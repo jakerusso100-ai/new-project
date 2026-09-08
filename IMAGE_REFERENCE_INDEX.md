@@ -4,16 +4,20 @@ This is the master visual-reference register. The repository records where a ref
 
 ## Series references
 
-| ID | Source | Visual evidence to extract |
-|---|---|---|
-| S01 | Close Rick-Counters of the Rick Kind | First major exterior/interior Citadel views; Council area; city-scale context |
-| S02 | The Rickshank Rickdemption | Damaged Citadel; collision with Galactic Federation prison; military/security areas |
-| S03 | The Ricklantis Mixup | Rebuilt city; streets; sidewalks; shops; construction; taxis; police; school; industrial/social districts |
-| S04 | Rickmurai Jack | Late Citadel; President Morty's regime; underground machinery; Dimensional Drive; destruction |
-| S05 | Solaricks | Ruins; Dimensional Drive remains; exterior debris; post-destruction environment |
-| S06 | JuRicksic Mort | Later continuity/background references |
-| S07 | Unmortricken | Citadel flashback / Morty Agency context |
-| S08 | The Rick, The Mort & The Ugly | Ruins and Boss Hog Rick's attempted New Citadel reconstruction |
+| ID | Source | Visual evidence to extract | Model use | Confidence |
+|---|---|---|---|---|
+| S01 | Close Rick-Counters of the Rick Kind | First major exterior/interior Citadel views; Council area; city-scale context | global shell, Council | A |
+| S02 | The Rickshank Rickdemption | Damaged Citadel; collision/destruction context; security areas | damage state, security | A |
+| S03 | The Ricklantis Mixup | Rebuilt city; streets; sidewalks; shops; construction; taxis; police; school; industrial/social districts | city plan, infrastructure | A |
+| S04 | Rickmurai Jack | Late Citadel; President Morty's regime; underground machinery; Dimensional Drive; destruction | underground, machinery | A |
+| S05 | Solaricks | Ruins; Dimensional Drive remains; exterior debris; post-destruction environment | ruins | A |
+| S06 | JuRicksic Mort | Later continuity/background references | continuity validation | A/B |
+| S07 | Unmortricken | Citadel flashback / Morty Agency context | landmarks, continuity | A |
+| S08 | The Rick, The Mort & The Ugly | Ruins and Boss Hog Rick's attempted New Citadel reconstruction | New Citadel | A |
+
+## Visual extraction matrix
+
+For every usable view, extract: silhouette, dome geometry, shell segmentation, skyline density, road curvature, building height classes, transit, portals, vegetation, civic landmarks, signage, machinery, entrances, and visible vertical layering.
 
 ## Secondary discovery indexes
 

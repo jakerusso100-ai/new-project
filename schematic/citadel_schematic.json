@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.7.0",
+  "schema_version": "2.0.0",
   "title": "Citadel of Ricks — Master Schematic Database",
   "generated_from": "Evidence registers in this repository (see SCHEMATIC.md for derivation rules)",
   "units": {
@@ -37,57 +37,57 @@
       "id": "V+3",
       "name": "Dome cap",
       "z_min": 0.1,
-      "z_max": 0.36,
-      "note": "Shallow segmented glazed cap with a raised central hub (#23). Skyline reaches up into it."
+      "z_max": 0.29,
+      "note": "Shallow 8-segment glazed cap (h 0.19, silhouette-fitted) with a raised central hub."
     },
     {
       "id": "V+2",
       "name": "Hover / elevated circulation band",
       "z_min": 0.05,
       "z_max": 0.2,
-      "note": "Flying taxis, private flying cars, elevated tracks and walkways. Exact elevations UNKNOWN."
+      "note": "Flying taxis, private flying cars, elevated tracks and walkways."
     },
     {
       "id": "V+1",
       "name": "Building volume",
       "z_min": 0.0,
-      "z_max": 0.3,
-      "note": "Skyline inside the drum wall and cap; the cap apex is at 0.32 so nothing exceeds 0.3."
+      "z_max": 0.28,
+      "note": "Skyline inside the disc rim and cap; apex 0.29."
     },
     {
       "id": "V0",
       "name": "Surface city ground plane",
       "z_min": 0.0,
       "z_max": 0.0,
-      "note": "Streets, sidewalks, plaza, farm terrain. Deck level of the arms and pods."
+      "note": "Streets, plaza, farm terrain. Arm roots; pod decks sit ≈0.3 R lower."
     },
     {
       "id": "V-1",
-      "name": "Drum lower deck",
-      "z_min": -0.12,
+      "name": "Disc lower deck",
+      "z_min": -0.02,
       "z_max": -0.02,
-      "note": "Sewers, manholes, utility conduits, Mortyburg interface underside. The drum is thin (#23)."
+      "note": "The disc is only ≈0.12 R thick (fitted); sewers and conduits are shallow."
     },
     {
       "id": "V-2",
       "name": "Portal-fluid cave base (under-hub)",
-      "z_min": -0.26,
-      "z_max": -0.14,
-      "note": "Underground production with the large central vat, inside the block the keel hangs from."
+      "z_min": -0.22,
+      "z_max": -0.06,
+      "note": "Underground production with the central vat, in the block the keel hangs from."
     },
     {
       "id": "V-3",
       "name": "Dimensional Drive / launch (under-hub, keel root)",
       "z_min": -0.6,
-      "z_max": -0.26,
-      "note": "Drive void, control enclosure, vats, launch chamber between the keel fins."
+      "z_max": -0.22,
+      "note": "Drive void, control enclosure, vats; launch chamber between the fin roots."
     },
     {
       "id": "V-4",
       "name": "Keel blade / exit chute",
-      "z_min": -1.55,
+      "z_min": -2.13,
       "z_max": -0.6,
-      "note": "Cyan energy blade and flanking fins hang to ~1.5 R below deck (#23). Chute inside the blade."
+      "note": "Energy blade to -2.13 R, fins to -1.65 R (silhouette-fitted). Chute inside the blade to −1.4."
     }
   ],
   "states": [
@@ -219,7 +219,7 @@
         "radius_top": 1.0,
         "radius_bottom": 1.0,
         "z_top": 0.1,
-        "z_bottom": -0.12,
+        "z_bottom": -0.02,
         "features": [
           "thin round deck (#23: rim ≈ 0.2 R thick)",
           "plated rim wall with cyan light strips",
@@ -233,10 +233,12 @@
         0
       ],
       "evidence": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)"
       ],
-      "rationale": "Exterior #23 shows the city on a thin round disc: the plated rim below the glass is only ~0.2 R deep and the underside is flat, with a separate block (SHELL-UNDERHUB) where the keel attaches. v1.3 over-estimated the drum thickness (0.53 R); corrected to 0.22 R.",
+      "rationale": "Exterior #23 shows the city on a thin round disc: the plated rim below the glass is only ~0.2 R deep and the underside is flat, with a separate block (SHELL-UNDERHUB) where the keel attaches. v1.3 over-estimated the drum thickness (0.53 R); corrected to 0.22 R. Numeric fit to #23: underside at z −0.05, so the disc is only ≈0.15 R thick. Silhouette fit: underside at z -0.02; the disc is ≈0.12 R thick.",
       "unknowns": [
         "rim wall height",
         "deck thickness",
@@ -247,6 +249,8 @@
         "S05E10 wide shots"
       ],
       "reference_images": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)"
       ]
     },
@@ -271,10 +275,10 @@
       "parent": "SHELL-DRUM",
       "geometry": {
         "type": "cylinder",
-        "radius_top": 0.48,
-        "radius_bottom": 0.42,
-        "z_top": -0.12,
-        "z_bottom": -0.32,
+        "radius_top": 0.34,
+        "radius_bottom": 0.299,
+        "z_top": -0.02,
+        "z_bottom": -0.45,
         "features": [
           "faceted yellow block under the drum centre",
           "keel fins and blade hang from it",
@@ -287,9 +291,11 @@
         0
       ],
       "evidence": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)"
       ],
-      "rationale": "In #23 a faceted block sits under the centre of the drum and the keel fins hang from it. It is the natural volume for the Drive stack (V-2/V-3). Depth is a ratio estimate.",
+      "rationale": "In #23 a faceted block sits under the centre of the drum and the keel fins hang from it. It is the natural volume for the Drive stack (V-2/V-3). Depth is a ratio estimate. Silhouette fit: r 0.34, z -0.02 → -0.45.",
       "unknowns": [
         "depth",
         "facet form",
@@ -299,6 +305,8 @@
         "any exterior from below"
       ],
       "reference_images": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)"
       ]
     },
@@ -324,9 +332,9 @@
       "geometry": {
         "type": "box",
         "size": [
-          0.12,
-          0.4,
-          1.05
+          0.1,
+          0.365,
+          1.2
         ],
         "features": [
           "flat plated slab",
@@ -336,15 +344,17 @@
         ]
       },
       "position": [
-        0.27,
+        0.32,
         0.0,
-        -1.25
+        -1.65
       ],
       "azimuth": 0,
       "evidence": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)"
       ],
-      "rationale": "Flat plated fins flank the energy blade in #23, hanging from the under-hub to about 1.2 R below deck with angled tips. In the frame the visible fins sit under the arm directions with the blade exposed between them, so the fins are aligned with the arms (az 0/120/240). Two are clearly visible; the third is assumed by symmetry.",
+      "rationale": "Flat plated fins flank the energy blade in #23, hanging from the under-hub to about 1.2 R below deck with angled tips. In the frame the visible fins sit under the arm directions with the blade exposed between them, so the fins are aligned with the arms (az 0/120/240). Two are clearly visible; the third is assumed by symmetry. Numeric fit to #23: fins end at z −1.84. Silhouette fit: fins at r 0.32, width 0.365, bottom z -1.65; fitted azimuth offset from the arms was −2.7°, i.e. aligned.",
       "unknowns": [
         "fin count",
         "fin depth",
@@ -356,6 +366,8 @@
         "S05E10 tilting wide shot"
       ],
       "reference_images": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)"
       ]
     },
@@ -381,9 +393,9 @@
       "geometry": {
         "type": "box",
         "size": [
-          0.12,
-          0.4,
-          1.05
+          0.1,
+          0.365,
+          1.2
         ],
         "features": [
           "flat plated slab",
@@ -393,15 +405,17 @@
         ]
       },
       "position": [
-        -0.135,
-        0.234,
-        -1.25
+        -0.16,
+        0.277,
+        -1.65
       ],
       "azimuth": 120,
       "evidence": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)"
       ],
-      "rationale": "Flat plated fins flank the energy blade in #23, hanging from the under-hub to about 1.2 R below deck with angled tips. In the frame the visible fins sit under the arm directions with the blade exposed between them, so the fins are aligned with the arms (az 0/120/240). Two are clearly visible; the third is assumed by symmetry.",
+      "rationale": "Flat plated fins flank the energy blade in #23, hanging from the under-hub to about 1.2 R below deck with angled tips. In the frame the visible fins sit under the arm directions with the blade exposed between them, so the fins are aligned with the arms (az 0/120/240). Two are clearly visible; the third is assumed by symmetry. Numeric fit to #23: fins end at z −1.84. Silhouette fit: fins at r 0.32, width 0.365, bottom z -1.65; fitted azimuth offset from the arms was −2.7°, i.e. aligned.",
       "unknowns": [
         "fin count",
         "fin depth",
@@ -413,6 +427,8 @@
         "S05E10 tilting wide shot"
       ],
       "reference_images": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)"
       ]
     },
@@ -438,9 +454,9 @@
       "geometry": {
         "type": "box",
         "size": [
-          0.12,
-          0.4,
-          1.05
+          0.1,
+          0.365,
+          1.2
         ],
         "features": [
           "flat plated slab",
@@ -450,15 +466,17 @@
         ]
       },
       "position": [
-        -0.135,
-        -0.234,
-        -1.25
+        -0.16,
+        -0.277,
+        -1.65
       ],
       "azimuth": 240,
       "evidence": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)"
       ],
-      "rationale": "Flat plated fins flank the energy blade in #23, hanging from the under-hub to about 1.2 R below deck with angled tips. In the frame the visible fins sit under the arm directions with the blade exposed between them, so the fins are aligned with the arms (az 0/120/240). Two are clearly visible; the third is assumed by symmetry.",
+      "rationale": "Flat plated fins flank the energy blade in #23, hanging from the under-hub to about 1.2 R below deck with angled tips. In the frame the visible fins sit under the arm directions with the blade exposed between them, so the fins are aligned with the arms (az 0/120/240). Two are clearly visible; the third is assumed by symmetry. Numeric fit to #23: fins end at z −1.84. Silhouette fit: fins at r 0.32, width 0.365, bottom z -1.65; fitted azimuth offset from the arms was −2.7°, i.e. aligned.",
       "unknowns": [
         "fin count",
         "fin depth",
@@ -470,6 +488,8 @@
         "S05E10 tilting wide shot"
       ],
       "reference_images": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)"
       ]
     },
@@ -493,10 +513,10 @@
       ],
       "geometry": {
         "type": "cylinder",
-        "radius_top": 0.2,
+        "radius_top": 0.117,
         "radius_bottom": 0.0,
-        "z_top": -0.32,
-        "z_bottom": -1.6,
+        "z_top": -0.45,
+        "z_bottom": -2.13,
         "features": [
           "broad translucent cyan crystalline blade (≈0.3 R wide at the root)",
           "longest element of the keel",
@@ -510,16 +530,17 @@
         0
       ],
       "evidence": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)",
         "EXTERIOR.md",
         "SOURCE_INDEX.md (lower metallic structural plates)",
         "GEOMETRY_DATABASE.md G-002"
       ],
-      "rationale": "Third pass on #23, measured: keel top width ≈ 70 px = 0.87 R across; blade tip 125 px = 1.56 R below the disc underside; fins end ≈ 1.2 R down. The keel is a bright cyan crystalline blade on the axis flanked by flat plated fins with angled tips, all hanging from the under-hub. Existence A, ratios B.",
+      "rationale": "Third pass on #23, measured: keel top width ≈ 70 px = 0.87 R across; blade tip 125 px = 1.56 R below the disc underside; fins end ≈ 1.2 R down. The keel is a bright cyan crystalline blade on the axis flanked by flat plated fins with angled tips, all hanging from the under-hub. Existence A, ratios B. Numeric fit to #23: blade tip at z −2.10 (measured from the disc centre, not the front rim — the earlier 1.56 was measured from the wrong edge). Silhouette fit: blade root r 0.117, tip z -2.13.",
       "unknowns": [
         "blade section (round vs flat)",
-        "depth",
         "whether the glow is the Drive output"
       ],
       "required_shots": [
@@ -528,6 +549,8 @@
         "S05E10 tilting/explosion wide shot"
       ],
       "reference_images": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)"
       ]
@@ -557,7 +580,7 @@
         "count": 16,
         "radius": 1.01,
         "z_top": 0.09,
-        "z_bottom": -0.11
+        "z_bottom": -0.01
       },
       "position": [
         0,
@@ -607,7 +630,7 @@
       "geometry": {
         "type": "disc",
         "radius": 0.035,
-        "z": -1.05,
+        "z": -1.4,
         "aperture_radius": 0.02,
         "aperture_offset": [
           0,
@@ -617,7 +640,7 @@
       "position": [
         0,
         0,
-        -1.05
+        -1.4
       ],
       "evidence": [
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
@@ -658,23 +681,23 @@
       ],
       "geometry": {
         "type": "path",
-        "width": 0.34,
-        "z": -0.01,
+        "width": 0.44,
+        "z": -0.03,
         "points": [
           [
-            0.95,
+            0.97,
             0.0,
-            -0.01
+            -0.03
           ],
           [
-            1.25,
+            1.465,
             0.0,
-            -0.01
+            -0.14
           ],
           [
-            1.58,
+            1.96,
             0.0,
-            -0.01
+            -0.25
           ]
         ]
       },
@@ -686,11 +709,13 @@
       "azimuth": 0,
       "parent": "SHELL-LOWER-BODY",
       "evidence": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)",
         "CONTRADICTION_LOG.md C-002"
       ],
-      "rationale": "Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level.",
+      "rationale": "Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level. Numeric fit to #23: the arm slopes from the disc underside (z −0.03) down to the pod rim (z −0.28) over ≈0.85 R. Silhouette fit: arm width 0.44 R, sloping from z -0.03 at the disc to z -0.25 at the pod rim.",
       "unknowns": [
         "width",
         "section",
@@ -702,6 +727,8 @@
         "S05E10 disengagement exterior"
       ],
       "reference_images": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)"
       ]
@@ -726,23 +753,23 @@
       ],
       "geometry": {
         "type": "path",
-        "width": 0.34,
-        "z": -0.01,
+        "width": 0.44,
+        "z": -0.03,
         "points": [
           [
-            -0.475,
-            0.823,
-            -0.01
+            -0.485,
+            0.84,
+            -0.03
           ],
           [
-            -0.625,
-            1.083,
-            -0.01
+            -0.732,
+            1.269,
+            -0.14
           ],
           [
-            -0.79,
-            1.368,
-            -0.01
+            -0.98,
+            1.697,
+            -0.25
           ]
         ]
       },
@@ -754,11 +781,13 @@
       "azimuth": 120,
       "parent": "SHELL-LOWER-BODY",
       "evidence": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)",
         "CONTRADICTION_LOG.md C-002"
       ],
-      "rationale": "Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level.",
+      "rationale": "Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level. Numeric fit to #23: the arm slopes from the disc underside (z −0.03) down to the pod rim (z −0.28) over ≈0.85 R. Silhouette fit: arm width 0.44 R, sloping from z -0.03 at the disc to z -0.25 at the pod rim.",
       "unknowns": [
         "width",
         "section",
@@ -770,6 +799,8 @@
         "S05E10 disengagement exterior"
       ],
       "reference_images": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)"
       ]
@@ -794,23 +825,23 @@
       ],
       "geometry": {
         "type": "path",
-        "width": 0.34,
-        "z": -0.01,
+        "width": 0.44,
+        "z": -0.03,
         "points": [
           [
-            -0.475,
-            -0.823,
-            -0.01
+            -0.485,
+            -0.84,
+            -0.03
           ],
           [
-            -0.625,
-            -1.083,
-            -0.01
+            -0.733,
+            -1.269,
+            -0.14
           ],
           [
-            -0.79,
-            -1.368,
-            -0.01
+            -0.98,
+            -1.697,
+            -0.25
           ]
         ]
       },
@@ -822,11 +853,13 @@
       "azimuth": 240,
       "parent": "SHELL-LOWER-BODY",
       "evidence": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)",
         "CONTRADICTION_LOG.md C-002"
       ],
-      "rationale": "Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level.",
+      "rationale": "Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level. Numeric fit to #23: the arm slopes from the disc underside (z −0.03) down to the pod rim (z −0.28) over ≈0.85 R. Silhouette fit: arm width 0.44 R, sloping from z -0.03 at the disc to z -0.25 at the pod rim.",
       "unknowns": [
         "width",
         "section",
@@ -838,6 +871,8 @@
         "S05E10 disengagement exterior"
       ],
       "reference_images": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)"
       ]
@@ -862,7 +897,7 @@
       "geometry": {
         "type": "cap",
         "radius": 1.0,
-        "height": 0.26,
+        "height": 0.19,
         "z_base": 0.1,
         "features": [
           "radially segmented glazing (8 segments visible)",
@@ -877,6 +912,8 @@
         0
       ],
       "evidence": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#14 (S05E10 plaza destruction wide)",
@@ -886,9 +923,9 @@
         "GEOMETRY_DATABASE.md G-001",
         "EVIDENCE_MATRIX.md E-002"
       ],
-      "rationale": "Strongest recurring exterior feature. Defines the unit U and the origin. Gallery #14/#15 show massive dark structural ribs of the dome overhead from inside the plaza; gallery #01 shows finer ribbed glazing between them. Exterior #23 settles the profile: a shallow, radially segmented glazed cap sitting on a thick drum, not a full hemisphere. Cap height ≈ 0.3 R. The hologram (#04) agrees. Two independent sources → LOCKED for the cap form; height ratio still an estimate. Second pass on #23: cap height revised down to ≈0.22 R and a raised circular hub added at the apex; pods carry the same hub.",
+      "rationale": "Strongest recurring exterior feature. Defines the unit U and the origin. Gallery #14/#15 show massive dark structural ribs of the dome overhead from inside the plaza; gallery #01 shows finer ribbed glazing between them. Exterior #23 settles the profile: a shallow, radially segmented glazed cap sitting on a thick drum, not a full hemisphere. Cap height ≈ 0.3 R. The hologram (#04) agrees. Two independent sources → LOCKED for the cap form; height ratio still an estimate. Second pass on #23: cap height revised down to ≈0.22 R and a raised circular hub added at the apex; pods carry the same hub. Numeric fit to #23: cap height 0.24 R. Silhouette fit: cap height 0.19 R.",
       "unknowns": [
-        "cap height ratio (0.26, third estimate from #23)",
+        "cap height ratio (0.19, silhouette-fitted)",
         "segment count",
         "absolute radius"
       ],
@@ -898,6 +935,8 @@
         "S05E10 wide shots"
       ],
       "reference_images": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#01 (S01E10 arrival plaza)",
@@ -925,10 +964,10 @@
       ],
       "geometry": {
         "type": "cap",
-        "radius": 0.55,
-        "height": 0.16,
-        "z_base": 0.04,
-        "drum_bottom": -0.06,
+        "radius": 0.54,
+        "height": 0.1,
+        "z_base": -0.27,
+        "drum_bottom": -0.37,
         "features": [
           "segmented glazed cap",
           "raised central hub",
@@ -937,18 +976,20 @@
         ]
       },
       "position": [
-        2.1,
+        2.5,
         0.0,
-        0
+        -0.31
       ],
       "azimuth": 0,
       "evidence": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)",
         "SOURCE_INDEX.md (three smaller domed districts)",
         "CONTRADICTION_LOG.md C-002"
       ],
-      "rationale": "Exterior #23 (third pass, measured on the full frame): disc radius R = 80 px; pod diameter ≈ 100 px (near) / 100 px (far) → r ≈ 0.55 R; pod centres 150–210 px from the disc centre → ≈ 2.1 R allowing for perspective; pod rim depth ≈ 0.1 R. Hologram #04 agrees on topology. Azimuths relative to the interior UNKNOWN.",
+      "rationale": "Exterior #23 (third pass, measured on the full frame): disc radius R = 80 px; pod diameter ≈ 100 px (near) / 100 px (far) → r ≈ 0.55 R; pod centres 150–210 px from the disc centre → ≈ 2.1 R allowing for perspective; pod rim depth ≈ 0.1 R. Hologram #04 agrees on topology. Azimuths relative to the interior UNKNOWN. Numeric fit to #23: pod centres at 2.39 R, radius 0.58 R, pod deck ≈0.3 R below the main deck (the arms slope down to them). Silhouette fit: pod radius 0.54, deck -0.31 below the main deck, cap height 0.1. Fitted per-pod centre distances were 2.73 / 2.14 / 2.67 R (near / far / right) with a long-lens camera being optimal, so the spread is a hand-drawn perspective artefact; symmetrised to 2.5 R.",
       "unknowns": [
         "true count",
         "radius ratio to DOME-P",
@@ -961,6 +1002,8 @@
         "any aerial view"
       ],
       "reference_images": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)"
       ]
@@ -985,10 +1028,10 @@
       ],
       "geometry": {
         "type": "cap",
-        "radius": 0.55,
-        "height": 0.16,
-        "z_base": 0.04,
-        "drum_bottom": -0.06,
+        "radius": 0.54,
+        "height": 0.1,
+        "z_base": -0.27,
+        "drum_bottom": -0.37,
         "features": [
           "segmented glazed cap",
           "raised central hub",
@@ -997,18 +1040,20 @@
         ]
       },
       "position": [
-        -1.05,
-        1.819,
-        0
+        -1.25,
+        2.165,
+        -0.31
       ],
       "azimuth": 120,
       "evidence": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)",
         "SOURCE_INDEX.md (three smaller domed districts)",
         "CONTRADICTION_LOG.md C-002"
       ],
-      "rationale": "See DOME-S1. A panel/antenna mast stands on one pod in #23 (PROP-PANEL-MAST, assigned to this pod as a placeholder).",
+      "rationale": "See DOME-S1. A panel/antenna mast stands on one pod in #23 (PROP-PANEL-MAST, assigned to this pod as a placeholder). Numeric fit to #23: pod centres at 2.39 R, radius 0.58 R, pod deck ≈0.3 R below the main deck (the arms slope down to them). Silhouette fit: pod radius 0.54, deck -0.31 below the main deck, cap height 0.1. Fitted per-pod centre distances were 2.73 / 2.14 / 2.67 R (near / far / right) with a long-lens camera being optimal, so the spread is a hand-drawn perspective artefact; symmetrised to 2.5 R.",
       "unknowns": [
         "as DOME-S1"
       ],
@@ -1016,6 +1061,8 @@
         "as DOME-S1"
       ],
       "reference_images": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)"
       ]
@@ -1042,10 +1089,10 @@
       ],
       "geometry": {
         "type": "cap",
-        "radius": 0.55,
-        "height": 0.16,
-        "z_base": 0.04,
-        "drum_bottom": -0.06,
+        "radius": 0.54,
+        "height": 0.1,
+        "z_base": -0.27,
+        "drum_bottom": -0.37,
         "features": [
           "segmented glazed cap",
           "raised central hub",
@@ -1054,19 +1101,21 @@
         ]
       },
       "position": [
-        -1.05,
-        -1.819,
-        0
+        -1.25,
+        -2.165,
+        -0.31
       ],
       "azimuth": 240,
       "evidence": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)",
         "LOCATION_REGISTER.md (Mortyburg: smaller domed district; detachable)",
         "EPISODE_EVIDENCE_RICKMURAI_JACK.md (Mortyburg detachment)",
         "CONTRADICTION_LOG.md C-003"
       ],
-      "rationale": "Mortyburg is a detachable domed section (A). #23 and #04 show all three satellite pods on arms; a pod on an arm is the only configuration that can disengage and fly off (S05E10), so Mortyburg = one of the three pods is now B. Which pod, and the azimuth, remain UNKNOWN.",
+      "rationale": "Mortyburg is a detachable domed section (A). #23 and #04 show all three satellite pods on arms; a pod on an arm is the only configuration that can disengage and fly off (S05E10), so Mortyburg = one of the three pods is now B. Which pod, and the azimuth, remain UNKNOWN. Numeric fit to #23: pod centres at 2.39 R, radius 0.58 R, pod deck ≈0.3 R below the main deck (the arms slope down to them). Silhouette fit: pod radius 0.54, deck -0.31 below the main deck, cap height 0.1. Fitted per-pod centre distances were 2.73 / 2.14 / 2.67 R (near / far / right) with a long-lens camera being optimal, so the spread is a hand-drawn perspective artefact; symmetrised to 2.5 R.",
       "unknowns": [
         "which pod is Mortyburg",
         "azimuth",
@@ -1080,6 +1129,8 @@
         "S06E01 stranded-section exterior"
       ],
       "reference_images": [
+        "reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons)",
+        "reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23)",
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)"
       ]
@@ -1106,7 +1157,7 @@
         "type": "cap",
         "radius": 0.22,
         "height": 0.04,
-        "z_base": 0.36
+        "z_base": 0.29000000000000004
       },
       "position": [
         0,
@@ -1148,14 +1199,14 @@
       "parent": "DOME-S1",
       "geometry": {
         "type": "cap",
-        "radius": 0.12,
+        "radius": 0.119,
         "height": 0.025,
-        "z_base": 0.2
+        "z_base": -0.17
       },
       "position": [
-        2.1,
+        2.5,
         0.0,
-        0
+        -0.31
       ],
       "evidence": [
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)"
@@ -1191,14 +1242,14 @@
       "parent": "DOME-S2",
       "geometry": {
         "type": "cap",
-        "radius": 0.12,
+        "radius": 0.119,
         "height": 0.025,
-        "z_base": 0.2
+        "z_base": -0.17
       },
       "position": [
-        -1.05,
-        1.819,
-        0
+        -1.25,
+        2.165,
+        -0.31
       ],
       "evidence": [
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)"
@@ -1234,14 +1285,14 @@
       "parent": "DOME-MB",
       "geometry": {
         "type": "cap",
-        "radius": 0.12,
+        "radius": 0.119,
         "height": 0.025,
-        "z_base": 0.2
+        "z_base": -0.17
       },
       "position": [
-        -1.05,
-        -1.819,
-        0
+        -1.25,
+        -2.165,
+        -0.31
       ],
       "evidence": [
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)"
@@ -1284,9 +1335,9 @@
         ]
       },
       "position": [
-        -1.05,
-        1.819,
-        0.18
+        -1.25,
+        2.165,
+        -0.16
       ],
       "evidence": [
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)"
@@ -1584,24 +1635,29 @@
             0.05
           ],
           [
-            -0.475,
-            -0.823,
-            0.05
+            -0.485,
+            -0.84,
+            0.02
           ],
           [
-            -0.525,
-            -0.909,
-            0.05
+            -0.515,
+            -0.892,
+            0.0
           ],
           [
-            -0.79,
-            -1.368,
-            0.05
+            -0.75,
+            -1.299,
+            -0.13
           ],
           [
-            -1.05,
-            -1.819,
-            0.05
+            -0.98,
+            -1.697,
+            -0.25
+          ],
+          [
+            -1.25,
+            -2.165,
+            -0.25
           ]
         ]
       },
@@ -2319,7 +2375,7 @@
         "type": "cylinder",
         "radius_top": 0.02,
         "radius_bottom": 0.035,
-        "z_top": 0.28,
+        "z_top": 0.26,
         "z_bottom": 0.0,
         "features": [
           "tall tapering spire",
@@ -2471,7 +2527,7 @@
         "type": "cylinder",
         "radius_top": 0.02,
         "radius_bottom": 0.12,
-        "z_top": 0.3,
+        "z_top": 0.28,
         "z_bottom": 0.0,
         "features": [
           "several tapering spires",
@@ -2582,7 +2638,7 @@
         "size": [
           0.12,
           0.1,
-          0.22
+          0.2
         ],
         "features": [
           "tall shaft",
@@ -3515,7 +3571,7 @@
         "size": [
           0.06,
           0.06,
-          0.26
+          0.24
         ],
         "features": [
           "scaffolding",
@@ -4022,7 +4078,7 @@
       ],
       "geometry": {
         "type": "tunnel_network",
-        "z": -0.05,
+        "z": -0.03,
         "tube_radius": 0.012,
         "follows": [
           "CIRC-RING-1",
@@ -4065,9 +4121,9 @@
       ],
       "geometry": {
         "type": "cavern",
-        "radius": 0.25,
-        "z_top": -0.14,
-        "z_bottom": -0.26,
+        "radius": 0.24,
+        "z_top": -0.06,
+        "z_bottom": -0.22,
         "features": [
           "large central vat",
           "collection containers",
@@ -4077,9 +4133,9 @@
         ]
       },
       "position": [
-        0.1,
-        0.06,
-        -0.2
+        0.08,
+        0.05,
+        -0.14
       ],
       "evidence": [
         "EPISODE_EVIDENCE_RICKMURAI_JACK.md (portal-fluid production / mines)",
@@ -4116,9 +4172,9 @@
       "geometry": {
         "type": "cylinder",
         "radius_top": 0.3,
-        "radius_bottom": 0.28,
-        "z_top": -0.26,
-        "z_bottom": -0.42,
+        "radius_bottom": 0.27,
+        "z_top": -0.22,
+        "z_bottom": -0.44,
         "features": [
           "drive core",
           "glass-domed control enclosure",
@@ -4134,7 +4190,7 @@
       "position": [
         0,
         0,
-        -0.34
+        -0.33
       ],
       "evidence": [
         "reference_images/CITADEL_IMAGE_GALLERY.md#17 (S05E10 rail cart)",
@@ -4190,7 +4246,7 @@
       "position": [
         0.2,
         0,
-        -0.4
+        -0.42
       ],
       "evidence": [
         "reference_images/CITADEL_IMAGE_GALLERY.md#13 (S05E10 Central Finite Curve platform)",
@@ -4233,7 +4289,7 @@
       "position": [
         0,
         0,
-        -0.41
+        -0.43
       ],
       "evidence": [
         "EPISODE_EVIDENCE_RICKMURAI_JACK.md (Operation Phoenix vats feed biological material into the drive process)"
@@ -4267,7 +4323,7 @@
       "geometry": {
         "type": "box",
         "size": [
-          0.12,
+          0.11,
           0.1,
           0.16
         ],
@@ -4321,12 +4377,12 @@
         "radius_top": 0.03,
         "radius_bottom": 0.02,
         "z_top": -0.6,
-        "z_bottom": -1.05
+        "z_bottom": -1.4
       },
       "position": [
         0,
         0,
-        -0.825
+        -1.0
       ],
       "evidence": [
         "EPISODE_EVIDENCE_RICKMURAI_JACK.md (launched from the bottom of the Citadel)",
@@ -4376,9 +4432,9 @@
         ]
       },
       "position": [
-        -0.525,
-        -0.909,
-        0
+        -0.515,
+        -0.892,
+        -0.03
       ],
       "azimuth": 240,
       "evidence": [
@@ -4422,9 +4478,9 @@
         "length": 0.06
       },
       "position": [
-        -1.05,
-        -1.819,
-        -0.06
+        -1.25,
+        -2.165,
+        -0.37
       ],
       "evidence": [
         "DIALOGUE_ARCHITECTURE_CROSSREF.md D-010"
@@ -4497,7 +4553,7 @@
       "geometry": {
         "type": "box",
         "size": [
-          0.12,
+          0.11,
           0.1,
           0.16
         ],

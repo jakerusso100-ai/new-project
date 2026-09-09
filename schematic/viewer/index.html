@@ -441,7 +441,7 @@ DB.nodes.filter(n=>n.id.startsWith('ARM-')).forEach(n=>{ const pts=n.geometry.po
 // placed flush on the measured surface (z ≈ +0.03 at |side| ≈ 0.235, flank slope ≈ 35°) so they light the through-concourse behind them
 DB.nodes.filter(n=>n.id.startsWith('ARM-')).forEach(n=>{ const pts=n.geometry.points; const a=Math.atan2(pts[0][1],pts[0][0]); const ca=Math.cos(a), sa=Math.sin(a); const r0=Math.hypot(pts[0][0],pts[0][1]), r1=Math.hypot(pts[2][0],pts[2][1]); const len=r1-r0;
   const winMat=new THREE.MeshPhysicalMaterial({color:0x9fe8ff,emissive:0x3fd0ff,emissiveIntensity:0.9,transmission:0.4,roughness:0.15,transparent:true,opacity:0.85});
-  for(const sg of [1,-1]) for(let k=0;k<12;k++){ const rr_=r0+len*(k+0.5)/12; const u=sg*0.235; const [x,y]=[ca*rr_-sa*u, sa*rr_+ca*u]; const m=new THREE.Mesh(new THREE.BoxGeometry(0.03,0.012,0.002),winMat); m.position.set(x,y,0.03); m.rotation.z=a; m.rotateX(sg*35*Math.PI/180); m.rotateY(0); cat.glass.add(tag(m,n.id,'flank window panel (#23)')); }
+  const slope=35*Math.PI/180; for(const sg of [1,-1]) for(let k=0;k<12;k++){ const rr_=r0+len*(k+0.5)/12; const u=sg*(0.235+0.0025*Math.sin(slope)); const [x,y]=[ca*rr_-sa*u, sa*rr_+ca*u]; const m=new THREE.Mesh(new THREE.BoxGeometry(0.045,0.018,0.003),winMat); m.position.set(x,y,0.03+0.0025*Math.cos(slope)); m.rotation.z=a; m.rotateX(sg*slope); cat.glass.add(tag(m,n.id,'flank window panel (#23)')); }
 });
 
 // ---------------- UI + visibility

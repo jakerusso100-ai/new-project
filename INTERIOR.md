@@ -84,8 +84,6 @@ The arm exterior is left exactly as the STL has it. Inside the lenticular sectio
 
 Checked the STL surface across the arm width at three stations: it is a smooth lens with a central spine ridge and a shallow flank ledge near the pod end — **no window recesses or glazing**. The cyan strips in the Printables render are paint. Frame #23 does show a row of cyan lit panels along each arm flank, so twelve lit window panels per flank are placed flush on the measured surface at z ≈ +0.03 R (where the flank slope is ≈ 35°), lighting the through-concourse behind them. Existence A (frame), placement C. Toggle: **glass**.
 
-**Arm top glazing (owner decision, 2026-09-09).** The top skin of each arm (|side| < 0.20 R, above +0.035 R) is rendered as glass so the upper gallery and concourse read from above. No frame shows the arm tops directly and the Printables model has them solid, so this is a design choice with placement C, recorded in `arm_section.top_glazing`.
-
 ## Pods
 
 Each pod repeats the shell (glass, ribs, hub, rim lights), a deck, a ring road, a small plaza and procedural blocks at 0.592 scale. `DOME-MB` (Mortyburg, B) uses the Mortytown family.

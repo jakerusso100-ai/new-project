@@ -206,7 +206,7 @@
 
 **Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); CONTRADICTION_LOG.md C-002
 
-**Sub-features to model:** lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R; cyan light strips along the edges (#23); level with the equatorial plane; interior: three enclosed levels inside the 0.2 R section (upper gallery +0.05, through-concourse 0, service deck −0.05); exterior surface unchanged; row of lit window panels along each flank at deck level (#23); no other glazing on the arm; top skin glazed (owner decision; no direct frame) — flanks and underside hull
+**Sub-features to model:** lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R; cyan light strips along the edges (#23); level with the equatorial plane; interior: three enclosed levels inside the 0.2 R section (upper gallery +0.05, through-concourse 0, service deck −0.05); exterior surface unchanged; row of lit window panels along each flank at deck level (#23); no other glazing on the arm
 
 ### ARM-S2 — Radial arm to DOME-S2
 
@@ -216,7 +216,7 @@
 
 **Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); CONTRADICTION_LOG.md C-002
 
-**Sub-features to model:** lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R; cyan light strips along the edges (#23); level with the equatorial plane; interior: three enclosed levels inside the 0.2 R section (upper gallery +0.05, through-concourse 0, service deck −0.05); exterior surface unchanged; row of lit window panels along each flank at deck level (#23); no other glazing on the arm; top skin glazed (owner decision; no direct frame) — flanks and underside hull
+**Sub-features to model:** lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R; cyan light strips along the edges (#23); level with the equatorial plane; interior: three enclosed levels inside the 0.2 R section (upper gallery +0.05, through-concourse 0, service deck −0.05); exterior surface unchanged; row of lit window panels along each flank at deck level (#23); no other glazing on the arm
 
 ### ARM-MB — Radial arm to DOME-MB
 
@@ -226,7 +226,7 @@
 
 **Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); CONTRADICTION_LOG.md C-002
 
-**Sub-features to model:** lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R; cyan light strips along the edges (#23); level with the equatorial plane; interior: three enclosed levels inside the 0.2 R section (upper gallery +0.05, through-concourse 0, service deck −0.05); exterior surface unchanged; row of lit window panels along each flank at deck level (#23); no other glazing on the arm; top skin glazed (owner decision; no direct frame) — flanks and underside hull
+**Sub-features to model:** lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R; cyan light strips along the edges (#23); level with the equatorial plane; interior: three enclosed levels inside the 0.2 R section (upper gallery +0.05, through-concourse 0, service deck −0.05); exterior surface unchanged; row of lit window panels along each flank at deck level (#23); no other glazing on the arm
 
 ### DOME-P — Principal transparent dome
 

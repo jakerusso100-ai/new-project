@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.3.4",
+  "schema_version": "2.3.3",
   "title": "Citadel of Ricks — Master Schematic Database",
   "generated_from": "Evidence registers in this repository (see SCHEMATIC.md for derivation rules)",
   "units": {
@@ -844,8 +844,7 @@
           "cyan light strips along the edges (#23)",
           "level with the equatorial plane",
           "interior: three enclosed levels inside the 0.2 R section (upper gallery +0.05, through-concourse 0, service deck −0.05); exterior surface unchanged",
-          "row of lit window panels along each flank at deck level (#23); no other glazing on the arm",
-          "top skin glazed (owner decision; no direct frame) — flanks and underside hull"
+          "row of lit window panels along each flank at deck level (#23); no other glazing on the arm"
         ],
         "interior_levels": [
           {
@@ -951,8 +950,7 @@
           "cyan light strips along the edges (#23)",
           "level with the equatorial plane",
           "interior: three enclosed levels inside the 0.2 R section (upper gallery +0.05, through-concourse 0, service deck −0.05); exterior surface unchanged",
-          "row of lit window panels along each flank at deck level (#23); no other glazing on the arm",
-          "top skin glazed (owner decision; no direct frame) — flanks and underside hull"
+          "row of lit window panels along each flank at deck level (#23); no other glazing on the arm"
         ],
         "interior_levels": [
           {
@@ -1058,8 +1056,7 @@
           "cyan light strips along the edges (#23)",
           "level with the equatorial plane",
           "interior: three enclosed levels inside the 0.2 R section (upper gallery +0.05, through-concourse 0, service deck −0.05); exterior surface unchanged",
-          "row of lit window panels along each flank at deck level (#23); no other glazing on the arm",
-          "top skin glazed (owner decision; no direct frame) — flanks and underside hull"
+          "row of lit window panels along each flank at deck level (#23); no other glazing on the arm"
         ],
         "interior_levels": [
           {
@@ -5473,11 +5470,6 @@
       "evidence": "exterior frame #23 shows a row of cyan lit panels along each arm flank; the Printables render paints cyan strips in the same place (paint, not geometry); the STL has no recess for them",
       "placement": "row of lit window panels on each flank skin at z ≈ +0.03 R (|side| ≈ 0.235 R), 12 per flank, flush with the surface; they light the through-concourse behind them",
       "confidence": "existence A (frame), placement C"
-    },
-    "top_glazing": {
-      "status": "OWNER DECISION (2026-09-09), placement C",
-      "rule": "STL arm triangles with z > +0.035 R and |side| < 0.20 R render as glazing; flanks (window panels) and underside remain hull",
-      "evidence": "no frame shows the arm tops directly; #23 shows lit strips on the flanks only; the Printables model has solid tops. Kept as a design choice so the upper gallery and concourse read from outside."
     }
   }
 }

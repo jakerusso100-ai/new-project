@@ -49,7 +49,7 @@
     <select id="state"></select>
     <h2>Views</h2>
     <div>
-      <button data-view="iso">Isometric</button><button data-view="top">Plan</button><button data-view="side">Side</button><button data-view="front">Front</button><button data-view="under">Underground</button><button data-view="ref23">Match exterior #23</button>
+      <button data-view="iso">Isometric</button><button data-view="top">Plan</button><button data-view="side">Side</button><button data-view="front">Front</button><button data-view="under">Underground</button><button data-view="ref23">Match exterior #23</button><button data-view="arm">Arm interior</button><button data-view="plaza">Plaza</button><button data-view="pod">Mortyburg pod</button>
     </div>
     <label class="row"><input type="checkbox" id="helpers" checked> Show grid &amp; axes</label>
     <label class="row"><input type="checkbox" id="meshtoggle" checked> Show reference STL mesh (if embedded)</label>
@@ -126,6 +126,9 @@ document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{
   if(v==='side'){orbit.theta=-Math.PI/2;orbit.phi=Math.PI/2;orbit.r=6.2;}
   if(v==='front'){orbit.theta=0;orbit.phi=Math.PI/2;orbit.r=6.2;}
   camera.fov=45; if(v==='ref23'){orbit.theta=-3.27;orbit.phi=1.13;orbit.r=14.25;orbit.target.set(-0.527,-0.247,-0.519);camera.fov=14.9;} camera.updateProjectionMatrix();
+  if(v==='arm'){ const a=240*Math.PI/180; orbit.theta=a-2.3; orbit.phi=1.15; orbit.r=0.9; orbit.target.set(Math.cos(a)*1.35,Math.sin(a)*1.35,0.02); document.getElementById('cut').checked=true; refreshVisibility(); }
+  if(v==='plaza'){ orbit.theta=-0.7; orbit.phi=1.15; orbit.r=0.8; orbit.target.set(0,0.02,0.06); document.getElementById('cut').checked=false; refreshVisibility(); }
+  if(v==='pod'){ const p=DB.nodes.find(n=>n.id==='DOME-MB').position; orbit.theta=-0.6; orbit.phi=1.1; orbit.r=1.4; orbit.target.set(p[0],p[1],0.02); document.getElementById('cut').checked=false; refreshVisibility(); }
   if(v==='under'){orbit.theta=Math.PI/4;orbit.phi=Math.PI*0.72;orbit.r=2.6;orbit.target.set(0,0,-0.7); document.getElementById('cut').checked=true; refreshVisibility();}
   applyCam();
 });

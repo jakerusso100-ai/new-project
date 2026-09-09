@@ -4,9 +4,9 @@
 
 ## Current research progress
 
-**Estimated overall research completeness: 73%**
+**Estimated overall research completeness: 78%**
 
-This percentage measures coverage of the evidence database against the project's research goals, not the amount of documentation written. It is deliberately conservative: unresolved views, comic references, source cross-indexing, exact dimensions, and contradictions remain open.
+This percentage measures coverage of the evidence database against the project's research goals, not the amount of documentation written. It remains conservative: unresolved views, comic references, source cross-indexing, exact dimensions, and contradictions remain open.
 
 ## Research coverage
 
@@ -20,6 +20,10 @@ This percentage measures coverage of the evidence database against the project's
 - [ ] Every usable Citadel view catalogued
 - [ ] Every relevant comic Citadel reference catalogued
 - [ ] Source screenshots/links cross-indexed to individual evidence records
+- [x] Scene-by-scene evidence framework established
+- [x] Initial S03E07 and S05E10 grouped visual evidence logged
+- [x] Dialogue-to-architecture cross-reference established
+- [x] Contradiction/continuity register established
 - [ ] Complete scene-by-scene visual evidence log
 - [ ] Complete dialogue-to-architecture evidence cross-reference
 - [ ] Complete contradiction/continuity review
@@ -34,10 +38,12 @@ This percentage measures coverage of the evidence database against the project's
 - [x] Destruction/rebuild-state inventory
 - [ ] Every major visible mass tagged to source evidence
 - [ ] Stable relationships confirmed across multiple views
+- [x] Relative-measurement methodology established
 - [ ] Complete dimensional evidence table
 - [ ] Explicit UNKNOWN / NOT SHOWN designation for every unsupported dimension
-- [ ] Transit geometry evidence catalogued
-- [ ] Underground/industrial evidence catalogued at scene level
+- [ ] Transit geometry evidence catalogued at shot level
+- [x] Underground/industrial evidence catalogued at grouped scene level
+- [ ] Underground/industrial evidence catalogued at complete shot level
 
 ## User-created schematic handoff
 
@@ -46,8 +52,9 @@ The repository must provide the user with enough source evidence to make their o
 - [x] Evidence hierarchy documented
 - [x] Confidence/inference discipline documented
 - [x] Source separation between show and comics documented
+- [x] Major evidence-register structure established
 - [ ] All major schematic inputs cross-indexed
-- [ ] All major unresolved geometry listed
+- [x] Major unresolved geometry register established
 - [ ] Final schematic evidence handoff reviewed
 
 ## Out of scope for this phase

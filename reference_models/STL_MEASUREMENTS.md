@@ -60,6 +60,16 @@ Lenticular bridges from the main body to each pod. Arc widths measured by inters
 
 (*ridge/valley detail on the arm's top surface.) So the arms are ≈ 0.55 R wide and 0.20 R thick at the equator, tapering to ≈ 0.2 R wide at ±0.10 R — level with the deck, not sloping.
 
+## Arm cross-section (perpendicular to the arm axis)
+
+Sections at r = 1.05 / 1.2 / 1.35 / 1.5 / 1.65 R along the arm. Half-width in R at each height (mid-arm, r 1.35):
+
+| z (R) | −0.08 | −0.05 | −0.03 | 0 | +0.024 | +0.05 | +0.065 | +0.08 | +0.095 |
+|---|---|---|---|---|---|---|---|---|---|
+| half-width | 0.15 | 0.20 | 0.23 | 0.25 | 0.25 | 0.20 | 0.18 | 0.14 | 0.11 |
+
+Underside at −0.108 R everywhere; top at +0.15 R at the root falling to +0.12 R mid-arm. The section widens again to 0.33 R where it merges into the pod (r ≥ 1.65). Stored as `arm_section` in the JSON; the arm interior levels are sized from it.
+
 ## STL vs. silhouette fit vs. schematic
 
 | Element | Silhouette fit (frame #23) | STL | Adopted (v2.1) |

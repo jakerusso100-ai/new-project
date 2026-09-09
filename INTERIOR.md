@@ -4,6 +4,9 @@ What the viewer now builds inside the shell, element by element, with the eviden
 
 ## Glazing
 
+**With the STL embedded (`index_mesh.html`)** the mesh's own triangles are classified into glazing (the upper lens of the main body and of each pod, minus the apex hubs — 34,463 triangles) and hull (48,017 triangles); only the glazing is rendered transparent, the hull is opaque and untouched. Nothing generated is added outside the mesh surface: the structural ribs and purlins run 0.009 R *inside* the glass, and the rim, rim lights and apex hub are drawn only in the standalone viewer that has no mesh. An automated check (`interior` objects vs. the STL lens profile and the measured arm section) reports zero generated elements outside the shell apart from the ribs, which are inside by construction.
+
+
 - **Main lens** rendered as glass (transmissive, 32 % opaque) over the STL profile: apex +0.292 R (584 m), r = 0.83 at +0.15.
 - **Eight meridian ribs** — the segment seams in the STL and the exterior frame (#23) — drawn as heavy dark structural ribs because the plaza frames (#14, #15) show massive dark ribs overhead from inside.
 - **Apex hub** r 0.20 R (STL top section).
@@ -71,7 +74,7 @@ Replacing the block-out boxes: the central monument spire with plinth (S01E10, #
 
 ## Arms (interior only)
 
-The arm exterior is left exactly as the STL has it. Inside the 0.2 R (400 m) lenticular section three enclosed levels are built, visible through the end portals and in cut-away:
+The arm exterior is left exactly as the STL has it. Inside the lenticular section (measured from the STL: half-width 0.25 R at deck level, 0.20 at ±0.05, 0.14 at +0.08; underside −0.108, top +0.12–0.15) three enclosed levels are built, each sized to the section, visible through the end portals and in cut-away:
 
 - **Upper gallery (+0.05 R, 100 m)** — floor on columns with hover-vehicle hangar bays along both flanks.
 - **Through-concourse (0)** — the main deck continues into the arm: floor, road, walkway, ceiling lights, glazed window bands, and a lit portal in each end face (disc rim and pod rim). City, arm and pod decks are one continuous floor, which the S05E10 train to Mortyburg requires.

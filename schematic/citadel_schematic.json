@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.3.1",
+  "schema_version": "2.3.2",
   "title": "Citadel of Ricks — Master Schematic Database",
   "generated_from": "Evidence registers in this repository (see SCHEMATIC.md for derivation rules)",
   "units": {
@@ -820,7 +820,7 @@
       "geometry": {
         "type": "path",
         "width": 0.55,
-        "thickness": 0.2,
+        "thickness": 0.22,
         "z": 0.0,
         "points": [
           [
@@ -851,7 +851,7 @@
             "name": "upper gallery",
             "z": 0.05,
             "m": 100,
-            "use": "enclosed upper level: offices, hover-vehicle hangar bays, windows in the arm flank"
+            "use": "enclosed upper level: hangar bays kept within the flank (half-width 0.16 R at +0.07)"
           },
           {
             "id": "ARM0",
@@ -925,7 +925,7 @@
       "geometry": {
         "type": "path",
         "width": 0.55,
-        "thickness": 0.2,
+        "thickness": 0.22,
         "z": 0.0,
         "points": [
           [
@@ -956,7 +956,7 @@
             "name": "upper gallery",
             "z": 0.05,
             "m": 100,
-            "use": "enclosed upper level: offices, hover-vehicle hangar bays, windows in the arm flank"
+            "use": "enclosed upper level: hangar bays kept within the flank (half-width 0.16 R at +0.07)"
           },
           {
             "id": "ARM0",
@@ -1030,7 +1030,7 @@
       "geometry": {
         "type": "path",
         "width": 0.55,
-        "thickness": 0.2,
+        "thickness": 0.22,
         "z": 0.0,
         "points": [
           [
@@ -1061,7 +1061,7 @@
             "name": "upper gallery",
             "z": 0.05,
             "m": 100,
-            "use": "enclosed upper level: offices, hover-vehicle hangar bays, windows in the arm flank"
+            "use": "enclosed upper level: hangar bays kept within the flank (half-width 0.16 R at +0.07)"
           },
           {
             "id": "ARM0",
@@ -5413,5 +5413,54 @@
       "DIST-CONSTRUCTION": "mid-rise with scaffolding (DS-02/03)",
       "pods": "generic mid-rise; DOME-MB uses the Mortytown family"
     }
+  },
+  "arm_section": {
+    "note": "STL arm cross-section at mid-arm (r 1.35 R), perpendicular to the arm axis: [z/R, half-width/R]. Underside −0.108, top +0.12 (mid) to +0.15 (root). From reference_models/STL_MEASUREMENTS.md.",
+    "half_width_by_z": [
+      [
+        -0.108,
+        0.0
+      ],
+      [
+        -0.08,
+        0.15
+      ],
+      [
+        -0.05,
+        0.2
+      ],
+      [
+        -0.03,
+        0.228
+      ],
+      [
+        0.0,
+        0.251
+      ],
+      [
+        0.024,
+        0.246
+      ],
+      [
+        0.05,
+        0.2
+      ],
+      [
+        0.065,
+        0.179
+      ],
+      [
+        0.08,
+        0.136
+      ],
+      [
+        0.095,
+        0.111
+      ],
+      [
+        0.12,
+        0.0
+      ]
+    ]
   }
 }

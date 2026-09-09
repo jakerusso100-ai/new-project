@@ -26,14 +26,15 @@ function lensShell(R,H,segs,scale,cx,cy,id){
   const g=new THREE.Group();
   const geo=new THREE.SphereGeometry(1,96,32,0,Math.PI*2,0,Math.PI/2); geo.rotateX(Math.PI/2); geo.scale(R,R,H);
   const glass=new THREE.MeshPhysicalMaterial({color:COL.glass,transmission:0.92,roughness:0.08,metalness:0,transparent:true,opacity:0.28,side:THREE.DoubleSide,thickness:0.02,depthWrite:false});
-  g.add(tag(meshAt(geo,glass,cx,cy,0),id,'glazing'));
+  if(!MESH_B64) g.add(tag(meshAt(geo,glass,cx,cy,0),id,'glazing')); // with the STL embedded its own glazing triangles are rendered transparent instead
   const ribMat=M({color:COL.rib,roughness:0.5,metalness:0.3});
-  for(let i=0;i<segs;i++){ const a=i/segs*Math.PI*2; const pts=[]; for(let k=0;k<=24;k++){ const t=k/24*Math.PI/2; pts.push(new THREE.Vector3(cx+Math.cos(a)*R*Math.cos(t), cy+Math.sin(a)*R*Math.cos(t), H*Math.sin(t))); }
+  const inset=0.009*scale; // ribs run just INSIDE the glazing so the exterior surface stays the STL's own
+  for(let i=0;i<segs;i++){ const a=i/segs*Math.PI*2; const pts=[]; for(let k=0;k<=24;k++){ const t=k/24*Math.PI/2; pts.push(new THREE.Vector3(cx+Math.cos(a)*(R-inset)*Math.cos(t), cy+Math.sin(a)*(R-inset)*Math.cos(t), (H-inset)*Math.sin(t))); }
     g.add(tag(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts),24,0.007*scale,8,false),ribMat),id,'structural rib')); }
-  for(const f of [0.45,0.75]){ const pts=[]; const zz=H*Math.sqrt(1-f*f); for(let k=0;k<=96;k++){ const a=k/96*Math.PI*2; pts.push(new THREE.Vector3(cx+Math.cos(a)*R*f,cy+Math.sin(a)*R*f,zz)); } g.add(tag(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts,true),96,0.004*scale,6,true),ribMat),id,'ring purlin')); }
-  g.add(tag(meshAt(new THREE.CylinderGeometry(0.2*R,0.2*R,0.012*scale,48).rotateX(Math.PI/2),M({color:COL.hull}),cx,cy,H-0.004*scale),id,'apex hub'));
-  g.add(tag(meshAt(new THREE.TorusGeometry(R,0.012*scale,8,128),M({color:COL.hull}),cx,cy,0),id,'rim'));
-  for(let i=0;i<24;i++){ const a=i/24*Math.PI*2+0.05; g.add(tag(meshAt(new THREE.BoxGeometry(0.03*scale,0.08*scale,0.008*scale),EM(COL.cyan,1.2),cx+Math.cos(a)*R*1.005,cy+Math.sin(a)*R*1.005,0.01*scale,a),id,'rim light')); }
+  for(const f of [0.45,0.75]){ const pts=[]; const zz=(H-inset)*Math.sqrt(1-f*f); for(let k=0;k<=96;k++){ const a=k/96*Math.PI*2; pts.push(new THREE.Vector3(cx+Math.cos(a)*(R-inset)*f,cy+Math.sin(a)*(R-inset)*f,zz)); } g.add(tag(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts,true),96,0.004*scale,6,true),ribMat),id,'ring purlin')); }
+  if(!MESH_B64){ g.add(tag(meshAt(new THREE.CylinderGeometry(0.2*R,0.2*R,0.012*scale,48).rotateX(Math.PI/2),M({color:COL.hull}),cx,cy,H-0.004*scale),id,'apex hub'));
+  g.add(tag(meshAt(new THREE.TorusGeometry(R,0.012*scale,8,128),M({color:COL.hull}),cx,cy,0),id,'rim')); }
+  for(let i=0;i<(MESH_B64?0:24);i++){ const a=i/24*Math.PI*2+0.05; g.add(tag(meshAt(new THREE.BoxGeometry(0.03*scale,0.08*scale,0.008*scale),EM(COL.cyan,1.2),cx+Math.cos(a)*R*1.005,cy+Math.sin(a)*R*1.005,0.01*scale,a),id,'rim light')); }
   return g;
 }
 cat.glass.add(lensShell(1.0,0.292,8,1,0,0,'DOME-P'));
@@ -189,13 +190,12 @@ DB.nodes.filter(n=>n.id.startsWith('ARM-')).forEach(n=>{ const pts=n.geometry.po
   // upper gallery at +0.05: floor slab on columns, hangar bays along the flanks
   put(new THREE.BoxGeometry(len,0.3,0.003),M({color:COL.deck,transparent:true,opacity:0.75}),r0+len/2,0,0.05,'upper gallery floor');
   for(let k=0;k<10;k++) for(const sg of [1,-1]) put(new THREE.CylinderGeometry(0.005,0.005,0.046,10).rotateX(Math.PI/2),M({color:0x9aa0aa}),r0+len*(k+0.5)/10,sg*0.13,0.027,'gallery column');
-  for(let k=0;k<6;k++) for(const sg of [1,-1]){ put(new THREE.BoxGeometry(0.04,0.05,0.03),M({color:0xd8d2b6}),r0+len*(k+0.5)/6,sg*0.19,0.053,'hangar bay'); put(new THREE.BoxGeometry(0.03,0.002,0.02),EM(0xffd060,0.8),r0+len*(k+0.5)/6,sg*0.164,0.062,'bay door light'); }
+  for(let k=0;k<6;k++) for(const sg of [1,-1]){ put(new THREE.BoxGeometry(0.04,0.045,0.02),M({color:0xd8d2b6}),r0+len*(k+0.5)/6,sg*0.105,0.053,'hangar bay'); put(new THREE.BoxGeometry(0.03,0.002,0.014),EM(0xffd060,0.8),r0+len*(k+0.5)/6,sg*0.081,0.06,'bay door light'); }
   // service deck at -0.05
   put(new THREE.BoxGeometry(len,0.3,0.003),M({color:COL.deck,transparent:true,opacity:0.6}),r0+len/2,0,-0.05,'service deck');
   for(let k=0;k<8;k++) put(new THREE.CylinderGeometry(0.012,0.012,0.04,12).rotateX(Math.PI/2),M({color:0x7a8a7a}),r0+len*(k+0.5)/8,0.1,-0.03,'service tank');
 });
-// arms: deck road + edge lights
-DB.nodes.filter(n=>n.id.startsWith('ARM-')).forEach(n=>{ const pts=n.geometry.points; const a=Math.atan2(pts[0][1],pts[0][0]); const r0=Math.hypot(pts[0][0],pts[0][1]), r1=Math.hypot(pts[2][0],pts[2][1]); const len=r1-r0; cat.streets.add(tag(meshAt(new THREE.BoxGeometry(len,0.05,0.003),roadMat,Math.cos(a)*(r0+len/2),Math.sin(a)*(r0+len/2),0.102,a),n.id,'arm deck road')); for(const sg of [1,-1]) cat.streets.add(tag(meshAt(new THREE.BoxGeometry(len,0.006,0.004),EM(COL.cyan,0.8),Math.cos(a)*(r0+len/2)-Math.sin(a)*sg*0.27,Math.sin(a)*(r0+len/2)+Math.cos(a)*sg*0.27,0.0,a),n.id,'arm edge light')); });
+// arms: exterior surface is the STL's own (no deck road, no edge lights added outside the mesh)
 
 // ---------------- UI + visibility
 const panel=document.createElement('div'); panel.innerHTML='<h2>Interior (generated)</h2>'+Object.keys(cat).map(k=>`<label class="row"><input type="checkbox" data-int="${k}" ${k==='labels'?'':'checked'}> ${k}</label>`).join('')+'<div class="sub">Generated fill inherits the placement class of its district; the inspector labels it GENERATED. See INTERIOR.md.</div>';

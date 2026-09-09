@@ -16,6 +16,7 @@ The research phase is complete. Every major reconstruction-relevant category is 
 
 Start with:
 
+- `INTERIOR.md` — what the viewer generates inside the shell (glass, decks, city blocks, landmarks, transit, underground) and the evidence for each
 - `SCALE_1_TO_1.md` — the 1:1 scale chain (R = 2,000 m, provisional) and the interior level stack
 - `reference_models/STL_MEASUREMENTS.md` — cross-section measurements of the owner-supplied exterior STL (file itself not committed)
 - `SCHEMATIC.md` — **master schematic** (coordinate system, massing, vertical stack, districts, drawings, 3D pipeline)

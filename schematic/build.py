@@ -529,6 +529,8 @@ def build_viewer(mesh_path=None):
     with open(tpl_path, encoding="utf-8") as f:
         tpl = f.read()
     html = tpl.replace("/*__SCHEMATIC_JSON__*/null", json.dumps(DB, separators=(",", ":")))
+    with open(os.path.join(VIEWER_DIR, "interior.js"), encoding="utf-8") as f:
+        html = html.replace("/*__INTERIOR_JS__*/", f.read())
     with open(os.path.join(VIEWER_DIR, "index.html"), "w", encoding="utf-8") as f:
         f.write(html.replace("/*__MESH_B64__*/null", "null"))
     print("wrote viewer/index.html")

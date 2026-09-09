@@ -12,7 +12,7 @@
 | `schematic/build.py` | Validates the JSON and regenerates every derived file. `python schematic/build.py` |
 | `schematic/drawings/*.svg` | Eight-drawing set: `TOP_MASTER`, `DISTRICT_MAP`, `TRANSIT_MASTER`, `SIDE_MASTER`, `FRONT_MASTER`, `SECTION_A`, `SECTION_B`, `STATE_COMPARISON`. |
 | `schematic/NODE_REGISTER.md` | Generated table of all nodes plus per-node rationale/unknowns/sub-features. |
-| `schematic/viewer/index.html` | Interactive 3D block-out (Three.js). State selector, layer and placement filters, click-to-inspect evidence. Open directly in a browser. |
+| `schematic/viewer/index.html` | Interactive 3D model (Three.js): block-out nodes plus the generated interior — glazing with ribs, deck plates and sub-levels, procedural city blocks per district under the glass envelope, landmark detail, transit, underground (`INTERIOR.md`). State selector, layer/placement/interior filters, click-to-inspect evidence, metres readout. `build.py --mesh file.stl` also writes `index_mesh.html` with the reference STL embedded (local only). |
 | `reference_images/IMAGE_SLOTS.md` | Generated checklist of the frames each node is waiting for. |
 | `reference_images/README.md` | Capture naming, camera-match log format, priority order. |
 
@@ -202,7 +202,7 @@ All drawings share the grid (0.25 U rings, 30° spokes) and the legend. Re-gener
 
 ## 13. From schematic to interactive 3D model — the pipeline
 
-The JSON is already a scene description. The viewer proves it: `schematic/viewer/index.html` builds meshes straight from the node geometry types (`hemisphere`, `cylinder`, `box`, `ring`, `sector`, `path`, `cavern`, `compound`, arrays…). The 3D model is the same data with real geometry swapped in per node.
+The JSON is already a scene description, and the viewer now renders it as a full model: the interior generator (`schematic/viewer/interior.js`, documented in `INTERIOR.md`) builds glazing, decks, streets, procedural blocks, landmark detail, transit and the underground from the districts, height envelope and deck stack. The viewer proves it: `schematic/viewer/index.html` builds meshes straight from the node geometry types (`hemisphere`, `cylinder`, `box`, `ring`, `sector`, `path`, `cavern`, `compound`, arrays…). The 3D model is the same data with real geometry swapped in per node.
 
 Recommended build order once images start landing:
 

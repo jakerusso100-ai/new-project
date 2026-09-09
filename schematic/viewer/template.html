@@ -209,6 +209,7 @@ function castAt(e){ const r=canvas.getBoundingClientRect(); mouse.x=((e.clientX-
 function hoverAt(e){ const id=castAt(e); if(id){ hoverEl.style.display='block'; hoverEl.style.left=(e.clientX-canvas.getBoundingClientRect().left+12)+'px'; hoverEl.style.top=(e.clientY-canvas.getBoundingClientRect().top+12)+'px'; hoverEl.textContent=id; canvas.style.cursor='pointer'; } else { hoverEl.style.display='none'; canvas.style.cursor='default'; } }
 function pick(e){ const id=castAt(e); if(id) selectNode(id); }
 function selectNode(id){
+  if(!DB.nodes.find(k=>k.id===id)){ document.getElementById('info').innerHTML=`<h2>Inspector</h2><h3>${id}</h3><p><span class="tag">GENERATED</span> ${window.__lastGenerated||''}</p><p class="muted">Procedural fill generated from the district sectors, the height envelope and the deck stack. It inherits the placement class of the district it sits in (PROVISIONAL/PLACEHOLDER) and is not evidence for any specific building.</p>`; return; }
   if(selected&&groups[selected]) groups[selected].traverse(o=>{ if(o.material&&o.userData.orig!==undefined){ o.material.emissive&&o.material.emissive.setHex(0); } });
   selected=id; const n=DB.nodes.find(k=>k.id===id); const G=groups[id];
   if(G) G.traverse(o=>{ if(o.material&&o.material.emissive){ o.userData.orig=1; o.material.emissive.setHex(0x334455); } });
@@ -218,7 +219,7 @@ function selectNode(id){
   document.getElementById('info').innerHTML=`
     <h2>Inspector</h2>
     <h3>${n.id}</h3><div>${n.name}</div>
-    <p><span class="tag ${n.existence[0]}">existence ${n.existence}</span><span class="tag ${n.placement}">${n.placement}</span><span class="tag">${n.kind}</span><span class="tag">${n.layer}</span>${n.continuity?`<span class="tag">${n.continuity}</span>`:''}</p>
+    <p>${window.__lastGenerated?`<span class="tag">GENERATED: ${window.__lastGenerated}</span>`:''}<span class="tag ${n.existence[0]}">existence ${n.existence}</span><span class="tag ${n.placement}">${n.placement}</span><span class="tag">${n.kind}</span><span class="tag">${n.layer}</span>${n.continuity?`<span class="tag">${n.continuity}</span>`:''}</p>
     <p class="muted">Position (U): ${n.position?n.position.map(v=>v.toFixed(3)).join(', '):'—'}${(n.position&&DB.units.absolute_conversion&&document.getElementById('metres').checked)?` · (${n.position.map(v=>Math.round(v*DB.units.absolute_conversion)).join(', ')} m)`:''}${n.height_limit_m?` · height limit under glass ${n.height_limit_m} m`:''}${n.azimuth!==undefined?` · az ${n.azimuth}°`:''}${n.parent?` · parent ${n.parent}`:''}</p>
     <p class="muted">States: ${n.states.join(', ')||'—'}<br>Bands: ${bands.join('; ')||'—'}</p>
     <h2>Placement rationale</h2><p>${n.rationale}</p>
@@ -230,6 +231,8 @@ function selectNode(id){
   if(G&&n.position){ orbit.target.set(n.position[0],n.position[1],n.position[2]); applyCam(); }
 }
 
+// ---------------------------------------------------------------- interior generator (inlined from interior.js at build time)
+/*__INTERIOR_JS__*/
 // ---------------------------------------------------------------- loop
 resize(); applyCam();
 (function loop(){ requestAnimationFrame(loop); if(canvas.width!==canvas.clientWidth*renderer.getPixelRatio()) resize(); renderer.render(scene,camera); })();

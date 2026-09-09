@@ -5235,5 +5235,20 @@
         ]
       }
     ]
+  },
+  "procedural": {
+    "seed": 1337,
+    "note": "Parameters for schematic/viewer/interior.js. Generated fill is not evidence; see INTERIOR.md.",
+    "families": {
+      "DIST-CIVIC-CORE": "towers, 35–90% of the glass envelope",
+      "DIST-COMMERCIAL-RING": "mixed mid/high-rise 25–60%",
+      "DIST-RICK-RESIDENTIAL": "rounded low/mid-rise 10–30% with trees",
+      "DIST-EAST-SANCHEZ-HEIGHTS": "mid/high-rise 20–50%",
+      "DIST-INDUSTRIAL": "large low sheds 6–16% with stacks",
+      "DIST-MORTYTOWN": "dense low-rise 30–80 m",
+      "DIST-AGRICULTURAL": "no buildings: fields, water, trees, farmhouse",
+      "DIST-CONSTRUCTION": "mid-rise with scaffolding (DS-02/03)",
+      "pods": "generic mid-rise; DOME-MB uses the Mortytown family"
+    }
   }
 }

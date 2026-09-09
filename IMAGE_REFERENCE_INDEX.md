@@ -1,6 +1,6 @@
 # Citadel Image Reference Index
 
-This is the master visual-reference register. The repository records where a reference comes from and what it proves; it does not mirror complete copyrighted galleries or comic pages.
+This is the master visual-reference register. The repository records where a reference comes from and what it proves. The project also maintains a GitHub-viewable gallery of gathered reference images at `reference_images/CITADEL_IMAGE_GALLERY.md`.
 
 ## Series references
 
@@ -14,6 +14,19 @@ This is the master visual-reference register. The repository records where a ref
 | S06 | JuRicksic Mort | Later continuity/background references | continuity validation | A/B |
 | S07 | Unmortricken | Citadel flashback / Morty Agency context | landmarks, continuity | A |
 | S08 | The Rick, The Mort & The Ugly | Ruins and Boss Hog Rick's attempted New Citadel reconstruction | New Citadel | A |
+
+## GitHub image gallery
+
+**Primary gallery:** `reference_images/CITADEL_IMAGE_GALLERY.md`
+
+The gallery currently embeds gathered visual references for:
+
+1. Citadel arrival/interior city architecture.
+2. Ricklantis dense urban streetscape.
+3. Waste Disposal Plant / Wishing Portal area.
+4. Council chamber / Rickmurai Jack context.
+
+Images are embedded from their original external hosts rather than rehosted as copied copyrighted files. Source attribution and reconstruction-use notes are included for each image.
 
 ## Visual extraction matrix
 

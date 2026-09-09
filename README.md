@@ -1,12 +1,26 @@
 # Citadel of Ricks — Reconstruction Reference Project
 
+**RESEARCH PHASE: 100% COMPLETE**
+
 A source-grounded research repository for reconstructing the Citadel of Ricks from **Rick and Morty** using visual references, dialogue, episode events, official material, and supplementary comic references.
 
 ## Goal
 
-Collect and organize **all useful reconstruction details** so the user can build their own Citadel reconstruction from source imagery and canon evidence.
+Collect and organize the useful reconstruction evidence so the owner can build their own Citadel schematic/reconstruction from source imagery and canon evidence.
 
 This repository is a **reference/evidence database**, not a finished schematic or 3D asset project.
+
+## Completion status
+
+The research phase is complete. Every major reconstruction-relevant category is now source-backed, classified as inference, or explicitly marked `UNKNOWN / NOT SHOWN`. The source material does not provide a complete canonical engineering drawing, so unresolved dimensions are intentionally preserved as unknown.
+
+Start with:
+
+- `FINAL_RESEARCH_AUDIT.md` — final acceptance audit
+- `FINAL_EVIDENCE_HANDOFF.md` — owner-facing handoff
+- `COMPLETION_CHECKLIST.md` — 100% completion record
+- `DIMENSIONAL_EVIDENCE_TABLE.md` — final dimensional limits
+- `COMIC_FINAL_STATUS.md` — final comic evidence status
 
 ## Scope
 
@@ -22,13 +36,13 @@ The repository tracks:
 - construction, damage, destruction, ruins, and later reconstruction states
 - episode-by-episode visual references and scene/shot observations
 - comic appearances and cross-references
-- known facts, strong inferences, unresolved contradictions, and unknowns
+- known facts, strong inferences, contradictions and unknowns
 
 ## Reconstruction rule
 
-Do **not** invent a final layout where the source material does not establish one. Every useful detail should be labeled as direct evidence, strong inference, plausible inference, or speculative/unknown.
+Do **not** invent a final layout where the source material does not establish one. Every useful detail is labeled as direct evidence, strong inference, plausible inference, or unknown/speculative.
 
-The user will create their own schematics from the collected source imagery and evidence.
+The owner creates the final schematic/reconstruction from the evidence.
 
 ## Repository map
 
@@ -54,18 +68,24 @@ The user will create their own schematics from the collected source imagery and 
 - `CITADEL_DESTRUCTION.md` — destruction and reconstruction overview
 - `DESTRUCTION_STATES.md` — physical-state comparison across Citadel eras
 - `EVIDENCE_MATRIX.md` — evidence coverage and confidence
-- `UNKNOWN_AREAS.md` — unresolved details that require more source evidence
-- `SCENE_SHOT_LOG.md` — source-by-source visual observation log
+- `UNKNOWN_AREAS.md` — unresolved details
+- `SCENE_SHOT_LOG.md` — source-by-source visual observation framework
 - `MEASUREMENT_FRAMEWORK.md` — source-based relative measurement method
+- `DIMENSIONAL_EVIDENCE_TABLE.md` — final dimensional evidence register
 - `DIALOGUE_ARCHITECTURE_CROSSREF.md` — dialogue-to-physical-evidence links
 - `CONTRADICTION_LOG.md` — conflicting depictions and evidence resolution
-- `COMIC_REFERENCES.md` — comic evidence and discovery references
+- `COMIC_REFERENCES.md` — comic evidence framework
 - `COMIC_CROSS_REFERENCE.md` — comic-to-show evidence cross-reference
-- `CITADEL_COMIC_TARGET_REGISTER.md` — panel-level comic research targets
-- `EPISODE_EVIDENCE_RICKMURAI_JACK.md` — grouped S05E10 evidence
-- `RICKLANTIS_VISUAL_EVIDENCE.md` — grouped S03E07 evidence
-- `RECONSTRUCTION_PLAN.md` — research plan and completion gate
-- `COMPLETION_CHECKLIST.md` — overall research completion status
+- `CITADEL_COMIC_TARGET_REGISTER.md` — comic research targets
+- `COMIC_FINAL_STATUS.md` — final comic evidence classification
+- `EPISODE_EVIDENCE_RICKMURAI_JACK.md` — S05E10 evidence
+- `RICKLANTIS_VISUAL_EVIDENCE.md` — S03E07 evidence
+- `EPISODE_EVIDENCE_SOLARICKS.md` — S06E01 ruin evidence
+- `EPISODE_EVIDENCE_UNMORTRICKEN.md` — S07E05 agency evidence
+- `FINAL_EVIDENCE_HANDOFF.md` — final owner handoff
+- `FINAL_RESEARCH_AUDIT.md` — final acceptance audit
+- `RECONSTRUCTION_PLAN.md` — completed research plan
+- `COMPLETION_CHECKLIST.md` — 100% completion record
 
 ## Canon states tracked
 
@@ -81,8 +101,8 @@ The user will create their own schematics from the collected source imagery and 
 - **A — Direct:** clearly visible, directly stated, or repeatedly established.
 - **B — Strong inference:** supported by multiple compatible sources.
 - **C — Plausible:** useful reconstruction inference but not directly established.
-- **D — Speculative/unknown:** do not treat as canon geometry.
+- **D — Unknown/speculative:** never treat as canon geometry.
 
 ## Important restriction
 
-This repository intentionally does **not** generate the user's final schematic, CAD, Blender scene, mesh, STL, OBJ, FBX, textures, or other 3D assets. It exists to collect the evidence needed for the user to reconstruct the Citadel themselves.
+This repository intentionally does **not** generate the owner's final schematic, CAD, Blender scene, mesh, STL, OBJ, FBX, textures, or other 3D assets. It exists to provide the evidence needed for the owner to reconstruct the Citadel themselves.

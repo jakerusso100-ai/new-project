@@ -1,49 +1,23 @@
-# 3D Model Specification
+# Model Specification — Archived / Out of Scope
 
-## Master coordinate system
+> **Current project instruction:** this phase is source research/documentation only. The user creates the schematic/reconstruction. No assistant-created 3D model or 3D asset is part of the current scope.
 
-- Right-handed coordinates.
-- Z = primary Citadel vertical axis.
-- Origin = center of the primary dome.
-- Use normalized units until visual ratios stabilize.
-- Maintain a single master scale variable for later conversion to Blender/CAD/game-engine units.
+The former contents of this file described coordinate systems, geometry layers, assets, deliverables and validation for a 3D model. Those tasks are intentionally deferred and are not active research requirements.
 
-## Geometry layers
+## Current replacement documents
 
-1. Global structural shell
-2. Central and secondary domes
-3. Primary streets/transit
-4. District blocks
-5. Landmark buildings
-6. Interior landscaping/plazas
-7. Props/signage
-8. Destruction/reconstruction variants
+- `SCENE_SHOT_LOG.md` — individual source-view evidence.
+- `MEASUREMENT_FRAMEWORK.md` — relative/source-based measurements.
+- `CONTRADICTION_LOG.md` — conflicting evidence and continuity issues.
+- `DIALOGUE_ARCHITECTURE_CROSSREF.md` — physical facts established by dialogue.
+- `UNKNOWN_AREAS.md` — unresolved geometry.
+- `COMPLETION_CHECKLIST.md` — research completion gate.
 
-## Asset organization
+## Scope status
 
-Each asset should carry metadata:
-
-- `asset_id`
-- `district`
-- `source_refs`
-- `state`
-- `confidence`
-- `canonical_or_inferred`
-- `revision`
-
-## Required deliverables
-
-- Exterior hero model
-- Full-city model
-- Interior cutaway
-- Top-down schematic
-- Vertical section
-- Infrastructure cutaway
-- Original Citadel state
-- Rebuilt Citadel state
-- Destroyed state
-- New Citadel construction state
-
-## Validation
-
-A model is not accepted because it merely looks plausible. It must survive camera-matching against multiple independent references.
+- 3D modeling: **OUT OF SCOPE**
+- CAD/Blender generation: **OUT OF SCOPE**
+- Mesh/STL/OBJ/FBX generation: **OUT OF SCOPE**
+- Texture/material generation: **OUT OF SCOPE**
+- Render/validation scene generation: **OUT OF SCOPE**
+- Source-grounded Citadel research: **IN SCOPE**

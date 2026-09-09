@@ -91,11 +91,11 @@ const key = new THREE.DirectionalLight(0xffffff, 0.8); key.position.set(2,-3,4);
 const fill = new THREE.DirectionalLight(0x88aaff, 0.3); fill.position.set(-3,2,1); scene.add(fill);
 
 // grid + axes on the ground plane (Z-up)
-const grid = new THREE.GridHelper(4, 40, 0x243040, 0x161d28); grid.rotation.x = Math.PI/2; scene.add(grid);
+const grid = new THREE.GridHelper(7, 70, 0x243040, 0x161d28); grid.rotation.x = Math.PI/2; scene.add(grid);
 const axes = new THREE.AxesHelper(1.2); scene.add(axes);
 
 // ---------------------------------------------------------------- orbit (Z-up)
-const orbit = { target:new THREE.Vector3(0,0,-0.1), r:3.4, theta:Math.PI/4, phi:Math.PI/3.2 };
+const orbit = { target:new THREE.Vector3(0,0,-0.1), r:5.6, theta:Math.PI/4, phi:Math.PI/3.2 };
 function applyCam(){
   const s = Math.sin(orbit.phi);
   camera.position.set(orbit.target.x + orbit.r*s*Math.cos(orbit.theta), orbit.target.y + orbit.r*s*Math.sin(orbit.theta), orbit.target.z + orbit.r*Math.cos(orbit.phi));
@@ -115,11 +115,11 @@ canvas.addEventListener('pointerup', e=>{ if(drag && !drag.moved) pick(e); drag=
 canvas.addEventListener('wheel', e=>{ e.preventDefault(); orbit.r = Math.min(12, Math.max(0.3, orbit.r*Math.exp(e.deltaY*0.001))); applyCam(); }, {passive:false});
 document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{
   const v=b.dataset.view; orbit.target.set(0,0,-0.1);
-  if(v==='iso'){orbit.theta=Math.PI/4;orbit.phi=Math.PI/3.2;orbit.r=3.4;}
-  if(v==='top'){orbit.theta=-Math.PI/2;orbit.phi=0.05;orbit.r=3.6;}
-  if(v==='side'){orbit.theta=-Math.PI/2;orbit.phi=Math.PI/2;orbit.r=3.6;}
-  if(v==='front'){orbit.theta=0;orbit.phi=Math.PI/2;orbit.r=3.6;}
-  if(v==='under'){orbit.theta=Math.PI/4;orbit.phi=Math.PI*0.72;orbit.r=2.6;orbit.target.set(0,0,-0.35); document.getElementById('cut').checked=true; refreshVisibility();}
+  if(v==='iso'){orbit.theta=Math.PI/4;orbit.phi=Math.PI/3.2;orbit.r=5.6;}
+  if(v==='top'){orbit.theta=-Math.PI/2;orbit.phi=0.05;orbit.r=6.2;}
+  if(v==='side'){orbit.theta=-Math.PI/2;orbit.phi=Math.PI/2;orbit.r=6.2;}
+  if(v==='front'){orbit.theta=0;orbit.phi=Math.PI/2;orbit.r=6.2;}
+  if(v==='under'){orbit.theta=Math.PI/4;orbit.phi=Math.PI*0.72;orbit.r=2.6;orbit.target.set(0,0,-0.7); document.getElementById('cut').checked=true; refreshVisibility();}
   applyCam();
 });
 function resize(){ const w=canvas.clientWidth||800, h=canvas.clientHeight||600; renderer.setSize(w,h,false); camera.aspect=w/h; camera.updateProjectionMatrix(); }
@@ -128,6 +128,7 @@ addEventListener('resize', resize);
 // ---------------------------------------------------------------- geometry builders (Z-up)
 function mat(n, extra){ const o = Object.assign({ color:KIND_COLOR[n.kind]||0x999999, transparent:true, opacity:PLACE_OPACITY[n.placement], roughness:0.7, metalness:0.1, side:THREE.DoubleSide }, extra||{}); return new THREE.MeshStandardMaterial(o); }
 function wire(n){ return new THREE.MeshBasicMaterial({ color:KIND_COLOR[n.kind]||0x999999, wireframe:true, transparent:true, opacity: n.placement==='PLACEHOLDER'?0.5:0.25 }); }
+function cap(r,hh,lo){ const Rs=(r*r+hh*hh)/(2*hh); const th=Math.acos((Rs-hh)/Rs); const g=new THREE.SphereGeometry(Rs,lo?24:64,lo?8:24,0,Math.PI*2,0,th); g.rotateX(Math.PI/2); g.translate(0,0,-(Rs-hh)); return g; }
 function hemi(r,lo){ const g=new THREE.SphereGeometry(r,lo?20:48,lo?10:24,0,Math.PI*2,0,Math.PI/2); g.rotateX(Math.PI/2); return g; }
 function cyl(rt, rb, zt, zb){ const g=new THREE.CylinderGeometry(rt, rb, zt-zb, 48, 1, false); g.rotateX(Math.PI/2); g.translate(0,0,(zt+zb)/2); return g; }
 function box(sx,sy,sz){ const g=new THREE.BoxGeometry(sx,sy,sz); g.translate(0,0,sz/2); return g; }
@@ -140,6 +141,7 @@ function buildNode(n){
   const M=mat(n), W=wire(n);
   switch(g.type){
     case 'hemisphere': { const isDome=n.kind==='dome'; const m=add(G, hemi(g.radius), isDome?mat(n,{opacity:0.12}):M, x,y,z); if(isDome) add(G, hemi(g.radius,true), new THREE.MeshBasicMaterial({color:KIND_COLOR.dome, wireframe:true, transparent:true, opacity:0.18}), x,y,z); if(g.body_depth) add(G, cyl(g.radius,g.radius*0.9,0,-g.body_depth), mat(n,{color:0x7a7f8a,opacity:0.6}), x,y,z); break; }
+    case 'cap': { const isDome=n.kind==='dome'; add(G, cap(g.radius,g.height), isDome?mat(n,{opacity:0.14}):M, x,y,g.z_base); if(isDome) add(G, cap(g.radius,g.height,true), new THREE.MeshBasicMaterial({color:KIND_COLOR.dome, wireframe:true, transparent:true, opacity:0.2}), x,y,g.z_base); if(g.drum_bottom!==undefined) add(G, cyl(g.radius,g.radius*0.96,g.z_base,g.drum_bottom), mat(n,{color:0x9aa0aa,opacity:0.7}), x,y,0); break; }
     case 'cylinder': { const isShell=n.kind==='shell'; add(G, cyl(g.radius_top,g.radius_bottom,g.z_top,g.z_bottom), isShell?mat(n,{opacity:0.35}):mat(n,{opacity:0.3}), x,y,0); if(!isShell) add(G, cyl(g.radius_top,g.radius_bottom,g.z_top,g.z_bottom), W, x,y,0); break; }
     case 'disc': { add(G, new THREE.CircleGeometry(g.radius,64), M, x,y,(g.z!==undefined?g.z:z)+0.001); if(g.aperture_radius){ const [ax,ay]=g.aperture_offset||[0,0]; add(G, new THREE.RingGeometry(g.aperture_radius*0.9,g.aperture_radius*1.3,32), mat(n,{color:0xff5c5c,opacity:0.9}), x+ax,y+ay,(g.z!==undefined?g.z:z)-0.002); } break; }
     case 'ring': add(G, new THREE.TorusGeometry(g.radius, g.width/2, 8, 96), M, x,y,(g.z||0)); break;

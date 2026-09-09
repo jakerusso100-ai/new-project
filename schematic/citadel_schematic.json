@@ -1,9 +1,9 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.3.0",
   "title": "Citadel of Ricks — Master Schematic Database",
   "generated_from": "Evidence registers in this repository (see SCHEMATIC.md for derivation rules)",
   "units": {
-    "U": "1 U = radius of the principal transparent dome (DOME-P). All lengths are dimensionless multiples of U.",
+    "U": "1 U = radius of the central drum / base radius of the principal dome cap (DOME-P). All lengths are dimensionless multiples of U.",
     "absolute_conversion": null,
     "absolute_conversion_note": "Leave null until a scale anchor is justified from reference images (see scale_anchors). When set, absolute_metres = value_in_U * absolute_conversion."
   },
@@ -33,721 +33,4289 @@
     "L7": "Underground machinery, interfaces, destruction and reconstruction variants"
   },
   "vertical_bands": [
-    {"id": "V+3", "name": "Dome apex / upper shell", "z_min": 0.6, "z_max": 1.0, "note": "Interior of DOME-P above the hover band. Contents UNKNOWN / NOT SHOWN."},
-    {"id": "V+2", "name": "Hover / elevated circulation band", "z_min": 0.06, "z_max": 0.3, "note": "Flying taxis, private flying cars, elevated structures. Exact elevations UNKNOWN."},
-    {"id": "V+1", "name": "Building volume", "z_min": 0.0, "z_max": 0.6, "note": "Skyline. Tallest towers provisionally capped at 0.6 U so they fit under the dome; actual max height UNKNOWN."},
-    {"id": "V0",  "name": "Surface city ground plane", "z_min": 0.0, "z_max": 0.0, "note": "Streets, sidewalks, plazas, farm terrain."},
-    {"id": "V-1", "name": "Subsurface service", "z_min": -0.08, "z_max": -0.02, "note": "Sewers, manholes, utility conduits. Passages large enough for a person (S05E10)."},
-    {"id": "V-2", "name": "Portal-fluid production / cave base", "z_min": -0.3, "z_max": -0.12, "note": "Underground production with containers and a large central vat (S05E10)."},
-    {"id": "V-3", "name": "Dimensional Drive / launch chamber", "z_min": -0.45, "z_max": -0.25, "note": "Drive core, glass-domed control enclosure, Operation Phoenix vats, launch platforms and track."},
-    {"id": "V-4", "name": "Exit chute / hull underside", "z_min": -0.65, "z_max": -0.45, "note": "Spacecraft exit chute launches from the bottom of the Citadel (S05E10)."}
+    {
+      "id": "V+3",
+      "name": "Dome cap",
+      "z_min": 0.25,
+      "z_max": 0.55,
+      "note": "Shallow glazed cap over the drum (exterior #23). Tallest spires may reach into it."
+    },
+    {
+      "id": "V+2",
+      "name": "Hover / elevated circulation band",
+      "z_min": 0.06,
+      "z_max": 0.3,
+      "note": "Flying taxis, private flying cars, elevated tracks and walkways. Exact elevations UNKNOWN."
+    },
+    {
+      "id": "V+1",
+      "name": "Building volume (inside the drum)",
+      "z_min": 0.0,
+      "z_max": 0.55,
+      "note": "Skyline. The drum wall rises to 0.25 and the cap to 0.55; spires appear to reach near the cap (#02, #12)."
+    },
+    {
+      "id": "V0",
+      "name": "Surface city ground plane",
+      "z_min": 0.0,
+      "z_max": 0.0,
+      "note": "Streets, sidewalks, plaza, farm terrain. Deck level of the radial arms."
+    },
+    {
+      "id": "V-1",
+      "name": "Subsurface service (drum lower deck)",
+      "z_min": -0.08,
+      "z_max": -0.02,
+      "note": "Sewers, manholes, utility conduits, Mortyburg interface underside."
+    },
+    {
+      "id": "V-2",
+      "name": "Portal-fluid production / cave base",
+      "z_min": -0.28,
+      "z_max": -0.1,
+      "note": "Underground production with containers and a large central vat (S05E10). Bottom of the drum / top of the keel."
+    },
+    {
+      "id": "V-3",
+      "name": "Dimensional Drive / launch chamber (keel)",
+      "z_min": -0.85,
+      "z_max": -0.35,
+      "note": "Drive void with suspended walkways, control enclosure, vats, launch chamber. Inside the hanging keel; the keel's cyan energy strip (#23) is on this band."
+    },
+    {
+      "id": "V-4",
+      "name": "Exit chute / keel spike",
+      "z_min": -1.6,
+      "z_max": -0.85,
+      "note": "Chute to the keel tip. Spacecraft launches from the bottom point (S05E10)."
+    }
   ],
   "states": [
-    {"id": "DS-01", "name": "Early / original Citadel", "sources": ["S01E10 Close Rick-Counters of the Rick Kind"]},
-    {"id": "DS-02", "name": "Post-Rickshank damage and repair", "sources": ["S03E01 The Rickshank Rickdemption"]},
-    {"id": "DS-03", "name": "Rebuilt / Ricklantis-era Citadel", "sources": ["S03E07 The Ricklantis Mixup"]},
-    {"id": "DS-04", "name": "Late / President Morty era", "sources": ["S05E10 Rickmurai Jack", "S07E05 Unmortricken (flashback)"]},
-    {"id": "DS-05", "name": "Rickmurai destruction sequence", "sources": ["S05E10 Rickmurai Jack"]},
-    {"id": "DS-06", "name": "Solaricks ruins", "sources": ["S06E01 Solaricks"]},
-    {"id": "DS-07", "name": "New Citadel attempt", "sources": ["S08E03 The Rick, The Mort & The Ugly"]},
-    {"id": "DS-08", "name": "New Citadel destroyed", "sources": ["S08E03 The Rick, The Mort & The Ugly"]}
+    {
+      "id": "DS-01",
+      "name": "Early / original Citadel",
+      "sources": [
+        "S01E10 Close Rick-Counters of the Rick Kind"
+      ]
+    },
+    {
+      "id": "DS-02",
+      "name": "Post-Rickshank damage and repair",
+      "sources": [
+        "S03E01 The Rickshank Rickdemption"
+      ]
+    },
+    {
+      "id": "DS-03",
+      "name": "Rebuilt / Ricklantis-era Citadel",
+      "sources": [
+        "S03E07 The Ricklantis Mixup"
+      ]
+    },
+    {
+      "id": "DS-04",
+      "name": "Late / President Morty era",
+      "sources": [
+        "S05E10 Rickmurai Jack",
+        "S07E05 Unmortricken (flashback)"
+      ]
+    },
+    {
+      "id": "DS-05",
+      "name": "Rickmurai destruction sequence",
+      "sources": [
+        "S05E10 Rickmurai Jack"
+      ]
+    },
+    {
+      "id": "DS-06",
+      "name": "Solaricks ruins",
+      "sources": [
+        "S06E01 Solaricks"
+      ]
+    },
+    {
+      "id": "DS-07",
+      "name": "New Citadel attempt",
+      "sources": [
+        "S08E03 The Rick, The Mort & The Ugly"
+      ]
+    },
+    {
+      "id": "DS-08",
+      "name": "New Citadel destroyed",
+      "sources": [
+        "S08E03 The Rick, The Mort & The Ugly"
+      ]
+    }
   ],
   "scale_anchors": [
-    {"id": "SA-01", "object": "Adult Rick standing height", "assumed_value_m": 1.85, "use": "Primary human-scale anchor for doors, sidewalks, storefronts, rail cars."},
-    {"id": "SA-02", "object": "Morty standing height", "assumed_value_m": 1.6, "use": "Secondary human anchor in Mortytown / Academy frames."},
-    {"id": "SA-03", "object": "Standard doorway height", "assumed_value_m": 2.1, "use": "Storefronts, Academy entrance, Morty Mart."},
-    {"id": "SA-04", "object": "Conventional car length", "assumed_value_m": 4.5, "use": "Road width, lane count, curb geometry (S03E07 street montage)."},
-    {"id": "SA-05", "object": "Police cruiser / hover taxi length", "assumed_value_m": null, "use": "Only after it is measured against SA-01 in the same frame."},
-    {"id": "SA-06", "object": "Commuter rail car length", "assumed_value_m": null, "use": "Station opening, Mortyburg interface width. Measure the car against seated Ricks first."},
-    {"id": "SA-07", "object": "Manhole diameter", "assumed_value_m": 0.6, "use": "Sewer access scale near the central plaza (S05E10)."}
+    {
+      "id": "SA-01",
+      "object": "Adult Rick standing height",
+      "assumed_value_m": 1.85,
+      "use": "Primary human-scale anchor for doors, sidewalks, storefronts, rail cars."
+    },
+    {
+      "id": "SA-02",
+      "object": "Morty standing height",
+      "assumed_value_m": 1.6,
+      "use": "Secondary human anchor in Mortytown / Academy frames."
+    },
+    {
+      "id": "SA-03",
+      "object": "Standard doorway height",
+      "assumed_value_m": 2.1,
+      "use": "Storefronts, Academy entrance, Morty Mart."
+    },
+    {
+      "id": "SA-04",
+      "object": "Conventional car length",
+      "assumed_value_m": 4.5,
+      "use": "Road width, lane count, curb geometry (S03E07 street montage)."
+    },
+    {
+      "id": "SA-05",
+      "object": "Police cruiser / hover taxi length",
+      "assumed_value_m": null,
+      "use": "Only after it is measured against SA-01 in the same frame."
+    },
+    {
+      "id": "SA-06",
+      "object": "Commuter rail car length",
+      "assumed_value_m": null,
+      "use": "Station opening, Mortyburg interface width. Measure the car against seated Ricks first."
+    },
+    {
+      "id": "SA-07",
+      "object": "Manhole diameter",
+      "assumed_value_m": 0.6,
+      "use": "Sewer access scale near the central plaza (S05E10)."
+    }
   ],
   "nodes": [
     {
-      "id": "SHELL-LOWER-BODY", "name": "Lower metallic structural body", "kind": "shell", "layer": "L0", "band": ["V0","V-1","V-2","V-3","V-4"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-01","DS-02","DS-03","DS-04","DS-05"],
-      "geometry": {"type": "cylinder", "radius_top": 1.25, "radius_bottom": 0.9, "z_top": 0.0, "z_bottom": -0.65},
-      "position": [0, 0, 0],
-      "evidence": ["EXTERIOR.md", "SOURCE_INDEX.md (lower metallic structural plates)", "GEOMETRY_DATABASE.md G-002"],
-      "rationale": "Repeated exterior views show a lower metallic mass much larger than the upper city. Taper and depth are provisional envelope values chosen so all underground bands fit inside.",
-      "unknowns": ["absolute size", "taper profile", "plate segmentation", "docking/attachment structures"],
-      "required_shots": ["S01E10 exterior establishing", "S03E01 damaged exterior", "S05E10 tilting/explosion wide shot"],
-      "reference_images": []
+      "id": "SHELL-DRUM",
+      "name": "Central drum (city deck and wall)",
+      "kind": "shell",
+      "layer": "L0",
+      "band": [
+        "V+1",
+        "V0",
+        "V-1",
+        "V-2"
+      ],
+      "existence": "A",
+      "placement": "LOCKED",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "cylinder",
+        "radius_top": 1.0,
+        "radius_bottom": 1.0,
+        "z_top": 0.25,
+        "z_bottom": -0.28,
+        "features": [
+          "thick round deck",
+          "plated rim wall",
+          "arm roots at deck level",
+          "cyan rim lights"
+        ]
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)"
+      ],
+      "rationale": "Exterior #23 shows the city carried on a thick round drum whose rim wall rises above deck level and is capped by the glazed dome; the underside of the drum is where the keel and arms attach. Drum thickness (0.25 above deck, 0.28 below) is a ratio estimate from #23.",
+      "unknowns": [
+        "rim wall height",
+        "deck thickness",
+        "rim detailing"
+      ],
+      "required_shots": [
+        "S01E10 exterior",
+        "S05E10 wide shots"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)"
+      ]
     },
     {
-      "id": "SHELL-PLATES", "name": "Exterior structural plates", "kind": "shell", "layer": "L0", "band": ["V-1","V-2","V-3","V-4"],
-      "existence": "A", "placement": "PLACEHOLDER", "states": ["DS-01","DS-02","DS-03","DS-04","DS-05"], "parent": "SHELL-LOWER-BODY",
-      "geometry": {"type": "plate_array", "count": 12, "radius": 1.26, "z_top": -0.05, "z_bottom": -0.6},
-      "position": [0, 0, 0],
-      "evidence": ["SOURCE_INDEX.md (lower metallic structural plates)", "EXTERIOR.md checklist"],
-      "rationale": "Plates exist (A). Count of 12 is a modelling placeholder so the exterior reads as segmented; re-count from exterior frames.",
-      "unknowns": ["plate count", "plate size", "seams", "which plates carry airlocks"],
-      "required_shots": ["S01E10 exterior establishing", "S03E01 damaged exterior"],
-      "reference_images": []
+      "id": "SHELL-LOWER-BODY",
+      "name": "Hanging keel (lower structural body)",
+      "kind": "shell",
+      "layer": "L0",
+      "band": [
+        "V-2",
+        "V-3",
+        "V-4"
+      ],
+      "existence": "A",
+      "placement": "ANCHORED",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "cylinder",
+        "radius_top": 0.45,
+        "radius_bottom": 0.03,
+        "z_top": -0.28,
+        "z_bottom": -1.6,
+        "features": [
+          "faceted plated hull",
+          "cyan vertical energy strip (#23)",
+          "spike tip",
+          "houses the Drive stack"
+        ]
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)",
+        "EXTERIOR.md",
+        "SOURCE_INDEX.md (lower metallic structural plates)",
+        "GEOMETRY_DATABASE.md G-002"
+      ],
+      "rationale": "Founding hologram (gallery #04, S05E10) shows the lower body as an inverted cone/funnel under the central disc, ringed with concentric bands and tapering to a point at roughly one disc-radius depth. The v1 envelope (shallow tapered cylinder r 1.25->0.9, depth 0.65) is superseded. Apex depth and exact taper are ratio estimates from a single hologram frame. Exterior #23 confirms the hologram: a tall tapering keel hangs beneath the drum, faceted/plated, with a glowing cyan vertical energy strip down its face, ending in a spike. Keel top radius ≈ 0.45 R, depth ≈ 1.6 R below deck. Two independent sources → ANCHORED.",
+      "unknowns": [
+        "facet count",
+        "exact taper",
+        "whether the energy strip is the Drive exhaust or lighting"
+      ],
+      "required_shots": [
+        "S01E10 exterior establishing",
+        "S03E01 damaged exterior",
+        "S05E10 tilting/explosion wide shot"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)"
+      ]
     },
     {
-      "id": "SHELL-UNDERSIDE", "name": "Hull underside with exit aperture", "kind": "shell", "layer": "L0", "band": ["V-4"],
-      "existence": "B", "placement": "ANCHORED", "states": ["DS-01","DS-02","DS-03","DS-04","DS-05"], "parent": "SHELL-LOWER-BODY",
-      "geometry": {"type": "disc", "radius": 0.9, "z": -0.65, "aperture_radius": 0.05, "aperture_offset": [0, -0.2]},
-      "position": [0, 0, -0.65],
-      "evidence": ["EPISODE_EVIDENCE_RICKMURAI_JACK.md (spacecraft launched from the bottom of the Citadel)"],
-      "rationale": "The exit chute launches from the bottom; therefore the hull underside has an aperture on the chute axis (UG-EXIT-CHUTE).",
-      "unknowns": ["aperture position", "other underside features"],
-      "required_shots": ["S05E10 spacecraft exit shot", "S06E01 ruin exterior approach"],
-      "reference_images": []
+      "id": "SHELL-PLATES",
+      "name": "Drum rim plating",
+      "kind": "shell",
+      "layer": "L0",
+      "band": [
+        "V+1",
+        "V0",
+        "V-1",
+        "V-2"
+      ],
+      "existence": "A",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "parent": "SHELL-DRUM",
+      "geometry": {
+        "type": "plate_array",
+        "count": 16,
+        "radius": 1.01,
+        "z_top": 0.24,
+        "z_bottom": -0.27
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)",
+        "SOURCE_INDEX.md (lower metallic structural plates)",
+        "EXTERIOR.md checklist"
+      ],
+      "rationale": "Hologram shows concentric horizontal bands on the funnel rather than vertical plates; 12 vertical segments are retained as a placeholder for the upper band only. Re-derive from an exterior frame. Re-purposed: the plating visible in #23 is on the drum rim wall and keel facets, not a separate lower-body plate ring.",
+      "unknowns": [
+        "plate count",
+        "plate size",
+        "seams",
+        "which plates carry airlocks"
+      ],
+      "required_shots": [
+        "S01E10 exterior establishing",
+        "S03E01 damaged exterior"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)"
+      ]
     },
     {
-      "id": "DOME-P", "name": "Principal transparent dome", "kind": "dome", "layer": "L1", "band": ["V0","V+1","V+2","V+3"],
-      "existence": "A", "placement": "LOCKED", "states": ["DS-01","DS-02","DS-03","DS-04","DS-05"],
-      "geometry": {"type": "hemisphere", "radius": 1.0},
-      "position": [0, 0, 0],
-      "evidence": ["EXTERIOR.md", "SOURCE_INDEX.md", "GEOMETRY_DATABASE.md G-001", "EVIDENCE_MATRIX.md E-002"],
-      "rationale": "Strongest recurring exterior feature. Defines the unit U and the origin.",
-      "unknowns": ["exact dome profile (full hemisphere vs. shallower cap)", "frame/mullion pattern", "absolute radius"],
-      "required_shots": ["S01E10 exterior establishing", "S03E01 damaged exterior", "S05E10 wide shots"],
-      "reference_images": []
+      "id": "SHELL-UNDERSIDE",
+      "name": "Keel tip with exit aperture",
+      "kind": "shell",
+      "layer": "L0",
+      "band": [
+        "V-4"
+      ],
+      "existence": "B",
+      "placement": "ANCHORED",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "parent": "SHELL-LOWER-BODY",
+      "geometry": {
+        "type": "disc",
+        "radius": 0.04,
+        "z": -1.6,
+        "aperture_radius": 0.03,
+        "aperture_offset": [
+          0,
+          0
+        ]
+      },
+      "position": [
+        0,
+        0,
+        -1.6
+      ],
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)",
+        "EPISODE_EVIDENCE_RICKMURAI_JACK.md (spacecraft launched from the bottom of the Citadel)"
+      ],
+      "rationale": "The body tapers to a point (hologram #04) and the spacecraft launches from the bottom (S05E10); therefore the exit aperture is at the apex on the axis. The keel ends in a spike (#23); the exit aperture is at the tip.",
+      "unknowns": [
+        "aperture position",
+        "other underside features"
+      ],
+      "required_shots": [
+        "S05E10 spacecraft exit shot",
+        "S06E01 ruin exterior approach"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)"
+      ]
     },
     {
-      "id": "DOME-S1", "name": "Secondary dome 1", "kind": "dome", "layer": "L1", "band": ["V0","V+1"],
-      "existence": "B", "placement": "PLACEHOLDER", "states": ["DS-01","DS-02","DS-03","DS-04","DS-05"],
-      "geometry": {"type": "hemisphere", "radius": 0.35, "body_depth": 0.2},
-      "position": [1.3, 0.0, 0.0], "azimuth": 0,
-      "evidence": ["SOURCE_INDEX.md (three smaller domed districts)", "CONTRADICTION_LOG.md C-002"],
-      "rationale": "Secondary domes exist; three is the secondary-source count. Equal spacing at 120 deg is a placeholder. District assignment UNKNOWN.",
-      "unknowns": ["true count", "radius ratio to DOME-P", "which district it encloses", "whether it sits on the rim or projects from the lower body"],
-      "required_shots": ["S01E10 exterior establishing", "S05E10 wide shots", "any aerial view"],
-      "reference_images": []
+      "id": "ARM-S1",
+      "name": "Radial arm to DOME-S1",
+      "kind": "shell",
+      "layer": "L0",
+      "band": [
+        "V0",
+        "V-1"
+      ],
+      "existence": "A",
+      "placement": "ANCHORED",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "path",
+        "width": 0.3,
+        "z": 0.0,
+        "points": [
+          [
+            1.0,
+            0.0,
+            0
+          ],
+          [
+            1.25,
+            0.0,
+            0
+          ],
+          [
+            1.5,
+            0.0,
+            0
+          ]
+        ]
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "azimuth": 0,
+      "parent": "SHELL-LOWER-BODY",
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)",
+        "CONTRADICTION_LOG.md C-002"
+      ],
+      "rationale": "Hologram #04 shows each satellite pod connected to the central disc by a straight radial arm. Width and length are ratio estimates; whether the arm carries rail, road, or only structure is UNKNOWN (the Mortyburg arm must carry the rail spur). Exterior #23 shows the arms as wide flat decks (≈0.3 R wide) running from the drum rim to the pod rim at deck level.",
+      "unknowns": [
+        "width",
+        "section",
+        "what circulation it carries",
+        "whether arms are level with the ground plane"
+      ],
+      "required_shots": [
+        "any exterior frame showing an arm",
+        "S05E10 disengagement exterior"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)"
+      ]
     },
     {
-      "id": "DOME-S2", "name": "Secondary dome 2", "kind": "dome", "layer": "L1", "band": ["V0","V+1"],
-      "existence": "B", "placement": "PLACEHOLDER", "states": ["DS-01","DS-02","DS-03","DS-04","DS-05"],
-      "geometry": {"type": "hemisphere", "radius": 0.35, "body_depth": 0.2},
-      "position": [-0.65, 1.126, 0.0], "azimuth": 120,
-      "evidence": ["SOURCE_INDEX.md (three smaller domed districts)", "CONTRADICTION_LOG.md C-002"],
-      "rationale": "See DOME-S1.",
-      "unknowns": ["as DOME-S1"],
-      "required_shots": ["as DOME-S1"],
-      "reference_images": []
+      "id": "ARM-S2",
+      "name": "Radial arm to DOME-S2",
+      "kind": "shell",
+      "layer": "L0",
+      "band": [
+        "V0",
+        "V-1"
+      ],
+      "existence": "A",
+      "placement": "ANCHORED",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "path",
+        "width": 0.3,
+        "z": 0.0,
+        "points": [
+          [
+            -0.5,
+            0.866,
+            0
+          ],
+          [
+            -0.625,
+            1.083,
+            0
+          ],
+          [
+            -0.75,
+            1.299,
+            0
+          ]
+        ]
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "azimuth": 120,
+      "parent": "SHELL-LOWER-BODY",
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)",
+        "CONTRADICTION_LOG.md C-002"
+      ],
+      "rationale": "Hologram #04 shows each satellite pod connected to the central disc by a straight radial arm. Width and length are ratio estimates; whether the arm carries rail, road, or only structure is UNKNOWN (the Mortyburg arm must carry the rail spur). Exterior #23 shows the arms as wide flat decks (≈0.3 R wide) running from the drum rim to the pod rim at deck level.",
+      "unknowns": [
+        "width",
+        "section",
+        "what circulation it carries",
+        "whether arms are level with the ground plane"
+      ],
+      "required_shots": [
+        "any exterior frame showing an arm",
+        "S05E10 disengagement exterior"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)"
+      ]
     },
     {
-      "id": "DOME-MB", "name": "Mortyburg dome (detachable section)", "kind": "dome", "layer": "L1", "band": ["V0","V+1","V-1"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-01","DS-02","DS-03","DS-04","DS-05","DS-06"],
-      "geometry": {"type": "hemisphere", "radius": 0.35, "body_depth": 0.2},
-      "position": [-0.65, -1.126, 0.0], "azimuth": 240,
-      "evidence": ["LOCATION_REGISTER.md (Mortyburg: smaller domed district; detachable)", "EPISODE_EVIDENCE_RICKMURAI_JACK.md (Mortyburg detachment)", "CONTRADICTION_LOG.md C-003"],
-      "rationale": "Mortyburg is a smaller domed section that physically separates (A). Working hypothesis: it is one of the three secondary domes (C). Placed on the rim because it must have an exterior face to detach through. Azimuth is placeholder. In DS-06 it is stranded separately (see EPISODE_EVIDENCE_SOLARICKS.md) — render it displaced from the debris field.",
-      "unknowns": ["whether Mortyburg is one of the 'three' domes or a fourth", "attachment geometry", "azimuth", "internal layout"],
-      "required_shots": ["S05E10 disengagement exterior", "S05E10 boosters firing", "S05E10 train arrival interior", "S06E01 stranded-section exterior"],
-      "reference_images": []
+      "id": "ARM-MB",
+      "name": "Radial arm to DOME-MB",
+      "kind": "shell",
+      "layer": "L0",
+      "band": [
+        "V0",
+        "V-1"
+      ],
+      "existence": "A",
+      "placement": "ANCHORED",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "path",
+        "width": 0.3,
+        "z": 0.0,
+        "points": [
+          [
+            -0.5,
+            -0.866,
+            0
+          ],
+          [
+            -0.625,
+            -1.083,
+            0
+          ],
+          [
+            -0.75,
+            -1.299,
+            0
+          ]
+        ]
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "azimuth": 240,
+      "parent": "SHELL-LOWER-BODY",
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)",
+        "CONTRADICTION_LOG.md C-002"
+      ],
+      "rationale": "Hologram #04 shows each satellite pod connected to the central disc by a straight radial arm. Width and length are ratio estimates; whether the arm carries rail, road, or only structure is UNKNOWN (the Mortyburg arm must carry the rail spur). Exterior #23 shows the arms as wide flat decks (≈0.3 R wide) running from the drum rim to the pod rim at deck level.",
+      "unknowns": [
+        "width",
+        "section",
+        "what circulation it carries",
+        "whether arms are level with the ground plane"
+      ],
+      "required_shots": [
+        "any exterior frame showing an arm",
+        "S05E10 disengagement exterior"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)"
+      ]
     },
     {
-      "id": "CIRC-RING-1", "name": "Inner circumferential road", "kind": "circulation", "layer": "L2", "band": ["V0"],
-      "existence": "B", "placement": "PROVISIONAL", "states": ["DS-01","DS-02","DS-03","DS-04","DS-05"],
-      "geometry": {"type": "ring", "radius": 0.3, "width": 0.03, "z": 0.0},
-      "position": [0, 0, 0],
-      "evidence": ["GEOMETRY_DATABASE.md G-005", "EXTERIOR.md (radial/circular organisation)"],
+      "id": "DOME-P",
+      "name": "Principal transparent dome",
+      "kind": "dome",
+      "layer": "L1",
+      "band": [
+        "V+3"
+      ],
+      "existence": "A",
+      "placement": "LOCKED",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "cap",
+        "radius": 1.0,
+        "height": 0.3,
+        "z_base": 0.25,
+        "features": [
+          "radially segmented glazing panels (#23)",
+          "primary dark structural ribs visible from inside (#14/#15)",
+          "secondary glazing ribs (#01)"
+        ]
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#14 (S05E10 plaza destruction wide)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)",
+        "EXTERIOR.md",
+        "SOURCE_INDEX.md",
+        "GEOMETRY_DATABASE.md G-001",
+        "EVIDENCE_MATRIX.md E-002"
+      ],
+      "rationale": "Strongest recurring exterior feature. Defines the unit U and the origin. Gallery #14/#15 show massive dark structural ribs of the dome overhead from inside the plaza; gallery #01 shows finer ribbed glazing between them. Exterior #23 settles the profile: a shallow, radially segmented glazed cap sitting on a thick drum, not a full hemisphere. Cap height ≈ 0.3 R. The hologram (#04) agrees. Two independent sources → LOCKED for the cap form; height ratio still an estimate.",
+      "unknowns": [
+        "cap height ratio (estimated 0.3)",
+        "panel count",
+        "absolute radius"
+      ],
+      "required_shots": [
+        "S01E10 exterior establishing",
+        "S03E01 damaged exterior",
+        "S05E10 wide shots"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#01 (S01E10 arrival plaza)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#14 (S05E10 plaza destruction wide)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground)"
+      ]
+    },
+    {
+      "id": "DOME-S1",
+      "name": "Secondary dome 1",
+      "kind": "dome",
+      "layer": "L1",
+      "band": [
+        "V0",
+        "V+1"
+      ],
+      "existence": "B",
+      "placement": "ANCHORED",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "cap",
+        "radius": 0.5,
+        "height": 0.15,
+        "z_base": 0.15,
+        "drum_bottom": -0.2,
+        "features": [
+          "segmented glazed cap",
+          "short drum",
+          "small underside body"
+        ]
+      },
+      "position": [
+        2.0,
+        0.0,
+        0
+      ],
+      "azimuth": 0,
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)",
+        "SOURCE_INDEX.md (three smaller domed districts)",
+        "CONTRADICTION_LOG.md C-002"
+      ],
+      "rationale": "Exterior #23 and the hologram #04 agree: three satellite discs, each a small drum with a segmented glazed cap, held out on long flat arms at ~120 deg. In #23 the pod diameter is roughly half the central drum and the pod centre sits about two drum radii out. Topology and ratios are therefore ANCHORED; azimuths relative to the city interior remain UNKNOWN.",
+      "unknowns": [
+        "true count",
+        "radius ratio to DOME-P",
+        "which district it encloses",
+        "whether it sits on the rim or projects from the lower body"
+      ],
+      "required_shots": [
+        "S01E10 exterior establishing",
+        "S05E10 wide shots",
+        "any aerial view"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)"
+      ]
+    },
+    {
+      "id": "DOME-S2",
+      "name": "Secondary dome 2",
+      "kind": "dome",
+      "layer": "L1",
+      "band": [
+        "V0",
+        "V+1"
+      ],
+      "existence": "B",
+      "placement": "ANCHORED",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "cap",
+        "radius": 0.5,
+        "height": 0.15,
+        "z_base": 0.15,
+        "drum_bottom": -0.2,
+        "features": [
+          "segmented glazed cap",
+          "short drum",
+          "small underside body"
+        ]
+      },
+      "position": [
+        -1.0,
+        1.732,
+        0
+      ],
+      "azimuth": 120,
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)",
+        "SOURCE_INDEX.md (three smaller domed districts)",
+        "CONTRADICTION_LOG.md C-002"
+      ],
+      "rationale": "See DOME-S1. A panel/antenna mast stands on one pod in #23 (PROP-PANEL-MAST, assigned to this pod as a placeholder).",
+      "unknowns": [
+        "as DOME-S1"
+      ],
+      "required_shots": [
+        "as DOME-S1"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)"
+      ]
+    },
+    {
+      "id": "DOME-MB",
+      "name": "Mortyburg dome (detachable section)",
+      "kind": "dome",
+      "layer": "L1",
+      "band": [
+        "V0",
+        "V+1",
+        "V-1"
+      ],
+      "existence": "A",
+      "placement": "ANCHORED",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05",
+        "DS-06"
+      ],
+      "geometry": {
+        "type": "cap",
+        "radius": 0.5,
+        "height": 0.15,
+        "z_base": 0.15,
+        "drum_bottom": -0.2,
+        "features": [
+          "segmented glazed cap",
+          "short drum",
+          "small underside body"
+        ]
+      },
+      "position": [
+        -1.0,
+        -1.732,
+        0
+      ],
+      "azimuth": 240,
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)",
+        "LOCATION_REGISTER.md (Mortyburg: smaller domed district; detachable)",
+        "EPISODE_EVIDENCE_RICKMURAI_JACK.md (Mortyburg detachment)",
+        "CONTRADICTION_LOG.md C-003"
+      ],
+      "rationale": "Mortyburg is a detachable domed section (A). #23 and #04 show all three satellite pods on arms; a pod on an arm is the only configuration that can disengage and fly off (S05E10), so Mortyburg = one of the three pods is now B. Which pod, and the azimuth, remain UNKNOWN.",
+      "unknowns": [
+        "which pod is Mortyburg",
+        "azimuth",
+        "arm/joint geometry",
+        "internal layout"
+      ],
+      "required_shots": [
+        "S05E10 disengagement exterior",
+        "S05E10 boosters firing",
+        "S05E10 train arrival interior",
+        "S06E01 stranded-section exterior"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)"
+      ]
+    },
+    {
+      "id": "PROP-PANEL-MAST",
+      "name": "Panel / antenna mast on a pod",
+      "kind": "prop",
+      "layer": "L6",
+      "band": [
+        "V+3"
+      ],
+      "existence": "A",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "parent": "DOME-S2",
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.2,
+          0.02,
+          0.25
+        ]
+      },
+      "position": [
+        -1.0,
+        1.732,
+        0.3
+      ],
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)"
+      ],
+      "rationale": "A square panel on a mast stands above one of the pods in #23 (solar array or antenna). Which pod is UNKNOWN.",
+      "unknowns": [
+        "which pod",
+        "function",
+        "size"
+      ],
+      "required_shots": [
+        "any exterior"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)"
+      ]
+    },
+    {
+      "id": "CIRC-RING-1",
+      "name": "Inner circumferential road",
+      "kind": "circulation",
+      "layer": "L2",
+      "band": [
+        "V0"
+      ],
+      "existence": "B",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "ring",
+        "radius": 0.3,
+        "width": 0.03,
+        "z": 0.0
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "evidence": [
+        "GEOMETRY_DATABASE.md G-005",
+        "EXTERIOR.md (radial/circular organisation)"
+      ],
       "rationale": "Several views show circular organisation. Three rings is a modelling convention, not a count from any frame.",
-      "unknowns": ["ring count", "radii", "road width", "lane organisation"],
-      "required_shots": ["S03E07 aerial/street montage", "S05E10 plaza-flood aerial"],
+      "unknowns": [
+        "ring count",
+        "radii",
+        "road width",
+        "lane organisation"
+      ],
+      "required_shots": [
+        "S03E07 aerial/street montage",
+        "S05E10 plaza-flood aerial"
+      ],
       "reference_images": []
     },
     {
-      "id": "CIRC-RING-2", "name": "Middle circumferential road", "kind": "circulation", "layer": "L2", "band": ["V0"],
-      "existence": "B", "placement": "PROVISIONAL", "states": ["DS-01","DS-02","DS-03","DS-04","DS-05"],
-      "geometry": {"type": "ring", "radius": 0.6, "width": 0.03, "z": 0.0}, "position": [0, 0, 0],
-      "evidence": ["GEOMETRY_DATABASE.md G-005"], "rationale": "See CIRC-RING-1.", "unknowns": ["as CIRC-RING-1"], "required_shots": ["as CIRC-RING-1"], "reference_images": []
+      "id": "CIRC-RING-2",
+      "name": "Middle circumferential road",
+      "kind": "circulation",
+      "layer": "L2",
+      "band": [
+        "V0"
+      ],
+      "existence": "B",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "ring",
+        "radius": 0.6,
+        "width": 0.03,
+        "z": 0.0
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "evidence": [
+        "GEOMETRY_DATABASE.md G-005"
+      ],
+      "rationale": "See CIRC-RING-1.",
+      "unknowns": [
+        "as CIRC-RING-1"
+      ],
+      "required_shots": [
+        "as CIRC-RING-1"
+      ],
+      "reference_images": []
     },
     {
-      "id": "CIRC-RING-3", "name": "Outer circumferential road", "kind": "circulation", "layer": "L2", "band": ["V0"],
-      "existence": "B", "placement": "PROVISIONAL", "states": ["DS-01","DS-02","DS-03","DS-04","DS-05"],
-      "geometry": {"type": "ring", "radius": 0.9, "width": 0.03, "z": 0.0}, "position": [0, 0, 0],
-      "evidence": ["GEOMETRY_DATABASE.md G-005"], "rationale": "See CIRC-RING-1.", "unknowns": ["as CIRC-RING-1"], "required_shots": ["as CIRC-RING-1"], "reference_images": []
+      "id": "CIRC-RING-3",
+      "name": "Outer circumferential road",
+      "kind": "circulation",
+      "layer": "L2",
+      "band": [
+        "V0"
+      ],
+      "existence": "B",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "ring",
+        "radius": 0.9,
+        "width": 0.03,
+        "z": 0.0
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "evidence": [
+        "GEOMETRY_DATABASE.md G-005"
+      ],
+      "rationale": "See CIRC-RING-1.",
+      "unknowns": [
+        "as CIRC-RING-1"
+      ],
+      "required_shots": [
+        "as CIRC-RING-1"
+      ],
+      "reference_images": []
     },
     {
-      "id": "CIRC-RADIALS", "name": "Radial avenues (8)", "kind": "circulation", "layer": "L2", "band": ["V0"],
-      "existence": "B", "placement": "PROVISIONAL", "states": ["DS-01","DS-02","DS-03","DS-04","DS-05"],
-      "geometry": {"type": "radial_array", "count": 8, "r_inner": 0.12, "r_outer": 0.98, "width": 0.03, "z": 0.0, "az_start": 0},
-      "position": [0, 0, 0],
-      "evidence": ["GEOMETRY_DATABASE.md G-004"],
+      "id": "CIRC-RADIALS",
+      "name": "Radial avenues (8)",
+      "kind": "circulation",
+      "layer": "L2",
+      "band": [
+        "V0"
+      ],
+      "existence": "B",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "radial_array",
+        "count": 8,
+        "r_inner": 0.12,
+        "r_outer": 0.98,
+        "width": 0.03,
+        "z": 0.0,
+        "az_start": 0
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "evidence": [
+        "GEOMETRY_DATABASE.md G-004"
+      ],
       "rationale": "Radial organisation is supported (B); eight is a modelling convention.",
-      "unknowns": ["count", "which radial is 'Fifth'", "which carry the rail"],
-      "required_shots": ["S03E07 street montage", "any aerial view"],
+      "unknowns": [
+        "count",
+        "which radial is 'Fifth'",
+        "which carry the rail"
+      ],
+      "required_shots": [
+        "S03E07 street montage",
+        "any aerial view"
+      ],
       "reference_images": []
     },
     {
-      "id": "CIRC-5TH-BURP", "name": "Fifth and [Burp] Avenue intersection", "kind": "circulation", "layer": "L2", "band": ["V0"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-03"],
-      "geometry": {"type": "point", "radius": 0.02}, "position": [-0.424, -0.424, 0.0],
-      "evidence": ["DIALOGUE_ARCHITECTURE_CROSSREF.md D-001", "RICKLANTIS_VISUAL_EVIDENCE.md (dispatch associates it with Mortytown)"],
+      "id": "CIRC-5TH-BURP",
+      "name": "Fifth and [Burp] Avenue intersection",
+      "kind": "circulation",
+      "layer": "L2",
+      "band": [
+        "V0"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-03"
+      ],
+      "geometry": {
+        "type": "point",
+        "radius": 0.02
+      },
+      "position": [
+        -0.424,
+        -0.424,
+        0.0
+      ],
+      "evidence": [
+        "DIALOGUE_ARCHITECTURE_CROSSREF.md D-001",
+        "RICKLANTIS_VISUAL_EVIDENCE.md (dispatch associates it with Mortytown)"
+      ],
       "rationale": "Named intersection associated with Mortytown by dispatch; placed where CIRC-RING-2 meets the 225 deg radial, inside DIST-MORTYTOWN.",
-      "unknowns": ["exact position", "which streets are 'Fifth' and 'Burp'"],
-      "required_shots": ["S03E07 police dispatch / Mortytown street"],
+      "unknowns": [
+        "exact position",
+        "which streets are 'Fifth' and 'Burp'"
+      ],
+      "required_shots": [
+        "S03E07 police dispatch / Mortytown street"
+      ],
       "reference_images": []
     },
     {
-      "id": "CIRC-RAIL-LOOP", "name": "Commuter rail loop", "kind": "circulation", "layer": "L2", "band": ["V0","V+2"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-03","DS-04","DS-05"],
-      "geometry": {"type": "ring", "radius": 0.72, "width": 0.02, "z": 0.05},
-      "position": [0, 0, 0.05],
-      "evidence": ["RICKLANTIS_VISUAL_EVIDENCE.md 7", "DIALOGUE_ARCHITECTURE_CROSSREF.md D-004", "EPISODE_EVIDENCE_RICKMURAI_JACK.md (tramway, train to Mortyburg)"],
-      "rationale": "A commuter train exists (A). A loop at z=+0.05 is a placeholder topology chosen so it can connect the plaza tramway to the Mortyburg spur; elevation is UNKNOWN (ground/elevated/underground all possible).",
-      "unknowns": ["elevation", "line count", "station count", "whether the S03E07 train and S05E10 tram are the same system"],
-      "required_shots": ["S03E07 train commute exterior", "S05E10 tramway flood", "S05E10 train to Mortyburg"],
+      "id": "CIRC-RAIL-LOOP",
+      "name": "Commuter rail loop",
+      "kind": "circulation",
+      "layer": "L2",
+      "band": [
+        "V0",
+        "V+2"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "ring",
+        "radius": 0.72,
+        "width": 0.02,
+        "z": 0.05
+      },
+      "position": [
+        0,
+        0,
+        0.05
+      ],
+      "evidence": [
+        "RICKLANTIS_VISUAL_EVIDENCE.md 7",
+        "DIALOGUE_ARCHITECTURE_CROSSREF.md D-004",
+        "EPISODE_EVIDENCE_RICKMURAI_JACK.md (tramway, train to Mortyburg)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#02 (S03E07 streetscape)"
+      ],
+      "rationale": "A commuter train exists (A). A loop at z=+0.05 is a placeholder topology chosen so it can connect the plaza tramway to the Mortyburg spur; elevation is UNKNOWN (ground/elevated/underground all possible). Gallery #02 shows an elevated transit tube crossing a street, which supports (but does not prove) the elevated placement.",
+      "unknowns": [
+        "elevation",
+        "line count",
+        "station count",
+        "whether the S03E07 train and S05E10 tram are the same system"
+      ],
+      "required_shots": [
+        "S03E07 train commute exterior",
+        "S05E10 tramway flood",
+        "S05E10 train to Mortyburg"
+      ],
       "reference_images": []
     },
     {
-      "id": "CIRC-RAIL-MB-SPUR", "name": "Rail spur to Mortyburg", "kind": "circulation", "layer": "L2", "band": ["V0","V+2"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-04","DS-05"],
-      "geometry": {"type": "path", "width": 0.02, "z": 0.05, "points": [[-0.36, -0.624, 0.05], [-0.5, -0.87, 0.05], [-0.65, -1.126, 0.05]]},
-      "position": [0, 0, 0.05],
-      "evidence": ["DIALOGUE_ARCHITECTURE_CROSSREF.md D-008", "EPISODE_EVIDENCE_RICKMURAI_JACK.md (train route connecting affected area to Mortyburg)"],
-      "rationale": "Route exists and passes through the Mortyburg interface (A). Path is a straight provisional connector from the loop to IF-MORTYBURG.",
-      "unknowns": ["route", "stations", "whether the spur is the same track as the loop"],
-      "required_shots": ["S05E10 train to Mortyburg interior/exterior"],
+      "id": "CIRC-RAIL-MB-SPUR",
+      "name": "Rail spur to Mortyburg",
+      "kind": "circulation",
+      "layer": "L2",
+      "band": [
+        "V0",
+        "V+2"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "path",
+        "width": 0.02,
+        "z": 0.05,
+        "points": [
+          [
+            -0.36,
+            -0.624,
+            0.05
+          ],
+          [
+            -0.5,
+            -0.866,
+            0.05
+          ],
+          [
+            -0.56,
+            -0.97,
+            0.05
+          ],
+          [
+            -0.75,
+            -1.299,
+            0.05
+          ],
+          [
+            -1.0,
+            -1.732,
+            0.05
+          ]
+        ]
+      },
+      "position": [
+        0,
+        0,
+        0.05
+      ],
+      "evidence": [
+        "DIALOGUE_ARCHITECTURE_CROSSREF.md D-008",
+        "EPISODE_EVIDENCE_RICKMURAI_JACK.md (train route connecting affected area to Mortyburg)"
+      ],
+      "rationale": "Route exists and passes through the Mortyburg interface (A). Now runs along ARM-MB to the pod. Path remains a straight provisional connector.",
+      "unknowns": [
+        "route",
+        "stations",
+        "whether the spur is the same track as the loop"
+      ],
+      "required_shots": [
+        "S05E10 train to Mortyburg interior/exterior"
+      ],
       "reference_images": []
     },
     {
-      "id": "CIRC-TRAM-PLAZA", "name": "Plaza tramway", "kind": "circulation", "layer": "L2", "band": ["V0"],
-      "existence": "A", "placement": "ANCHORED", "states": ["DS-04","DS-05"],
-      "geometry": {"type": "path", "width": 0.015, "z": 0.0, "points": [[0.14, 0.0, 0.0], [0.3, 0.0, 0.0], [0.72, 0.0, 0.0]]},
-      "position": [0, 0, 0],
-      "evidence": ["EPISODE_EVIDENCE_RICKMURAI_JACK.md (plaza / tramway / lower city)"],
-      "rationale": "Tramway is shown in the same flooding sequence as the central plaza; therefore anchored adjacent to LM-CENTRAL-PLAZA. Direction is placeholder; drawn to meet CIRC-RAIL-LOOP.",
-      "unknowns": ["direction", "whether it joins CIRC-RAIL-LOOP"],
-      "required_shots": ["S05E10 plaza flood sequence"],
-      "reference_images": []
+      "id": "CIRC-TRAM-PLAZA",
+      "name": "Plaza tramway",
+      "kind": "circulation",
+      "layer": "L2",
+      "band": [
+        "V0",
+        "V+2"
+      ],
+      "existence": "A",
+      "placement": "ANCHORED",
+      "states": [
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "ring",
+        "radius": 0.22,
+        "width": 0.015,
+        "z": 0.06,
+        "features": [
+          "cyan elevated track",
+          "slender support columns",
+          "multiple tiers",
+          "sweeps around the plaza and out into the city"
+        ]
+      },
+      "position": [
+        0,
+        0,
+        0.06
+      ],
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#14 (S05E10 plaza destruction wide)",
+        "EPISODE_EVIDENCE_RICKMURAI_JACK.md (plaza / tramway / lower city)"
+      ],
+      "rationale": "Tramway is shown in the same flooding sequence as the central plaza; therefore anchored adjacent to LM-CENTRAL-PLAZA. Direction is placeholder; drawn to meet CIRC-RAIL-LOOP. Gallery #14/#15 show the plaza ringed by curved cyan elevated tracks on slender columns at two or more heights; the tramway is therefore an elevated curved track around the plaza, not a ground path. Geometry changed from a straight ground path to an elevated ring segment.",
+      "unknowns": [
+        "tier count and heights",
+        "where it connects to CIRC-RAIL-LOOP",
+        "whether the S03E07 train runs on it"
+      ],
+      "required_shots": [
+        "S05E10 plaza flood sequence"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#14 (S05E10 plaza destruction wide)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground)"
+      ]
     },
     {
-      "id": "CIRC-HOVER-BAND", "name": "Hover / flying traffic band", "kind": "circulation", "layer": "L2", "band": ["V+2"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-01","DS-02","DS-03","DS-04","DS-05"],
-      "geometry": {"type": "annular_volume", "r_inner": 0.15, "r_outer": 0.95, "z_min": 0.06, "z_max": 0.3},
-      "position": [0, 0, 0],
-      "evidence": ["TRANSPORTATION.md (hover traffic)", "RICKLANTIS_VISUAL_EVIDENCE.md 2", "EVIDENCE_MATRIX.md E-007"],
+      "id": "CIRC-HOVER-BAND",
+      "name": "Hover / flying traffic band",
+      "kind": "circulation",
+      "layer": "L2",
+      "band": [
+        "V+2"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "annular_volume",
+        "r_inner": 0.15,
+        "r_outer": 0.95,
+        "z_min": 0.06,
+        "z_max": 0.3
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "evidence": [
+        "TRANSPORTATION.md (hover traffic)",
+        "RICKLANTIS_VISUAL_EVIDENCE.md 2",
+        "EVIDENCE_MATRIX.md E-007"
+      ],
       "rationale": "Flying taxis and private flying cars exist (A). Band limits are a placeholder envelope for the 3D model's traffic layer.",
-      "unknowns": ["altitudes", "lanes", "takeoff/landing points"],
-      "required_shots": ["S03E07 city montage with flying cars", "S03E07 taxi pickup at Cafe Sanchez"],
+      "unknowns": [
+        "altitudes",
+        "lanes",
+        "takeoff/landing points"
+      ],
+      "required_shots": [
+        "S03E07 city montage with flying cars",
+        "S03E07 taxi pickup at Cafe Sanchez"
+      ],
       "reference_images": []
     },
     {
-      "id": "CIRC-MANHOLE", "name": "Manhole / sewer access near plaza", "kind": "circulation", "layer": "L2", "band": ["V0","V-1"],
-      "existence": "A", "placement": "ANCHORED", "states": ["DS-04","DS-05"],
-      "geometry": {"type": "point", "radius": 0.006}, "position": [0.16, -0.08, 0.0],
-      "evidence": ["EPISODE_EVIDENCE_RICKMURAI_JACK.md (manhole used by Rick and Morty)", "UTILITY_SYSTEMS.md (sewers)"],
+      "id": "CIRC-MANHOLE",
+      "name": "Manhole / sewer access near plaza",
+      "kind": "circulation",
+      "layer": "L2",
+      "band": [
+        "V0",
+        "V-1"
+      ],
+      "existence": "A",
+      "placement": "ANCHORED",
+      "states": [
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "point",
+        "radius": 0.006
+      },
+      "position": [
+        0.16,
+        -0.08,
+        0.0
+      ],
+      "evidence": [
+        "EPISODE_EVIDENCE_RICKMURAI_JACK.md (manhole used by Rick and Morty)",
+        "UTILITY_SYSTEMS.md (sewers)"
+      ],
       "rationale": "Used during the plaza/tramway flooding sequence, so it sits at the plaza edge.",
-      "unknowns": ["exact position", "other manholes"],
-      "required_shots": ["S05E10 manhole descent"],
+      "unknowns": [
+        "exact position",
+        "other manholes"
+      ],
+      "required_shots": [
+        "S05E10 manhole descent"
+      ],
       "reference_images": []
     },
     {
-      "id": "SYS-PORTAL-SUPPLY", "name": "Citywide portal supply network", "kind": "utility", "layer": "L2", "band": ["V0","V-1","V-2"],
-      "existence": "A", "placement": "UNPLACED", "states": ["DS-01","DS-02","DS-03","DS-04","DS-05"],
-      "geometry": null, "position": null,
-      "evidence": ["EPISODE_EVIDENCE_RICKMURAI_JACK.md (citywide portal supply can be hacked)", "CONTRADICTION_LOG.md C-006"],
+      "id": "SYS-PORTAL-SUPPLY",
+      "name": "Citywide portal supply network",
+      "kind": "utility",
+      "layer": "L2",
+      "band": [
+        "V0",
+        "V-1",
+        "V-2"
+      ],
+      "existence": "A",
+      "placement": "UNPLACED",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": null,
+      "position": null,
+      "evidence": [
+        "EPISODE_EVIDENCE_RICKMURAI_JACK.md (citywide portal supply can be hacked)",
+        "CONTRADICTION_LOG.md C-006"
+      ],
       "rationale": "Exists as a system; no visible routing. Kept as a separate ID from UG-PORTAL-FLUID and UG-DIM-DRIVE per C-006.",
-      "unknowns": ["all routing", "node locations"],
-      "required_shots": ["S05E10 portal-supply failure sequence"],
+      "unknowns": [
+        "all routing",
+        "node locations"
+      ],
+      "required_shots": [
+        "S05E10 portal-supply failure sequence"
+      ],
       "reference_images": []
     },
     {
-      "id": "SYS-TAXI", "name": "Hover taxi service", "kind": "utility", "layer": "L2", "band": ["V0","V+2"],
-      "existence": "A", "placement": "UNPLACED", "states": ["DS-03","DS-04"],
-      "geometry": null, "position": null,
-      "evidence": ["RICKLANTIS_VISUAL_EVIDENCE.md 4 (taxi passes Campaign Manager Morty)"],
+      "id": "SYS-TAXI",
+      "name": "Hover taxi service",
+      "kind": "utility",
+      "layer": "L2",
+      "band": [
+        "V0",
+        "V+2"
+      ],
+      "existence": "A",
+      "placement": "UNPLACED",
+      "states": [
+        "DS-03",
+        "DS-04"
+      ],
+      "geometry": null,
+      "position": null,
+      "evidence": [
+        "RICKLANTIS_VISUAL_EVIDENCE.md 4 (taxi passes Campaign Manager Morty)"
+      ],
       "rationale": "Curbside pickup behaviour is direct evidence; vehicles are props on CIRC-HOVER-BAND / streets, not a placed structure.",
-      "unknowns": ["depot", "stands"], "required_shots": ["S03E07 taxi pickup"], "reference_images": []
+      "unknowns": [
+        "depot",
+        "stands"
+      ],
+      "required_shots": [
+        "S03E07 taxi pickup"
+      ],
+      "reference_images": []
     },
     {
-      "id": "DIST-CIVIC-CORE", "name": "Civic / government core", "kind": "district", "layer": "L3", "band": ["V0","V+1"],
-      "existence": "B", "placement": "ANCHORED", "states": ["DS-01","DS-02","DS-03","DS-04","DS-05"],
-      "geometry": {"type": "sector", "r_inner": 0.0, "r_outer": 0.3, "az_start": 0, "az_end": 360},
-      "position": [0, 0, 0],
-      "evidence": ["EPISODE_EVIDENCE_RICKMURAI_JACK.md (central plaza, Presidential Building)", "COUNCIL_CHAMBER.md", "CIVIC_SYSTEMS.md"],
+      "id": "DIST-CIVIC-CORE",
+      "name": "Civic / government core",
+      "kind": "district",
+      "layer": "L3",
+      "band": [
+        "V0",
+        "V+1"
+      ],
+      "existence": "B",
+      "placement": "ANCHORED",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "sector",
+        "r_inner": 0.0,
+        "r_outer": 0.3,
+        "az_start": 0,
+        "az_end": 360
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "evidence": [
+        "EPISODE_EVIDENCE_RICKMURAI_JACK.md (central plaza, Presidential Building)",
+        "COUNCIL_CHAMBER.md",
+        "CIVIC_SYSTEMS.md"
+      ],
       "rationale": "The central plaza and the Presidential Building are shown together in the collapse; government functions cluster around the plaza. Council Hall, courthouse and Morty Agency are placed here as PROVISIONAL/PLACEHOLDER, not because a frame shows them adjacent.",
-      "unknowns": ["boundary", "which civic buildings are actually here"],
-      "required_shots": ["S05E10 plaza exterior", "S01E10 Council approach"],
+      "unknowns": [
+        "boundary",
+        "which civic buildings are actually here"
+      ],
+      "required_shots": [
+        "S05E10 plaza exterior",
+        "S01E10 Council approach"
+      ],
       "reference_images": []
     },
     {
-      "id": "DIST-COMMERCIAL-RING", "name": "Commercial / high-rise ring", "kind": "district", "layer": "L3", "band": ["V0","V+1"],
-      "existence": "B", "placement": "PROVISIONAL", "states": ["DS-01","DS-02","DS-03","DS-04","DS-05"],
-      "geometry": {"type": "sector", "r_inner": 0.3, "r_outer": 0.6, "az_start": 0, "az_end": 360},
-      "position": [0, 0, 0],
-      "evidence": ["RICKLANTIS_VISUAL_EVIDENCE.md 1-4, 8", "BUILDING_FAMILIES.md 1, 7", "GEOMETRY_DATABASE.md G-006"],
-      "rationale": "Dense high-rise blocks with storefronts, cafes and the newsroom. Ring placement is a convention: densest fabric between the civic core and the outer districts.",
-      "unknowns": ["true extent", "height distribution"],
-      "required_shots": ["S03E07 skyline montage", "S03E07 skyscraper reconstruction"],
-      "reference_images": []
+      "id": "DIST-COMMERCIAL-RING",
+      "name": "Commercial / high-rise ring",
+      "kind": "district",
+      "layer": "L3",
+      "band": [
+        "V0",
+        "V+1"
+      ],
+      "existence": "B",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "sector",
+        "r_inner": 0.3,
+        "r_outer": 0.6,
+        "az_start": 0,
+        "az_end": 360
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#02 (S03E07 streetscape)",
+        "RICKLANTIS_VISUAL_EVIDENCE.md 1-4, 8",
+        "BUILDING_FAMILIES.md 1, 7",
+        "GEOMETRY_DATABASE.md G-006"
+      ],
+      "rationale": "Dense high-rise blocks with storefronts, cafes and the newsroom. Ring placement is a convention: densest fabric between the civic core and the outer districts. Gallery #02 confirms very wide pedestrian streets flanked by monumental curved buildings with cyan strip lighting and at least one large dome-topped round building in the mid-ground.",
+      "unknowns": [
+        "true extent",
+        "height distribution"
+      ],
+      "required_shots": [
+        "S03E07 skyline montage",
+        "S03E07 skyscraper reconstruction"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#02 (S03E07 streetscape)"
+      ]
     },
     {
-      "id": "DIST-RICK-RESIDENTIAL", "name": "High-status Rick residential", "kind": "district", "layer": "L3", "band": ["V0","V+1"],
-      "existence": "C", "placement": "PLACEHOLDER", "states": ["DS-01","DS-02","DS-03","DS-04","DS-05"],
-      "geometry": {"type": "sector", "r_inner": 0.6, "r_outer": 0.95, "az_start": 30, "az_end": 90},
-      "position": [0, 0, 0],
-      "evidence": ["CIVIC_SYSTEMS.md (social stratification)", "MORTYTOWN.md (contrast with higher-status Rick areas)", "RICKLANTIS_VISUAL_EVIDENCE.md 2 (wealthy Rick in private flying car)"],
+      "id": "DIST-RICK-RESIDENTIAL",
+      "name": "High-status Rick residential",
+      "kind": "district",
+      "layer": "L3",
+      "band": [
+        "V0",
+        "V+1"
+      ],
+      "existence": "C",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "sector",
+        "r_inner": 0.6,
+        "r_outer": 0.95,
+        "az_start": 30,
+        "az_end": 90
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "evidence": [
+        "CIVIC_SYSTEMS.md (social stratification)",
+        "MORTYTOWN.md (contrast with higher-status Rick areas)",
+        "RICKLANTIS_VISUAL_EVIDENCE.md 2 (wealthy Rick in private flying car)"
+      ],
       "rationale": "Stratification is documented; a distinct wealthy residential area is inferred, not shown as a district. Placed opposite Mortytown to express the contrast.",
-      "unknowns": ["whether a discrete district exists at all"],
-      "required_shots": ["any residential exterior"],
+      "unknowns": [
+        "whether a discrete district exists at all"
+      ],
+      "required_shots": [
+        "any residential exterior"
+      ],
       "reference_images": []
     },
     {
-      "id": "DIST-EAST-SANCHEZ-HEIGHTS", "name": "East Sanchez Heights", "kind": "district", "layer": "L3", "band": ["V0","V+1"],
-      "existence": "A", "placement": "PLACEHOLDER", "states": ["DS-03"],
-      "geometry": {"type": "sector", "r_inner": 0.6, "r_outer": 0.95, "az_start": 330, "az_end": 390},
-      "position": [0, 0, 0],
-      "evidence": ["DIALOGUE_ARCHITECTURE_CROSSREF.md D-002", "RICKLANTIS_VISUAL_EVIDENCE.md 8 (gravity outage)"],
+      "id": "DIST-EAST-SANCHEZ-HEIGHTS",
+      "name": "East Sanchez Heights",
+      "kind": "district",
+      "layer": "L3",
+      "band": [
+        "V0",
+        "V+1"
+      ],
+      "existence": "A",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-03"
+      ],
+      "geometry": {
+        "type": "sector",
+        "r_inner": 0.6,
+        "r_outer": 0.95,
+        "az_start": 330,
+        "az_end": 390
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "evidence": [
+        "DIALOGUE_ARCHITECTURE_CROSSREF.md D-002",
+        "RICKLANTIS_VISUAL_EVIDENCE.md 8 (gravity outage)"
+      ],
       "rationale": "Named subdivision (A). Placed on +X solely because of the word 'East' (C); 'Heights' suggests elevated terrain or towers (D).",
-      "unknowns": ["everything spatial", "whether 'East' refers to Citadel geometry at all"],
-      "required_shots": ["S03E07 Citadel Morning News graphic"],
+      "unknowns": [
+        "everything spatial",
+        "whether 'East' refers to Citadel geometry at all"
+      ],
+      "required_shots": [
+        "S03E07 Citadel Morning News graphic"
+      ],
       "reference_images": []
     },
     {
-      "id": "DIST-INDUSTRIAL", "name": "Industrial sector", "kind": "district", "layer": "L3", "band": ["V0","V+1","V-1"],
-      "existence": "B", "placement": "PROVISIONAL", "states": ["DS-01","DS-02","DS-03","DS-04","DS-05"],
-      "geometry": {"type": "sector", "r_inner": 0.6, "r_outer": 0.98, "az_start": 90, "az_end": 160},
-      "position": [0, 0, 0],
-      "evidence": ["SIMPLE_RICKS_FACTORY.md", "RICKLANTIS_VISUAL_EVIDENCE.md 9, 10, 15", "BUILDING_FAMILIES.md 5, 6"],
+      "id": "DIST-INDUSTRIAL",
+      "name": "Industrial sector",
+      "kind": "district",
+      "layer": "L3",
+      "band": [
+        "V0",
+        "V+1",
+        "V-1"
+      ],
+      "existence": "B",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "sector",
+        "r_inner": 0.6,
+        "r_outer": 0.98,
+        "az_start": 90,
+        "az_end": 160
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "evidence": [
+        "SIMPLE_RICKS_FACTORY.md",
+        "RICKLANTIS_VISUAL_EVIDENCE.md 9, 10, 15",
+        "BUILDING_FAMILIES.md 5, 6"
+      ],
       "rationale": "Simple Rick's and the Wishing Portal compound need large floor plates; grouped at the rim so heavy machinery can connect down to the lower body.",
-      "unknowns": ["whether industry is one sector or distributed"],
-      "required_shots": ["S03E07 factory exterior", "S03E07 Wishing Portal approach"],
+      "unknowns": [
+        "whether industry is one sector or distributed"
+      ],
+      "required_shots": [
+        "S03E07 factory exterior",
+        "S03E07 Wishing Portal approach"
+      ],
       "reference_images": []
     },
     {
-      "id": "DIST-MORTYTOWN", "name": "Mortytown", "kind": "district", "layer": "L3", "band": ["V0","V+1"],
-      "existence": "A", "placement": "PLACEHOLDER", "states": ["DS-03","DS-04","DS-05"],
-      "geometry": {"type": "sector", "r_inner": 0.55, "r_outer": 0.95, "az_start": 190, "az_end": 260},
-      "position": [0, 0, 0],
-      "evidence": ["MORTYTOWN.md", "RICKLANTIS_VISUAL_EVIDENCE.md 11-13", "DIALOGUE_ARCHITECTURE_CROSSREF.md D-003", "CONTRADICTION_LOG.md C-003"],
+      "id": "DIST-MORTYTOWN",
+      "name": "Mortytown",
+      "kind": "district",
+      "layer": "L3",
+      "band": [
+        "V0",
+        "V+1"
+      ],
+      "existence": "A",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "sector",
+        "r_inner": 0.55,
+        "r_outer": 0.95,
+        "az_start": 190,
+        "az_end": 260
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "evidence": [
+        "MORTYTOWN.md",
+        "RICKLANTIS_VISUAL_EVIDENCE.md 11-13",
+        "DIALOGUE_ARCHITECTURE_CROSSREF.md D-003",
+        "CONTRADICTION_LOG.md C-003"
+      ],
       "rationale": "Distinct neighbourhood with streets, alleys, Morty Mart, Creepy Morty, occupied residences (A). Placed at the rim on a lower-status/edge inference (C). NOT the same thing as Mortyburg (C-003) — the sector is adjacent to the Mortyburg interface only as a modelling convenience.",
-      "unknowns": ["boundary", "grid", "vertical extent", "true relationship to Mortyburg"],
-      "required_shots": ["S03E07 Mortytown streets", "S03E07 alley graffiti", "S03E07 Morty Mart exterior", "S03E07 Creepy Morty exterior"],
+      "unknowns": [
+        "boundary",
+        "grid",
+        "vertical extent",
+        "true relationship to Mortyburg"
+      ],
+      "required_shots": [
+        "S03E07 Mortytown streets",
+        "S03E07 alley graffiti",
+        "S03E07 Morty Mart exterior",
+        "S03E07 Creepy Morty exterior"
+      ],
       "reference_images": []
     },
     {
-      "id": "DIST-BIG-MORTY", "name": "Big Morty criminal territory", "kind": "district", "layer": "L3", "band": ["V0"],
-      "existence": "A", "placement": "PLACEHOLDER", "states": ["DS-03"], "parent": "DIST-MORTYTOWN",
-      "geometry": {"type": "sector", "r_inner": 0.7, "r_outer": 0.9, "az_start": 215, "az_end": 245},
-      "position": [0, 0, 0],
-      "evidence": ["LOCATION_REGISTER.md (Big Morty criminal territory)", "RICKLANTIS_VISUAL_EVIDENCE.md 11"],
+      "id": "DIST-BIG-MORTY",
+      "name": "Big Morty criminal territory",
+      "kind": "district",
+      "layer": "L3",
+      "band": [
+        "V0"
+      ],
+      "existence": "A",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-03"
+      ],
+      "parent": "DIST-MORTYTOWN",
+      "geometry": {
+        "type": "sector",
+        "r_inner": 0.7,
+        "r_outer": 0.9,
+        "az_start": 215,
+        "az_end": 245
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "evidence": [
+        "LOCATION_REGISTER.md (Big Morty criminal territory)",
+        "RICKLANTIS_VISUAL_EVIDENCE.md 11"
+      ],
       "rationale": "Criminal economy is shown inside Mortytown; the sub-sector is arbitrary.",
-      "unknowns": ["extent"], "required_shots": ["S03E07 Big Morty interior/exterior"], "reference_images": []
+      "unknowns": [
+        "extent"
+      ],
+      "required_shots": [
+        "S03E07 Big Morty interior/exterior"
+      ],
+      "reference_images": []
     },
     {
-      "id": "DIST-AGRICULTURAL", "name": "Agricultural edge (MegaFruit farm)", "kind": "district", "layer": "L3", "band": ["V0"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-03","DS-04","DS-05"],
-      "geometry": {"type": "sector", "r_inner": 0.72, "r_outer": 0.98, "az_start": 270, "az_end": 325},
-      "position": [0, 0, 0],
-      "evidence": ["RICKLANTIS_VISUAL_EVIDENCE.md 14 (farm-at-edge)", "BUILDING_FAMILIES.md 8", "CONTRADICTION_LOG.md C-005"],
+      "id": "DIST-AGRICULTURAL",
+      "name": "Agricultural edge (MegaFruit farm)",
+      "kind": "district",
+      "layer": "L3",
+      "band": [
+        "V0"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "sector",
+        "r_inner": 0.72,
+        "r_outer": 0.98,
+        "az_start": 270,
+        "az_end": 325
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "evidence": [
+        "RICKLANTIS_VISUAL_EVIDENCE.md 14 (farm-at-edge)",
+        "BUILDING_FAMILIES.md 8",
+        "CONTRADICTION_LOG.md C-005"
+      ],
       "rationale": "Open agricultural land distinct from dense streets, previously identified as farm-at-edge; therefore an outer sector under the dome where open space reads correctly.",
-      "unknowns": ["footprint", "enclosure", "whether farming is centralised"],
-      "required_shots": ["S03E07 farm wide shot", "S03E07 Farmer Rick and robot dog"],
+      "unknowns": [
+        "footprint",
+        "enclosure",
+        "whether farming is centralised"
+      ],
+      "required_shots": [
+        "S03E07 farm wide shot",
+        "S03E07 Farmer Rick and robot dog"
+      ],
       "reference_images": []
     },
     {
-      "id": "DIST-CONSTRUCTION", "name": "Post-Rickshank construction zones", "kind": "district", "layer": "L3", "band": ["V0","V+1"],
-      "existence": "A", "placement": "PLACEHOLDER", "states": ["DS-02","DS-03"],
-      "geometry": {"type": "sector", "r_inner": 0.35, "r_outer": 0.6, "az_start": 150, "az_end": 195},
-      "position": [0, 0, 0],
-      "evidence": ["RICKLANTIS_VISUAL_EVIDENCE.md 1", "BUILDING_FAMILIES.md 9", "DESTRUCTION_STATES.md DS-02/DS-03"],
+      "id": "DIST-CONSTRUCTION",
+      "name": "Post-Rickshank construction zones",
+      "kind": "district",
+      "layer": "L3",
+      "band": [
+        "V0",
+        "V+1"
+      ],
+      "existence": "A",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-02",
+        "DS-03"
+      ],
+      "geometry": {
+        "type": "sector",
+        "r_inner": 0.35,
+        "r_outer": 0.6,
+        "az_start": 150,
+        "az_end": 195
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "evidence": [
+        "RICKLANTIS_VISUAL_EVIDENCE.md 1",
+        "BUILDING_FAMILIES.md 9",
+        "DESTRUCTION_STATES.md DS-02/DS-03"
+      ],
       "rationale": "Damaged buildings and roadways with active skyscraper reconstruction (A). Where the damage was is UNKNOWN; the sector is arbitrary. In the 3D model this is a state-dependent overlay, not a permanent district.",
-      "unknowns": ["damage distribution"], "required_shots": ["S03E07 opening reconstruction montage", "S03E01 damaged Citadel"], "reference_images": []
+      "unknowns": [
+        "damage distribution"
+      ],
+      "required_shots": [
+        "S03E07 opening reconstruction montage",
+        "S03E01 damaged Citadel"
+      ],
+      "reference_images": []
     },
     {
-      "id": "DIST-DOWNTOWN-RICKVILLE", "name": "Downtown Rickville (comic)", "kind": "district", "layer": "L3", "band": ["V0","V+1"],
-      "existence": "A", "placement": "UNPLACED", "states": [], "continuity": "COMIC-CANON",
-      "geometry": null, "position": null,
-      "evidence": ["COMIC_FINAL_STATUS.md", "CITADEL_COMIC_TARGET_REGISTER.md"],
+      "id": "DIST-DOWNTOWN-RICKVILLE",
+      "name": "Downtown Rickville (comic)",
+      "kind": "district",
+      "layer": "L3",
+      "band": [
+        "V0",
+        "V+1"
+      ],
+      "existence": "A",
+      "placement": "UNPLACED",
+      "states": [],
+      "continuity": "COMIC-CANON",
+      "geometry": null,
+      "position": null,
+      "evidence": [
+        "COMIC_FINAL_STATUS.md",
+        "CITADEL_COMIC_TARGET_REGISTER.md"
+      ],
       "rationale": "Comic-only location. Per C-008 it is not given animated-continuity coordinates.",
-      "unknowns": ["all"], "required_shots": ["Council of Ricks #1 street panels"], "reference_images": []
-    },
-    {
-      "id": "LM-CENTRAL-PLAZA", "name": "Central plaza", "kind": "landmark", "layer": "L5", "band": ["V0"],
-      "existence": "A", "placement": "ANCHORED", "states": ["DS-04","DS-05"],
-      "geometry": {"type": "disc", "radius": 0.12, "z": 0.0}, "position": [0, 0, 0],
-      "evidence": ["EPISODE_EVIDENCE_RICKMURAI_JACK.md (central plaza)"],
-      "rationale": "Described as central; anchored on the origin. Whether the same plaza exists in DS-01..03 is UNKNOWN, so states are limited to S05E10.",
-      "unknowns": ["shape", "size", "existence in earlier states"],
-      "required_shots": ["S05E10 plaza before flood", "S05E10 plaza flood"],
+      "unknowns": [
+        "all"
+      ],
+      "required_shots": [
+        "Council of Ricks #1 street panels"
+      ],
       "reference_images": []
     },
     {
-      "id": "LM-PRESIDENTIAL-BUILDING", "name": "Presidential Building", "kind": "landmark", "layer": "L4", "band": ["V0","V+1"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-04","DS-05"],
-      "geometry": {"type": "box", "size": [0.12, 0.1, 0.28]}, "position": [0.0, 0.19, 0.0],
-      "evidence": ["EPISODE_EVIDENCE_RICKMURAI_JACK.md (Rick and Morty exit it during the collapse)"],
-      "rationale": "Exited into the collapse sequence that also shows the plaza; placed on the plaza edge. Tallest civic mass by convention.",
-      "unknowns": ["footprint", "height", "which plaza edge", "relationship to Council Hall (C-004)"],
-      "required_shots": ["S05E10 Presidential Building exterior", "S05E10 exit sequence"],
-      "reference_images": []
+      "id": "LM-CENTRAL-PLAZA",
+      "name": "Central plaza",
+      "kind": "landmark",
+      "layer": "L5",
+      "band": [
+        "V0"
+      ],
+      "existence": "A",
+      "placement": "ANCHORED",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "disc",
+        "radius": 0.16,
+        "z": 0.0
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#01 (S01E10 arrival plaza)",
+        "EPISODE_EVIDENCE_RICKMURAI_JACK.md (central plaza)"
+      ],
+      "rationale": "S01E10 arrival frame (gallery #01) shows a large central atrium plaza under ribbed glazing with a monument tower at its centre, water and rock at its edge and curved multi-level walkways sweeping around it. Combined with the S05E10 \"central plaza\", the plaza is now carried through all intact states and anchored on the origin.",
+      "unknowns": [
+        "whether the DS-01 atrium and the DS-04 plaza are the same space",
+        "exact size"
+      ],
+      "required_shots": [
+        "S05E10 plaza before flood",
+        "S05E10 plaza flood"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#01 (S01E10 arrival plaza)"
+      ]
     },
     {
-      "id": "LM-COUNCIL-HALL", "name": "Council Hall (Council of Ricks)", "kind": "landmark", "layer": "L4", "band": ["V0","V+1"],
-      "existence": "A", "placement": "PLACEHOLDER", "states": ["DS-01","DS-02"],
-      "geometry": {"type": "box", "size": [0.14, 0.1, 0.12]}, "position": [-0.2, 0.06, 0.0],
-      "evidence": ["COUNCIL_CHAMBER.md", "LOCATION_REGISTER.md (Council Hall)", "EVIDENCE_MATRIX.md E-008"],
-      "rationale": "Council chamber with stage/seating is direct (A). Its exterior and its position relative to the later Presidential Building are UNKNOWN. Placed in the civic core. States end at DS-02 because the Council is destroyed in Rickshank; whether the building persists is UNKNOWN.",
-      "unknowns": ["exterior massing", "floor count", "survival after DS-02", "relation to Shadow Council Hall"],
-      "required_shots": ["S01E10 Council chamber interior", "S01E10 Council approach", "S03E01 Council/security areas"],
-      "reference_images": []
+      "id": "LM-CENTRAL-MONUMENT",
+      "name": "Central monument tower (Rick statue)",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0",
+        "V+1",
+        "V+2"
+      ],
+      "existence": "A",
+      "placement": "ANCHORED",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "cylinder",
+        "radius_top": 0.02,
+        "radius_bottom": 0.035,
+        "z_top": 0.5,
+        "z_bottom": 0.0,
+        "features": [
+          "tall tapering spire",
+          "Rick statue/relief on the shaft",
+          "plinth at plaza level",
+          "elevated walkway attachments",
+          "late-era form: ornate pointed spire with arched base and orange detailing (#14/#15)"
+        ]
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "parent": "LM-CENTRAL-PLAZA",
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#14 (S05E10 plaza destruction wide)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#01 (S01E10 arrival plaza)"
+      ],
+      "rationale": "Directly visible at the centre of the arrival plaza in S01E10 (gallery #01): a tall pale spire with a Rick figure on it, walkways meeting it at height. Height ratio to people is roughly 25:1 in frame; 0.5 U is a placeholder. Survival after DS-02 UNKNOWN. Gallery #14/#15 (S05E10 plaza during the collapse) show an ornate pointed spire with arched base at the plaza centre, so a central spire persists into the late Citadel; its form differs from the S01E10 monument (rebuilt or re-dressed), which is why the node is carried through DS-03..05 rather than duplicated.",
+      "unknowns": [
+        "height",
+        "whether the DS-01 and DS-04 spires are the same structure",
+        "relation to the Presidential Building"
+      ],
+      "required_shots": [
+        "S01E10 arrival wide",
+        "S01E10 reverse angle"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#01 (S01E10 arrival plaza)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#14 (S05E10 plaza destruction wide)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground)"
+      ]
     },
     {
-      "id": "LM-COUNCIL-CHAMBER", "name": "Council chamber (interior)", "kind": "interior", "layer": "L4", "band": ["V0"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-01","DS-02"], "parent": "LM-COUNCIL-HALL",
-      "geometry": {"type": "room", "size": [0.1, 0.08, 0.04], "features": ["raised stage/platform", "six council seats", "audience/seating arrangement", "controlled entry"]},
-      "position": [-0.2, 0.06, 0.0],
-      "evidence": ["COUNCIL_CHAMBER.md", "DIMENSIONAL_EVIDENCE_TABLE.md (seating/stage arrangement visible)"],
-      "rationale": "Interior arrangement is visible; the six-member Council gives the seat count.",
-      "unknowns": ["room proportions", "ceiling height"],
-      "required_shots": ["S01E10 Council chamber wide", "S01E10 Council chamber reverse"],
-      "reference_images": []
+      "id": "CIRC-CORE-WALKWAYS",
+      "name": "Elevated curved walkways around the core",
+      "kind": "circulation",
+      "layer": "L2",
+      "band": [
+        "V+2"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-01",
+        "DS-02"
+      ],
+      "geometry": {
+        "type": "ring",
+        "radius": 0.2,
+        "width": 0.02,
+        "z": 0.12
+      },
+      "position": [
+        0,
+        0,
+        0.12
+      ],
+      "parent": "LM-CENTRAL-PLAZA",
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#01 (S01E10 arrival plaza)",
+        "VERTICAL_LAYERS.md (elevated circulation)"
+      ],
+      "rationale": "Gallery #01 shows at least three tiers of curved pedestrian walkways sweeping around the atrium at different heights. Modelled as one ring at z 0.12; add tiers once frames give the spacing.",
+      "unknowns": [
+        "tier count",
+        "heights",
+        "where they land"
+      ],
+      "required_shots": [
+        "S01E10 arrival wide",
+        "S01E10 atrium ceiling"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#01 (S01E10 arrival plaza)"
+      ]
     },
     {
-      "id": "LM-SHADOW-COUNCIL-HALL", "name": "Shadow Council Hall", "kind": "landmark", "layer": "L4", "band": ["V0","V+1"],
-      "existence": "A", "placement": "PLACEHOLDER", "states": ["DS-03","DS-04"],
-      "geometry": {"type": "box", "size": [0.1, 0.1, 0.1]}, "position": [-0.2, -0.12, 0.0],
-      "evidence": ["RICKLANTIS_VISUAL_EVIDENCE.md 16", "CONTRADICTION_LOG.md C-004"],
+      "id": "LM-CORE-WATER",
+      "name": "Atrium water feature and rock garden",
+      "kind": "natural",
+      "layer": "L5",
+      "band": [
+        "V0"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "terrain_patch",
+        "radius": 0.06,
+        "features": [
+          "pond/pool",
+          "boulders",
+          "planting"
+        ]
+      },
+      "position": [
+        -0.11,
+        0.04,
+        0
+      ],
+      "parent": "LM-CENTRAL-PLAZA",
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#01 (S01E10 arrival plaza)",
+        "VERTICAL_LAYERS.md (trees, fountains)"
+      ],
+      "rationale": "Water and large rocks flank the plaza on the left of the S01E10 arrival frame; confirms natural elements inside the civic core. Side is camera-relative, so the azimuth is placeholder. Gallery #15 shows a fountain pool with trees and planting in the late plaza, so the water feature persists (in some form) through DS-03..05.",
+      "unknowns": [
+        "extent",
+        "which side of the plaza"
+      ],
+      "required_shots": [
+        "S01E10 arrival wide"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#01 (S01E10 arrival plaza)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground)"
+      ]
+    },
+    {
+      "id": "LM-SPIRE-CLUSTER",
+      "name": "Central spire cluster (DS-03 skyline)",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0",
+        "V+1",
+        "V+2"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "cylinder",
+        "radius_top": 0.02,
+        "radius_bottom": 0.12,
+        "z_top": 0.6,
+        "z_bottom": 0.0,
+        "features": [
+          "several tapering spires",
+          "tallest masses in the skyline",
+          "glowing cyan strip lighting"
+        ]
+      },
+      "position": [
+        0.08,
+        0.1,
+        0
+      ],
+      "parent": "DIST-CIVIC-CORE",
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#02 (S03E07 streetscape)"
+      ],
+      "rationale": "The S03E07 streetscape (gallery #02) has a cluster of very tall spires on the vanishing point behind lower blocks; the tallest masses are therefore central, supporting the core-to-rim height gradient. Placed in the civic core; exact position UNKNOWN.",
+      "unknowns": [
+        "spire count",
+        "heights vs dome",
+        "exact position"
+      ],
+      "required_shots": [
+        "S03E07 skyline montage",
+        "S03E07 street reverse"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#02 (S03E07 streetscape)"
+      ]
+    },
+    {
+      "id": "CIRC-ELEVATED-TUBE",
+      "name": "Elevated transit tube crossing the street",
+      "kind": "circulation",
+      "layer": "L2",
+      "band": [
+        "V+2"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-03",
+        "DS-04"
+      ],
+      "geometry": {
+        "type": "path",
+        "width": 0.02,
+        "z": 0.07,
+        "points": [
+          [
+            0.32,
+            0.12,
+            0.07
+          ],
+          [
+            0.45,
+            0.12,
+            0.07
+          ],
+          [
+            0.6,
+            0.12,
+            0.07
+          ]
+        ]
+      },
+      "position": [
+        0,
+        0,
+        0.07
+      ],
+      "parent": "CIRC-RAIL-LOOP",
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#02 (S03E07 streetscape)",
+        "RICKLANTIS_VISUAL_EVIDENCE.md 7"
+      ],
+      "rationale": "Gallery #02 shows a horizontal transit tube/bridge spanning a pedestrian street at roughly 2-3 storeys. This is the first visual support for the rail loop being elevated; the loop stays PROVISIONAL at z 0.05 but the tube is logged as its own node until the two are proven the same.",
+      "unknowns": [
+        "whether this is the commuter rail",
+        "height",
+        "route"
+      ],
+      "required_shots": [
+        "S03E07 street wide",
+        "S03E07 train exterior"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#02 (S03E07 streetscape)"
+      ]
+    },
+    {
+      "id": "LM-PRESIDENTIAL-BUILDING",
+      "name": "Presidential Building",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0",
+        "V+1"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.12,
+          0.1,
+          0.28
+        ],
+        "features": [
+          "tall shaft",
+          "circular panoramic glazed top level (#12)",
+          "exit onto the plaza (S05E10)"
+        ]
+      },
+      "position": [
+        0.0,
+        0.19,
+        0.0
+      ],
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#12 (S05E10 Presidential dining room)",
+        "EPISODE_EVIDENCE_RICKMURAI_JACK.md (Rick and Morty exit it during the collapse)"
+      ],
+      "rationale": "Exited into the collapse sequence that also shows the plaza; placed on the plaza edge. Tallest civic mass by convention. Gallery #12 (dining room) shows a circular panoramic glazed room high above the skyline with spires and a domed building visible below, consistent with a tall building whose top level is a round glazed chamber.",
+      "unknowns": [
+        "footprint",
+        "height",
+        "which plaza edge",
+        "relationship to Council Hall (C-004)"
+      ],
+      "required_shots": [
+        "S05E10 Presidential Building exterior",
+        "S05E10 exit sequence"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#12 (S05E10 Presidential dining room)"
+      ]
+    },
+    {
+      "id": "LM-PLAZA-DOME-BUILDING",
+      "name": "Domed building at the plaza edge",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0",
+        "V+1"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.14,
+          0.14,
+          0.1
+        ],
+        "features": [
+          "pale drum",
+          "yellow-orange domed roof",
+          "arched openings"
+        ]
+      },
+      "position": [
+        0.24,
+        -0.16,
+        0
+      ],
+      "parent": "DIST-CIVIC-CORE",
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#14 (S05E10 plaza destruction wide)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#12 (S05E10 Presidential dining room)"
+      ],
+      "rationale": "A large pale domed building with an orange roof stands at the plaza edge in the S05E10 collapse frames and a similar dome is visible from the Presidential dining room (#12). Side of the plaza is camera-relative, so the azimuth is placeholder.",
+      "unknowns": [
+        "function",
+        "exact position",
+        "whether it is the Council/Shadow Council hall"
+      ],
+      "required_shots": [
+        "S05E10 plaza wide",
+        "S05E10 plaza reverse"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#14 (S05E10 plaza destruction wide)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#12 (S05E10 Presidential dining room)"
+      ]
+    },
+    {
+      "id": "LM-COUNCIL-HALL",
+      "name": "Council Hall (Council of Ricks)",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0",
+        "V+1"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-01",
+        "DS-02"
+      ],
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.16,
+          0.1,
+          0.14
+        ],
+        "features": [
+          "grand entrance stair (#24)",
+          "layered glazed façade",
+          "three emblem banners",
+          "domed turret",
+          "arched central door"
+        ]
+      },
+      "position": [
+        -0.2,
+        0.06,
+        0.0
+      ],
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#24 (S01E10 civic building entrance)",
+        "COUNCIL_CHAMBER.md",
+        "LOCATION_REGISTER.md (Council Hall)",
+        "EVIDENCE_MATRIX.md E-008"
+      ],
+      "rationale": "Council chamber with stage/seating is direct (A). Its exterior and its position relative to the later Presidential Building are UNKNOWN. Placed in the civic core. States end at DS-02 because the Council is destroyed in Rickshank; whether the building persists is UNKNOWN. Gallery #24 (S01E10) shows the civic building the arriving Ricks face: a broad multi-storey glazed façade with three large emblem banners, a grand stair, a domed turret and tall spires behind. Identified as the Council building by the Council-era emblem; position still not shown.",
+      "unknowns": [
+        "exterior massing",
+        "floor count",
+        "survival after DS-02",
+        "relation to Shadow Council Hall"
+      ],
+      "required_shots": [
+        "S01E10 Council chamber interior",
+        "S01E10 Council approach",
+        "S03E01 Council/security areas"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#24 (S01E10 civic building entrance)"
+      ]
+    },
+    {
+      "id": "LM-COUNCIL-CHAMBER",
+      "name": "Council chamber (interior)",
+      "kind": "interior",
+      "layer": "L4",
+      "band": [
+        "V0"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-01",
+        "DS-02"
+      ],
+      "parent": "LM-COUNCIL-HALL",
+      "geometry": {
+        "type": "room",
+        "size": [
+          0.1,
+          0.08,
+          0.04
+        ],
+        "features": [
+          "tall curved raised bench for six",
+          "floor well below the bench",
+          "large organic trunk-like columns",
+          "controlled entry",
+          "raised curved dais with emblem (#26)",
+          "giant oval feature wall (#26)"
+        ]
+      },
+      "position": [
+        -0.2,
+        0.06,
+        0.0
+      ],
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#26 (S03E01 Council hall)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#06 (S01E10 Council chamber)",
+        "COUNCIL_CHAMBER.md",
+        "DIMENSIONAL_EVIDENCE_TABLE.md (seating/stage arrangement visible)"
+      ],
+      "rationale": "Interior arrangement is visible; the six-member Council gives the seat count. Gallery #06 shows the Council seated on a tall curved raised bench well above the floor, with large organic trunk-like columns and a yellow-green palette. Gallery #26 (S03E01) shows the tribunal form: a raised yellow curved dais bearing the Council emblem, an audience floor below, and a giant oval feature wall behind.",
+      "unknowns": [
+        "room proportions",
+        "ceiling height"
+      ],
+      "required_shots": [
+        "S01E10 Council chamber wide",
+        "S01E10 Council chamber reverse"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#26 (S03E01 Council hall)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#06 (S01E10 Council chamber)"
+      ]
+    },
+    {
+      "id": "LM-SHADOW-COUNCIL-HALL",
+      "name": "Shadow Council Hall",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0",
+        "V+1"
+      ],
+      "existence": "A",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-03",
+        "DS-04"
+      ],
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.1,
+          0.1,
+          0.1
+        ]
+      },
+      "position": [
+        -0.2,
+        -0.12,
+        0.0
+      ],
+      "evidence": [
+        "RICKLANTIS_VISUAL_EVIDENCE.md 16",
+        "CONTRADICTION_LOG.md C-004"
+      ],
       "rationale": "Dedicated interior with designated seats (A). Not proven to be the old Council Hall; kept as a separate node in the civic core.",
-      "unknowns": ["exterior", "identity with LM-COUNCIL-HALL"],
-      "required_shots": ["S03E07 Shadow Council interior"], "reference_images": []
+      "unknowns": [
+        "exterior",
+        "identity with LM-COUNCIL-HALL"
+      ],
+      "required_shots": [
+        "S03E07 Shadow Council interior"
+      ],
+      "reference_images": []
     },
     {
-      "id": "LM-COURTHOUSE", "name": "Courthouse / judicial facility", "kind": "landmark", "layer": "L4", "band": ["V0","V+1"],
-      "existence": "B", "placement": "PLACEHOLDER", "states": ["DS-01","DS-02","DS-03","DS-04"],
-      "geometry": {"type": "box", "size": [0.1, 0.08, 0.1]}, "position": [0.2, 0.1, 0.0],
-      "evidence": ["CIVIC_SYSTEMS.md (courts/law)", "LOCATION_REGISTER.md", "CONTRADICTION_LOG.md C-004"],
+      "id": "LM-COURTHOUSE",
+      "name": "Courthouse / judicial facility",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0",
+        "V+1"
+      ],
+      "existence": "B",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04"
+      ],
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.1,
+          0.08,
+          0.1
+        ]
+      },
+      "position": [
+        0.2,
+        0.1,
+        0.0
+      ],
+      "evidence": [
+        "CIVIC_SYSTEMS.md (courts/law)",
+        "LOCATION_REGISTER.md",
+        "CONTRADICTION_LOG.md C-004"
+      ],
       "rationale": "Judicial function exists; no building shown. Civic-core slot.",
-      "unknowns": ["everything physical"], "required_shots": ["any courtroom frame"], "reference_images": []
+      "unknowns": [
+        "everything physical"
+      ],
+      "required_shots": [
+        "any courtroom frame"
+      ],
+      "reference_images": []
     },
     {
-      "id": "LM-MORTY-AGENCY", "name": "Morty Agency", "kind": "landmark", "layer": "L4", "band": ["V0","V+1"],
-      "existence": "A", "placement": "PLACEHOLDER", "states": ["DS-03","DS-04"],
-      "geometry": {"type": "box", "size": [0.1, 0.08, 0.1], "features": ["reception/counter (Counter Rick)", "guard post (Guard Rick)", "Morty database room"]},
-      "position": [0.18, -0.16, 0.0],
-      "evidence": ["EPISODE_EVIDENCE_UNMORTRICKEN.md", "DIALOGUE_ARCHITECTURE_CROSSREF.md D-012, D-013"],
+      "id": "LM-MORTY-AGENCY",
+      "name": "Morty Agency",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0",
+        "V+1"
+      ],
+      "existence": "A",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-03",
+        "DS-04"
+      ],
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.1,
+          0.08,
+          0.1
+        ],
+        "features": [
+          "reception/counter (Counter Rick)",
+          "guard post (Guard Rick)",
+          "Morty database room"
+        ]
+      },
+      "position": [
+        0.18,
+        -0.16,
+        0.0
+      ],
+      "evidence": [
+        "EPISODE_EVIDENCE_UNMORTRICKEN.md",
+        "DIALOGUE_ARCHITECTURE_CROSSREF.md D-012, D-013"
+      ],
       "rationale": "Administrative facility with controlled access (A/B). Placed in the civic core as an administrative function; adjacency to anything is explicitly NOT established.",
-      "unknowns": ["footprint", "district", "exterior"],
-      "required_shots": ["S07E05 Agency exterior", "S07E05 reception/database interior"], "reference_images": []
+      "unknowns": [
+        "footprint",
+        "district",
+        "exterior"
+      ],
+      "required_shots": [
+        "S07E05 Agency exterior",
+        "S07E05 reception/database interior"
+      ],
+      "reference_images": []
     },
     {
-      "id": "LM-MILITIA-HQ", "name": "Citadel militia / SEAL Team Ricks base", "kind": "landmark", "layer": "L4", "band": ["V0","V+1"],
-      "existence": "A", "placement": "PLACEHOLDER", "states": ["DS-01","DS-02"],
-      "geometry": {"type": "box", "size": [0.12, 0.08, 0.08]}, "position": [-0.05, -0.24, 0.0],
-      "evidence": ["CITADEL_POLICE.md (Council era militia, SEAL Team Ricks)", "LOCATION_REGISTER.md"],
-      "rationale": "Council-era security force exists; the facility is inferred. Near the civic core for government access.",
-      "unknowns": ["whether it is the same site as LM-POLICE-HQ in later states"], "required_shots": ["S01E10 / S03E01 security areas"], "reference_images": []
+      "id": "LM-MILITIA-HQ",
+      "name": "Citadel militia / SEAL Team Ricks base",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0",
+        "V+1"
+      ],
+      "existence": "A",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-01",
+        "DS-02"
+      ],
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.12,
+          0.08,
+          0.08
+        ]
+      },
+      "position": [
+        -0.05,
+        -0.24,
+        0.0
+      ],
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#20 (S01E10 security corridor)",
+        "CITADEL_POLICE.md (Council era militia, SEAL Team Ricks)",
+        "LOCATION_REGISTER.md"
+      ],
+      "rationale": "Council-era security force exists; the facility is inferred. Near the civic core for government access. Gallery #20 shows armed Ricks in a glazed corridor with planting, so security circulation shares the civic core's glazed, vegetated language.",
+      "unknowns": [
+        "whether it is the same site as LM-POLICE-HQ in later states"
+      ],
+      "required_shots": [
+        "S01E10 / S03E01 security areas"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#20 (S01E10 security corridor)"
+      ]
     },
     {
-      "id": "LM-POLICE-HQ", "name": "Citadel Police HQ and Academy", "kind": "landmark", "layer": "L4", "band": ["V0","V+1"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-03","DS-04"],
-      "geometry": {"type": "box", "size": [0.14, 0.1, 0.1], "features": ["offices", "academy classrooms", "indoor shooting range", "cruiser garage / vehicle access"]},
-      "position": [-0.36, -0.28, 0.0],
-      "evidence": ["RICKLANTIS_VISUAL_EVIDENCE.md 5", "CITADEL_POLICE.md", "EVIDENCE_MATRIX.md E-009"],
+      "id": "LM-POLICE-HQ",
+      "name": "Citadel Police HQ and Academy",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0",
+        "V+1"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-03",
+        "DS-04"
+      ],
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.14,
+          0.1,
+          0.1
+        ],
+        "features": [
+          "offices",
+          "academy classrooms",
+          "indoor shooting range",
+          "cruiser garage / vehicle access"
+        ]
+      },
+      "position": [
+        -0.36,
+        -0.28,
+        0.0
+      ],
+      "evidence": [
+        "RICKLANTIS_VISUAL_EVIDENCE.md 5",
+        "CITADEL_POLICE.md",
+        "EVIDENCE_MATRIX.md E-009"
+      ],
       "rationale": "Police patrol Mortytown and dispatch to 'Fifth and Burp'; HQ placed between the civic core and Mortytown so patrol routes are short. Integrated into the street network per CITADEL_POLICE.md.",
-      "unknowns": ["footprint", "whether HQ and Academy are one building"],
-      "required_shots": ["S03E07 shooting range", "S03E07 cruisers leaving", "S03E07 police exterior"], "reference_images": []
+      "unknowns": [
+        "footprint",
+        "whether HQ and Academy are one building"
+      ],
+      "required_shots": [
+        "S03E07 shooting range",
+        "S03E07 cruisers leaving",
+        "S03E07 police exterior"
+      ],
+      "reference_images": []
     },
     {
-      "id": "LM-SHOOTING-RANGE", "name": "Police Academy shooting range", "kind": "interior", "layer": "L4", "band": ["V0"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-03"], "parent": "LM-POLICE-HQ",
-      "geometry": {"type": "room", "size": [0.08, 0.04, 0.02], "features": ["firing line", "synthetic Gromflomite targets", "lane dividers"]},
-      "position": [-0.36, -0.28, 0.0],
-      "evidence": ["RICKLANTIS_VISUAL_EVIDENCE.md 5"], "rationale": "Directly shown interior.",
-      "unknowns": ["lane count", "range length"], "required_shots": ["S03E07 shooting range"], "reference_images": []
+      "id": "LM-SHOOTING-RANGE",
+      "name": "Police Academy shooting range",
+      "kind": "interior",
+      "layer": "L4",
+      "band": [
+        "V0"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-03"
+      ],
+      "parent": "LM-POLICE-HQ",
+      "geometry": {
+        "type": "room",
+        "size": [
+          0.08,
+          0.04,
+          0.02
+        ],
+        "features": [
+          "firing line",
+          "synthetic Gromflomite targets",
+          "lane dividers"
+        ]
+      },
+      "position": [
+        -0.36,
+        -0.28,
+        0.0
+      ],
+      "evidence": [
+        "RICKLANTIS_VISUAL_EVIDENCE.md 5"
+      ],
+      "rationale": "Directly shown interior.",
+      "unknowns": [
+        "lane count",
+        "range length"
+      ],
+      "required_shots": [
+        "S03E07 shooting range"
+      ],
+      "reference_images": []
     },
     {
-      "id": "LM-MORTY-ACADEMY", "name": "Morty Academy", "kind": "landmark", "layer": "L4", "band": ["V0","V+1"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-03","DS-04"],
-      "geometry": {"type": "box", "size": [0.14, 0.1, 0.06], "features": ["lockable main entrance", "locker corridor", "classrooms", "graduation/assignment hall"]},
-      "position": [-0.45, -0.55, 0.0],
-      "evidence": ["RICKLANTIS_VISUAL_EVIDENCE.md 6", "CIVIC_SYSTEMS.md (education)"],
+      "id": "LM-MORTY-ACADEMY",
+      "name": "Morty Academy",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0",
+        "V+1"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-03",
+        "DS-04"
+      ],
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.14,
+          0.1,
+          0.06
+        ],
+        "features": [
+          "lockable main entrance",
+          "locker corridor",
+          "classrooms",
+          "graduation/assignment hall"
+        ]
+      },
+      "position": [
+        -0.45,
+        -0.55,
+        0.0
+      ],
+      "evidence": [
+        "RICKLANTIS_VISUAL_EVIDENCE.md 6",
+        "CIVIC_SYSTEMS.md (education)"
+      ],
       "rationale": "Morty-serving institution; placed on the inner edge of Mortytown (C). Adjacency is not shown.",
-      "unknowns": ["district", "footprint", "floor count"],
-      "required_shots": ["S03E07 Academy entrance", "S03E07 locker corridor", "S03E07 classroom", "S03E07 locked entrance (regime change)"], "reference_images": []
+      "unknowns": [
+        "district",
+        "footprint",
+        "floor count"
+      ],
+      "required_shots": [
+        "S03E07 Academy entrance",
+        "S03E07 locker corridor",
+        "S03E07 classroom",
+        "S03E07 locked entrance (regime change)"
+      ],
+      "reference_images": []
     },
     {
-      "id": "LM-SIMPLE-RICKS", "name": "Simple Rick's Wafer Cookie Factory", "kind": "landmark", "layer": "L4", "band": ["V0","V+1","V-1"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-01","DS-02","DS-03","DS-04","DS-05"],
-      "geometry": {"type": "box", "size": [0.22, 0.14, 0.1], "features": ["exterior entrance/approach with media staging", "assembly-line production floor", "supervisory offices overlooking the floor", "processing machinery with brain-extraction tubing", "Flavor Core secured chamber", "SWAT approach corridor"]},
-      "position": [0.05, 0.78, 0.0], "azimuth": 120,
-      "evidence": ["SIMPLE_RICKS_FACTORY.md", "RICKLANTIS_VISUAL_EVIDENCE.md 9-10", "EVIDENCE_MATRIX.md E-010"],
+      "id": "LM-SIMPLE-RICKS",
+      "name": "Simple Rick's Wafer Cookie Factory",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0",
+        "V+1",
+        "V-1"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.22,
+          0.14,
+          0.1
+        ],
+        "features": [
+          "exterior entrance/approach with media staging",
+          "assembly-line production floor",
+          "supervisory offices overlooking the floor",
+          "processing machinery with brain-extraction tubing",
+          "Flavor Core secured chamber",
+          "SWAT approach corridor"
+        ]
+      },
+      "position": [
+        0.05,
+        0.78,
+        0.0
+      ],
+      "azimuth": 120,
+      "evidence": [
+        "SIMPLE_RICKS_FACTORY.md",
+        "RICKLANTIS_VISUAL_EVIDENCE.md 9-10",
+        "EVIDENCE_MATRIX.md E-010"
+      ],
       "rationale": "Large industrial complex with multiple internal security zones (A). Placed in DIST-INDUSTRIAL. Footprint is the largest single building envelope by convention.",
-      "unknowns": ["footprint", "floor plan", "position relative to Mortytown"],
-      "required_shots": ["S03E07 factory exterior", "S03E07 assembly line", "S03E07 Flavor Core", "S03E07 SWAT breach"], "reference_images": []
+      "unknowns": [
+        "footprint",
+        "floor plan",
+        "position relative to Mortytown"
+      ],
+      "required_shots": [
+        "S03E07 factory exterior",
+        "S03E07 assembly line",
+        "S03E07 Flavor Core",
+        "S03E07 SWAT breach"
+      ],
+      "reference_images": []
     },
     {
-      "id": "LM-FLAVOR-CORE", "name": "Flavor Core chamber", "kind": "interior", "layer": "L4", "band": ["V0"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-03"], "parent": "LM-SIMPLE-RICKS",
-      "geometry": {"type": "room", "size": [0.04, 0.04, 0.03], "features": ["force-field barrier", "Simple Rick chair with headgear/tubing", "lockdown door breached by cutting tool"]},
-      "position": [0.05, 0.84, 0.0],
-      "evidence": ["RICKLANTIS_VISUAL_EVIDENCE.md 10"], "rationale": "Secured chamber inside the factory, at the far end from the entrance by convention.",
-      "unknowns": ["dimensions", "position within factory"], "required_shots": ["S03E07 Flavor Core interior", "S03E07 breach"], "reference_images": []
+      "id": "LM-FLAVOR-CORE",
+      "name": "Flavor Core chamber",
+      "kind": "interior",
+      "layer": "L4",
+      "band": [
+        "V0"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-03"
+      ],
+      "parent": "LM-SIMPLE-RICKS",
+      "geometry": {
+        "type": "cylinder",
+        "radius_top": 0.03,
+        "radius_bottom": 0.03,
+        "z_top": 0.03,
+        "z_bottom": 0.0,
+        "features": [
+          "circular room",
+          "central cylindrical tank with tubing",
+          "chair with headgear",
+          "perimeter observation glazing",
+          "force-field/lockdown door"
+        ]
+      },
+      "position": [
+        0.05,
+        0.84,
+        0.0
+      ],
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#18 (S03E07 Flavor Core)",
+        "RICKLANTIS_VISUAL_EVIDENCE.md 10"
+      ],
+      "rationale": "Secured chamber inside the factory, at the far end from the entrance by convention. Gallery #18 shows a circular chamber with a large central cylindrical tank fed by tubes, the Simple Rick chair beside it, and observation glazing around the perimeter. Geometry changed from a box to a cylinder.",
+      "unknowns": [
+        "dimensions",
+        "position within factory"
+      ],
+      "required_shots": [
+        "S03E07 Flavor Core interior",
+        "S03E07 breach"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#18 (S03E07 Flavor Core)"
+      ]
     },
     {
-      "id": "LM-WISHING-PORTAL", "name": "Wishing Portal compound", "kind": "landmark", "layer": "L4", "band": ["V0","V-1","V-2"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-03","DS-04"],
-      "geometry": {"type": "compound", "wall_radius": 0.07, "wall_height": 0.03, "building_size": [0.06, 0.06, 0.05], "features": ["tall circular wall", "gated/locked entrance", "rusty building", "portal pit inside"]},
-      "position": [-0.35, 0.82, 0.0], "azimuth": 113,
-      "evidence": ["RICKLANTIS_VISUAL_EVIDENCE.md 15", "LOCATION_REGISTER.md (Wishing Portal; Waste Disposal Plant)", "CIVIC_SYSTEMS.md (waste)"],
+      "id": "LM-WISHING-PORTAL",
+      "name": "Wishing Portal compound",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0",
+        "V-1",
+        "V-2"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-03",
+        "DS-04"
+      ],
+      "geometry": {
+        "type": "compound",
+        "wall_radius": 0.07,
+        "wall_height": 0.03,
+        "building_size": [
+          0.06,
+          0.06,
+          0.05
+        ],
+        "features": [
+          "tall circular wall",
+          "gated/locked entrance",
+          "rusty building",
+          "portal pit inside"
+        ]
+      },
+      "position": [
+        -0.35,
+        0.82,
+        0.0
+      ],
+      "azimuth": 113,
+      "evidence": [
+        "RICKLANTIS_VISUAL_EVIDENCE.md 15",
+        "LOCATION_REGISTER.md (Wishing Portal; Waste Disposal Plant)",
+        "CIVIC_SYSTEMS.md (waste)"
+      ],
       "rationale": "Rusty building inside a tall circular wall with a gated entrance (A). It is a waste-disposal facility; grouped with industry at the rim. The portal pit is assumed to drop into V-1/V-2.",
-      "unknowns": ["disposal machinery", "destination", "whether the Waste Disposal Plant is this site (kept separate as LM-WASTE-PLANT)"],
-      "required_shots": ["S03E07 approach to wall", "S03E07 gate breach", "S03E07 portal reveal"], "reference_images": []
+      "unknowns": [
+        "disposal machinery",
+        "destination",
+        "whether the Waste Disposal Plant is this site (kept separate as LM-WASTE-PLANT)"
+      ],
+      "required_shots": [
+        "S03E07 approach to wall",
+        "S03E07 gate breach",
+        "S03E07 portal reveal"
+      ],
+      "reference_images": []
     },
     {
-      "id": "LM-WASTE-PLANT", "name": "Waste Disposal Plant", "kind": "landmark", "layer": "L4", "band": ["V0","V-1"],
-      "existence": "B", "placement": "PLACEHOLDER", "states": ["DS-01","DS-02","DS-03","DS-04"],
-      "geometry": {"type": "box", "size": [0.1, 0.08, 0.06]}, "position": [-0.22, 0.9, 0.0],
-      "evidence": ["LOCATION_REGISTER.md (Waste Disposal Plant)", "UTILITY_SYSTEMS.md (waste)"],
+      "id": "LM-WASTE-PLANT",
+      "name": "Waste Disposal Plant",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0",
+        "V-1"
+      ],
+      "existence": "B",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04"
+      ],
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.1,
+          0.08,
+          0.06
+        ]
+      },
+      "position": [
+        -0.22,
+        0.9,
+        0.0
+      ],
+      "evidence": [
+        "LOCATION_REGISTER.md (Waste Disposal Plant)",
+        "UTILITY_SYSTEMS.md (waste)"
+      ],
       "rationale": "Named in secondary sources; placed next to the Wishing Portal because both are waste infrastructure. Not proven to be the same site.",
-      "unknowns": ["identity with LM-WISHING-PORTAL", "everything physical"], "required_shots": ["any"], "reference_images": []
+      "unknowns": [
+        "identity with LM-WISHING-PORTAL",
+        "everything physical"
+      ],
+      "required_shots": [
+        "any"
+      ],
+      "reference_images": []
     },
     {
-      "id": "LM-AIRLOCK-PODS", "name": "Body-disposal airlock pods", "kind": "utility", "layer": "L4", "band": ["V0","V-1"],
-      "existence": "A", "placement": "PLACEHOLDER", "states": ["DS-03"],
-      "geometry": {"type": "pod_array", "count": 4, "pod_size": [0.02, 0.02, 0.02]}, "position": [-0.5, 1.09, -0.02], "azimuth": 115,
-      "evidence": ["RICKLANTIS_VISUAL_EVIDENCE.md 17", "EPISODE_EVIDENCE_RICKLANTIS.md (airlock)"],
+      "id": "LM-AIRLOCK-PODS",
+      "name": "Body-disposal airlock pods",
+      "kind": "utility",
+      "layer": "L4",
+      "band": [
+        "V0",
+        "V-1"
+      ],
+      "existence": "A",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-03"
+      ],
+      "geometry": {
+        "type": "pod_array",
+        "count": 4,
+        "pod_size": [
+          0.02,
+          0.02,
+          0.02
+        ]
+      },
+      "position": [
+        -0.5,
+        1.09,
+        -0.02
+      ],
+      "azimuth": 115,
+      "evidence": [
+        "RICKLANTIS_VISUAL_EVIDENCE.md 17",
+        "EPISODE_EVIDENCE_RICKLANTIS.md (airlock)"
+      ],
       "rationale": "Pods expel bodies into space, so they must penetrate the outer hull. Placed on the rim beside the waste facilities (C). Separate system from the Wishing Portal per the evidence register.",
-      "unknowns": ["count", "location", "whether they are on the dome rim or the lower body"],
-      "required_shots": ["S03E07 pod loading", "S03E07 bodies-in-space exterior"], "reference_images": []
+      "unknowns": [
+        "count",
+        "location",
+        "whether they are on the dome rim or the lower body"
+      ],
+      "required_shots": [
+        "S03E07 pod loading",
+        "S03E07 bodies-in-space exterior"
+      ],
+      "reference_images": []
     },
     {
-      "id": "LM-MEGAFRUIT-FARM", "name": "MegaFruit farm", "kind": "natural", "layer": "L5", "band": ["V0"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-03","DS-04"], "parent": "DIST-AGRICULTURAL",
-      "geometry": {"type": "terrain_patch", "radius": 0.1, "features": ["cultivated rows", "Mega Trees / Mega Fruit", "farmhouse/structures", "water feature", "robot-dog patrol area"]},
-      "position": [0.15, -0.85, 0.0], "azimuth": 300,
-      "evidence": ["RICKLANTIS_VISUAL_EVIDENCE.md 14", "CONTRADICTION_LOG.md C-005"],
+      "id": "LM-MEGAFRUIT-FARM",
+      "name": "MegaFruit farm",
+      "kind": "natural",
+      "layer": "L5",
+      "band": [
+        "V0"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-03",
+        "DS-04"
+      ],
+      "parent": "DIST-AGRICULTURAL",
+      "geometry": {
+        "type": "terrain_patch",
+        "radius": 0.1,
+        "features": [
+          "cultivated rows",
+          "Mega Trees / Mega Fruit",
+          "farmhouse/structures",
+          "water feature",
+          "robot-dog patrol area"
+        ]
+      },
+      "position": [
+        0.15,
+        -0.85,
+        0.0
+      ],
+      "azimuth": 300,
+      "evidence": [
+        "RICKLANTIS_VISUAL_EVIDENCE.md 14",
+        "CONTRADICTION_LOG.md C-005"
+      ],
       "rationale": "Directly shown open farm with Farmer Rick and robot dog.",
-      "unknowns": ["area", "enclosure"], "required_shots": ["S03E07 farm wide", "S03E07 farmhouse"], "reference_images": []
+      "unknowns": [
+        "area",
+        "enclosure"
+      ],
+      "required_shots": [
+        "S03E07 farm wide",
+        "S03E07 farmhouse"
+      ],
+      "reference_images": []
     },
     {
-      "id": "LM-CAFE-SANCHEZ", "name": "Cafe Sanchez", "kind": "landmark", "layer": "L4", "band": ["V0"],
-      "existence": "A", "placement": "PLACEHOLDER", "states": ["DS-03"],
-      "geometry": {"type": "storefront", "size": [0.03, 0.02, 0.03], "features": ["street-front entrance", "curbside taxi pickup"]},
-      "position": [0.42, 0.2, 0.0],
-      "evidence": ["RICKLANTIS_VISUAL_EVIDENCE.md 4"],
+      "id": "LM-CAFE-SANCHEZ",
+      "name": "Cafe Sanchez",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0"
+      ],
+      "existence": "A",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-03"
+      ],
+      "geometry": {
+        "type": "storefront",
+        "size": [
+          0.03,
+          0.02,
+          0.03
+        ],
+        "features": [
+          "street-front entrance",
+          "curbside taxi pickup"
+        ]
+      },
+      "position": [
+        0.42,
+        0.2,
+        0.0
+      ],
+      "evidence": [
+        "RICKLANTIS_VISUAL_EVIDENCE.md 4"
+      ],
       "rationale": "Street-front cafe with taxi access (A). Commercial-ring slot; exact block UNKNOWN.",
-      "unknowns": ["district", "block"], "required_shots": ["S03E07 Cafe Sanchez exterior / taxi"], "reference_images": []
+      "unknowns": [
+        "district",
+        "block"
+      ],
+      "required_shots": [
+        "S03E07 Cafe Sanchez exterior / taxi"
+      ],
+      "reference_images": []
     },
     {
-      "id": "LM-NEWSROOM", "name": "Citadel Morning News studio", "kind": "landmark", "layer": "L4", "band": ["V0","V+1"],
-      "existence": "A", "placement": "PLACEHOLDER", "states": ["DS-03"],
-      "geometry": {"type": "box", "size": [0.06, 0.05, 0.12]}, "position": [0.5, -0.12, 0.0],
-      "evidence": ["RICKLANTIS_VISUAL_EVIDENCE.md 8"],
+      "id": "LM-NEWSROOM",
+      "name": "Citadel Morning News studio",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0",
+        "V+1"
+      ],
+      "existence": "A",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-03"
+      ],
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.06,
+          0.05,
+          0.12
+        ]
+      },
+      "position": [
+        0.5,
+        -0.12,
+        0.0
+      ],
+      "evidence": [
+        "RICKLANTIS_VISUAL_EVIDENCE.md 8"
+      ],
       "rationale": "Dedicated newsroom (A). Commercial-ring slot.",
-      "unknowns": ["exterior", "district"], "required_shots": ["S03E07 newsroom interior"], "reference_images": []
+      "unknowns": [
+        "exterior",
+        "district"
+      ],
+      "required_shots": [
+        "S03E07 newsroom interior"
+      ],
+      "reference_images": []
     },
     {
-      "id": "LM-SKYSCRAPER-REBUILD", "name": "Skyscraper under reconstruction", "kind": "landmark", "layer": "L4", "band": ["V0","V+1"],
-      "existence": "A", "placement": "PLACEHOLDER", "states": ["DS-03"], "parent": "DIST-CONSTRUCTION",
-      "geometry": {"type": "box", "size": [0.06, 0.06, 0.45], "features": ["scaffolding", "exposed structure", "heavy structural members being placed by Ricks"]},
-      "position": [-0.45, 0.15, 0.0],
-      "evidence": ["RICKLANTIS_VISUAL_EVIDENCE.md 1"],
-      "rationale": "Directly shown rebuild of a tall building.", "unknowns": ["location"], "required_shots": ["S03E07 skyscraper rebuild"], "reference_images": []
+      "id": "LM-SKYSCRAPER-REBUILD",
+      "name": "Skyscraper under reconstruction",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0",
+        "V+1"
+      ],
+      "existence": "A",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-03"
+      ],
+      "parent": "DIST-CONSTRUCTION",
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.06,
+          0.06,
+          0.45
+        ],
+        "features": [
+          "scaffolding",
+          "exposed structure",
+          "heavy structural members being placed by Ricks"
+        ]
+      },
+      "position": [
+        -0.45,
+        0.15,
+        0.0
+      ],
+      "evidence": [
+        "RICKLANTIS_VISUAL_EVIDENCE.md 1"
+      ],
+      "rationale": "Directly shown rebuild of a tall building.",
+      "unknowns": [
+        "location"
+      ],
+      "required_shots": [
+        "S03E07 skyscraper rebuild"
+      ],
+      "reference_images": []
     },
     {
-      "id": "LM-MORTY-MART", "name": "Morty Mart", "kind": "landmark", "layer": "L4", "band": ["V0"],
-      "existence": "A", "placement": "PLACEHOLDER", "states": ["DS-03"], "parent": "DIST-MORTYTOWN",
-      "geometry": {"type": "storefront", "size": [0.04, 0.03, 0.03], "features": ["checkout", "aisles"]}, "position": [-0.62, -0.48, 0.0],
-      "evidence": ["RICKLANTIS_VISUAL_EVIDENCE.md 12"], "rationale": "Street-facing retail in Mortytown (A).",
-      "unknowns": ["block"], "required_shots": ["S03E07 Morty Mart exterior", "S03E07 interior"], "reference_images": []
+      "id": "LM-MORTY-MART",
+      "name": "Morty Mart",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0"
+      ],
+      "existence": "A",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-03"
+      ],
+      "parent": "DIST-MORTYTOWN",
+      "geometry": {
+        "type": "storefront",
+        "size": [
+          0.04,
+          0.03,
+          0.03
+        ],
+        "features": [
+          "checkout",
+          "aisles"
+        ]
+      },
+      "position": [
+        -0.62,
+        -0.48,
+        0.0
+      ],
+      "evidence": [
+        "RICKLANTIS_VISUAL_EVIDENCE.md 12"
+      ],
+      "rationale": "Street-facing retail in Mortytown (A).",
+      "unknowns": [
+        "block"
+      ],
+      "required_shots": [
+        "S03E07 Morty Mart exterior",
+        "S03E07 interior"
+      ],
+      "reference_images": []
     },
     {
-      "id": "LM-CREEPY-MORTY", "name": "The Creepy Morty", "kind": "landmark", "layer": "L4", "band": ["V0"],
-      "existence": "A", "placement": "PLACEHOLDER", "states": ["DS-03"], "parent": "DIST-MORTYTOWN",
-      "geometry": {"type": "storefront", "size": [0.04, 0.03, 0.04], "features": ["exterior entrance", "police hovercar arrival area"]}, "position": [-0.72, -0.62, 0.0],
-      "evidence": ["RICKLANTIS_VISUAL_EVIDENCE.md 13"], "rationale": "Named venue with exterior entrance in Mortytown (A/B).",
-      "unknowns": ["interior"], "required_shots": ["S03E07 Creepy Morty exterior"], "reference_images": []
+      "id": "LM-CREEPY-MORTY",
+      "name": "The Creepy Morty",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0"
+      ],
+      "existence": "A",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-03"
+      ],
+      "parent": "DIST-MORTYTOWN",
+      "geometry": {
+        "type": "storefront",
+        "size": [
+          0.04,
+          0.03,
+          0.04
+        ],
+        "features": [
+          "exterior entrance",
+          "police hovercar arrival area"
+        ]
+      },
+      "position": [
+        -0.72,
+        -0.62,
+        0.0
+      ],
+      "evidence": [
+        "RICKLANTIS_VISUAL_EVIDENCE.md 13"
+      ],
+      "rationale": "Named venue with exterior entrance in Mortytown (A/B).",
+      "unknowns": [
+        "interior"
+      ],
+      "required_shots": [
+        "S03E07 Creepy Morty exterior"
+      ],
+      "reference_images": []
     },
     {
-      "id": "LM-MORTYTOWN-RESIDENCE", "name": "Mortytown residential interior (crib scene)", "kind": "interior", "layer": "L4", "band": ["V0"],
-      "existence": "A", "placement": "PLACEHOLDER", "states": ["DS-03"], "parent": "DIST-MORTYTOWN",
-      "geometry": {"type": "room", "size": [0.02, 0.02, 0.01]}, "position": [-0.56, -0.68, 0.0],
-      "evidence": ["EPISODE_EVIDENCE_RICKLANTIS.md (residential/criminal interior with crib)"],
-      "rationale": "Proves occupied residential interiors exist in Mortytown.", "unknowns": ["building"], "required_shots": ["S03E07 crib interior"], "reference_images": []
+      "id": "LM-MORTYTOWN-RESIDENCE",
+      "name": "Mortytown residential interior (crib scene)",
+      "kind": "interior",
+      "layer": "L4",
+      "band": [
+        "V0"
+      ],
+      "existence": "A",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-03"
+      ],
+      "parent": "DIST-MORTYTOWN",
+      "geometry": {
+        "type": "room",
+        "size": [
+          0.02,
+          0.02,
+          0.01
+        ]
+      },
+      "position": [
+        -0.56,
+        -0.68,
+        0.0
+      ],
+      "evidence": [
+        "EPISODE_EVIDENCE_RICKLANTIS.md (residential/criminal interior with crib)"
+      ],
+      "rationale": "Proves occupied residential interiors exist in Mortytown.",
+      "unknowns": [
+        "building"
+      ],
+      "required_shots": [
+        "S03E07 crib interior"
+      ],
+      "reference_images": []
     },
     {
-      "id": "LM-MORTY-DAY-CARE", "name": "Morty Day Care", "kind": "landmark", "layer": "L4", "band": ["V0"],
-      "existence": "B", "placement": "PLACEHOLDER", "states": ["DS-03","DS-04"], "parent": "DIST-MORTYTOWN",
-      "geometry": {"type": "storefront", "size": [0.03, 0.03, 0.02]}, "position": [-0.5, -0.74, 0.0],
-      "evidence": ["DISTRICTS.md", "LOCATION_REGISTER.md"], "rationale": "Named business; Morty-serving so slotted in Mortytown (C).",
-      "unknowns": ["all"], "required_shots": ["any"], "reference_images": []
+      "id": "LM-MORTY-DAY-CARE",
+      "name": "Morty Day Care",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0"
+      ],
+      "existence": "B",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-03",
+        "DS-04"
+      ],
+      "parent": "DIST-MORTYTOWN",
+      "geometry": {
+        "type": "storefront",
+        "size": [
+          0.03,
+          0.03,
+          0.02
+        ]
+      },
+      "position": [
+        -0.5,
+        -0.74,
+        0.0
+      ],
+      "evidence": [
+        "DISTRICTS.md",
+        "LOCATION_REGISTER.md"
+      ],
+      "rationale": "Named business; Morty-serving so slotted in Mortytown (C).",
+      "unknowns": [
+        "all"
+      ],
+      "required_shots": [
+        "any"
+      ],
+      "reference_images": []
     },
     {
-      "id": "LM-MORTY-GAMES", "name": "Morty Games", "kind": "landmark", "layer": "L4", "band": ["V0"],
-      "existence": "B", "placement": "PLACEHOLDER", "states": ["DS-03","DS-04"], "parent": "DIST-MORTYTOWN",
-      "geometry": {"type": "storefront", "size": [0.03, 0.03, 0.03]}, "position": [-0.66, -0.36, 0.0],
-      "evidence": ["DISTRICTS.md", "LOCATION_REGISTER.md"], "rationale": "As LM-MORTY-DAY-CARE.", "unknowns": ["all"], "required_shots": ["any"], "reference_images": []
+      "id": "LM-MORTY-GAMES",
+      "name": "Morty Games",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0"
+      ],
+      "existence": "B",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-03",
+        "DS-04"
+      ],
+      "parent": "DIST-MORTYTOWN",
+      "geometry": {
+        "type": "storefront",
+        "size": [
+          0.03,
+          0.03,
+          0.03
+        ]
+      },
+      "position": [
+        -0.66,
+        -0.36,
+        0.0
+      ],
+      "evidence": [
+        "DISTRICTS.md",
+        "LOCATION_REGISTER.md"
+      ],
+      "rationale": "As LM-MORTY-DAY-CARE.",
+      "unknowns": [
+        "all"
+      ],
+      "required_shots": [
+        "any"
+      ],
+      "reference_images": []
     },
     {
-      "id": "LM-MORTY-INSURANCE", "name": "Morty Insurance", "kind": "landmark", "layer": "L4", "band": ["V0","V+1"],
-      "existence": "B", "placement": "PLACEHOLDER", "states": ["DS-03","DS-04"], "parent": "DIST-COMMERCIAL-RING",
-      "geometry": {"type": "box", "size": [0.04, 0.04, 0.1]}, "position": [-0.3, -0.42, 0.0],
-      "evidence": ["DISTRICTS.md", "LOCATION_REGISTER.md"], "rationale": "Financial service; commercial-ring slot on the Mortytown side.", "unknowns": ["all"], "required_shots": ["any"], "reference_images": []
+      "id": "LM-MORTY-INSURANCE",
+      "name": "Morty Insurance",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0",
+        "V+1"
+      ],
+      "existence": "B",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-03",
+        "DS-04"
+      ],
+      "parent": "DIST-COMMERCIAL-RING",
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.04,
+          0.04,
+          0.1
+        ]
+      },
+      "position": [
+        -0.3,
+        -0.42,
+        0.0
+      ],
+      "evidence": [
+        "DISTRICTS.md",
+        "LOCATION_REGISTER.md"
+      ],
+      "rationale": "Financial service; commercial-ring slot on the Mortytown side.",
+      "unknowns": [
+        "all"
+      ],
+      "required_shots": [
+        "any"
+      ],
+      "reference_images": []
     },
     {
-      "id": "LM-SALTY-RICK", "name": "The Salty Rick", "kind": "landmark", "layer": "L4", "band": ["V0"],
-      "existence": "B", "placement": "PLACEHOLDER", "states": ["DS-03","DS-04"], "parent": "DIST-COMMERCIAL-RING",
-      "geometry": {"type": "storefront", "size": [0.03, 0.02, 0.03]}, "position": [0.3, 0.4, 0.0],
-      "evidence": ["LOCATION_REGISTER.md"], "rationale": "Named venue; commercial-ring slot.", "unknowns": ["all"], "required_shots": ["any"], "reference_images": []
+      "id": "LM-SALTY-RICK",
+      "name": "The Salty Rick",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0"
+      ],
+      "existence": "B",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-03",
+        "DS-04"
+      ],
+      "parent": "DIST-COMMERCIAL-RING",
+      "geometry": {
+        "type": "storefront",
+        "size": [
+          0.03,
+          0.02,
+          0.03
+        ]
+      },
+      "position": [
+        0.3,
+        0.4,
+        0.0
+      ],
+      "evidence": [
+        "LOCATION_REGISTER.md"
+      ],
+      "rationale": "Named venue; commercial-ring slot.",
+      "unknowns": [
+        "all"
+      ],
+      "required_shots": [
+        "any"
+      ],
+      "reference_images": []
     },
     {
-      "id": "LM-BIG-RICKS-GUMBO", "name": "Big Rick's Gumbo Hutch", "kind": "landmark", "layer": "L4", "band": ["V0"],
-      "existence": "B", "placement": "PLACEHOLDER", "states": ["DS-03","DS-04"], "parent": "DIST-COMMERCIAL-RING",
-      "geometry": {"type": "storefront", "size": [0.03, 0.02, 0.03]}, "position": [0.48, -0.3, 0.0],
-      "evidence": ["DISTRICTS.md"], "rationale": "Named venue; commercial-ring slot.", "unknowns": ["all"], "required_shots": ["any"], "reference_images": []
+      "id": "LM-BIG-RICKS-GUMBO",
+      "name": "Big Rick's Gumbo Hutch",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0"
+      ],
+      "existence": "B",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-03",
+        "DS-04"
+      ],
+      "parent": "DIST-COMMERCIAL-RING",
+      "geometry": {
+        "type": "storefront",
+        "size": [
+          0.03,
+          0.02,
+          0.03
+        ]
+      },
+      "position": [
+        0.48,
+        -0.3,
+        0.0
+      ],
+      "evidence": [
+        "DISTRICTS.md"
+      ],
+      "rationale": "Named venue; commercial-ring slot.",
+      "unknowns": [
+        "all"
+      ],
+      "required_shots": [
+        "any"
+      ],
+      "reference_images": []
     },
     {
-      "id": "LM-REBUILD-A-MORTY", "name": "Re-Build-A-Morty", "kind": "landmark", "layer": "L4", "band": ["V0"],
-      "existence": "A", "placement": "PLACEHOLDER", "states": ["DS-04"], "parent": "DIST-COMMERCIAL-RING",
-      "geometry": {"type": "storefront", "size": [0.04, 0.03, 0.04]}, "position": [-0.15, -0.5, 0.0],
-      "evidence": ["LOCATION_REGISTER.md (Re-Build-A-Morty, Rickmurai Jack)"], "rationale": "Named facility from S05E10; slot only.", "unknowns": ["all"], "required_shots": ["S05E10 Re-Build-A-Morty exterior"], "reference_images": []
+      "id": "LM-REBUILD-A-MORTY",
+      "name": "Re-Build-A-Morty",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [
+        "V0"
+      ],
+      "existence": "A",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-04"
+      ],
+      "parent": "DIST-COMMERCIAL-RING",
+      "geometry": {
+        "type": "storefront",
+        "size": [
+          0.04,
+          0.03,
+          0.04
+        ],
+        "features": [
+          "glass cloning tube",
+          "service counter",
+          "shelving",
+          "signage over entrance"
+        ]
+      },
+      "position": [
+        -0.15,
+        -0.5,
+        0.0
+      ],
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#11 (S05E10 Re-Build-A-Morty)",
+        "LOCATION_REGISTER.md (Re-Build-A-Morty, Rickmurai Jack)"
+      ],
+      "rationale": "Named facility from S05E10; slot only. Gallery #11 shows a retail interior with a glass cloning tube, service counter and shelving; confirms storefront scale.",
+      "unknowns": [
+        "all"
+      ],
+      "required_shots": [
+        "S05E10 Re-Build-A-Morty exterior"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#11 (S05E10 Re-Build-A-Morty)"
+      ]
     },
     {
-      "id": "LM-RICKINGHAM-PALACE", "name": "Rickingham Palace (comic)", "kind": "landmark", "layer": "L4", "band": [],
-      "existence": "A", "placement": "UNPLACED", "states": [], "continuity": "COMIC-CANON",
-      "geometry": null, "position": null,
-      "evidence": ["COMIC_FINAL_STATUS.md"], "rationale": "Comic-only; not placed in animated continuity (C-008).", "unknowns": ["all"], "required_shots": ["Council of Ricks #1 palace panels"], "reference_images": []
+      "id": "LM-RICKINGHAM-PALACE",
+      "name": "Rickingham Palace (comic)",
+      "kind": "landmark",
+      "layer": "L4",
+      "band": [],
+      "existence": "A",
+      "placement": "UNPLACED",
+      "states": [],
+      "continuity": "COMIC-CANON",
+      "geometry": null,
+      "position": null,
+      "evidence": [
+        "COMIC_FINAL_STATUS.md"
+      ],
+      "rationale": "Comic-only; not placed in animated continuity (C-008).",
+      "unknowns": [
+        "all"
+      ],
+      "required_shots": [
+        "Council of Ricks #1 palace panels"
+      ],
+      "reference_images": []
     },
     {
-      "id": "PROP-BANNERS", "name": "Regime banners over Rick emblems", "kind": "prop", "layer": "L6", "band": ["V+1"],
-      "existence": "A", "placement": "UNPLACED", "states": ["DS-03","DS-04"],
-      "geometry": null, "position": null,
-      "evidence": ["RICKLANTIS_VISUAL_EVIDENCE.md 16", "EPISODE_EVIDENCE_RICKLANTIS.md (political/architectural transition)"],
+      "id": "PROP-BANNERS",
+      "name": "Regime banners over Rick emblems",
+      "kind": "prop",
+      "layer": "L6",
+      "band": [
+        "V+1"
+      ],
+      "existence": "A",
+      "placement": "UNPLACED",
+      "states": [
+        "DS-03",
+        "DS-04"
+      ],
+      "geometry": null,
+      "position": null,
+      "evidence": [
+        "RICKLANTIS_VISUAL_EVIDENCE.md 16",
+        "EPISODE_EVIDENCE_RICKLANTIS.md (political/architectural transition)"
+      ],
       "rationale": "State-dependent decal layer on civic buildings: Rick emblems (DS-01..03) replaced by Morty/Rick banners (late DS-03 onward).",
-      "unknowns": ["which buildings"], "required_shots": ["S03E07 banner montage"], "reference_images": []
+      "unknowns": [
+        "which buildings"
+      ],
+      "required_shots": [
+        "S03E07 banner montage"
+      ],
+      "reference_images": []
     },
     {
-      "id": "PROP-STREET-FURNITURE", "name": "Street furniture, signage, trees, fountains", "kind": "prop", "layer": "L6", "band": ["V0"],
-      "existence": "A", "placement": "UNPLACED", "states": ["DS-01","DS-02","DS-03","DS-04"],
-      "geometry": null, "position": null,
-      "evidence": ["BUILDING_FAMILIES.md (streetscape details)", "VERTICAL_LAYERS.md (trees, fountains)"],
-      "rationale": "Catalogue per frame; scatter procedurally in the 3D model.",
-      "unknowns": ["all placement"], "required_shots": ["S03E07 street montage"], "reference_images": []
+      "id": "PROP-STREET-FURNITURE",
+      "name": "Street furniture, signage, trees, fountains",
+      "kind": "prop",
+      "layer": "L6",
+      "band": [
+        "V0"
+      ],
+      "existence": "A",
+      "placement": "UNPLACED",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04"
+      ],
+      "geometry": null,
+      "position": null,
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground)",
+        "BUILDING_FAMILIES.md (streetscape details)",
+        "VERTICAL_LAYERS.md (trees, fountains)"
+      ],
+      "rationale": "Catalogue per frame; scatter procedurally in the 3D model. Gallery #15: trees in planters and a fountain pool in the late plaza.",
+      "unknowns": [
+        "all placement"
+      ],
+      "required_shots": [
+        "S03E07 street montage"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground)"
+      ]
     },
     {
-      "id": "UG-SEWERS", "name": "Sewer / utility passages", "kind": "utility", "layer": "L7", "band": ["V-1"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-03","DS-04","DS-05"],
-      "geometry": {"type": "tunnel_network", "z": -0.05, "tube_radius": 0.012, "follows": ["CIRC-RING-1", "CIRC-RING-2", "CIRC-RADIALS"]},
-      "position": [0, 0, -0.05],
-      "evidence": ["UTILITY_SYSTEMS.md (sewers)", "EPISODE_EVIDENCE_RICKMURAI_JACK.md (deformed Mortys emerge from sewers)"],
+      "id": "UG-SEWERS",
+      "name": "Sewer / utility passages",
+      "kind": "utility",
+      "layer": "L7",
+      "band": [
+        "V-1"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "tunnel_network",
+        "z": -0.05,
+        "tube_radius": 0.012,
+        "follows": [
+          "CIRC-RING-1",
+          "CIRC-RING-2",
+          "CIRC-RADIALS"
+        ]
+      },
+      "position": [
+        0,
+        0,
+        -0.05
+      ],
+      "evidence": [
+        "UTILITY_SYSTEMS.md (sewers)",
+        "EPISODE_EVIDENCE_RICKMURAI_JACK.md (deformed Mortys emerge from sewers)"
+      ],
       "rationale": "Person-sized passages exist (A). Routing under the road network is a modelling convention.",
-      "unknowns": ["map", "depth"], "required_shots": ["S05E10 sewer interior"], "reference_images": []
+      "unknowns": [
+        "map",
+        "depth"
+      ],
+      "required_shots": [
+        "S05E10 sewer interior"
+      ],
+      "reference_images": []
     },
     {
-      "id": "UG-PORTAL-FLUID", "name": "Portal-fluid production complex ('cave base')", "kind": "machinery", "layer": "L7", "band": ["V-2"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-04","DS-05"],
-      "geometry": {"type": "cavern", "radius": 0.4, "z_top": -0.12, "z_bottom": -0.3, "features": ["large central vat", "collection containers", "deformed-Morty work areas", "rock/cave surfaces", "connection to SYS-PORTAL-SUPPLY"]},
-      "position": [0.25, 0.15, -0.21],
-      "evidence": ["EPISODE_EVIDENCE_RICKMURAI_JACK.md (portal-fluid production / mines)", "DIALOGUE_ARCHITECTURE_CROSSREF.md D-006, D-007"],
-      "rationale": "Reached by descending from the city; described as a cave base with a large central vat (A). Offset from the axis so it does not collide with UG-DIM-DRIVE; the offset direction is arbitrary.",
-      "unknowns": ["footprint", "depth", "relation to the Drive", "relation to the citywide supply"],
-      "required_shots": ["S05E10 descent", "S05E10 central vat", "S05E10 worker area"], "reference_images": []
+      "id": "UG-PORTAL-FLUID",
+      "name": "Portal-fluid production complex ('cave base')",
+      "kind": "machinery",
+      "layer": "L7",
+      "band": [
+        "V-2"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "cavern",
+        "radius": 0.3,
+        "z_top": -0.1,
+        "z_bottom": -0.28,
+        "features": [
+          "large central vat",
+          "collection containers",
+          "deformed-Morty work areas",
+          "rock/cave surfaces",
+          "connection to SYS-PORTAL-SUPPLY"
+        ]
+      },
+      "position": [
+        0.1,
+        0.08,
+        -0.19
+      ],
+      "evidence": [
+        "EPISODE_EVIDENCE_RICKMURAI_JACK.md (portal-fluid production / mines)",
+        "DIALOGUE_ARCHITECTURE_CROSSREF.md D-006, D-007"
+      ],
+      "rationale": "Reached by descending from the city; described as a cave base with a large central vat (A). Now placed in the lower deck of the drum just above the keel; offset from the axis so it clears the Drive void below. Offset direction is arbitrary.",
+      "unknowns": [
+        "footprint",
+        "depth",
+        "relation to the Drive",
+        "relation to the citywide supply"
+      ],
+      "required_shots": [
+        "S05E10 descent",
+        "S05E10 central vat",
+        "S05E10 worker area"
+      ],
+      "reference_images": []
     },
     {
-      "id": "UG-DIM-DRIVE", "name": "Dimensional Drive chamber", "kind": "machinery", "layer": "L7", "band": ["V-3"],
-      "existence": "A", "placement": "ANCHORED", "states": ["DS-04","DS-05"],
-      "geometry": {"type": "cylinder", "radius_top": 0.3, "radius_bottom": 0.3, "z_top": -0.25, "z_bottom": -0.45, "features": ["drive core", "glass-domed control enclosure", "control interface", "evacuation infrastructure", "Operation Phoenix vat feeds", "launch platforms"]},
-      "position": [0, 0, -0.35],
-      "evidence": ["EPISODE_EVIDENCE_RICKMURAI_JACK.md (Dimensional Drive)", "SOURCE_INDEX.md (central position)", "DIALOGUE_ARCHITECTURE_CROSSREF.md D-005", "GEOMETRY_DATABASE.md G-011"],
-      "rationale": "Secondary sources describe the Drive as central; its failure deforms the whole Citadel, consistent with a central position. Anchored on the axis below the civic core.",
-      "unknowns": ["chamber dimensions", "floor elevations", "hull connections", "exact relation to UG-PORTAL-FLUID"],
-      "required_shots": ["S05E10 Drive chamber wide", "S05E10 control enclosure", "S05E10 activation"], "reference_images": []
+      "id": "UG-DIM-DRIVE",
+      "name": "Dimensional Drive chamber",
+      "kind": "machinery",
+      "layer": "L7",
+      "band": [
+        "V-3"
+      ],
+      "existence": "A",
+      "placement": "ANCHORED",
+      "states": [
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "cylinder",
+        "radius_top": 0.3,
+        "radius_bottom": 0.28,
+        "z_top": -0.35,
+        "z_bottom": -0.65,
+        "features": [
+          "drive core",
+          "glass-domed control enclosure",
+          "control interface",
+          "evacuation infrastructure",
+          "Operation Phoenix vat feeds",
+          "launch platforms",
+          "long straight suspended walkway/bridge over void (#13)",
+          "portal-array spiral display (#13)",
+          "curved service rail with cart (#17)"
+        ]
+      },
+      "position": [
+        0,
+        0,
+        -0.5
+      ],
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#17 (S05E10 rail cart)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#13 (S05E10 Central Finite Curve platform)",
+        "EPISODE_EVIDENCE_RICKMURAI_JACK.md (Dimensional Drive)",
+        "SOURCE_INDEX.md (central position)",
+        "DIALOGUE_ARCHITECTURE_CROSSREF.md D-005",
+        "GEOMETRY_DATABASE.md G-011",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)"
+      ],
+      "rationale": "Secondary sources describe the Drive as central; its failure deforms the whole Citadel, consistent with a central position. Anchored on the axis below the civic core. The funnel form (hologram #04) puts the widest underground volume just below the city and narrows towards the apex: the Drive fits the upper funnel, the launch chamber and chute the neck. Gallery #13 shows a long straight suspended platform/bridge over a dark void with the Central Finite Curve portal-spiral projected beside it; #17 shows a rail cart running on a curved rail in the same environment. The chamber is therefore a large void spanned by walkways, not a solid machinery block.",
+      "unknowns": [
+        "chamber dimensions",
+        "floor elevations",
+        "hull connections",
+        "exact relation to UG-PORTAL-FLUID"
+      ],
+      "required_shots": [
+        "S05E10 Drive chamber wide",
+        "S05E10 control enclosure",
+        "S05E10 activation"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#13 (S05E10 Central Finite Curve platform)",
+        "reference_images/CITADEL_IMAGE_GALLERY.md#17 (S05E10 rail cart)"
+      ]
     },
     {
-      "id": "UG-CONTROL-ENCLOSURE", "name": "Glass-domed control enclosure", "kind": "machinery", "layer": "L7", "band": ["V-3"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-04","DS-05"], "parent": "UG-DIM-DRIVE",
-      "geometry": {"type": "hemisphere", "radius": 0.05}, "position": [0.2, 0.0, -0.4],
-      "evidence": ["EPISODE_EVIDENCE_RICKMURAI_JACK.md (glass-domed/control enclosure around the principal control interface)"],
-      "rationale": "Directly described; placed on a platform at the chamber edge overlooking the core.",
-      "unknowns": ["size", "position in chamber"], "required_shots": ["S05E10 control enclosure"], "reference_images": []
+      "id": "UG-CONTROL-ENCLOSURE",
+      "name": "Glass-domed control enclosure",
+      "kind": "machinery",
+      "layer": "L7",
+      "band": [
+        "V-3"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-04",
+        "DS-05"
+      ],
+      "parent": "UG-DIM-DRIVE",
+      "geometry": {
+        "type": "hemisphere",
+        "radius": 0.05,
+        "features": [
+          "glass dome",
+          "raised round platform",
+          "ring of base lights",
+          "control console inside"
+        ]
+      },
+      "position": [
+        0.2,
+        0,
+        -0.6
+      ],
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#13 (S05E10 Central Finite Curve platform)",
+        "EPISODE_EVIDENCE_RICKMURAI_JACK.md (glass-domed/control enclosure around the principal control interface)"
+      ],
+      "rationale": "Directly described; placed on a platform at the chamber edge overlooking the core. Gallery #13 shows the enclosure as a glass dome on a raised round platform with a ring of lights at its base, at the edge of a large dark chamber beside a long straight suspended walkway.",
+      "unknowns": [
+        "size",
+        "position in chamber"
+      ],
+      "required_shots": [
+        "S05E10 control enclosure"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#13 (S05E10 Central Finite Curve platform)"
+      ]
     },
     {
-      "id": "UG-PHOENIX-VATS", "name": "Operation Phoenix vats", "kind": "machinery", "layer": "L7", "band": ["V-3"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-04","DS-05"], "parent": "UG-DIM-DRIVE",
-      "geometry": {"type": "vat_array", "count": 6, "vat_radius": 0.025, "height": 0.08, "ring_radius": 0.22}, "position": [0, 0, -0.41],
-      "evidence": ["EPISODE_EVIDENCE_RICKMURAI_JACK.md (Operation Phoenix vats feed biological material into the drive process)"],
+      "id": "UG-PHOENIX-VATS",
+      "name": "Operation Phoenix vats",
+      "kind": "machinery",
+      "layer": "L7",
+      "band": [
+        "V-3"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-04",
+        "DS-05"
+      ],
+      "parent": "UG-DIM-DRIVE",
+      "geometry": {
+        "type": "vat_array",
+        "count": 6,
+        "vat_radius": 0.025,
+        "height": 0.08,
+        "ring_radius": 0.22
+      },
+      "position": [
+        0,
+        0,
+        -0.63
+      ],
+      "evidence": [
+        "EPISODE_EVIDENCE_RICKMURAI_JACK.md (Operation Phoenix vats feed biological material into the drive process)"
+      ],
       "rationale": "Vats feed the Drive, so they ring the core. Count of six is placeholder.",
-      "unknowns": ["count", "size", "feed routing"], "required_shots": ["S05E10 vats"], "reference_images": []
+      "unknowns": [
+        "count",
+        "size",
+        "feed routing"
+      ],
+      "required_shots": [
+        "S05E10 vats"
+      ],
+      "reference_images": []
     },
     {
-      "id": "UG-LAUNCH-CHAMBER", "name": "Launch chamber (Evil Morty's spacecraft)", "kind": "machinery", "layer": "L7", "band": ["V-3","V-4"],
-      "existence": "A", "placement": "ANCHORED", "states": ["DS-04","DS-05"],
-      "geometry": {"type": "box", "size": [0.16, 0.12, 0.14], "features": ["platforms with piping", "launch track leading to chute", "glass panels", "spacecraft cradle"]},
-      "position": [0, -0.2, -0.42],
-      "evidence": ["EPISODE_EVIDENCE_SOLARICKS.md (surviving launch/technical chamber)", "EPISODE_EVIDENCE_RICKMURAI_JACK.md (spacecraft loaded into an exit chute)"],
-      "rationale": "The spacecraft is loaded from the Drive area into the chute; the chamber therefore sits between the Drive and the chute. Survives as RUIN-LAUNCH-CHAMBER in DS-06.",
-      "unknowns": ["footprint", "track length", "relation to Drive core"],
-      "required_shots": ["S05E10 spacecraft loading", "S06E01 ruined platforms and track", "S06E01 broken glass/piping"], "reference_images": []
+      "id": "UG-LAUNCH-CHAMBER",
+      "name": "Launch chamber (Evil Morty's spacecraft)",
+      "kind": "machinery",
+      "layer": "L7",
+      "band": [
+        "V-3",
+        "V-4"
+      ],
+      "existence": "A",
+      "placement": "ANCHORED",
+      "states": [
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.14,
+          0.12,
+          0.16
+        ],
+        "features": [
+          "platforms with piping",
+          "launch track leading to chute",
+          "glass panels",
+          "spacecraft cradle"
+        ]
+      },
+      "position": [
+        0,
+        -0.06,
+        -0.85
+      ],
+      "evidence": [
+        "EPISODE_EVIDENCE_SOLARICKS.md (surviving launch/technical chamber)",
+        "EPISODE_EVIDENCE_RICKMURAI_JACK.md (spacecraft loaded into an exit chute)"
+      ],
+      "rationale": "The spacecraft is loaded from the Drive area into the chute; the chamber sits in the funnel neck between the Drive and the apex chute. Survives as RUIN-LAUNCH-CHAMBER in DS-06.",
+      "unknowns": [
+        "footprint",
+        "track length",
+        "relation to Drive core"
+      ],
+      "required_shots": [
+        "S05E10 spacecraft loading",
+        "S06E01 ruined platforms and track",
+        "S06E01 broken glass/piping"
+      ],
+      "reference_images": []
     },
     {
-      "id": "UG-EXIT-CHUTE", "name": "Spacecraft exit chute", "kind": "machinery", "layer": "L7", "band": ["V-3","V-4"],
-      "existence": "A", "placement": "ANCHORED", "states": ["DS-04","DS-05","DS-06"],
-      "geometry": {"type": "cylinder", "radius_top": 0.04, "radius_bottom": 0.05, "z_top": -0.42, "z_bottom": -0.65},
-      "position": [0, -0.2, -0.535],
-      "evidence": ["EPISODE_EVIDENCE_RICKMURAI_JACK.md (launched from the bottom of the Citadel)", "EPISODE_EVIDENCE_SOLARICKS.md (launch track)"],
-      "rationale": "Vertical chute from the launch chamber to SHELL-UNDERSIDE. Axis shares the launch chamber's offset; the SHELL-UNDERSIDE aperture follows it.",
-      "unknowns": ["angle (vertical vs inclined)", "length"], "required_shots": ["S05E10 launch", "S06E01 track ruin"], "reference_images": []
+      "id": "UG-EXIT-CHUTE",
+      "name": "Spacecraft exit chute",
+      "kind": "machinery",
+      "layer": "L7",
+      "band": [
+        "V-3",
+        "V-4"
+      ],
+      "existence": "A",
+      "placement": "ANCHORED",
+      "states": [
+        "DS-04",
+        "DS-05",
+        "DS-06"
+      ],
+      "geometry": {
+        "type": "cylinder",
+        "radius_top": 0.04,
+        "radius_bottom": 0.025,
+        "z_top": -0.85,
+        "z_bottom": -1.6
+      },
+      "position": [
+        0,
+        0,
+        -1.225
+      ],
+      "evidence": [
+        "EPISODE_EVIDENCE_RICKMURAI_JACK.md (launched from the bottom of the Citadel)",
+        "EPISODE_EVIDENCE_SOLARICKS.md (launch track)"
+      ],
+      "rationale": "Chute from the launch chamber down the keel to the tip aperture. Length ≈ 0.75 U is set by the keel depth from #23.",
+      "unknowns": [
+        "angle (vertical vs inclined)",
+        "length"
+      ],
+      "required_shots": [
+        "S05E10 launch",
+        "S06E01 track ruin"
+      ],
+      "reference_images": []
     },
     {
-      "id": "IF-MORTYBURG", "name": "Mortyburg attachment interface", "kind": "interface", "layer": "L7", "band": ["V0","V-1"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-01","DS-02","DS-03","DS-04","DS-05"],
-      "geometry": {"type": "box", "size": [0.12, 0.08, 0.1], "features": ["closing entrance / blast door", "rail passes through", "DISENGAGE control", "structural release"]},
-      "position": [-0.5, -0.87, 0.0], "azimuth": 240,
-      "evidence": ["EPISODE_EVIDENCE_RICKMURAI_JACK.md (Mortyburg detachment)", "DIALOGUE_ARCHITECTURE_CROSSREF.md D-008, D-009"],
-      "rationale": "Engineered structural/transit interface with a closing entrance (A). Sits on the DOME-P rim at the Mortyburg azimuth, on the rail spur.",
-      "unknowns": ["attachment count", "diameter", "service connections"],
-      "required_shots": ["S05E10 DISENGAGE control", "S05E10 entrance closing", "S05E10 separation exterior"], "reference_images": []
+      "id": "IF-MORTYBURG",
+      "name": "Mortyburg attachment interface",
+      "kind": "interface",
+      "layer": "L7",
+      "band": [
+        "V0",
+        "V-1"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.12,
+          0.08,
+          0.1
+        ],
+        "features": [
+          "closing entrance / blast door",
+          "rail passes through",
+          "DISENGAGE control",
+          "structural release"
+        ]
+      },
+      "position": [
+        -0.56,
+        -0.97,
+        0
+      ],
+      "azimuth": 240,
+      "evidence": [
+        "EPISODE_EVIDENCE_RICKMURAI_JACK.md (Mortyburg detachment)",
+        "DIALOGUE_ARCHITECTURE_CROSSREF.md D-008, D-009"
+      ],
+      "rationale": "Engineered structural/transit interface with a closing entrance (A). Moved to the root of ARM-MB where the arm meets the main body, so the rail spur passes through it onto the arm.",
+      "unknowns": [
+        "attachment count",
+        "diameter",
+        "service connections"
+      ],
+      "required_shots": [
+        "S05E10 DISENGAGE control",
+        "S05E10 entrance closing",
+        "S05E10 separation exterior"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)"
+      ]
     },
     {
-      "id": "MB-THRUSTERS", "name": "Mortyburg boosters / thrusters", "kind": "machinery", "layer": "L7", "band": ["V-1"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-05","DS-06"], "parent": "DOME-MB",
-      "geometry": {"type": "thruster_array", "count": 3, "radius": 0.03, "length": 0.06}, "position": [-0.65, -1.126, -0.2],
-      "evidence": ["DIALOGUE_ARCHITECTURE_CROSSREF.md D-010"],
+      "id": "MB-THRUSTERS",
+      "name": "Mortyburg boosters / thrusters",
+      "kind": "machinery",
+      "layer": "L7",
+      "band": [
+        "V-1"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-05",
+        "DS-06"
+      ],
+      "parent": "DOME-MB",
+      "geometry": {
+        "type": "thruster_array",
+        "count": 3,
+        "radius": 0.03,
+        "length": 0.06
+      },
+      "position": [
+        -1.0,
+        -1.732,
+        -0.2
+      ],
+      "evidence": [
+        "DIALOGUE_ARCHITECTURE_CROSSREF.md D-010"
+      ],
       "rationale": "Thrusters fire after separation (A); on the underside by convention.",
-      "unknowns": ["count", "placement"], "required_shots": ["S05E10 boosters firing"], "reference_images": []
+      "unknowns": [
+        "count",
+        "placement"
+      ],
+      "required_shots": [
+        "S05E10 boosters firing"
+      ],
+      "reference_images": []
     },
     {
-      "id": "RUIN-DEBRIS-FIELD", "name": "Post-destruction debris field", "kind": "ruin", "layer": "L7", "band": [],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-06","DS-07","DS-08"],
-      "geometry": {"type": "scatter_volume", "radius": 2.5, "z_min": -1.0, "z_max": 1.0, "fragment_count": 40},
-      "position": [0, 0, 0],
-      "evidence": ["EPISODE_EVIDENCE_SOLARICKS.md", "CONTRADICTION_LOG.md C-009"],
+      "id": "RUIN-DEBRIS-FIELD",
+      "name": "Post-destruction debris field",
+      "kind": "ruin",
+      "layer": "L7",
+      "band": [],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-06",
+        "DS-07",
+        "DS-08"
+      ],
+      "geometry": {
+        "type": "scatter_volume",
+        "radius": 2.5,
+        "z_min": -1.0,
+        "z_max": 1.0,
+        "fragment_count": 40
+      },
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "evidence": [
+        "EPISODE_EVIDENCE_SOLARICKS.md",
+        "CONTRADICTION_LOG.md C-009"
+      ],
       "rationale": "Large spatially coherent ruin exposed to vacuum, with distinct fragments. Radius is a placeholder for the fragment scatter.",
-      "unknowns": ["fragment positions", "surviving fraction of shell"],
-      "required_shots": ["S06E01 approach", "S06E01 fragment hops", "S08E03 wreckage"], "reference_images": []
+      "unknowns": [
+        "fragment positions",
+        "surviving fraction of shell"
+      ],
+      "required_shots": [
+        "S06E01 approach",
+        "S06E01 fragment hops",
+        "S08E03 wreckage"
+      ],
+      "reference_images": []
     },
     {
-      "id": "RUIN-LAUNCH-CHAMBER", "name": "Ruined launch chamber", "kind": "ruin", "layer": "L7", "band": ["V-3"],
-      "existence": "A", "placement": "ANCHORED", "states": ["DS-06"], "parent": "UG-LAUNCH-CHAMBER",
-      "geometry": {"type": "box", "size": [0.16, 0.12, 0.14], "features": ["broken piping", "broken glass", "surviving platforms", "surviving track segment", "scavenger access from exterior"]},
-      "position": [0, -0.2, -0.42],
-      "evidence": ["EPISODE_EVIDENCE_SOLARICKS.md (surviving launch/technical chamber)"],
+      "id": "RUIN-LAUNCH-CHAMBER",
+      "name": "Ruined launch chamber",
+      "kind": "ruin",
+      "layer": "L7",
+      "band": [
+        "V-3"
+      ],
+      "existence": "A",
+      "placement": "ANCHORED",
+      "states": [
+        "DS-06"
+      ],
+      "parent": "UG-LAUNCH-CHAMBER",
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.14,
+          0.12,
+          0.16
+        ],
+        "features": [
+          "broken piping",
+          "broken glass",
+          "surviving platforms",
+          "surviving track segment",
+          "scavenger access from exterior"
+        ]
+      },
+      "position": [
+        0,
+        -0.06,
+        -0.85
+      ],
+      "evidence": [
+        "EPISODE_EVIDENCE_SOLARICKS.md (surviving launch/technical chamber)"
+      ],
       "rationale": "Same envelope as UG-LAUNCH-CHAMBER, ruin variant. Whether the fragment kept its original position is UNKNOWN (C-009).",
-      "unknowns": ["fragment orientation"], "required_shots": ["S06E01 chamber ruin"], "reference_images": []
+      "unknowns": [
+        "fragment orientation"
+      ],
+      "required_shots": [
+        "S06E01 chamber ruin"
+      ],
+      "reference_images": []
     },
     {
-      "id": "RUIN-BEACON", "name": "Summer's beacon on the ruins", "kind": "prop", "layer": "L6", "band": [],
-      "existence": "A", "placement": "PLACEHOLDER", "states": ["DS-06"],
-      "geometry": {"type": "point", "radius": 0.01}, "position": [0.3, -0.3, 0.1],
-      "evidence": ["EPISODE_EVIDENCE_SOLARICKS.md (beacon)"], "rationale": "Navigation target on an exposed ruin surface.",
-      "unknowns": ["position"], "required_shots": ["S06E01 beacon placement"], "reference_images": []
+      "id": "RUIN-BEACON",
+      "name": "Summer's beacon on the ruins",
+      "kind": "prop",
+      "layer": "L6",
+      "band": [],
+      "existence": "A",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-06"
+      ],
+      "geometry": {
+        "type": "point",
+        "radius": 0.01
+      },
+      "position": [
+        0.3,
+        -0.3,
+        0.1
+      ],
+      "evidence": [
+        "EPISODE_EVIDENCE_SOLARICKS.md (beacon)"
+      ],
+      "rationale": "Navigation target on an exposed ruin surface.",
+      "unknowns": [
+        "position"
+      ],
+      "required_shots": [
+        "S06E01 beacon placement"
+      ],
+      "reference_images": []
     },
     {
-      "id": "NEW-CITADEL", "name": "New Citadel construction (Boss Hog Rick)", "kind": "variant", "layer": "L7", "band": ["V0","V+1"],
-      "existence": "A", "placement": "PROVISIONAL", "states": ["DS-07"],
-      "geometry": {"type": "box", "size": [0.8, 0.8, 0.5], "features": ["new construction built around/over wreckage", "lab/construction areas", "Boss Hog facilities"]},
-      "position": [0.4, 0.3, 0.0],
-      "evidence": ["CITADEL_DESTRUCTION.md State 6", "DESTRUCTION_STATES.md DS-07", "CONTRADICTION_LOG.md C-010"],
-      "rationale": "Separate architecture reusing wreckage; NOT a restoration of the original geometry (C-010). Envelope placed over part of the debris field.",
-      "unknowns": ["form", "extent", "which wreckage it occupies"],
-      "required_shots": ["S08E03 New Citadel exterior", "S08E03 construction/lab interiors", "S08E03 destruction"], "reference_images": []
+      "id": "NEW-CITADEL",
+      "name": "New Citadel construction (Boss Hog Rick)",
+      "kind": "variant",
+      "layer": "L7",
+      "band": [
+        "V0",
+        "V+1"
+      ],
+      "existence": "A",
+      "placement": "PROVISIONAL",
+      "states": [
+        "DS-07"
+      ],
+      "geometry": {
+        "type": "box",
+        "size": [
+          0.8,
+          0.8,
+          0.5
+        ],
+        "features": [
+          "new construction built around/over wreckage",
+          "lab/construction areas",
+          "Boss Hog facilities",
+          "throne room with tall glazing (#21)",
+          "industrial pipe/gantry hall beyond (#21)"
+        ]
+      },
+      "position": [
+        0.4,
+        0.3,
+        0.0
+      ],
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#21 (S08E03 Boss Hog throne room)",
+        "CITADEL_DESTRUCTION.md State 6",
+        "DESTRUCTION_STATES.md DS-07",
+        "CONTRADICTION_LOG.md C-010"
+      ],
+      "rationale": "Separate architecture reusing wreckage; NOT a restoration of the original geometry (C-010). Envelope placed over part of the debris field. Gallery #21 shows Boss Hog's throne room with tall glazed walls looking onto a red-lit industrial interior of pipes, gantries and tanks; the New Citadel reads as an industrial plant with a ceremonial room, not a city.",
+      "unknowns": [
+        "form",
+        "extent",
+        "which wreckage it occupies"
+      ],
+      "required_shots": [
+        "S08E03 New Citadel exterior",
+        "S08E03 construction/lab interiors",
+        "S08E03 destruction"
+      ],
+      "reference_images": [
+        "reference_images/CITADEL_IMAGE_GALLERY.md#21 (S08E03 Boss Hog throne room)"
+      ]
     }
   ],
   "drawings": [
-    {"id": "TOP_MASTER", "title": "Plan view — all layers", "projection": "plan", "layers": ["L0","L1","L2","L3","L4","L5","L7"], "state": "DS-04"},
-    {"id": "DISTRICT_MAP", "title": "District and landmark map", "projection": "plan", "layers": ["L1","L3","L4","L5"], "state": "DS-03"},
-    {"id": "TRANSIT_MASTER", "title": "Roads, rail, tram, hover band and access", "projection": "plan", "layers": ["L1","L2"], "state": "DS-04"},
-    {"id": "SIDE_MASTER", "title": "Longitudinal elevation (looking along -Y)", "projection": "elevation_y", "layers": ["L0","L1","L4","L7"], "state": "DS-04"},
-    {"id": "FRONT_MASTER", "title": "Transverse elevation (looking along +X)", "projection": "elevation_x", "layers": ["L0","L1","L4","L7"], "state": "DS-04"},
-    {"id": "SECTION_A", "title": "Section A-A — principal dome and civic core (Y=0 plane)", "projection": "section_y", "layers": ["L0","L1","L2","L4","L7"], "state": "DS-04"},
-    {"id": "SECTION_B", "title": "Section B-B — urban shell and lower machinery (X=0 plane)", "projection": "section_x", "layers": ["L0","L1","L2","L4","L7"], "state": "DS-04"},
-    {"id": "STATE_COMPARISON", "title": "State comparison DS-01 .. DS-08", "projection": "plan_multiples", "layers": ["L0","L1","L3","L4","L7"], "state": "all"}
+    {
+      "id": "TOP_MASTER",
+      "title": "Plan view — all layers",
+      "projection": "plan",
+      "layers": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L5",
+        "L7"
+      ],
+      "state": "DS-04"
+    },
+    {
+      "id": "DISTRICT_MAP",
+      "title": "District and landmark map",
+      "projection": "plan",
+      "layers": [
+        "L1",
+        "L3",
+        "L4",
+        "L5"
+      ],
+      "state": "DS-03"
+    },
+    {
+      "id": "TRANSIT_MASTER",
+      "title": "Roads, rail, tram, hover band and access",
+      "projection": "plan",
+      "layers": [
+        "L1",
+        "L2"
+      ],
+      "state": "DS-04"
+    },
+    {
+      "id": "SIDE_MASTER",
+      "title": "Longitudinal elevation (looking along -Y)",
+      "projection": "elevation_y",
+      "layers": [
+        "L0",
+        "L1",
+        "L4",
+        "L7"
+      ],
+      "state": "DS-04"
+    },
+    {
+      "id": "FRONT_MASTER",
+      "title": "Transverse elevation (looking along +X)",
+      "projection": "elevation_x",
+      "layers": [
+        "L0",
+        "L1",
+        "L4",
+        "L7"
+      ],
+      "state": "DS-04"
+    },
+    {
+      "id": "SECTION_A",
+      "title": "Section A-A — principal dome and civic core (Y=0 plane)",
+      "projection": "section_y",
+      "layers": [
+        "L0",
+        "L1",
+        "L2",
+        "L4",
+        "L7"
+      ],
+      "state": "DS-04"
+    },
+    {
+      "id": "SECTION_B",
+      "title": "Section B-B — urban shell and lower machinery (X=0 plane)",
+      "projection": "section_x",
+      "layers": [
+        "L0",
+        "L1",
+        "L2",
+        "L4",
+        "L7"
+      ],
+      "state": "DS-04"
+    },
+    {
+      "id": "STATE_COMPARISON",
+      "title": "State comparison DS-01 .. DS-08",
+      "projection": "plan_multiples",
+      "layers": [
+        "L0",
+        "L1",
+        "L3",
+        "L4",
+        "L7"
+      ],
+      "state": "all"
+    }
   ]
 }

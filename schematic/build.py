@@ -119,7 +119,7 @@ def draw_plan_node(P, n, labels=True):
     st = node_style(n)
     out = []
     label_at = (x, y)
-    if t == "hemisphere":
+    if t in ("hemisphere", "cap"):
         out.append(P.circle(x, y, g["radius"], st))
         label_at = (x, y + g["radius"] * 0.85)
     elif t == "cylinder":
@@ -233,6 +233,16 @@ def draw_elev_node(E, n):
             bx, by = E.p(h - r, z)
             out.append(f'<rect x="{bx:.1f}" y="{by:.1f}" width="{2*r*S:.1f}" height="{g["body_depth"]*S:.1f}" {st}/>')
         label = (h, z + r + 0.03)
+    elif t == "cap":
+        r, hh, zb = g["radius"], g["height"], g["z_base"]
+        Rs = (r * r + hh * hh) / (2 * hh)
+        x0, y0 = E.p(h - r, zb)
+        x1, y1 = E.p(h + r, zb)
+        out.append(f'<path d="M {x0:.1f},{y0:.1f} A {Rs*S:.1f} {Rs*S:.1f} 0 0 1 {x1:.1f},{y1:.1f}" {st}/>')
+        if g.get("drum_bottom") is not None:
+            bx, by = E.p(h - r, zb)
+            out.append(f'<rect x="{bx:.1f}" y="{by:.1f}" width="{2*r*S:.1f}" height="{(zb - g["drum_bottom"])*S:.1f}" {st}/>')
+        label = (h, zb + hh + 0.03)
     elif t == "cylinder":
         zt, zb = g["z_top"], g["z_bottom"]
         if "features" in g or n["kind"] == "machinery":  # positioned cylinders: z fields are absolute
@@ -349,9 +359,9 @@ def svg_open(W, H):
             f'<rect width="{W}" height="{H}" fill="#0b0e13"/>')
 
 
-def grid_plan(P, W, H, rmax=1.7):
+def grid_plan(P, W, H, rmax=2.6):
     out = []
-    for r in [0.25, 0.5, 0.75, 1.0, 1.25, 1.5]:
+    for r in [0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0, 2.25, 2.5]:
         if r <= rmax:
             out.append(P.circle(0, 0, r, 'stroke="#1e2733" stroke-width="1" fill="none"'))
             out.append(P.text(r, 0.02, f"{r:.2f}U", size=9, color="#3b4a5c", anchor="start"))
@@ -366,23 +376,23 @@ def grid_plan(P, W, H, rmax=1.7):
 
 def grid_elev(E, W, H, bands=False):
     out = []
-    for z in [-0.6, -0.4, -0.2, 0.0, 0.2, 0.4, 0.6, 0.8, 1.0]:
-        x0, y0 = E.p(-1.9, z)
-        x1, y1 = E.p(1.9, z)
+    for z in [-1.6, -1.4, -1.2, -1.0, -0.8, -0.6, -0.4, -0.2, 0.0, 0.2, 0.4, 0.6, 0.8]:
+        x0, y0 = E.p(-2.6, z)
+        x1, y1 = E.p(2.6, z)
         col = "#2a3644" if z == 0 else "#1e2733"
         out.append(f'<line x1="{x0:.1f}" y1="{y0:.1f}" x2="{x1:.1f}" y2="{y1:.1f}" stroke="{col}" stroke-width="1"/>')
-        out.append(E.text(-1.93, z, f"z={z:+.1f}U", size=9, color="#3b4a5c", anchor="end", dy=3))
-    for hpos in [-1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5]:
-        x0, y0 = E.p(hpos, 1.15)
-        x1, y1 = E.p(hpos, -0.8)
+        out.append(E.text(-2.63, z, f"z={z:+.1f}U", size=9, color="#3b4a5c", anchor="end", dy=3))
+    for hpos in [-2.5, -2.0, -1.5, -1.0, -0.5, 0.0, 0.5, 1.0, 1.5, 2.0, 2.5]:
+        x0, y0 = E.p(hpos, 0.9)
+        x1, y1 = E.p(hpos, -1.7)
         out.append(f'<line x1="{x0:.1f}" y1="{y0:.1f}" x2="{x1:.1f}" y2="{y1:.1f}" stroke="#1e2733" stroke-width="1"/>')
-        out.append(E.text(hpos, -0.86, f"{hpos:+.1f}U", size=9, color="#3b4a5c"))
+        out.append(E.text(hpos, -1.76, f"{hpos:+.1f}U", size=9, color="#3b4a5c"))
     if bands:
         for b in DB["vertical_bands"]:
-            x0, y0 = E.p(-1.85, b["z_max"])
-            x1, y1 = E.p(1.85, b["z_min"])
+            x0, y0 = E.p(-2.55, b["z_max"])
+            x1, y1 = E.p(2.55, b["z_min"])
             out.append(f'<rect x="{x0:.1f}" y="{y0:.1f}" width="{x1-x0:.1f}" height="{max(y1-y0,1):.1f}" fill="#ffffff" fill-opacity="0.025" stroke="#2f3d4f" stroke-dasharray="3,6"/>')
-            out.append(E.text(1.86, (b["z_min"] + b["z_max"]) / 2, f'{b["id"]} {b["name"]}', size=9, color="#6b7c93", anchor="start", dy=3))
+            out.append(E.text(2.56, (b["z_min"] + b["z_max"]) / 2, f'{b["id"]} {b["name"]}', size=9, color="#6b7c93", anchor="start", dy=3))
     return "\n".join(out)
 
 
@@ -390,7 +400,7 @@ def grid_elev(E, W, H, bands=False):
 PLAN_ORDER = ["shell", "dome", "district", "circulation", "utility", "natural", "landmark", "interior", "machinery", "interface", "ruin", "variant", "prop"]
 
 
-def build_plan(d, W=1500, H=1500, scale=380):
+def build_plan(d, W=1500, H=1500, scale=270):
     P = Plan(W / 2 - 40, H / 2 - 60, scale)
     nodes = select(d["layers"], d["state"])
     nodes.sort(key=lambda n: PLAN_ORDER.index(n["kind"]))
@@ -405,10 +415,10 @@ def build_plan(d, W=1500, H=1500, scale=380):
     return "\n".join(body)
 
 
-def build_elev(d, W=1700, H=1000, scale=380):
+def build_elev(d, W=1700, H=1000, scale=300):
     axis = "x" if d["projection"] in ("elevation_y", "section_y") else "y"
     section = d["projection"].startswith("section")
-    E = Elev(W / 2 - 60, 560, scale, axis)
+    E = Elev(W / 2 - 60, 430, scale, axis)
     nodes = select(d["layers"], d["state"])
     nodes.sort(key=lambda n: PLAN_ORDER.index(n["kind"]))
     body = [svg_open(W, H), grid_elev(E, W, H, bands=section)]
@@ -431,7 +441,7 @@ def build_multiples(d, W=1800, H=1000):
     for i, s in enumerate(DB["states"]):
         col, row = i % 4, i // 4
         ox, oy = 30 + col * cell_w, 90 + row * cell_h
-        P = Plan(ox + cell_w / 2, oy + cell_h / 2 + 10, 95)
+        P = Plan(ox + cell_w / 2, oy + cell_h / 2 + 10, 68)
         body.append(f'<rect x="{ox}" y="{oy}" width="{cell_w-10}" height="{cell_h-10}" fill="none" stroke="#2a3644"/>')
         body.append(f'<text x="{ox+10}" y="{oy+20}" font-size="13" fill="#fff" font-weight="bold">{esc(s["id"])} {esc(s["name"])}</text>')
         body.append(f'<text x="{ox+10}" y="{oy+36}" font-size="10" fill="#8a97a8">{esc("; ".join(s["sources"]))}</text>')

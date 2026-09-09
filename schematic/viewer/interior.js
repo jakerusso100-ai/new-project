@@ -175,6 +175,25 @@ const dd=NB['UG-DIM-DRIVE'].geometry; cat.underground.add(tag(meshAt(new THREE.C
 cat.underground.add(tag(meshAt(new THREE.BoxGeometry(0.5,0.05,0.008),M({color:0x9aa0aa}),0,0,-0.33),'UG-DIM-DRIVE','suspended walkway'));
 cat.underground.add(tag(meshAt(new THREE.TorusKnotGeometry(0.05,0.006,64,8,2,5),EM(0xffc020,1),-0.12,0.06,-0.3),'UG-DIM-DRIVE','portal-array display'));
 cat.underground.add(tag(meshAt(new THREE.CylinderGeometry(0.03,0.03,0.12,24).rotateX(Math.PI/2),new THREE.MeshStandardMaterial({color:0x5be0ff,emissive:0x3fd0ff,emissiveIntensity:1.5,transparent:true,opacity:0.7}),0,0,-0.30),'UG-DIM-DRIVE','drive core'));
+// arms: exterior unchanged (deck road + edge lights); interior levels inside the lens section, visible through the end portals and in cut-away
+DB.nodes.filter(n=>n.id.startsWith('ARM-')).forEach(n=>{ const pts=n.geometry.points; const a=Math.atan2(pts[0][1],pts[0][0]); const ca=Math.cos(a), sa=Math.sin(a); const r0=Math.hypot(pts[0][0],pts[0][1]), r1=Math.hypot(pts[2][0],pts[2][1]); const len=r1-r0; const at=(r,side,z)=>[ca*r-sa*side, sa*r+ca*side, z];
+  const put=(geo,mat,r,side,z,label)=>{ const [x,y,zz]=at(r,side,z); const m=meshAt(geo,mat,x,y,zz,a); cat.decks.add(tag(m,n.id,label)); return m; };
+  // portals: dark openings in the end faces at deck level (disc rim and pod rim) with lit lintels
+  for(const rr_ of [r0-0.005,r1+0.005]){ put(new THREE.BoxGeometry(0.012,0.22,0.045),M({color:0x141a22}),rr_,0,0.0,'arm portal'); put(new THREE.BoxGeometry(0.014,0.23,0.004),EM(COL.cyan,1.1),rr_,0,0.046,'portal lintel light'); }
+  // through-concourse at deck level
+  put(new THREE.BoxGeometry(len,0.24,0.003),M({color:0xd0cbb3}),r0+len/2,0,0.004,'concourse floor');
+  put(new THREE.BoxGeometry(len,0.03,0.003),roadMat,r0+len/2,-0.06,0.006,'concourse road');
+  put(new THREE.BoxGeometry(len,0.06,0.002),walkMat,r0+len/2,0.07,0.006,'concourse walkway');
+  for(let k=0;k<14;k++){ put(new THREE.BoxGeometry(0.004,0.2,0.002),EM(COL.cyan,0.6),r0+len*(k+0.5)/14,0,0.044,'concourse ceiling light'); }
+  for(const sg of [1,-1]) put(new THREE.BoxGeometry(len,0.004,0.018),new THREE.MeshPhysicalMaterial({color:COL.glass,transparent:true,opacity:0.45,transmission:0.5}),r0+len/2,sg*0.125,0.024,'concourse window band');
+  // upper gallery at +0.05: floor slab on columns, hangar bays along the flanks
+  put(new THREE.BoxGeometry(len,0.3,0.003),M({color:COL.deck,transparent:true,opacity:0.75}),r0+len/2,0,0.05,'upper gallery floor');
+  for(let k=0;k<10;k++) for(const sg of [1,-1]) put(new THREE.CylinderGeometry(0.005,0.005,0.046,10).rotateX(Math.PI/2),M({color:0x9aa0aa}),r0+len*(k+0.5)/10,sg*0.13,0.027,'gallery column');
+  for(let k=0;k<6;k++) for(const sg of [1,-1]){ put(new THREE.BoxGeometry(0.04,0.05,0.03),M({color:0xd8d2b6}),r0+len*(k+0.5)/6,sg*0.19,0.053,'hangar bay'); put(new THREE.BoxGeometry(0.03,0.002,0.02),EM(0xffd060,0.8),r0+len*(k+0.5)/6,sg*0.164,0.062,'bay door light'); }
+  // service deck at -0.05
+  put(new THREE.BoxGeometry(len,0.3,0.003),M({color:COL.deck,transparent:true,opacity:0.6}),r0+len/2,0,-0.05,'service deck');
+  for(let k=0;k<8;k++) put(new THREE.CylinderGeometry(0.012,0.012,0.04,12).rotateX(Math.PI/2),M({color:0x7a8a7a}),r0+len*(k+0.5)/8,0.1,-0.03,'service tank');
+});
 // arms: deck road + edge lights
 DB.nodes.filter(n=>n.id.startsWith('ARM-')).forEach(n=>{ const pts=n.geometry.points; const a=Math.atan2(pts[0][1],pts[0][0]); const r0=Math.hypot(pts[0][0],pts[0][1]), r1=Math.hypot(pts[2][0],pts[2][1]); const len=r1-r0; cat.streets.add(tag(meshAt(new THREE.BoxGeometry(len,0.05,0.003),roadMat,Math.cos(a)*(r0+len/2),Math.sin(a)*(r0+len/2),0.102,a),n.id,'arm deck road')); for(const sg of [1,-1]) cat.streets.add(tag(meshAt(new THREE.BoxGeometry(len,0.006,0.004),EM(COL.cyan,0.8),Math.cos(a)*(r0+len/2)-Math.sin(a)*sg*0.27,Math.sin(a)*(r0+len/2)+Math.cos(a)*sg*0.27,0.0,a),n.id,'arm edge light')); });
 

@@ -69,6 +69,14 @@ Replacing the block-out boxes: the central monument spire with plinth (S01E10, #
 - Cave-base cavern wall with the glowing central vat (S05E10).
 - Dimensional Drive void with the long suspended walkway and the portal-array display beside the existing control enclosure and Phoenix vats (#13).
 
+## Arms (interior only)
+
+The arm exterior is left exactly as the STL has it. Inside the 0.2 R (400 m) lenticular section three enclosed levels are built, visible through the end portals and in cut-away:
+
+- **Upper gallery (+0.05 R, 100 m)** — floor on columns with hover-vehicle hangar bays along both flanks.
+- **Through-concourse (0)** — the main deck continues into the arm: floor, road, walkway, ceiling lights, glazed window bands, and a lit portal in each end face (disc rim and pod rim). City, arm and pod decks are one continuous floor, which the S05E10 train to Mortyburg requires.
+- **Service deck (−0.05 R)** — utilities, tanks, freight; `IF-MORTYBURG` (the disengage machinery) sits here under the root.
+
 ## Pods
 
 Each pod repeats the shell (glass, ribs, hub, rim lights), a deck, a ring road, a small plaza and procedural blocks at 0.592 scale. `DOME-MB` (Mortyburg, B) uses the Mortytown family.

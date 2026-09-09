@@ -6,7 +6,10 @@ Track the complete visual-search target for the Citadel reconstruction rather th
 
 ## Current embedded-reference count
 
-The working gallery currently contains **22 visual-reference entries** in `CITADEL_IMAGE_GALLERY.md`. Some are distinct source images while a few intentionally preserve separate evidence hits for the same architectural view.
+The working gallery contains **30 visual-reference entries** across the main gallery and the second gap-closure appendix. The appendix adds exterior silhouette, entrance plaza, newsroom, civic assembly, diner, factory-security and Solaricks-ruin references.
+
+- Main gallery: `reference_images/CITADEL_IMAGE_GALLERY.md`
+- Gap-closure batch 02: `reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md`
 
 ## Required source sweep
 
@@ -97,6 +100,8 @@ The working gallery currently contains **22 visual-reference entries** in `CITAD
     - brewery
     - Big Rick's club
     - Big Rick's office
+    - Morty Village
+    - arcade
     - final firefight/destruction
 
 ## Comic sweep
@@ -113,7 +118,7 @@ Search panel/page-level material for every Citadel depiction in:
 
 Comic evidence must remain separated from animated-series canon unless a direct correspondence is established.
 
-## Source-gallery pages identified
+## Confirmed source-gallery inventory
 
 - Close Rick-Counters of the Rick Kind gallery
 - The Rickshank Rickdemption gallery
@@ -127,6 +132,9 @@ Comic evidence must remain separated from animated-series canon unless a direct 
 - Citadel location/category pages
 - Council of Ricks gallery/reference
 - Comic Vine Citadel gallery
+- Issue 22 Citadel/development-art references
+
+The Rickshank gallery explicitly exposes a Citadel-destruction section and separate production-art categories including storyboards and background art. citeturn1search0 The Ricklantis gallery separately exposes its major storylines plus promo art, character designs, prop designs, storyboards and background art. citeturn1search1
 
 ## Collection rules
 
@@ -147,3 +155,20 @@ The visual collection is considered complete only when every identified Citadel 
 3. the source is unavailable and that limitation is explicitly recorded.
 
 A finite number of embedded images should therefore **never** be described as “every frame of the Citadel.” The repository's goal is a complete, auditable **visual evidence index**.
+
+## Current gap-closure status
+
+The major image gaps have been narrowed substantially. The latest pass added references for the exterior silhouette, entrance plaza, civic assembly, newsroom, commercial diner, factory security and Solaricks interior ruins. It also confirmed that several remaining categories have dedicated source galleries or production-art sections.
+
+Remaining work is now primarily **frame-level enumeration and source-page auditing**, especially:
+
+- every distinct S01 Citadel frame
+- every distinct S03E01 destruction/transition frame
+- every S03E07 business/location frame
+- every S05E10 underground/Dimensional Drive frame
+- S07 flashback frames where the Citadel or Morty Agency is visible
+- every distinct S08 reconstruction location
+- comic panel-level Citadel depictions
+- legitimately available production/background art
+
+This distinction prevents the project from falsely equating “30 useful references” with “every frame.”

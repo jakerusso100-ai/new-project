@@ -35,34 +35,37 @@ The user will create their own schematics from the collected source imagery and 
 - `RESEARCH.md` — methodology and evidence hierarchy
 - `SOURCE_INDEX.md` — source catalog and evidence policy
 - `IMAGE_REFERENCE_INDEX.md` — visual-reference database
+- `SOURCE_CATALOG.md` — episode/comic/official source inventory
 - `CANON_TIMELINE.md` — Citadel continuity/state timeline
 - `ARCHITECTURE.md` — global architectural observations
 - `EXTERIOR.md` — exterior observations
 - `DISTRICTS.md` — district and landmark inventory
+- `LOCATION_REGISTER.md` — detailed location inventory
+- `BUILDING_FAMILIES.md` — recurring building/streetscape patterns
+- `VERTICAL_LAYERS.md` — surface, subsurface, industrial, and technical layers
 - `INFRASTRUCTURE.md` — transportation, utilities, dimensional and waste systems
+- `UTILITY_SYSTEMS.md` — utility/service evidence framework
+- `TRANSPORTATION.md` — movement and circulation evidence
+- `CIVIC_SYSTEMS.md` — government, police, education, economy, and social systems
 - `COUNCIL_CHAMBER.md` — Council/government references
 - `MORTYTOWN.md` — Morty district references
 - `SIMPLE_RICKS_FACTORY.md` — industrial landmark references
 - `CITADEL_POLICE.md` — police/militia references
-- `CITADEL_DESTRUCTION.md` — destruction and reconstruction states
-- `COMIC_REFERENCES.md` — comic evidence and discovery references
+- `CITADEL_DESTRUCTION.md` — destruction and reconstruction overview
+- `DESTRUCTION_STATES.md` — physical-state comparison across Citadel eras
 - `EVIDENCE_MATRIX.md` — evidence coverage and confidence
 - `UNKNOWN_AREAS.md` — unresolved details that require more source evidence
-- `SOURCE_CATALOG.md` — episode/comic/official source inventory
-- `LOCATION_REGISTER.md` — detailed location inventory
-- `INFRASTRUCTURE_REGISTER.md` — detailed infrastructure inventory
-- `BUILDING_FAMILIES.md` — recurring building/streetscape patterns
-- `VERTICAL_LAYERS.md` — surface, subsurface, industrial, and technical layers
-- `CIVIC_SYSTEMS.md` — government, police, education, economy, and social systems
-- `TRANSPORTATION.md` — movement and circulation evidence
-- `UTILITY_SYSTEMS.md` — power, water, waste, communications, and portal systems
-- `DESTRUCTION_STATES.md` — physical-state comparison across Citadel eras
-- `COMIC_CROSS_REFERENCE.md` — comic-to-show evidence cross-reference
 - `SCENE_SHOT_LOG.md` — source-by-source visual observation log
 - `MEASUREMENT_FRAMEWORK.md` — source-based relative measurement method
+- `DIALOGUE_ARCHITECTURE_CROSSREF.md` — dialogue-to-physical-evidence links
 - `CONTRADICTION_LOG.md` — conflicting depictions and evidence resolution
-- `SCHEMATIC_STATUS.md` — evidence readiness checklist for the user's own drawings
-- `COPYRIGHT_AND_REFERENCE_POLICY.md` — reference-image handling rules
+- `COMIC_REFERENCES.md` — comic evidence and discovery references
+- `COMIC_CROSS_REFERENCE.md` — comic-to-show evidence cross-reference
+- `CITADEL_COMIC_TARGET_REGISTER.md` — panel-level comic research targets
+- `EPISODE_EVIDENCE_RICKMURAI_JACK.md` — grouped S05E10 evidence
+- `RICKLANTIS_VISUAL_EVIDENCE.md` — grouped S03E07 evidence
+- `RECONSTRUCTION_PLAN.md` — research plan and completion gate
+- `COMPLETION_CHECKLIST.md` — overall research completion status
 
 ## Canon states tracked
 

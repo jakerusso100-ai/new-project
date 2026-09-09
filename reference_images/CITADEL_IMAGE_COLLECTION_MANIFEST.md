@@ -1,0 +1,149 @@
+# Citadel Image Collection Manifest
+
+## Purpose
+
+Track the complete visual-search target for the Citadel reconstruction rather than treating a small gallery as complete.
+
+## Current embedded-reference count
+
+The working gallery currently contains **22 visual-reference entries** in `CITADEL_IMAGE_GALLERY.md`. Some are distinct source images while a few intentionally preserve separate evidence hits for the same architectural view.
+
+## Required source sweep
+
+### Animated series
+
+1. **S01E10 — Close Rick-Counters of the Rick Kind**
+   - Citadel exterior
+   - arrival/portal entrance
+   - city/public interiors
+   - commercial areas
+   - Council Hall
+   - Council corridor/security
+   - final Citadel exterior
+   - production art where legitimately available
+
+2. **S03E01 — The Rickshank Rickdemption**
+   - intact-to-damaged transition
+   - Galactic Federation prison collision
+   - destruction sequence
+   - damaged streets/buildings
+   - Council/security areas
+   - destruction storyboards/backgrounds
+
+3. **S03E07 — The Ricklantis Mixup / Tales From The Citadel**
+   - exterior rebuilt Citadel
+   - construction crews
+   - streets/sidewalks
+   - flying cars and ordinary traffic
+   - Cafe Sanchez
+   - police academy/shooting range
+   - Morty Academy
+   - train
+   - Citadel Morning News
+   - Simple Rick factory
+   - Flavor Core
+   - Mortytown
+   - The Creepy Morty
+   - Wishing Portal/Waste Disposal Plant
+   - Shadow Council
+   - presidential transition
+
+4. **S05E10 — Rickmurai Jack**
+   - bright rebuilt plaza
+   - greenery/landscaping
+   - President Morty signage
+   - Re-Build-A-Morty
+   - presidential building
+   - underground portal-fluid systems
+   - deformed Morty labor areas
+   - cloning infrastructure
+   - Dimensional Drive
+   - Operation Phoenix
+   - Mortyburg
+   - Citadel separation
+   - destruction
+
+5. **S06E01 — Solaricks**
+   - destroyed Citadel exterior
+   - ruins
+   - Mortyburg
+   - Dimensional Drive remnants
+   - scavenger activity
+   - debris fields
+
+6. **S06E07 — Full Meta Jackrick / related continuity**
+   - only Citadel references that contribute architectural/continuity evidence
+
+7. **S06E06 — JuRicksic Mort**
+   - destroyed-Citadel continuity references
+
+8. **S07E05 — Unmortricken**
+   - Citadel flashback
+   - Morty Mart
+   - Morty Agency
+   - flashback city/context
+
+9. **S07E06 — Rickfending Your Mort**
+   - Citadel social/Rick-space references
+   - The Salty Rick
+   - any architectural/environmental frames
+
+10. **S08E03 — The Rick, The Mort & The Ugly**
+    - Citadel wreckage
+    - cloned-Rick settlement
+    - construction site
+    - Boss Hog Rick's rebuilt structure
+    - cloning laboratory
+    - brewery
+    - Big Rick's club
+    - Big Rick's office
+    - final firefight/destruction
+
+## Comic sweep
+
+Search panel/page-level material for every Citadel depiction in:
+
+- published *Rick and Morty* comic issues
+- Citadel-specific issues and story arcs
+- Council of Ricks appearances
+- militia/security appearances
+- Doofus Jerry / Genetic Restructurer Citadel takeover
+- Pocket Mortys / Pocket Like You Stole It material where it visually depicts the Citadel
+- official/licensed promotional comic art where architectural evidence is visible
+
+Comic evidence must remain separated from animated-series canon unless a direct correspondence is established.
+
+## Source-gallery pages identified
+
+- Close Rick-Counters of the Rick Kind gallery
+- The Rickshank Rickdemption gallery
+- The Ricklantis Mixup gallery
+- Rickmurai Jack gallery
+- Solaricks gallery
+- JuRicksic Mort gallery
+- Unmortricken gallery
+- Rickfending Your Mort gallery
+- The Rick, The Mort & The Ugly gallery
+- Citadel location/category pages
+- Council of Ricks gallery/reference
+- Comic Vine Citadel gallery
+
+## Collection rules
+
+- Prefer primary/licensed sources where possible.
+- Use third-party stills as discovery/reference pointers, not as proof of hidden geometry.
+- Preserve the source URL for every image.
+- Avoid duplicates unless the duplicate represents a distinct evidence hit or source.
+- Do not bulk-rehost copyrighted episode galleries or comic pages.
+- Do not invent missing frames.
+- Record unavailable images as source-page references rather than silently dropping them.
+
+## Completion criterion
+
+The visual collection is considered complete only when every identified Citadel appearance and every Citadel-specific location has been checked against its available gallery/source and either:
+
+1. a useful visual reference is recorded,
+2. the source is checked and contains no useful architecture, or
+3. the source is unavailable and that limitation is explicitly recorded.
+
+A finite number of embedded images should therefore **never** be described as “every frame of the Citadel.” The repository's goal is a complete, auditable **visual evidence index**.

@@ -1,6 +1,6 @@
 # Citadel Image Reference Index
 
-This is the master visual-reference register. The repository records where a reference comes from and what it proves. The project maintains a GitHub-viewable gallery at `reference_images/CITADEL_IMAGE_GALLERY.md` and a collection manifest at `reference_images/CITADEL_IMAGE_COLLECTION_MANIFEST.md`.
+This is the master visual-reference register. The repository records where a reference comes from and what it proves. The project maintains a GitHub-viewable gallery at `reference_images/CITADEL_IMAGE_GALLERY.md`, a gap-closure appendix at `reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md`, and a collection manifest at `reference_images/CITADEL_IMAGE_COLLECTION_MANIFEST.md`.
 
 ## Series references
 
@@ -20,30 +20,16 @@ This is the master visual-reference register. The repository records where a ref
 
 **Primary gallery:** `reference_images/CITADEL_IMAGE_GALLERY.md`
 
-The current working gallery contains **22 visual-reference entries**, covering:
+The working collection now contains **30 visual-reference entries** across the primary gallery and the gap-closure appendix. The latest batch specifically adds:
 
-1. Citadel arrival/interior city architecture.
-2. Ricklantis dense urban streetscape.
-3. Waste Disposal Plant / Wishing Portal.
-4. Council/institutional interiors.
-5. Grand assembly/public interiors.
-6. Citadel crowd/public-space scale.
-7. Ricklantis construction and unrest.
-8. Morty Mart.
-9. Morty Academy.
-10. Re-Build-A-Morty.
-11. President Morty political/dining interiors.
-12. Central Finite Curve / dimensional-drive context.
-13. Rickmurai Jack destruction.
-14. Alternate destruction/courtyard view.
-15. President Morty chamber.
-16. Rickmurai Jack portal infrastructure.
-17. Simple Rick factory / Flavor Core.
-18. Later Citadel crowd/interior reference.
-19. Early Citadel security.
-20. Boss Hog Rick / Season 8 reconstruction.
-21. Additional late-era political interior evidence.
-22. Other source-confirmed Citadel visual hits retained for comparison.
+- full exterior / three-dome silhouette
+- entrance plaza
+- Citadel Morning News studio
+- civic assembly hall / raised dais
+- grand public interior with water feature
+- Citadel political diner / Citadel Daily
+- factory security / reinforced glazing
+- Solaricks interior wreckage
 
 The number is a working embedded-reference count, **not a claim that it equals every frame produced by the show**. The collection manifest defines the audit needed to check every Citadel appearance and source gallery.
 
@@ -64,7 +50,10 @@ For every usable view, extract: silhouette, dome geometry, shell segmentation, s
 - Rickmurai Jack gallery: https://rickandmorty.fandom.com/wiki/Rickmurai_Jack/Gallery
 - Solaricks gallery: https://rickandmorty.fandom.com/wiki/Solaricks/Gallery
 - Unmortricken gallery: https://rickandmorty.fandom.com/wiki/Unmortricken/Gallery
+- Rickfending Your Mort gallery: https://rickandmorty.fandom.com/wiki/Rickfending_Your_Mort/Gallery
+- The Rick, The Mort & The Ugly gallery: https://rickandmorty.fandom.com/wiki/The_Rick,_The_Mort_%26_The_Ugly/Gallery
 - Citadel category: https://rickandmorty.fandom.com/wiki/Category%3AThe_Citadel
+- Council of Ricks: https://rickandmorty.fandom.com/wiki/Council_of_Ricks
 - Comic Vine Citadel gallery: https://comicvine.gamespot.com/citadel-of-ricks/4020-65478/images/
 
 ## Required capture tags

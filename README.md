@@ -1,6 +1,6 @@
 # Citadel of Ricks — Reconstruction Reference Project
 
-**RESEARCH PHASE: 100% COMPLETE**
+**RESEARCH PHASE: 100% COMPLETE — SCHEMATIC PHASE: v1 DELIVERED (see `SCHEMATIC.md`)**
 
 A source-grounded research repository for reconstructing the Citadel of Ricks from **Rick and Morty** using visual references, dialogue, episode events, official material, and supplementary comic references.
 
@@ -8,13 +8,19 @@ A source-grounded research repository for reconstructing the Citadel of Ricks fr
 
 Collect and organize the useful reconstruction evidence so the owner can build their own Citadel schematic/reconstruction from source imagery and canon evidence.
 
-This repository is a **reference/evidence database**, not a finished schematic or 3D asset project.
+This repository began as a **reference/evidence database**. On 2026-09-08 the owner lifted the schematic/3D scope lock; the evidence base now feeds a master schematic (`SCHEMATIC.md`, `schematic/`) that is the input to the interactive 3D model.
 
 ## Completion status
 
 The research phase is complete. Every major reconstruction-relevant category is now source-backed, classified as inference, or explicitly marked `UNKNOWN / NOT SHOWN`. The source material does not provide a complete canonical engineering drawing, so unresolved dimensions are intentionally preserved as unknown.
 
 Start with:
+
+- `SCHEMATIC.md` — **master schematic** (coordinate system, massing, vertical stack, districts, drawings, 3D pipeline)
+- `schematic/citadel_schematic.json` — machine-readable schematic database (74 nodes)
+- `schematic/drawings/` — generated SVG drawing set
+- `schematic/viewer/index.html` — interactive 3D block-out viewer
+- `reference_images/IMAGE_SLOTS.md` — which frames still need to be captured
 
 - `FINAL_RESEARCH_AUDIT.md` — final acceptance audit
 - `FINAL_EVIDENCE_HANDOFF.md` — owner-facing handoff
@@ -103,6 +109,6 @@ The owner creates the final schematic/reconstruction from the evidence.
 - **C — Plausible:** useful reconstruction inference but not directly established.
 - **D — Unknown/speculative:** never treat as canon geometry.
 
-## Important restriction
+## Scope note
 
-This repository intentionally does **not** generate the owner's final schematic, CAD, Blender scene, mesh, STL, OBJ, FBX, textures, or other 3D assets. It exists to provide the evidence needed for the owner to reconstruct the Citadel themselves.
+The original research phase deliberately produced no schematic or 3D assets. That restriction was lifted by the owner on 2026-09-08. The schematic keeps the evidence discipline: every node carries an existence confidence (A–D) **and** a placement class (LOCKED / ANCHORED / PROVISIONAL / PLACEHOLDER / UNPLACED), and no absolute dimension is asserted until a scale anchor is justified from reference images.

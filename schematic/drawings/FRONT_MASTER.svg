@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1000" viewBox="0 0 1700 1000" font-family="ui-monospace, Consolas, monospace"><rect width="1700" height="1000" fill="#0b0e13"/>
+<line x1="68.0" y1="788.0" x2="1512.0" y2="788.0" stroke="#1e2733" stroke-width="1"/>
+<text x="56.6" y="791.0" font-size="9" text-anchor="end" fill="#3b4a5c" font-family="ui-monospace, Consolas, monospace">z=-0.6U</text>
+<line x1="68.0" y1="712.0" x2="1512.0" y2="712.0" stroke="#1e2733" stroke-width="1"/>
+<text x="56.6" y="715.0" font-size="9" text-anchor="end" fill="#3b4a5c" font-family="ui-monospace, Consolas, monospace">z=-0.4U</text>
+<line x1="68.0" y1="636.0" x2="1512.0" y2="636.0" stroke="#1e2733" stroke-width="1"/>
+<text x="56.6" y="639.0" font-size="9" text-anchor="end" fill="#3b4a5c" font-family="ui-monospace, Consolas, monospace">z=-0.2U</text>
+<line x1="68.0" y1="560.0" x2="1512.0" y2="560.0" stroke="#2a3644" stroke-width="1"/>
+<text x="56.6" y="563.0" font-size="9" text-anchor="end" fill="#3b4a5c" font-family="ui-monospace, Consolas, monospace">z=+0.0U</text>
+<line x1="68.0" y1="484.0" x2="1512.0" y2="484.0" stroke="#1e2733" stroke-width="1"/>
+<text x="56.6" y="487.0" font-size="9" text-anchor="end" fill="#3b4a5c" font-family="ui-monospace, Consolas, monospace">z=+0.2U</text>
+<line x1="68.0" y1="408.0" x2="1512.0" y2="408.0" stroke="#1e2733" stroke-width="1"/>
+<text x="56.6" y="411.0" font-size="9" text-anchor="end" fill="#3b4a5c" font-family="ui-monospace, Consolas, monospace">z=+0.4U</text>
+<line x1="68.0" y1="332.0" x2="1512.0" y2="332.0" stroke="#1e2733" stroke-width="1"/>
+<text x="56.6" y="335.0" font-size="9" text-anchor="end" fill="#3b4a5c" font-family="ui-monospace, Consolas, monospace">z=+0.6U</text>
+<line x1="68.0" y1="256.0" x2="1512.0" y2="256.0" stroke="#1e2733" stroke-width="1"/>
+<text x="56.6" y="259.0" font-size="9" text-anchor="end" fill="#3b4a5c" font-family="ui-monospace, Consolas, monospace">z=+0.8U</text>
+<line x1="68.0" y1="180.0" x2="1512.0" y2="180.0" stroke="#1e2733" stroke-width="1"/>
+<text x="56.6" y="183.0" font-size="9" text-anchor="end" fill="#3b4a5c" font-family="ui-monospace, Consolas, monospace">z=+1.0U</text>
+<line x1="220.0" y1="123.0" x2="220.0" y2="864.0" stroke="#1e2733" stroke-width="1"/>
+<text x="220.0" y="886.8" font-size="9" text-anchor="middle" fill="#3b4a5c" font-family="ui-monospace, Consolas, monospace">-1.5U</text>
+<line x1="410.0" y1="123.0" x2="410.0" y2="864.0" stroke="#1e2733" stroke-width="1"/>
+<text x="410.0" y="886.8" font-size="9" text-anchor="middle" fill="#3b4a5c" font-family="ui-monospace, Consolas, monospace">-1.0U</text>
+<line x1="600.0" y1="123.0" x2="600.0" y2="864.0" stroke="#1e2733" stroke-width="1"/>
+<text x="600.0" y="886.8" font-size="9" text-anchor="middle" fill="#3b4a5c" font-family="ui-monospace, Consolas, monospace">-0.5U</text>
+<line x1="790.0" y1="123.0" x2="790.0" y2="864.0" stroke="#1e2733" stroke-width="1"/>
+<text x="790.0" y="886.8" font-size="9" text-anchor="middle" fill="#3b4a5c" font-family="ui-monospace, Consolas, monospace">+0.0U</text>
+<line x1="980.0" y1="123.0" x2="980.0" y2="864.0" stroke="#1e2733" stroke-width="1"/>
+<text x="980.0" y="886.8" font-size="9" text-anchor="middle" fill="#3b4a5c" font-family="ui-monospace, Consolas, monospace">+0.5U</text>
+<line x1="1170.0" y1="123.0" x2="1170.0" y2="864.0" stroke="#1e2733" stroke-width="1"/>
+<text x="1170.0" y="886.8" font-size="9" text-anchor="middle" fill="#3b4a5c" font-family="ui-monospace, Consolas, monospace">+1.0U</text>
+<line x1="1360.0" y1="123.0" x2="1360.0" y2="864.0" stroke="#1e2733" stroke-width="1"/>
+<text x="1360.0" y="886.8" font-size="9" text-anchor="middle" fill="#3b4a5c" font-family="ui-monospace, Consolas, monospace">+1.5U</text>
+<text x="30" y="40" font-size="22" fill="#fff" font-weight="bold">FRONT_MASTER — Transverse elevation (looking along +X)</text>
+<text x="30" y="62" font-size="12" fill="#8a97a8">Horizontal axis = Y (U). Vertical axis = Z (U). Elevation: exterior masses; interior shown for reference.</text>
+<polygon points="315.0,560.0 1265.0,560.0 1132.0,807.0 448.0,807.0" stroke="#7a7f8a" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#7a7f8a" fill-opacity="0.12"/>
+<text x="790.0" y="822.2" font-size="9" text-anchor="middle" fill="#7a7f8a" font-family="ui-monospace, Consolas, monospace">SHELL-LOWER-BODY</text>
+
+<line x1="448.0" y1="807.0" x2="1132.0" y2="807.0" stroke="#7a7f8a" stroke-width="1.8" stroke-opacity="0.9" fill="none"/>
+<text x="995.2" y="822.2" font-size="9" text-anchor="middle" fill="#7a7f8a" font-family="ui-monospace, Consolas, monospace">SHELL-UNDERSIDE</text>
+<path d="M 410.0,560.0 A 380.0 380.0 0 0 1 1170.0,560.0" stroke="#5bc0eb" stroke-width="2.6" stroke-opacity="1.0" fill="#5bc0eb" fill-opacity="0.12"/>
+<text x="790.0" y="168.6" font-size="9" text-anchor="middle" fill="#5bc0eb" font-family="ui-monospace, Consolas, monospace">DOME-P</text>
+<path d="M 657.0,560.0 A 133.0 133.0 0 0 1 923.0,560.0" stroke="#5bc0eb" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#5bc0eb" fill-opacity="0.12"/>
+<rect x="657.0" y="560.0" width="266.0" height="76.0" stroke="#5bc0eb" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#5bc0eb" fill-opacity="0.12"/>
+<text x="790.0" y="415.6" font-size="9" text-anchor="middle" fill="#5bc0eb" font-family="ui-monospace, Consolas, monospace">DOME-S1</text>
+<path d="M 1084.9,560.0 A 133.0 133.0 0 0 1 1350.9,560.0" stroke="#5bc0eb" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#5bc0eb" fill-opacity="0.12"/>
+<rect x="1084.9" y="560.0" width="266.0" height="76.0" stroke="#5bc0eb" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#5bc0eb" fill-opacity="0.12"/>
+<text x="1217.9" y="415.6" font-size="9" text-anchor="middle" fill="#5bc0eb" font-family="ui-monospace, Consolas, monospace">DOME-S2</text>
+<path d="M 229.1,560.0 A 133.0 133.0 0 0 1 495.1,560.0" stroke="#5bc0eb" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#5bc0eb" fill-opacity="0.12"/>
+<rect x="229.1" y="560.0" width="266.0" height="76.0" stroke="#5bc0eb" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#5bc0eb" fill-opacity="0.12"/>
+<text x="362.1" y="415.6" font-size="9" text-anchor="middle" fill="#5bc0eb" font-family="ui-monospace, Consolas, monospace">DOME-MB</text>
+<line x1="429.0" y1="579.0" x2="1151.0" y2="579.0" stroke="#c98bff" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="none"/>
+<text x="1094.0" y="590.4" font-size="9" text-anchor="middle" fill="#c98bff" font-family="ui-monospace, Consolas, monospace">UG-SEWERS</text>
+<rect x="843.2" y="453.6" width="38.0" height="106.4" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>
+<text x="862.2" y="444.1" font-size="9" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-PRESIDENTIAL-BUILDING</text>
+<rect x="725.4" y="522.0" width="38.0" height="38.0" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
+<text x="744.4" y="512.5" font-size="9" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-SHADOW-COUNCIL-HALL</text>
+<rect x="812.8" y="522.0" width="30.4" height="38.0" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
+<text x="828.0" y="512.5" font-size="9" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-COURTHOUSE</text>
+<rect x="714.0" y="522.0" width="30.4" height="38.0" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
+<text x="729.2" y="512.5" font-size="9" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-MORTY-AGENCY</text>
+<rect x="664.6" y="522.0" width="38.0" height="38.0" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>
+<text x="683.6" y="512.5" font-size="9" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-POLICE-HQ</text>
+<rect x="562.0" y="537.2" width="38.0" height="22.8" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>
+<text x="581.0" y="527.7" font-size="9" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-MORTY-ACADEMY</text>
+<rect x="1059.8" y="522.0" width="53.2" height="38.0" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>
+<text x="1086.4" y="512.5" font-size="9" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-SIMPLE-RICKS</text>
+<rect x="1075.0" y="548.6" width="53.2" height="11.4" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="none"/>
+<rect x="1090.2" y="541.0" width="22.8" height="19.0" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>
+<text x="1101.6" y="531.5" font-size="9" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-WISHING-PORTAL</text>
+<rect x="1116.8" y="537.2" width="30.4" height="22.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
+<text x="1132.0" y="527.7" font-size="9" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-WASTE-PLANT</text>
+<rect x="503.1" y="552.4" width="11.4" height="7.6" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
+<text x="508.8" y="542.9" font-size="9" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-MORTY-DAY-CARE</text>
+<rect x="647.5" y="548.6" width="11.4" height="11.4" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
+<text x="653.2" y="539.1" font-size="9" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-MORTY-GAMES</text>
+<rect x="622.8" y="522.0" width="15.2" height="38.0" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
+<text x="630.4" y="512.5" font-size="9" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-MORTY-INSURANCE</text>
+<rect x="938.2" y="548.6" width="7.6" height="11.4" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
+<text x="942.0" y="539.1" font-size="9" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-SALTY-RICK</text>
+<rect x="672.2" y="548.6" width="7.6" height="11.4" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
+<text x="676.0" y="539.1" font-size="9" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-BIG-RICKS-GUMBO</text>
+<rect x="594.3" y="544.8" width="11.4" height="15.2" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
+<text x="600.0" y="535.3" font-size="9" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-REBUILD-A-MORTY</text>
+<rect x="695.0" y="605.6" width="304.0" height="68.4" rx="18" stroke="#ff5c5c" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff5c5c" fill-opacity="0.12"/>
+<text x="847.0" y="685.4" font-size="9" text-anchor="middle" fill="#ff5c5c" font-family="ui-monospace, Consolas, monospace">UG-PORTAL-FLUID</text>
+<polygon points="676.0,655.0 904.0,655.0 904.0,731.0 676.0,731.0" stroke="#ff5c5c" stroke-width="1.8" stroke-opacity="0.9" fill="#ff5c5c" fill-opacity="0.12"/>
+<text x="790.0" y="746.2" font-size="9" text-anchor="middle" fill="#ff5c5c" font-family="ui-monospace, Consolas, monospace">UG-DIM-DRIVE</text>
+<path d="M 771.0,712.0 A 19.0 19.0 0 0 1 809.0,712.0" stroke="#ff5c5c" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff5c5c" fill-opacity="0.12"/>
+<text x="790.0" y="681.6" font-size="9" text-anchor="middle" fill="#ff5c5c" font-family="ui-monospace, Consolas, monospace">UG-CONTROL-ENCLOSURE</text>
+<rect x="780.5" y="685.4" width="19.0" height="30.4" stroke="#ff5c5c" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff5c5c" fill-opacity="0.12"/>
+<rect x="852.9" y="685.4" width="19.0" height="30.4" stroke="#ff5c5c" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff5c5c" fill-opacity="0.12"/>
+<rect x="852.9" y="685.4" width="19.0" height="30.4" stroke="#ff5c5c" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff5c5c" fill-opacity="0.12"/>
+<rect x="780.5" y="685.4" width="19.0" height="30.4" stroke="#ff5c5c" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff5c5c" fill-opacity="0.12"/>
+<rect x="708.1" y="685.4" width="19.0" height="30.4" stroke="#ff5c5c" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff5c5c" fill-opacity="0.12"/>
+<rect x="708.1" y="685.4" width="19.0" height="30.4" stroke="#ff5c5c" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff5c5c" fill-opacity="0.12"/>
+<text x="790.0" y="727.2" font-size="9" text-anchor="middle" fill="#ff5c5c" font-family="ui-monospace, Consolas, monospace">UG-PHOENIX-VATS</text>
+<rect x="691.2" y="666.4" width="45.6" height="53.2" stroke="#ff5c5c" stroke-width="1.8" stroke-opacity="0.9" fill="#ff5c5c" fill-opacity="0.12"/>
+<text x="714.0" y="656.9" font-size="9" text-anchor="middle" fill="#ff5c5c" font-family="ui-monospace, Consolas, monospace">UG-LAUNCH-CHAMBER</text>
+<polygon points="698.8,719.6 729.2,719.6 733.0,807.0 695.0,807.0" stroke="#ff5c5c" stroke-width="1.8" stroke-opacity="0.9" fill="#ff5c5c" fill-opacity="0.12"/>
+<text x="714.0" y="822.2" font-size="9" text-anchor="middle" fill="#ff5c5c" font-family="ui-monospace, Consolas, monospace">UG-EXIT-CHUTE</text>
+<rect x="444.2" y="522.0" width="30.4" height="38.0" stroke="#ffd166" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ffd166" fill-opacity="0.12"/>
+<text x="459.4" y="512.5" font-size="9" text-anchor="middle" fill="#ffd166" font-family="ui-monospace, Consolas, monospace">IF-MORTYBURG</text>
+<text x="30" y="750" font-size="12" fill="#fff" font-family="ui-monospace, Consolas, monospace" font-weight="bold">PLACEMENT CLASS (line style)</text>
+<line x1="30" y1="762" x2="80" y2="762" stroke="#fff" stroke-width="2.6"/>
+<text x="88" y="766" font-size="11" fill="#ddd" font-family="ui-monospace, Consolas, monospace">LOCKED — Existence A and geometry directly supported</text>
+<line x1="30" y1="778" x2="80" y2="778" stroke="#fff" stroke-width="1.8"/>
+<text x="88" y="782" font-size="11" fill="#ddd" font-family="ui-monospace, Consolas, monospace">ANCHORED — Existence A; position follows from an explicit source relationship (e</text>
+<line x1="30" y1="794" x2="80" y2="794" stroke="#fff" stroke-width="1.6" stroke-dasharray="8,5"/>
+<text x="88" y="798" font-size="11" fill="#ddd" font-family="ui-monospace, Consolas, monospace">PROVISIONAL — Existence A/B; position is a reasoned inference (C)</text>
+<line x1="30" y1="810" x2="80" y2="810" stroke="#fff" stroke-width="1.3" stroke-dasharray="2,4"/>
+<text x="88" y="814" font-size="11" fill="#ddd" font-family="ui-monospace, Consolas, monospace">PLACEHOLDER — Existence A/B/C; position is arbitrary (D) and exists only so the node has a slot in the model</text>
+<line x1="30" y1="826" x2="80" y2="826" stroke="#fff" stroke-width="1.0" stroke-dasharray="1,3"/>
+<text x="88" y="830" font-size="11" fill="#ddd" font-family="ui-monospace, Consolas, monospace">UNPLACED — Not given coordinates</text>
+<text x="30" y="854" font-size="12" fill="#fff" font-family="ui-monospace, Consolas, monospace" font-weight="bold">KIND (colour)</text>
+<rect x="30" y="862" width="12" height="10" fill="#7a7f8a"/>
+<text x="46" y="871" font-size="11" fill="#ddd" font-family="ui-monospace, Consolas, monospace">shell</text>
+<rect x="180" y="862" width="12" height="10" fill="#5bc0eb"/>
+<text x="196" y="871" font-size="11" fill="#ddd" font-family="ui-monospace, Consolas, monospace">dome</text>
+<rect x="330" y="862" width="12" height="10" fill="#f5b942"/>
+<text x="346" y="871" font-size="11" fill="#ddd" font-family="ui-monospace, Consolas, monospace">circulation</text>
+<rect x="30" y="878" width="12" height="10" fill="#c98bff"/>
+<text x="46" y="887" font-size="11" fill="#ddd" font-family="ui-monospace, Consolas, monospace">utility</text>
+<rect x="180" y="878" width="12" height="10" fill="#8fd18f"/>
+<text x="196" y="887" font-size="11" fill="#ddd" font-family="ui-monospace, Consolas, monospace">district</text>
+<rect x="330" y="878" width="12" height="10" fill="#ff8a65"/>
+<text x="346" y="887" font-size="11" fill="#ddd" font-family="ui-monospace, Consolas, monospace">landmark</text>
+<rect x="30" y="894" width="12" height="10" fill="#ffb199"/>
+<text x="46" y="903" font-size="11" fill="#ddd" font-family="ui-monospace, Consolas, monospace">interior</text>
+<rect x="180" y="894" width="12" height="10" fill="#4caf50"/>
+<text x="196" y="903" font-size="11" fill="#ddd" font-family="ui-monospace, Consolas, monospace">natural</text>
+<rect x="330" y="894" width="12" height="10" fill="#ff5c5c"/>
+<text x="346" y="903" font-size="11" fill="#ddd" font-family="ui-monospace, Consolas, monospace">machinery</text>
+<rect x="30" y="910" width="12" height="10" fill="#ffd166"/>
+<text x="46" y="919" font-size="11" fill="#ddd" font-family="ui-monospace, Consolas, monospace">interface</text>
+<rect x="180" y="910" width="12" height="10" fill="#a0522d"/>
+<text x="196" y="919" font-size="11" fill="#ddd" font-family="ui-monospace, Consolas, monospace">ruin</text>
+<rect x="330" y="910" width="12" height="10" fill="#e0e0e0"/>
+<text x="346" y="919" font-size="11" fill="#ddd" font-family="ui-monospace, Consolas, monospace">variant</text>
+<rect x="30" y="926" width="12" height="10" fill="#bbbbbb"/>
+<text x="46" y="935" font-size="11" fill="#ddd" font-family="ui-monospace, Consolas, monospace">prop</text>
+
+<rect x="1230" y="880" width="450" height="100" fill="#0e1218" stroke="#555"/>
+<text x="1242" y="904" font-size="16" fill="#fff" font-family="ui-monospace, Consolas, monospace" font-weight="bold">FRONT_MASTER</text>
+<text x="1242" y="924" font-size="12" fill="#ccc" font-family="ui-monospace, Consolas, monospace">Transverse elevation (looking along +X)</text>
+<text x="1242" y="942" font-size="11" fill="#aaa" font-family="ui-monospace, Consolas, monospace">State: DS-04   Layers: L0,L1,L4,L7</text>
+<text x="1242" y="958" font-size="11" fill="#aaa" font-family="ui-monospace, Consolas, monospace">Units: U = DOME-P radius (absolute scale UNKNOWN)   Built 2026-09-08</text>
+<text x="1242" y="972" font-size="10" fill="#888" font-family="ui-monospace, Consolas, monospace">Citadel of Ricks reconstruction — generated from citadel_schematic.json</text>
+</svg>

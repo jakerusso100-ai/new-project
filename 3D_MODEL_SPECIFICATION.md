@@ -1,57 +1,20 @@
-# 3D Model Specification
+# 3D Model Specification — Archived / Out of Scope
 
-## Target
+> **Project instruction:** this repository phase is research/documentation only. The user will make their own schematic/reconstruction. The assistant must not create a Blender scene, CAD model, mesh, STL, OBJ, FBX, texture package, or other 3D asset unless the project owner explicitly changes that instruction.
 
-A modular, source-grounded Citadel reconstruction suitable for Blender or another standard 3D package.
+This file is retained only as historical project planning material. Its former modeling deliverables are **not active tasks**.
 
-## Scene organization
+## Historical intent
 
-- `CITADEL_MASTER`
-- `SHELL`
-- `DOMES`
-- `DISTRICTS`
-- `LANDMARKS`
-- `TRANSIT`
-- `VEGETATION`
-- `MACHINERY`
-- `DAMAGE_VARIANTS`
-- `NEW_CITADEL`
-- `REFERENCE_CAMERAS`
-- `VALIDATION`
+The original document described a modular Citadel model organized around shell, domes, districts, landmarks, transit, machinery, damage variants and reference cameras.
 
-## Modeling strategy
+## Current status
 
-Use parametric or reusable building families for repeated urban structures. Keep district geometry modular. Keep landmark geometry individually editable. Separate canonical geometry from decorative detail.
+- 3D construction: **OUT OF SCOPE**
+- Blender/CAD generation: **OUT OF SCOPE**
+- Mesh generation: **OUT OF SCOPE**
+- Texture/material generation: **OUT OF SCOPE**
+- Render/validation scene generation: **OUT OF SCOPE**
+- Source research supporting the user's own reconstruction: **IN SCOPE**
 
-## LOD levels
-
-- LOD0: silhouette shell and domes.
-- LOD1: streets, districts and major skyline.
-- LOD2: landmark architecture and transit.
-- LOD3: street-level buildings and environmental detail.
-- LOD4: props, signs, vegetation and small mechanical detail.
-
-## Validation cameras
-
-Create fixed cameras corresponding to the major canonical exterior and interior reference viewpoints. Each validation render should compare silhouette, dome position, skyline density, road curvature and major landmarks.
-
-## State variants
-
-The model must support at minimum:
-
-1. Original/early Citadel.
-2. Rebuilt city-state.
-3. Damaged Citadel.
-4. Destroyed Citadel.
-5. Late underground/President Morty configuration.
-6. New Citadel reconstruction where evidence permits.
-
-## Deliverables
-
-- Native editable scene.
-- Exportable mesh.
-- Material library.
-- Reference-camera scene.
-- Dimension/measurement table.
-- Evidence metadata attached to major objects.
-- Change log.
+Use the evidence registers, scene/shot log, measurement framework, contradiction register and unknown register instead.

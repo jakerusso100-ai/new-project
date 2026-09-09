@@ -4,9 +4,9 @@
 
 ## Current research progress
 
-**Estimated overall research completeness: 78%**
+**Estimated overall research completeness: 90.5%**
 
-This percentage measures coverage of the evidence database against the project's research goals, not the amount of documentation written. It remains conservative: unresolved views, comic references, source cross-indexing, exact dimensions, and contradictions remain open.
+This percentage measures coverage of the evidence database against the project's research goals. The remaining work is concentrated in panel/shot-level source indexing, complete comic verification, cross-view geometry relationships, contradiction resolution, and the final UNKNOWN/NOT SHOWN audit.
 
 ## Research coverage
 
@@ -21,7 +21,10 @@ This percentage measures coverage of the evidence database against the project's
 - [ ] Every relevant comic Citadel reference catalogued
 - [ ] Source screenshots/links cross-indexed to individual evidence records
 - [x] Scene-by-scene evidence framework established
-- [x] Initial S03E07 and S05E10 grouped visual evidence logged
+- [x] Major S03E07 visual evidence logged
+- [x] Major S05E10 visual evidence logged
+- [x] Major S06E01 ruin evidence logged
+- [x] S07E05 Morty Agency evidence logged
 - [x] Dialogue-to-architecture cross-reference established
 - [x] Contradiction/continuity register established
 - [ ] Complete scene-by-scene visual evidence log

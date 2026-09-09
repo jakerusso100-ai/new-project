@@ -1,6 +1,6 @@
-# Citadel of Ricks — Master Schematic (v2.0)
+# Citadel of Ricks — Master Schematic (v2.1)
 
-**Status:** complete schematic built from every evidence register in this repository, then corrected against the reference images in `reference_images/` (16 inspected; see `reference_images/CAMERA_MATCH.md` for what each one changed). v1.3–v1.7 corrected the global massing against the full exterior frame (BATCH_02 #23) by eye; v2.0 replaces those values with a numeric silhouette fit (≈4,150 render-and-compare evaluations, `reference_images/EXTERIOR_FIT_23.md`). It is the bridge between the research phase (100% complete) and the interactive 3D model: every reconstructable feature now has an ID, a layer, a vertical band, a state list, a normalized position, a placement-trust class, the evidence behind it, its unknowns, and the reference shots it still needs.
+**Status:** complete schematic built from every evidence register in this repository, then corrected against the reference images in `reference_images/` (16 inspected; see `reference_images/CAMERA_MATCH.md` for what each one changed). v1.3–v1.7 corrected the global massing against the full exterior frame (BATCH_02 #23) by eye; v2.0 replaced those values with a numeric silhouette fit (≈4,150 render-and-compare evaluations, `reference_images/EXTERIOR_FIT_23.md`); v2.1 replaces the exterior with measured cross-sections of the owner-supplied STL (`reference_models/STL_MEASUREMENTS.md`), sets a provisional 1:1 scale (`SCALE_1_TO_1.md`, R = 2,000 m) and adds the interior deck stack that fits inside that shell. It is the bridge between the research phase (100% complete) and the interactive 3D model: every reconstructable feature now has an ID, a layer, a vertical band, a state list, a normalized position, a placement-trust class, the evidence behind it, its unknowns, and the reference shots it still needs.
 
 **Scope change:** the research-phase lock on schematic/3D output was lifted by the project owner on 2026-09-08. The evidence discipline is unchanged — the schematic does not convert a convenient assumption into canon; it gives every assumption a labelled slot so an image can overturn it.
 
@@ -40,49 +40,45 @@ A node can be existence-A and placement-PLACEHOLDER (Cafe Sanchez: definitely ex
 
 - **Origin:** centre of the principal dome (`DOME-P`) at the surface-city ground plane.
 - **Axes:** right-handed. +Z up through the dome apex. +X is nominal "east" (used once, for the East Sanchez Heights name-inference). +Y is 90° counter-clockwise from +X seen from above. Azimuth is measured CCW from +X.
-- **Unit:** **1 U = radius of the central drum = base radius of the DOME-P cap.** Every length in the JSON, drawings and viewer is a multiple of U.
-- **Absolute conversion:** `units.absolute_conversion` is `null` and stays null until a scale anchor is justified (§10). When set, metres = U × conversion. Changing it rescales the whole model without touching any topology — that is the point of normalizing.
+- **Unit:** **1 U = R = equatorial radius of the central lens** (its widest point). Every length in the JSON, drawings and viewer is a multiple of U.
+- **Absolute conversion:** `units.absolute_conversion` = **2,000 m per U** (PROVISIONAL, range 1,500–3,000; the chain is in `SCALE_1_TO_1.md`). Metres = U × 2,000. Changing the one field rescales the whole model without touching any topology — that is the point of normalizing.
 
-Why the dome radius and not the overall diameter: the dome is the one mass that appears in nearly every exterior shot and is LOCKED. The overall diameter depends on the lower body's taper, which is PROVISIONAL.
+Why the lens radius and not the overall span: the central body is the one mass that appears in every exterior shot and is LOCKED; the overall span depends on the pods and arms.
 
 ## 3. Global massing (L0 / L1)
 
-Fixed by the full exterior frame (`CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md` #23) and corroborated by the founding hologram (`CITADEL_IMAGE_GALLERY.md` #04). The v1 guess — a hemisphere on a broad plate body with domes tangent to the rim — was wrong on every count and is recorded in `CAMERA_MATCH.md`.
-
-All values below are from the numeric silhouette fit in `reference_images/EXTERIOR_FIT_23.md` (≈4,150 render-and-compare evaluations against frame #23; mean silhouette edge error 17.65 px ≈ 0.10 R).
+Geometry is now taken from cross-sections of the owner-supplied STL (`reference_models/STL_MEASUREMENTS.md`), a fan reconstruction that agrees with the frame-fitted silhouette on everything a single frame can constrain (spike depth −2.13 R in both) and settles what it cannot (pod height, arm section, fin count). Existence still comes from the show; the STL supplies the shape.
 
 | Node | Placement | Envelope (U) | Basis |
 |---|---|---|---|
-| `SHELL-DRUM` central disc | LOCKED | cylinder r 1.00, z +0.10 → −0.02 | The city rides on a **thin plate** only 0.12 R thick with cyan light strips on the plated rim. Defines the unit. |
-| `DOME-P` glazed cap | LOCKED | spherical cap r 1.00, height 0.19, base at z +0.10 | Shallow, radially segmented (8) cap — **not** a hemisphere. #23 and #04 agree; height fitted. |
-| `DOME-P-HUB` | ANCHORED | cap r 0.22, height 0.04 at the apex (z 0.29) | Raised circular hub where the segment ribs meet; every pod has one too. |
-| `SHELL-UNDERHUB` keel mount | ANCHORED | cylinder r 0.34 → 0.30, z −0.02 → −0.45 | Block under the centre of the plate from which the keel hangs. Natural home for the Drive stack. |
-| `SHELL-LOWER-BODY` keel energy blade | ANCHORED | cone r 0.12 → 0, z −0.45 → −2.13 | Bright cyan crystalline blade on the axis; tip **2.1 R below the deck** (fitted — earlier passes measured from the wrong edge). |
-| `KEEL-FIN-1/2/3` | ANCHORED (count PROVISIONAL) | slabs 0.10 × 0.365 × 1.20 at r 0.32, aligned with the arms (fitted offset −2.7°) | Flat plated fins flank the blade, ending 1.65 R below deck. Two are clearly visible; three assumed by symmetry — count UNKNOWN. |
-| `SHELL-UNDERSIDE` blade exit aperture | ANCHORED | disc r 0.035 at z −1.40 | Spacecraft launches from the bottom (S05E10); placed where the blade is still wide enough for the chute. |
-| `SHELL-PLATES` rim plating | PLACEHOLDER | 16 segments on the plate rim | Plating exists (#23); count is a placeholder. |
-| `DOME-S1`, `DOME-S2`, `DOME-MB` satellite pods | ANCHORED | caps r 0.54, height 0.10, on thin rims, **pod deck at z −0.31**, centres at 2.50 U, az 0° / 120° / 240° | Three discs with the same segmented cap + hub, hanging ≈0.3 R below the main deck. Fitted per-pod distances were 2.73 / 2.14 / 2.67 R with a near-orthographic camera, so the spread is a drawing artefact; symmetrised to 2.5 R. Azimuths relative to the interior UNKNOWN. |
-| `ARM-S1/S2/MB` radial arms | ANCHORED | planks 0.44 wide, r 0.97 → 1.96, sloping z −0.03 → −0.25 | Wide flat decks with cyan light strips that slope down from the plate underside to the pod rims (#23, fitted). What they carry is UNKNOWN; ARM-MB must carry the rail spur. |
-| `PROP-PANEL-MAST` | PLACEHOLDER | 0.18 × 0.20 panel on a mast over one pod | A square panel/antenna stands over one pod in #23; which pod is UNKNOWN. |
+| `DOME-P` glazed upper lens | LOCKED | half-ellipsoid r 1.00, apex +0.292; r = 0.83 at +0.15, 0.90 at +0.11 | Fuller than a spherical cap; 8 segments; hub r 0.20 at the apex. No drum wall — the equator is the rim. |
+| `SHELL-DRUM` lower hull | LOCKED | lower lens, depth 0.10 at the centre | Plated hull with cyan rim lights at the equator. |
+| `SHELL-UNDERHUB` keel mount | ANCHORED | tapering cylinder r 0.46 → 0.23, z −0.10 → −0.36 | Faceted block under the centre; fins hang from its lower rim. Home of the Drive stack. |
+| `SHELL-LOWER-BODY` central spike | ANCHORED | r 0.19 → 0.026, z −0.36 → **−2.13** | The glowing blade of #23; tip depth identical in STL and frame fit. |
+| `KEEL-FIN-1…5` | ANCHORED | 5 tapering plates, az 36° + 72°k, r 0.47–0.75 → 0.41–0.49, z −0.40 → −1.80 | **Five** fins at 72°, 36° off the arms. The frame only ever showed two. |
+| `SHELL-UNDERSIDE` exit aperture | ANCHORED | disc r 0.03 at z −1.40 on the spike | Spacecraft launches from the bottom (S05E10). |
+| `DOME-S1`, `DOME-S2`, `DOME-MB` pods | LOCKED | lenses r 0.592, apex +0.186, depth −0.10, centres at 2.316 U, az 0° / 120° / 240° | 0.59-scale copies of the central lens on the same equatorial plane. Mortyburg is one of them (B). Azimuths relative to the interior UNKNOWN. |
+| `ARM-S1/S2/MB` | LOCKED | lenticular bridges 0.55 wide × 0.20 thick at the equator, r 0.9 → 1.77 | Level with the deck; cyan light strips along the edges. 400 m thick at 1:1 — several decks inside. |
+| `PROP-PANEL-MAST` | PLACEHOLDER | 0.18 × 0.20 panel on a mast over one pod | In #23 only; not in the STL. Which pod is UNKNOWN. |
 
-**Still to settle from images:** fin count, whether the pods really differ in size (the fit says the near pod is drawn larger than any consistent camera allows), pod azimuths relative to the plaza, and which pod is Mortyburg. A second exterior at a different angle (S01E10 or S03E01) would move all of these from ratio estimates to measured values.
+**Still to settle from images:** pod azimuths relative to the plaza, which pod is Mortyburg, whether the show intends five fins (the fan model does; the frame shows two), and the absolute scale (§2, `SCALE_1_TO_1.md`).
 
-## 4. Vertical stack
+## 4. Vertical stack and interior levels
 
-The Citadel is not one city plane. Eight bands, from the top down (all z in U, all PROVISIONAL):
+The interior is bounded by the lens: 0.29 R of headroom at the centre, none at the rim. Bands (U, and metres at R = 2,000 m):
 
-| Band | z range | Contents | Nodes |
+| Band | z range (U) | metres | Contents |
 |---|---|---|---|
-| V+3 dome cap | +0.10 → +0.29 | glazed cap (h 0.19, fitted) with central hub; skyline reaches into it | `DOME-P`, `DOME-P-HUB`, `LM-SPIRE-CLUSTER` tops |
-| V+2 hover band | +0.05 → +0.20 | flying taxis, private flying cars, elevated tracks and walkways | `CIRC-HOVER-BAND`, `CIRC-TRAM-PLAZA`, `CIRC-ELEVATED-TUBE`, `CIRC-CORE-WALKWAYS` |
-| V+1 building volume | 0 → +0.28 | skyline inside the plate rim and cap (apex 0.29) | all L4 boxes |
-| V0 ground plane | 0 | streets, sidewalks, plaza, farm terrain; arm roots (pod decks sit 0.31 R lower) | rings, radials, `LM-CENTRAL-PLAZA`, `LM-MEGAFRUIT-FARM`, `ARM-*` |
-| V−1 plate underside | −0.02 | the plate is only 0.12 R thick (fitted); sewers and conduits are shallow | `UG-SEWERS`, `CIRC-MANHOLE` |
-| V−2 portal-fluid "cave base" | −0.06 → −0.22 | underground production, containers, large central vat — inside the under-hub | `UG-PORTAL-FLUID` |
-| V−3 Dimensional Drive / launch | −0.22 → −0.60 | drive void spanned by suspended walkways, glass-domed control enclosure, Operation Phoenix vats; launch chamber between the fin roots | `UG-DIM-DRIVE`, `UG-CONTROL-ENCLOSURE`, `UG-PHOENIX-VATS`, `UG-LAUNCH-CHAMBER` |
-| V−4 keel blade / exit chute | −0.60 → −2.13 | energy blade to −2.13, fins to −1.65 (fitted); chute inside the blade to −1.40 | `UG-EXIT-CHUTE`, `SHELL-UNDERSIDE`, `KEEL-FIN-*` |
+| V+3 dome cap | +0.18 → +0.292 | 360 → 584 | glazed lens; only the central spires reach here |
+| V+2 hover band | +0.03 → +0.12 | 60 → 240 | flying taxis, private flying cars, elevated rail loop and plaza tramway, atrium walkway tiers |
+| V+1 building volume | 0 → +0.28 | 0 → 560 | skyline under the glass — height limit is the lens profile (`height_envelope`): 0.277 R at the centre, 0.145 R at r 0.8, 0.05 R at r 0.95 |
+| V0 main deck | 0 | 0 | surface city; the pod decks and arm decks are on the same plane |
+| V−1 sub-decks | −0.01 → −0.10 | −20 → −200 | four ~45 m decks thinning to the rim: DK−1 transit/sewers, DK−2 service/waste/airlocks, DK−3 industrial underground, DK−4 hull machinery |
+| V−2 under-hub upper | −0.10 → −0.22 | −200 → −440 | portal-fluid cave base with the central vat (r ≤ 0.43 R) |
+| V−3 under-hub lower + spike root | −0.22 → −0.60 | −440 → −1,200 | Dimensional Drive void, suspended walkway, control enclosure, Operation Phoenix vats; launch chamber at the spike root |
+| V−4 spike and fins | −0.60 → −2.13 | −1,200 → −4,260 | five fins to −1.80; exit chute inside the spike to −1.40 |
 
-The stack lives in three masses: the thin plate (V+3 … V−1), the under-hub block (V−2, V−3) and the hanging keel (V−4). This is a real result of the exterior frame — the glowing blade is exactly where a Citadel-scale Drive's output would be, and the launch chute runs down inside it. Band boundaries are still conventions chosen so the S05E10 descent order (city → manhole → sewers → portal-fluid cave → Drive → chute → space) reads top-to-bottom; the *order* is source-established, the *depths* are ratio estimates. See `SECTION_A.svg` / `SECTION_B.svg`.
+The full level list with contents is `deck_stack` in the JSON and §"Levels" of `SCALE_1_TO_1.md`. Every landmark carries `height_limit_m`, the maximum roof height the glass allows at its radius; the tallest nodes (`LM-CENTRAL-MONUMENT`, `LM-SPIRE-CLUSTER`) are clamped to 0.26 R ≈ 520 m. The pods repeat the same stack at 0.59 scale; the arms are 400 m thick and carry the rail spur and roads inside.
 
 ## 5. Plan organisation (L2 / L3)
 

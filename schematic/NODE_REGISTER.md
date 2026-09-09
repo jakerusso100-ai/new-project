@@ -1,29 +1,31 @@
 # Node Register (generated — do not edit; edit `citadel_schematic.json` and run `python schematic/build.py`)
 
-93 nodes. Positions are in U (1 U = DOME-P radius). Placement class governs how much trust the position deserves.
+95 nodes. Positions are in U (1 U = DOME-P radius). Placement class governs how much trust the position deserves.
 
 | ID | Name | Kind | Layer | Bands | Exist. | Placement | States | Position (X,Y,Z) | Parent | Key evidence |
 |---|---|---|---|---|---|---|---|---|---|---|
-| `SHELL-DRUM` | Central drum (city deck and wall) | shell | L0 | V+1 V0 V-1 V-2 | A | LOCKED | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | — | reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23) |
-| `SHELL-UNDERHUB` | Under-hub (keel mount block) | shell | L0 | V-2 V-3 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | SHELL-DRUM | reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23) |
-| `KEEL-FIN-1` | Keel fin 1 | shell | L0 | V-3 V-4 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.32,+0.00,-1.65 | SHELL-UNDERHUB | reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23) |
-| `KEEL-FIN-2` | Keel fin 2 | shell | L0 | V-3 V-4 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | -0.16,+0.28,-1.65 | SHELL-UNDERHUB | reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23) |
-| `KEEL-FIN-3` | Keel fin 3 | shell | L0 | V-3 V-4 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | -0.16,-0.28,-1.65 | SHELL-UNDERHUB | reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23) |
-| `SHELL-LOWER-BODY` | Keel energy blade | shell | L0 | V-3 V-4 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | — | reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23) |
+| `SHELL-DRUM` | Central lens — lower hull | shell | L0 | V0 V-1 | A | LOCKED | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | — | reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons) |
+| `SHELL-UNDERHUB` | Under-hub (keel mount block) | shell | L0 | V-2 V-3 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | SHELL-DRUM | reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons) |
+| `KEEL-FIN-1` | Keel fin 1 of 5 | shell | L0 | V-3 V-4 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.46,+0.34,-1.80 | SHELL-UNDERHUB | reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior) |
+| `KEEL-FIN-2` | Keel fin 2 of 5 | shell | L0 | V-3 V-4 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | -0.18,+0.54,-1.80 | SHELL-UNDERHUB | reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior) |
+| `KEEL-FIN-3` | Keel fin 3 of 5 | shell | L0 | V-3 V-4 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | -0.57,+0.00,-1.80 | SHELL-UNDERHUB | reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior) |
+| `KEEL-FIN-4` | Keel fin 4 of 5 | shell | L0 | V-3 V-4 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | -0.18,-0.54,-1.80 | SHELL-UNDERHUB | reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior) |
+| `KEEL-FIN-5` | Keel fin 5 of 5 | shell | L0 | V-3 V-4 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.46,-0.34,-1.80 | SHELL-UNDERHUB | reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior) |
+| `SHELL-LOWER-BODY` | Central spike (energy blade) | shell | L0 | V-3 V-4 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | — | reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons) |
 | `SHELL-PLATES` | Drum rim plating | shell | L0 | V+1 V0 V-1 | A | PLACEHOLDER | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | SHELL-DRUM | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram) |
 | `SHELL-UNDERSIDE` | Blade exit aperture | shell | L0 | V-4 | B | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,-1.40 | SHELL-LOWER-BODY | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram) |
-| `ARM-S1` | Radial arm to DOME-S1 | shell | L0 | V0 V-1 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | SHELL-LOWER-BODY | reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23) |
-| `ARM-S2` | Radial arm to DOME-S2 | shell | L0 | V0 V-1 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | SHELL-LOWER-BODY | reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23) |
-| `ARM-MB` | Radial arm to DOME-MB | shell | L0 | V0 V-1 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | SHELL-LOWER-BODY | reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23) |
-| `DOME-P` | Principal transparent dome | dome | L1 | V+3 | A | LOCKED | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | — | reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23) |
-| `DOME-S1` | Secondary dome 1 | dome | L1 | V0 V+1 | B | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | +2.50,+0.00,-0.31 | — | reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23) |
-| `DOME-S2` | Secondary dome 2 | dome | L1 | V0 V+1 | B | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | -1.25,+2.17,-0.31 | — | reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23) |
-| `DOME-MB` | Mortyburg dome (detachable section) | dome | L1 | V0 V+1 V-1 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 DS-06 | -1.25,-2.17,-0.31 | — | reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23) |
-| `DOME-P-HUB` | Central hub cap on the main dome | dome | L1 | V+3 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | DOME-P | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view) |
-| `DOME-S1-HUB` | Hub cap on DOME-S1 | dome | L1 | V+3 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | +2.50,+0.00,-0.31 | DOME-S1 | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view) |
-| `DOME-S2-HUB` | Hub cap on DOME-S2 | dome | L1 | V+3 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | -1.25,+2.17,-0.31 | DOME-S2 | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view) |
-| `DOME-MB-HUB` | Hub cap on DOME-MB | dome | L1 | V+3 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | -1.25,-2.17,-0.31 | DOME-MB | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view) |
-| `PROP-PANEL-MAST` | Panel / antenna mast on a pod | prop | L6 | V+3 | A | PLACEHOLDER | DS-01 DS-02 DS-03 DS-04 DS-05 | -1.25,+2.17,-0.16 | DOME-S2 | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view) |
+| `ARM-S1` | Radial arm to DOME-S1 | shell | L0 | V+1 V0 V-1 | A | LOCKED | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | SHELL-LOWER-BODY | reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons) |
+| `ARM-S2` | Radial arm to DOME-S2 | shell | L0 | V+1 V0 V-1 | A | LOCKED | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | SHELL-LOWER-BODY | reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons) |
+| `ARM-MB` | Radial arm to DOME-MB | shell | L0 | V+1 V0 V-1 | A | LOCKED | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | SHELL-LOWER-BODY | reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons) |
+| `DOME-P` | Principal transparent dome | dome | L1 | V0 V+1 V+2 V+3 | A | LOCKED | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | — | reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons) |
+| `DOME-S1` | Secondary dome 1 | dome | L1 | V0 V+1 V-1 | B | LOCKED | DS-01 DS-02 DS-03 DS-04 DS-05 | +2.32,+0.00,+0.00 | — | reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons) |
+| `DOME-S2` | Secondary dome 2 | dome | L1 | V0 V+1 V-1 | B | LOCKED | DS-01 DS-02 DS-03 DS-04 DS-05 | -1.16,+2.01,+0.00 | — | reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons) |
+| `DOME-MB` | Mortyburg dome (detachable section) | dome | L1 | V0 V+1 V-1 | A | LOCKED | DS-01 DS-02 DS-03 DS-04 DS-05 DS-06 | -1.16,-2.01,+0.00 | — | reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons) |
+| `DOME-P-HUB` | Central hub cap on the main dome | dome | L1 | V+3 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | DOME-P | reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view) |
+| `DOME-S1-HUB` | Hub cap on DOME-S1 | dome | L1 | V+3 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | +2.32,+0.00,+0.00 | DOME-S1 | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view) |
+| `DOME-S2-HUB` | Hub cap on DOME-S2 | dome | L1 | V+3 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | -1.16,+2.01,+0.00 | DOME-S2 | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view) |
+| `DOME-MB-HUB` | Hub cap on DOME-MB | dome | L1 | V+3 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | -1.16,-2.01,+0.00 | DOME-MB | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view) |
+| `PROP-PANEL-MAST` | Panel / antenna mast on a pod | prop | L6 | V+3 | A | PLACEHOLDER | DS-01 DS-02 DS-03 DS-04 DS-05 | -1.16,+2.01,+0.19 | DOME-S2 | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view) |
 | `CIRC-RING-1` | Inner circumferential road | circulation | L2 | V0 | B | PROVISIONAL | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | — | GEOMETRY_DATABASE.md G-005; EXTERIOR.md (radial/circular organisation) |
 | `CIRC-RING-2` | Middle circumferential road | circulation | L2 | V0 | B | PROVISIONAL | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | — | GEOMETRY_DATABASE.md G-005 |
 | `CIRC-RING-3` | Outer circumferential road | circulation | L2 | V0 | B | PROVISIONAL | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | — | GEOMETRY_DATABASE.md G-005 |
@@ -85,80 +87,100 @@
 | `PROP-BANNERS` | Regime banners over Rick emblems | prop | L6 | V+1 | A | UNPLACED | DS-03 DS-04 | — | — | RICKLANTIS_VISUAL_EVIDENCE.md 16; EPISODE_EVIDENCE_RICKLANTIS.md (political/architectural transition) |
 | `PROP-STREET-FURNITURE` | Street furniture, signage, trees, fountains | prop | L6 | V0 | A | UNPLACED | DS-01 DS-02 DS-03 DS-04 | — | — | reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground); BUILDING_FAMILIES.md (streetscape details) |
 | `UG-SEWERS` | Sewer / utility passages | utility | L7 | V-1 | A | PROVISIONAL | DS-03 DS-04 DS-05 | +0.00,+0.00,-0.05 | — | UTILITY_SYSTEMS.md (sewers); EPISODE_EVIDENCE_RICKMURAI_JACK.md (deformed Mortys emerge from sewers) |
-| `UG-PORTAL-FLUID` | Portal-fluid production complex ('cave base') | machinery | L7 | V-2 | A | PROVISIONAL | DS-04 DS-05 | +0.08,+0.05,-0.14 | — | EPISODE_EVIDENCE_RICKMURAI_JACK.md (portal-fluid production / mines); DIALOGUE_ARCHITECTURE_CROSSREF.md D-006, D-007 |
-| `UG-DIM-DRIVE` | Dimensional Drive chamber | machinery | L7 | V-3 | A | ANCHORED | DS-04 DS-05 | +0.00,+0.00,-0.33 | — | reference_images/CITADEL_IMAGE_GALLERY.md#17 (S05E10 rail cart); reference_images/CITADEL_IMAGE_GALLERY.md#13 (S05E10 Central Finite Curve platform) |
-| `UG-CONTROL-ENCLOSURE` | Glass-domed control enclosure | machinery | L7 | V-3 | A | PROVISIONAL | DS-04 DS-05 | +0.20,+0.00,-0.42 | UG-DIM-DRIVE | reference_images/CITADEL_IMAGE_GALLERY.md#13 (S05E10 Central Finite Curve platform); EPISODE_EVIDENCE_RICKMURAI_JACK.md (glass-domed/control enclosure around the principal control interface) |
-| `UG-PHOENIX-VATS` | Operation Phoenix vats | machinery | L7 | V-3 | A | PROVISIONAL | DS-04 DS-05 | +0.00,+0.00,-0.43 | UG-DIM-DRIVE | EPISODE_EVIDENCE_RICKMURAI_JACK.md (Operation Phoenix vats feed biological material into the drive process) |
-| `UG-LAUNCH-CHAMBER` | Launch chamber (Evil Morty's spacecraft) | machinery | L7 | V-3 V-4 | A | ANCHORED | DS-04 DS-05 | +0.00,-0.04,-0.60 | — | EPISODE_EVIDENCE_SOLARICKS.md (surviving launch/technical chamber); EPISODE_EVIDENCE_RICKMURAI_JACK.md (spacecraft loaded into an exit chute) |
-| `UG-EXIT-CHUTE` | Spacecraft exit chute | machinery | L7 | V-3 V-4 | A | ANCHORED | DS-04 DS-05 DS-06 | +0.00,+0.00,-1.00 | — | EPISODE_EVIDENCE_RICKMURAI_JACK.md (launched from the bottom of the Citadel); EPISODE_EVIDENCE_SOLARICKS.md (launch track) |
-| `IF-MORTYBURG` | Mortyburg attachment interface | interface | L7 | V0 V-1 | A | PROVISIONAL | DS-01 DS-02 DS-03 DS-04 DS-05 | -0.52,-0.89,-0.03 | — | EPISODE_EVIDENCE_RICKMURAI_JACK.md (Mortyburg detachment); DIALOGUE_ARCHITECTURE_CROSSREF.md D-008, D-009 |
-| `MB-THRUSTERS` | Mortyburg boosters / thrusters | machinery | L7 | V-1 | A | PROVISIONAL | DS-05 DS-06 | -1.25,-2.17,-0.37 | DOME-MB | DIALOGUE_ARCHITECTURE_CROSSREF.md D-010 |
+| `UG-PORTAL-FLUID` | Portal-fluid production complex ('cave base') | machinery | L7 | V-2 | A | PROVISIONAL | DS-04 DS-05 | +0.08,+0.05,-0.16 | — | EPISODE_EVIDENCE_RICKMURAI_JACK.md (portal-fluid production / mines); DIALOGUE_ARCHITECTURE_CROSSREF.md D-006, D-007 |
+| `UG-DIM-DRIVE` | Dimensional Drive chamber | machinery | L7 | V-3 | A | ANCHORED | DS-04 DS-05 | +0.00,+0.00,-0.29 | — | reference_images/CITADEL_IMAGE_GALLERY.md#17 (S05E10 rail cart); reference_images/CITADEL_IMAGE_GALLERY.md#13 (S05E10 Central Finite Curve platform) |
+| `UG-CONTROL-ENCLOSURE` | Glass-domed control enclosure | machinery | L7 | V-3 | A | PROVISIONAL | DS-04 DS-05 | +0.17,+0.00,-0.34 | UG-DIM-DRIVE | reference_images/CITADEL_IMAGE_GALLERY.md#13 (S05E10 Central Finite Curve platform); EPISODE_EVIDENCE_RICKMURAI_JACK.md (glass-domed/control enclosure around the principal control interface) |
+| `UG-PHOENIX-VATS` | Operation Phoenix vats | machinery | L7 | V-3 | A | PROVISIONAL | DS-04 DS-05 | +0.00,+0.00,-0.35 | UG-DIM-DRIVE | EPISODE_EVIDENCE_RICKMURAI_JACK.md (Operation Phoenix vats feed biological material into the drive process) |
+| `UG-LAUNCH-CHAMBER` | Launch chamber (Evil Morty's spacecraft) | machinery | L7 | V-3 V-4 | A | ANCHORED | DS-04 DS-05 | +0.00,-0.03,-0.55 | — | EPISODE_EVIDENCE_SOLARICKS.md (surviving launch/technical chamber); EPISODE_EVIDENCE_RICKMURAI_JACK.md (spacecraft loaded into an exit chute) |
+| `UG-EXIT-CHUTE` | Spacecraft exit chute | machinery | L7 | V-3 V-4 | A | ANCHORED | DS-04 DS-05 DS-06 | +0.00,+0.00,-0.97 | — | EPISODE_EVIDENCE_RICKMURAI_JACK.md (launched from the bottom of the Citadel); EPISODE_EVIDENCE_SOLARICKS.md (launch track) |
+| `IF-MORTYBURG` | Mortyburg attachment interface | interface | L7 | V0 V-1 | A | PROVISIONAL | DS-01 DS-02 DS-03 DS-04 DS-05 | -0.50,-0.87,+0.00 | — | EPISODE_EVIDENCE_RICKMURAI_JACK.md (Mortyburg detachment); DIALOGUE_ARCHITECTURE_CROSSREF.md D-008, D-009 |
+| `MB-THRUSTERS` | Mortyburg boosters / thrusters | machinery | L7 | V-1 | A | PROVISIONAL | DS-05 DS-06 | -1.16,-2.01,-0.10 | DOME-MB | DIALOGUE_ARCHITECTURE_CROSSREF.md D-010 |
 | `RUIN-DEBRIS-FIELD` | Post-destruction debris field | ruin | L7 | — | A | PROVISIONAL | DS-06 DS-07 DS-08 | +0.00,+0.00,+0.00 | — | EPISODE_EVIDENCE_SOLARICKS.md; CONTRADICTION_LOG.md C-009 |
-| `RUIN-LAUNCH-CHAMBER` | Ruined launch chamber | ruin | L7 | V-3 | A | ANCHORED | DS-06 | +0.00,-0.04,-0.60 | UG-LAUNCH-CHAMBER | EPISODE_EVIDENCE_SOLARICKS.md (surviving launch/technical chamber) |
+| `RUIN-LAUNCH-CHAMBER` | Ruined launch chamber | ruin | L7 | V-3 | A | ANCHORED | DS-06 | +0.00,-0.03,-0.55 | UG-LAUNCH-CHAMBER | EPISODE_EVIDENCE_SOLARICKS.md (surviving launch/technical chamber) |
 | `RUIN-BEACON` | Summer's beacon on the ruins | prop | L6 | — | A | PLACEHOLDER | DS-06 | +0.30,-0.30,+0.10 | — | EPISODE_EVIDENCE_SOLARICKS.md (beacon) |
 | `NEW-CITADEL` | New Citadel construction (Boss Hog Rick) | variant | L7 | V0 V+1 | A | PROVISIONAL | DS-07 | +0.40,+0.30,+0.00 | — | reference_images/CITADEL_IMAGE_GALLERY.md#21 (S08E03 Boss Hog throne room); CITADEL_DESTRUCTION.md State 6 |
 
 ## Rationale and unknowns per node
 
-### SHELL-DRUM — Central drum (city deck and wall)
+### SHELL-DRUM — Central lens — lower hull
 
-**Placement rationale:** Exterior #23 shows the city on a thin round disc: the plated rim below the glass is only ~0.2 R deep and the underside is flat, with a separate block (SHELL-UNDERHUB) where the keel attaches. v1.3 over-estimated the drum thickness (0.53 R); corrected to 0.22 R. Numeric fit to #23: underside at z −0.05, so the disc is only ≈0.15 R thick. Silhouette fit: underside at z -0.02; the disc is ≈0.12 R thick.
+**Placement rationale:** STL cross-sections: the underside of the main body is the lower half of the lens, 0.10 R deep at the centre. The v2 "thin plate" was the right thickness but the wrong shape. Geometry measured from the STL.
 
 **Unknowns:** rim wall height; deck thickness; rim detailing
 
-**Evidence:** reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)
+**Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)
 
-**Sub-features to model:** thin round deck (#23: rim ≈ 0.2 R thick); plated rim wall with cyan light strips; arm roots at deck level; flat underside
+**Sub-features to model:** plated hull underside; cyan rim light strips at the equator; arm roots at the equator
 
 ### SHELL-UNDERHUB — Under-hub (keel mount block)
 
-**Placement rationale:** In #23 a faceted block sits under the centre of the drum and the keel fins hang from it. It is the natural volume for the Drive stack (V-2/V-3). Depth is a ratio estimate. Silhouette fit: r 0.34, z -0.02 → -0.45.
+**Placement rationale:** In #23 a faceted block sits under the centre of the drum and the keel fins hang from it. It is the natural volume for the Drive stack (V-2/V-3). Depth is a ratio estimate. Silhouette fit: r 0.34, z -0.02 → -0.45. STL: below the lens the central section shrinks linearly from r 0.46 at −0.11 to 0.23 at −0.36.
 
 **Unknowns:** depth; facet form; whether it is one block or several
 
-**Evidence:** reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)
+**Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)
 
-**Sub-features to model:** faceted yellow block under the drum centre; keel fins and blade hang from it; small cyan thruster/light clusters
+**Sub-features to model:** faceted tapering block; fins hang from its lower rim; houses the Drive stack
 
-### KEEL-FIN-1 — Keel fin 1
+### KEEL-FIN-1 — Keel fin 1 of 5
 
-**Placement rationale:** Flat plated fins flank the energy blade in #23, hanging from the under-hub to about 1.2 R below deck with angled tips. In the frame the visible fins sit under the arm directions with the blade exposed between them, so the fins are aligned with the arms (az 0/120/240). Two are clearly visible; the third is assumed by symmetry. Numeric fit to #23: fins end at z −1.84. Silhouette fit: fins at r 0.32, width 0.365, bottom z -1.65; fitted azimuth offset from the arms was −2.7°, i.e. aligned.
+**Placement rationale:** STL cross-sections show FIVE fins at 72° spacing (centroid azimuths 72/144/216/288/360 with the pods at 36/156/276, i.e. fins sit 36° off the arms). Each fin is a tapering plate from −0.40 to −1.80 R. The exterior frame only ever showed two, which is why v1.3–v2.0 assumed three.
 
-**Unknowns:** fin count; fin depth; tip angle; orientation relative to the arms
+**Unknowns:** exact taper; whether the show intends 5 (the fan model does)
 
-**Evidence:** reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)
+**Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior)
 
-**Sub-features to model:** flat plated slab; vertical striations; angled cut tip; cyan light strip on inner face
+**Sub-features to model:** flat plated fin; radial extent 0.47–0.75 R at the root tapering to 0.41–0.49 R at the tip; tangential width ≈0.26 R at the root, ≈0.15 R at the tip; ends at −1.8 R
 
-### KEEL-FIN-2 — Keel fin 2
+### KEEL-FIN-2 — Keel fin 2 of 5
 
-**Placement rationale:** Flat plated fins flank the energy blade in #23, hanging from the under-hub to about 1.2 R below deck with angled tips. In the frame the visible fins sit under the arm directions with the blade exposed between them, so the fins are aligned with the arms (az 0/120/240). Two are clearly visible; the third is assumed by symmetry. Numeric fit to #23: fins end at z −1.84. Silhouette fit: fins at r 0.32, width 0.365, bottom z -1.65; fitted azimuth offset from the arms was −2.7°, i.e. aligned.
+**Placement rationale:** STL cross-sections show FIVE fins at 72° spacing (centroid azimuths 72/144/216/288/360 with the pods at 36/156/276, i.e. fins sit 36° off the arms). Each fin is a tapering plate from −0.40 to −1.80 R. The exterior frame only ever showed two, which is why v1.3–v2.0 assumed three.
 
-**Unknowns:** fin count; fin depth; tip angle; orientation relative to the arms
+**Unknowns:** exact taper; whether the show intends 5 (the fan model does)
 
-**Evidence:** reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)
+**Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior)
 
-**Sub-features to model:** flat plated slab; vertical striations; angled cut tip; cyan light strip on inner face
+**Sub-features to model:** flat plated fin; radial extent 0.47–0.75 R at the root tapering to 0.41–0.49 R at the tip; tangential width ≈0.26 R at the root, ≈0.15 R at the tip; ends at −1.8 R
 
-### KEEL-FIN-3 — Keel fin 3
+### KEEL-FIN-3 — Keel fin 3 of 5
 
-**Placement rationale:** Flat plated fins flank the energy blade in #23, hanging from the under-hub to about 1.2 R below deck with angled tips. In the frame the visible fins sit under the arm directions with the blade exposed between them, so the fins are aligned with the arms (az 0/120/240). Two are clearly visible; the third is assumed by symmetry. Numeric fit to #23: fins end at z −1.84. Silhouette fit: fins at r 0.32, width 0.365, bottom z -1.65; fitted azimuth offset from the arms was −2.7°, i.e. aligned.
+**Placement rationale:** STL cross-sections show FIVE fins at 72° spacing (centroid azimuths 72/144/216/288/360 with the pods at 36/156/276, i.e. fins sit 36° off the arms). Each fin is a tapering plate from −0.40 to −1.80 R. The exterior frame only ever showed two, which is why v1.3–v2.0 assumed three.
 
-**Unknowns:** fin count; fin depth; tip angle; orientation relative to the arms
+**Unknowns:** exact taper; whether the show intends 5 (the fan model does)
 
-**Evidence:** reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)
+**Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior)
 
-**Sub-features to model:** flat plated slab; vertical striations; angled cut tip; cyan light strip on inner face
+**Sub-features to model:** flat plated fin; radial extent 0.47–0.75 R at the root tapering to 0.41–0.49 R at the tip; tangential width ≈0.26 R at the root, ≈0.15 R at the tip; ends at −1.8 R
 
-### SHELL-LOWER-BODY — Keel energy blade
+### KEEL-FIN-4 — Keel fin 4 of 5
 
-**Placement rationale:** Third pass on #23, measured: keel top width ≈ 70 px = 0.87 R across; blade tip 125 px = 1.56 R below the disc underside; fins end ≈ 1.2 R down. The keel is a bright cyan crystalline blade on the axis flanked by flat plated fins with angled tips, all hanging from the under-hub. Existence A, ratios B. Numeric fit to #23: blade tip at z −2.10 (measured from the disc centre, not the front rim — the earlier 1.56 was measured from the wrong edge). Silhouette fit: blade root r 0.117, tip z -2.13.
+**Placement rationale:** STL cross-sections show FIVE fins at 72° spacing (centroid azimuths 72/144/216/288/360 with the pods at 36/156/276, i.e. fins sit 36° off the arms). Each fin is a tapering plate from −0.40 to −1.80 R. The exterior frame only ever showed two, which is why v1.3–v2.0 assumed three.
+
+**Unknowns:** exact taper; whether the show intends 5 (the fan model does)
+
+**Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior)
+
+**Sub-features to model:** flat plated fin; radial extent 0.47–0.75 R at the root tapering to 0.41–0.49 R at the tip; tangential width ≈0.26 R at the root, ≈0.15 R at the tip; ends at −1.8 R
+
+### KEEL-FIN-5 — Keel fin 5 of 5
+
+**Placement rationale:** STL cross-sections show FIVE fins at 72° spacing (centroid azimuths 72/144/216/288/360 with the pods at 36/156/276, i.e. fins sit 36° off the arms). Each fin is a tapering plate from −0.40 to −1.80 R. The exterior frame only ever showed two, which is why v1.3–v2.0 assumed three.
+
+**Unknowns:** exact taper; whether the show intends 5 (the fan model does)
+
+**Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior)
+
+**Sub-features to model:** flat plated fin; radial extent 0.47–0.75 R at the root tapering to 0.41–0.49 R at the tip; tangential width ≈0.26 R at the root, ≈0.15 R at the tip; ends at −1.8 R
+
+### SHELL-LOWER-BODY — Central spike (energy blade)
+
+**Placement rationale:** Third pass on #23, measured: keel top width ≈ 70 px = 0.87 R across; blade tip 125 px = 1.56 R below the disc underside; fins end ≈ 1.2 R down. The keel is a bright cyan crystalline blade on the axis flanked by flat plated fins with angled tips, all hanging from the under-hub. Existence A, ratios B. Numeric fit to #23: blade tip at z −2.10 (measured from the disc centre, not the front rim — the earlier 1.56 was measured from the wrong edge). Silhouette fit: blade root r 0.117, tip z -2.13. STL: central spike tip at 2.13 R below the equator — identical to the silhouette-fitted blade tip (−2.13). Root r 0.19, thinning to 0.026 R.
 
 **Unknowns:** blade section (round vs flat); whether the glow is the Drive output
 
-**Evidence:** reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); EXTERIOR.md; SOURCE_INDEX.md (lower metallic structural plates); GEOMETRY_DATABASE.md G-002
+**Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); EXTERIOR.md; SOURCE_INDEX.md (lower metallic structural plates); GEOMETRY_DATABASE.md G-002
 
-**Sub-features to model:** broad translucent cyan crystalline blade (≈0.3 R wide at the root); longest element of the keel; pointed tip; houses the exit chute
+**Sub-features to model:** central spike, r 0.19 at the root, 0.026 over the last 0.7 R; cyan glow in the show (#23); tip at −2.13 R
 
 ### SHELL-PLATES — Drum rim plating
 
@@ -178,75 +200,81 @@
 
 ### ARM-S1 — Radial arm to DOME-S1
 
-**Placement rationale:** Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level. Numeric fit to #23: the arm slopes from the disc underside (z −0.03) down to the pod rim (z −0.28) over ≈0.85 R. Silhouette fit: arm width 0.44 R, sloping from z -0.03 at the disc to z -0.25 at the pod rim.
+**Placement rationale:** Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level. Numeric fit to #23: the arm slopes from the disc underside (z −0.03) down to the pod rim (z −0.28) over ≈0.85 R. Silhouette fit: arm width 0.44 R, sloping from z -0.03 at the disc to z -0.25 at the pod rim. STL: arc widths at the equator 0.50–0.66 R, 0.38–0.49 at −0.055, 0.20–0.25 at −0.096 and +0.10 — a lens-section bridge 0.2 R thick. Level with the deck, not sloping.
 
 **Unknowns:** width; section; what circulation it carries; whether arms are level with the ground plane
 
-**Evidence:** reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); CONTRADICTION_LOG.md C-002
+**Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); CONTRADICTION_LOG.md C-002
+
+**Sub-features to model:** lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R; cyan light strips along the edges (#23); level with the equatorial plane
 
 ### ARM-S2 — Radial arm to DOME-S2
 
-**Placement rationale:** Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level. Numeric fit to #23: the arm slopes from the disc underside (z −0.03) down to the pod rim (z −0.28) over ≈0.85 R. Silhouette fit: arm width 0.44 R, sloping from z -0.03 at the disc to z -0.25 at the pod rim.
+**Placement rationale:** Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level. Numeric fit to #23: the arm slopes from the disc underside (z −0.03) down to the pod rim (z −0.28) over ≈0.85 R. Silhouette fit: arm width 0.44 R, sloping from z -0.03 at the disc to z -0.25 at the pod rim. STL: arc widths at the equator 0.50–0.66 R, 0.38–0.49 at −0.055, 0.20–0.25 at −0.096 and +0.10 — a lens-section bridge 0.2 R thick. Level with the deck, not sloping.
 
 **Unknowns:** width; section; what circulation it carries; whether arms are level with the ground plane
 
-**Evidence:** reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); CONTRADICTION_LOG.md C-002
+**Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); CONTRADICTION_LOG.md C-002
+
+**Sub-features to model:** lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R; cyan light strips along the edges (#23); level with the equatorial plane
 
 ### ARM-MB — Radial arm to DOME-MB
 
-**Placement rationale:** Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level. Numeric fit to #23: the arm slopes from the disc underside (z −0.03) down to the pod rim (z −0.28) over ≈0.85 R. Silhouette fit: arm width 0.44 R, sloping from z -0.03 at the disc to z -0.25 at the pod rim.
+**Placement rationale:** Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level. Numeric fit to #23: the arm slopes from the disc underside (z −0.03) down to the pod rim (z −0.28) over ≈0.85 R. Silhouette fit: arm width 0.44 R, sloping from z -0.03 at the disc to z -0.25 at the pod rim. STL: arc widths at the equator 0.50–0.66 R, 0.38–0.49 at −0.055, 0.20–0.25 at −0.096 and +0.10 — a lens-section bridge 0.2 R thick. Level with the deck, not sloping.
 
 **Unknowns:** width; section; what circulation it carries; whether arms are level with the ground plane
 
-**Evidence:** reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); CONTRADICTION_LOG.md C-002
+**Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); CONTRADICTION_LOG.md C-002
+
+**Sub-features to model:** lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R; cyan light strips along the edges (#23); level with the equatorial plane
 
 ### DOME-P — Principal transparent dome
 
-**Placement rationale:** Strongest recurring exterior feature. Defines the unit U and the origin. Gallery #14/#15 show massive dark structural ribs of the dome overhead from inside the plaza; gallery #01 shows finer ribbed glazing between them. Exterior #23 settles the profile: a shallow, radially segmented glazed cap sitting on a thick drum, not a full hemisphere. Cap height ≈ 0.3 R. The hologram (#04) agrees. Two independent sources → LOCKED for the cap form; height ratio still an estimate. Second pass on #23: cap height revised down to ≈0.22 R and a raised circular hub added at the apex; pods carry the same hub. Numeric fit to #23: cap height 0.24 R. Silhouette fit: cap height 0.19 R.
+**Placement rationale:** STL cross-sections: the main body is a lens. Its upper surface rises from r = 1 at the equator to the apex 0.292 R above it, with r = 0.83 R at +0.15 and 0.90 R at +0.11 — fuller than a spherical cap. This replaces both the v1 hemisphere and the v2 spherical cap + drum. Existence A (exterior #23, hologram #04); geometry from the STL, a fan reconstruction, so the profile is B. Geometry measured from the STL.
 
-**Unknowns:** cap height ratio (0.19, silhouette-fitted); segment count; absolute radius
+**Unknowns:** exact segment count; hub form; absolute radius (see SCALE_1_TO_1.md)
 
-**Evidence:** reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground); reference_images/CITADEL_IMAGE_GALLERY.md#14 (S05E10 plaza destruction wide); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); EXTERIOR.md; SOURCE_INDEX.md; GEOMETRY_DATABASE.md G-001; EVIDENCE_MATRIX.md E-002
+**Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground); reference_images/CITADEL_IMAGE_GALLERY.md#14 (S05E10 plaza destruction wide); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); EXTERIOR.md; SOURCE_INDEX.md; GEOMETRY_DATABASE.md G-001; EVIDENCE_MATRIX.md E-002
 
-**Sub-features to model:** radially segmented glazing (8 segments visible); raised circular hub at the apex (DOME-P-HUB); primary dark structural ribs visible from inside (#14/#15); secondary glazing ribs (#01)
+**Sub-features to model:** smooth lens (half-ellipsoid) glazing, no cylindrical drum wall; 8 radial segment ribs; raised circular hub at the apex (r ≈ 0.2 R)
 
 ### DOME-S1 — Secondary dome 1
 
-**Placement rationale:** Exterior #23 (third pass, measured on the full frame): disc radius R = 80 px; pod diameter ≈ 100 px (near) / 100 px (far) → r ≈ 0.55 R; pod centres 150–210 px from the disc centre → ≈ 2.1 R allowing for perspective; pod rim depth ≈ 0.1 R. Hologram #04 agrees on topology. Azimuths relative to the interior UNKNOWN. Numeric fit to #23: pod centres at 2.39 R, radius 0.58 R, pod deck ≈0.3 R below the main deck (the arms slope down to them). Silhouette fit: pod radius 0.54, deck -0.31 below the main deck, cap height 0.1. Fitted per-pod centre distances were 2.73 / 2.14 / 2.67 R (near / far / right) with a long-lens camera being optimal, so the spread is a hand-drawn perspective artefact; symmetrised to 2.5 R.
+**Placement rationale:** Exterior #23 (third pass, measured on the full frame): disc radius R = 80 px; pod diameter ≈ 100 px (near) / 100 px (far) → r ≈ 0.55 R; pod centres 150–210 px from the disc centre → ≈ 2.1 R allowing for perspective; pod rim depth ≈ 0.1 R. Hologram #04 agrees on topology. Azimuths relative to the interior UNKNOWN. Numeric fit to #23: pod centres at 2.39 R, radius 0.58 R, pod deck ≈0.3 R below the main deck (the arms slope down to them). Silhouette fit: pod radius 0.54, deck -0.31 below the main deck, cap height 0.1. Fitted per-pod centre distances were 2.73 / 2.14 / 2.67 R (near / far / right) with a long-lens camera being optimal, so the spread is a hand-drawn perspective artefact; symmetrised to 2.5 R. STL: pod centre at 2.316 R (az 36/156/276 in the STL frame), radius 0.592 R, apex +0.186 R, underside −0.10 R — the pods are scaled copies of the main lens sitting on the same equatorial plane. The silhouette fit's "pods hang 0.3 R lower" was an artefact of modelling the pods as caps on rims.
 
 **Unknowns:** true count; radius ratio to DOME-P; which district it encloses; whether it sits on the rim or projects from the lower body
 
-**Evidence:** reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); SOURCE_INDEX.md (three smaller domed districts); CONTRADICTION_LOG.md C-002
+**Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); SOURCE_INDEX.md (three smaller domed districts); CONTRADICTION_LOG.md C-002
 
-**Sub-features to model:** segmented glazed cap; raised central hub; thin plated rim; city visible inside
+**Sub-features to model:** 0.59-scale copy of the central lens; segmented glazing + hub; underside flush with the main hull (−0.10 R)
 
 ### DOME-S2 — Secondary dome 2
 
-**Placement rationale:** See DOME-S1. A panel/antenna mast stands on one pod in #23 (PROP-PANEL-MAST, assigned to this pod as a placeholder). Numeric fit to #23: pod centres at 2.39 R, radius 0.58 R, pod deck ≈0.3 R below the main deck (the arms slope down to them). Silhouette fit: pod radius 0.54, deck -0.31 below the main deck, cap height 0.1. Fitted per-pod centre distances were 2.73 / 2.14 / 2.67 R (near / far / right) with a long-lens camera being optimal, so the spread is a hand-drawn perspective artefact; symmetrised to 2.5 R.
+**Placement rationale:** See DOME-S1. A panel/antenna mast stands on one pod in #23 (PROP-PANEL-MAST, assigned to this pod as a placeholder). Numeric fit to #23: pod centres at 2.39 R, radius 0.58 R, pod deck ≈0.3 R below the main deck (the arms slope down to them). Silhouette fit: pod radius 0.54, deck -0.31 below the main deck, cap height 0.1. Fitted per-pod centre distances were 2.73 / 2.14 / 2.67 R (near / far / right) with a long-lens camera being optimal, so the spread is a hand-drawn perspective artefact; symmetrised to 2.5 R. STL: pod centre at 2.316 R (az 36/156/276 in the STL frame), radius 0.592 R, apex +0.186 R, underside −0.10 R — the pods are scaled copies of the main lens sitting on the same equatorial plane. The silhouette fit's "pods hang 0.3 R lower" was an artefact of modelling the pods as caps on rims.
 
 **Unknowns:** as DOME-S1
 
-**Evidence:** reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); SOURCE_INDEX.md (three smaller domed districts); CONTRADICTION_LOG.md C-002
+**Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); SOURCE_INDEX.md (three smaller domed districts); CONTRADICTION_LOG.md C-002
 
-**Sub-features to model:** segmented glazed cap; raised central hub; thin plated rim; city visible inside
+**Sub-features to model:** 0.59-scale copy of the central lens; segmented glazing + hub; underside flush with the main hull (−0.10 R)
 
 ### DOME-MB — Mortyburg dome (detachable section)
 
-**Placement rationale:** Mortyburg is a detachable domed section (A). #23 and #04 show all three satellite pods on arms; a pod on an arm is the only configuration that can disengage and fly off (S05E10), so Mortyburg = one of the three pods is now B. Which pod, and the azimuth, remain UNKNOWN. Numeric fit to #23: pod centres at 2.39 R, radius 0.58 R, pod deck ≈0.3 R below the main deck (the arms slope down to them). Silhouette fit: pod radius 0.54, deck -0.31 below the main deck, cap height 0.1. Fitted per-pod centre distances were 2.73 / 2.14 / 2.67 R (near / far / right) with a long-lens camera being optimal, so the spread is a hand-drawn perspective artefact; symmetrised to 2.5 R.
+**Placement rationale:** Mortyburg is a detachable domed section (A). #23 and #04 show all three satellite pods on arms; a pod on an arm is the only configuration that can disengage and fly off (S05E10), so Mortyburg = one of the three pods is now B. Which pod, and the azimuth, remain UNKNOWN. Numeric fit to #23: pod centres at 2.39 R, radius 0.58 R, pod deck ≈0.3 R below the main deck (the arms slope down to them). Silhouette fit: pod radius 0.54, deck -0.31 below the main deck, cap height 0.1. Fitted per-pod centre distances were 2.73 / 2.14 / 2.67 R (near / far / right) with a long-lens camera being optimal, so the spread is a hand-drawn perspective artefact; symmetrised to 2.5 R. STL: pod centre at 2.316 R (az 36/156/276 in the STL frame), radius 0.592 R, apex +0.186 R, underside −0.10 R — the pods are scaled copies of the main lens sitting on the same equatorial plane. The silhouette fit's "pods hang 0.3 R lower" was an artefact of modelling the pods as caps on rims. Mortyburg is one of these pods (B).
 
 **Unknowns:** which pod is Mortyburg; azimuth; arm/joint geometry; internal layout
 
-**Evidence:** reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); LOCATION_REGISTER.md (Mortyburg: smaller domed district; detachable); EPISODE_EVIDENCE_RICKMURAI_JACK.md (Mortyburg detachment); CONTRADICTION_LOG.md C-003
+**Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); LOCATION_REGISTER.md (Mortyburg: smaller domed district; detachable); EPISODE_EVIDENCE_RICKMURAI_JACK.md (Mortyburg detachment); CONTRADICTION_LOG.md C-003
 
-**Sub-features to model:** segmented glazed cap; raised central hub; thin plated rim; city visible inside
+**Sub-features to model:** 0.59-scale copy of the central lens; segmented glazing + hub; underside flush with the main hull (−0.10 R)
 
 ### DOME-P-HUB — Central hub cap on the main dome
 
-**Placement rationale:** A raised circular cap sits at the apex of the main dome and of each pod in #23 (the segment ribs meet it).
+**Placement rationale:** A raised circular cap sits at the apex of the main dome and of each pod in #23 (the segment ribs meet it). STL: topmost section (z = apex − 0.25) is a circle of r 0.20 R.
 
 **Unknowns:** radius; whether it is glazed or solid
 
-**Evidence:** reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)
+**Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)
 
 ### DOME-S1-HUB — Hub cap on DOME-S1
 

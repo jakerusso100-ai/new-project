@@ -16,6 +16,8 @@ The research phase is complete. Every major reconstruction-relevant category is 
 
 Start with:
 
+- `SCALE_1_TO_1.md` — the 1:1 scale chain (R = 2,000 m, provisional) and the interior level stack
+- `reference_models/STL_MEASUREMENTS.md` — cross-section measurements of the owner-supplied exterior STL (file itself not committed)
 - `SCHEMATIC.md` — **master schematic** (coordinate system, massing, vertical stack, districts, drawings, 3D pipeline)
 - `schematic/citadel_schematic.json` — machine-readable schematic database (74 nodes)
 - `schematic/drawings/` — generated SVG drawing set

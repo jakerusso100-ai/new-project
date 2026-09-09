@@ -42,7 +42,7 @@
 <div id="app">
   <aside id="left">
     <h1>Citadel of Ricks — Schematic Viewer</h1>
-    <div class="sub">Interactive block-out of <code>citadel_schematic.json</code>. Units: U = central drum radius. Absolute scale UNKNOWN.</div>
+    <div class="sub">Interactive block-out of <code>citadel_schematic.json</code>. Units: U = R = lens equatorial radius; R ≈ 2,000 m (provisional, see SCALE_1_TO_1.md). Absolute scale UNKNOWN.</div>
     <h2>State</h2>
     <select id="state"></select>
     <h2>Views</h2>
@@ -50,6 +50,8 @@
       <button data-view="iso">Isometric</button><button data-view="top">Plan</button><button data-view="side">Side</button><button data-view="front">Front</button><button data-view="under">Underground</button><button data-view="ref23">Match exterior #23</button>
     </div>
     <label class="row"><input type="checkbox" id="helpers" checked> Show grid &amp; axes</label>
+    <label class="row"><input type="checkbox" id="meshtoggle" checked> Show reference STL mesh (if embedded)</label>
+    <label class="row"><input type="checkbox" id="metres" checked> Inspector in metres (R = <span id="rm"></span> m)</label>
     <label class="row"><input type="checkbox" id="cut" > Cut away dome &amp; shell (see interior)</label>
     <h2>Geometry layers</h2>
     <div id="layers"></div>
@@ -74,6 +76,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script>
 const DB = /*__SCHEMATIC_JSON__*/null;
+const MESH_B64 = /*__MESH_B64__*/null;
 if (!DB) { document.getElementById('info').innerHTML = '<p>Schematic JSON not inlined. Run <code>python schematic/build.py</code>.</p>'; }
 
 const KIND_COLOR = { shell:0x7a7f8a, dome:0x5bc0eb, circulation:0xf5b942, utility:0xc98bff, district:0x8fd18f, landmark:0xff8a65, interior:0xffb199, natural:0x4caf50, machinery:0xff5c5c, interface:0xffd166, ruin:0xa0522d, variant:0xe0e0e0, prop:0xbbbbbb };
@@ -131,6 +134,7 @@ addEventListener('resize', resize);
 function mat(n, extra){ const o = Object.assign({ color:KIND_COLOR[n.kind]||0x999999, transparent:true, opacity:PLACE_OPACITY[n.placement], roughness:0.7, metalness:0.1, side:THREE.DoubleSide }, extra||{}); return new THREE.MeshStandardMaterial(o); }
 function wire(n){ return new THREE.MeshBasicMaterial({ color:KIND_COLOR[n.kind]||0x999999, wireframe:true, transparent:true, opacity: n.placement==='PLACEHOLDER'?0.5:0.25 }); }
 function cap(r,hh,lo){ const Rs=(r*r+hh*hh)/(2*hh); const th=Math.acos((Rs-hh)/Rs); const g=new THREE.SphereGeometry(Rs,lo?8:64,lo?3:24,0,Math.PI*2,0,th); g.rotateX(Math.PI/2); g.translate(0,0,-(Rs-hh)); return g; }
+function lens(r,ht,bd,lo){ const G=new THREE.Group(); if(ht>0){ const g=new THREE.SphereGeometry(1,lo?16:64,lo?6:24,0,Math.PI*2,0,Math.PI/2); g.rotateX(Math.PI/2); g.scale(r,r,ht); G.userData.top=g; } if(bd>0){ const g=new THREE.SphereGeometry(1,lo?16:64,lo?6:24,0,Math.PI*2,Math.PI/2,Math.PI/2); g.rotateX(Math.PI/2); g.scale(r,r,bd); G.userData.bot=g; } return G; }
 function hemi(r,lo){ const g=new THREE.SphereGeometry(r,lo?20:48,lo?10:24,0,Math.PI*2,0,Math.PI/2); g.rotateX(Math.PI/2); return g; }
 function cyl(rt, rb, zt, zb){ const g=new THREE.CylinderGeometry(rt, rb, zt-zb, 48, 1, false); g.rotateX(Math.PI/2); g.translate(0,0,(zt+zb)/2); return g; }
 function box(sx,sy,sz){ const g=new THREE.BoxGeometry(sx,sy,sz); g.translate(0,0,sz/2); return g; }
@@ -143,6 +147,7 @@ function buildNode(n){
   const M=mat(n), W=wire(n);
   switch(g.type){
     case 'hemisphere': { const isDome=n.kind==='dome'; const m=add(G, hemi(g.radius), isDome?mat(n,{opacity:0.12}):M, x,y,z); if(isDome) add(G, hemi(g.radius,true), new THREE.MeshBasicMaterial({color:KIND_COLOR.dome, wireframe:true, transparent:true, opacity:0.18}), x,y,z); if(g.body_depth) add(G, cyl(g.radius,g.radius*0.9,0,-g.body_depth), mat(n,{color:0x7a7f8a,opacity:0.6}), x,y,z); break; }
+    case 'lens': { const L=lens(g.radius,g.top_height||0,g.bottom_depth||0); const isDome=n.kind==='dome'; if(L.userData.top){ add(G, L.userData.top, isDome?mat(n,{opacity:0.14}):M, x,y,z); if(isDome){ const Lw=lens(g.radius,g.top_height||0,0,true); add(G, Lw.userData.top, new THREE.MeshBasicMaterial({color:KIND_COLOR.dome, wireframe:true, transparent:true, opacity:0.2}), x,y,z);} } if(L.userData.bot){ add(G, L.userData.bot, mat(n,{color:0x9aa0aa,opacity:isDome?0.7:0.45}), x,y,z); } break; }
     case 'cap': { const isDome=n.kind==='dome'; add(G, cap(g.radius,g.height), isDome?mat(n,{opacity:0.14}):M, x,y,g.z_base); if(isDome) add(G, cap(g.radius,g.height,true), new THREE.MeshBasicMaterial({color:KIND_COLOR.dome, wireframe:true, transparent:true, opacity:0.2}), x,y,g.z_base); if(g.drum_bottom!==undefined) add(G, cyl(g.radius,g.radius*0.96,g.z_base,g.drum_bottom), mat(n,{color:0x9aa0aa,opacity:0.7}), x,y,0); break; }
     case 'cylinder': { if(n.id==='SHELL-LOWER-BODY'){ add(G, cyl(g.radius_top,g.radius_bottom,g.z_top,g.z_bottom), new THREE.MeshStandardMaterial({color:0x8af0ff, emissive:0x3fd0ff, emissiveIntensity:1.4, transparent:true, opacity:0.95}), x,y,0); break; }
       const isShell=n.kind==='shell'; add(G, cyl(g.radius_top,g.radius_bottom,g.z_top,g.z_bottom), isShell?mat(n,{opacity:0.35}):mat(n,{opacity:0.3}), x,y,0); if(!isShell) add(G, cyl(g.radius_top,g.radius_bottom,g.z_top,g.z_bottom), W, x,y,0); break; }
@@ -152,7 +157,7 @@ function buildNode(n){
     case 'sector': { const span=(g.az_end-g.az_start)*Math.PI/180; const geo=new THREE.RingGeometry(Math.max(g.r_inner,0.001), g.r_outer, 64, 1, g.az_start*Math.PI/180, span); add(G, geo, mat(n,{opacity:0.16}), 0,0,0.002); add(G, geo, W, 0,0,0.003); break; }
     case 'box': case 'room': case 'storefront': { add(G, box(...g.size), M, x,y,z, az); add(G, box(...g.size), W, x,y,z, az); break; }
     case 'point': add(G, new THREE.SphereGeometry(Math.max(g.radius,0.012),16,12), M, x,y,z); break;
-    case 'path': { const pts=g.points.map(p=>new THREE.Vector3(...p)); if(n.kind==='shell'){ for(let k=0;k<pts.length-1;k++){ const a=pts[k], b=pts[k+1]; const len=a.distanceTo(b); const dir=b.clone().sub(a).normalize(); const m=add(G, new THREE.BoxGeometry(len, g.width, 0.035), M); m.position.copy(a).lerp(b,0.5); m.quaternion.setFromUnitVectors(new THREE.Vector3(1,0,0), dir); const w=add(G, new THREE.BoxGeometry(len, g.width, 0.035), W); w.position.copy(m.position); w.quaternion.copy(m.quaternion); } } else add(G, new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), 32, g.width/2, 8, false), M); break; }
+    case 'path': { const pts=g.points.map(p=>new THREE.Vector3(...p)); if(n.kind==='shell'){ for(let k=0;k<pts.length-1;k++){ const a=pts[k], b=pts[k+1]; const len=a.distanceTo(b); const dir=b.clone().sub(a).normalize(); const m=add(G, new THREE.BoxGeometry(len, g.width, g.thickness||0.035), M); m.position.copy(a).lerp(b,0.5); m.quaternion.setFromUnitVectors(new THREE.Vector3(1,0,0), dir); const w=add(G, new THREE.BoxGeometry(len, g.width, g.thickness||0.035), W); w.position.copy(m.position); w.quaternion.copy(m.quaternion); } } else add(G, new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), 32, g.width/2, 8, false), M); break; }
     case 'annular_volume': { const geo=new THREE.CylinderGeometry(g.r_outer,g.r_outer,g.z_max-g.z_min,64,1,true); geo.rotateX(Math.PI/2); geo.translate(0,0,(g.z_max+g.z_min)/2); add(G, geo, mat(n,{opacity:0.07})); const gi=new THREE.CylinderGeometry(g.r_inner,g.r_inner,g.z_max-g.z_min,48,1,true); gi.rotateX(Math.PI/2); gi.translate(0,0,(g.z_max+g.z_min)/2); add(G, gi, mat(n,{opacity:0.07})); break; }
     case 'cavern': { add(G, cyl(g.radius, g.radius*0.85, g.z_top, g.z_bottom), mat(n,{opacity:0.3}), x,y,0); add(G, cyl(g.radius, g.radius*0.85, g.z_top, g.z_bottom), W, x,y,0); break; }
     case 'compound': { add(G, new THREE.TorusGeometry(g.wall_radius, 0.006, 6, 64), M, x,y,z+g.wall_height/2); const wallGeo=new THREE.CylinderGeometry(g.wall_radius,g.wall_radius,g.wall_height,48,1,true); wallGeo.rotateX(Math.PI/2); wallGeo.translate(0,0,g.wall_height/2); add(G, wallGeo, mat(n,{opacity:0.3}), x,y,z); add(G, box(...g.building_size), M, x,y,z); break; }
@@ -169,6 +174,9 @@ function buildNode(n){
 
 const groups={};
 DB.nodes.forEach(n=>{ const G=buildNode(n); if(G){ groups[n.id]=G; scene.add(G);} });
+// ---- optional embedded reference mesh (binary STL), aligned to the schematic frame
+let meshObj=null;
+if(MESH_B64){ try{ const bin=Uint8Array.from(atob(MESH_B64), c=>c.charCodeAt(0)); const dv=new DataView(bin.buffer); const nt=dv.getUint32(80,true); const pos=new Float32Array(nt*9); let o=84; for(let i=0;i<nt;i++){ o+=12; for(let k=0;k<9;k++){ pos[i*9+k]=dv.getFloat32(o,true); o+=4; } o+=2; } const geo=new THREE.BufferGeometry(); geo.setAttribute('position', new THREE.BufferAttribute(pos,3)); geo.computeVertexNormals(); const al=DB.units.stl_alignment; const s=1/DB.units.stl_units_per_U; meshObj=new THREE.Mesh(geo, new THREE.MeshStandardMaterial({color:0xe8dfb8, roughness:0.5, metalness:0.1, transparent:true, opacity:0.6, side:THREE.DoubleSide, flatShading:true})); const grp=new THREE.Group(); const inner=new THREE.Group(); inner.add(meshObj); inner.position.set(-al.centre_xy[0], -al.centre_xy[1], -al.equator_z); grp.add(inner); grp.scale.set(s,s,s); grp.rotation.z=al.rotate_deg*Math.PI/180; grp.userData.nodeId='STL-MESH'; scene.add(grp); window.meshGroup=grp; }catch(e){ console.warn('mesh load failed', e); } }
 
 // ---------------------------------------------------------------- UI
 const stateSel=document.getElementById('state');
@@ -187,8 +195,11 @@ function refreshVisibility(){
   const layersOn=new Set([...document.querySelectorAll('[data-layer]:checked')].map(e=>e.dataset.layer));
   const plOn=new Set([...document.querySelectorAll('[data-placement]:checked')].map(e=>e.dataset.placement));
   DB.nodes.forEach(n=>{ const G=groups[n.id]; if(!G) return; let v=layersOn.has(n.layer)&&plOn.has(n.placement)&&(st==='all'||n.states.includes(st)); if(cut&&(n.kind==='dome'||n.kind==='shell')&&n.id!=='SHELL-UNDERSIDE') v=false; G.visible=v; });
+  if(window.meshGroup) window.meshGroup.visible=!cut&&document.getElementById('meshtoggle').checked;
 }
 document.getElementById('helpers').addEventListener('change', e=>{ grid.visible=axes.visible=e.target.checked; });
+document.getElementById('meshtoggle').addEventListener('change', e=>{ if(window.meshGroup) window.meshGroup.visible=e.target.checked; });
+document.getElementById('rm').textContent=DB.units.absolute_conversion||'?';
 [stateSel, document.getElementById('cut'), ...document.querySelectorAll('[data-layer],[data-placement]')].forEach(e=>e.addEventListener('change', refreshVisibility));
 refreshVisibility();
 
@@ -208,7 +219,7 @@ function selectNode(id){
     <h2>Inspector</h2>
     <h3>${n.id}</h3><div>${n.name}</div>
     <p><span class="tag ${n.existence[0]}">existence ${n.existence}</span><span class="tag ${n.placement}">${n.placement}</span><span class="tag">${n.kind}</span><span class="tag">${n.layer}</span>${n.continuity?`<span class="tag">${n.continuity}</span>`:''}</p>
-    <p class="muted">Position (U): ${n.position?n.position.map(v=>v.toFixed(3)).join(', '):'—'}${n.azimuth!==undefined?` · az ${n.azimuth}°`:''}${n.parent?` · parent ${n.parent}`:''}</p>
+    <p class="muted">Position (U): ${n.position?n.position.map(v=>v.toFixed(3)).join(', '):'—'}${(n.position&&DB.units.absolute_conversion&&document.getElementById('metres').checked)?` · (${n.position.map(v=>Math.round(v*DB.units.absolute_conversion)).join(', ')} m)`:''}${n.height_limit_m?` · height limit under glass ${n.height_limit_m} m`:''}${n.azimuth!==undefined?` · az ${n.azimuth}°`:''}${n.parent?` · parent ${n.parent}`:''}</p>
     <p class="muted">States: ${n.states.join(', ')||'—'}<br>Bands: ${bands.join('; ')||'—'}</p>
     <h2>Placement rationale</h2><p>${n.rationale}</p>
     <h2>Evidence</h2><ul>${n.evidence.map(e=>`<li>${e}</li>`).join('')}</ul>

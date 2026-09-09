@@ -119,7 +119,7 @@ def draw_plan_node(P, n, labels=True):
     st = node_style(n)
     out = []
     label_at = (x, y)
-    if t in ("hemisphere", "cap"):
+    if t in ("hemisphere", "cap", "lens"):
         out.append(P.circle(x, y, g["radius"], st))
         label_at = (x, y + g["radius"] * 0.85)
     elif t == "cylinder":
@@ -236,6 +236,14 @@ def draw_elev_node(E, n):
             bx, by = E.p(h - r, z)
             out.append(f'<rect x="{bx:.1f}" y="{by:.1f}" width="{2*r*S:.1f}" height="{g["body_depth"]*S:.1f}" {st}/>')
         label = (h, z + r + 0.03)
+    elif t == "lens":
+        r = g["radius"]
+        for hh, sgn in ((g.get("top_height", 0), 1), (g.get("bottom_depth", 0), -1)):
+            if hh > 0:
+                x0, y0 = E.p(h - r, z); x1, y1 = E.p(h + r, z)
+                sweep = 1 if sgn > 0 else 0
+                out.append(f'<path d="M {x0:.1f},{y0:.1f} A {r*S:.1f} {hh*S:.1f} 0 0 {sweep} {x1:.1f},{y1:.1f}" {st}/>')
+        label = (h, z + g.get("top_height", 0) + 0.03)
     elif t == "cap":
         r, hh, zb = g["radius"], g["height"], g["z_base"]
         Rs = (r * r + hh * hh) / (2 * hh)
@@ -516,14 +524,20 @@ def build_image_slots():
     print("wrote reference_images/IMAGE_SLOTS.md")
 
 
-def build_viewer():
+def build_viewer(mesh_path=None):
     tpl_path = os.path.join(VIEWER_DIR, "template.html")
     with open(tpl_path, encoding="utf-8") as f:
         tpl = f.read()
     html = tpl.replace("/*__SCHEMATIC_JSON__*/null", json.dumps(DB, separators=(",", ":")))
     with open(os.path.join(VIEWER_DIR, "index.html"), "w", encoding="utf-8") as f:
-        f.write(html)
+        f.write(html.replace("/*__MESH_B64__*/null", "null"))
     print("wrote viewer/index.html")
+    if mesh_path:
+        import base64
+        b64 = base64.b64encode(open(mesh_path, "rb").read()).decode("ascii")
+        with open(os.path.join(VIEWER_DIR, "index_mesh.html"), "w", encoding="utf-8") as f:
+            f.write(html.replace("/*__MESH_B64__*/null", json.dumps(b64)))
+        print("wrote viewer/index_mesh.html (local only, mesh embedded — git-ignored)")
 
 
 def validate():
@@ -560,4 +574,5 @@ if __name__ == "__main__":
     build_drawings()
     build_register()
     build_image_slots()
-    build_viewer()
+    mesh = sys.argv[sys.argv.index("--mesh") + 1] if "--mesh" in sys.argv else None
+    build_viewer(mesh)

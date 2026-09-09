@@ -68,16 +68,16 @@
 | `LM-SIMPLE-RICKS` | Simple Rick's Wafer Cookie Factory | landmark | L4 | V0 V+1 V-1 | A | PROVISIONAL | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.05,+0.78,+0.00 | — | SIMPLE_RICKS_FACTORY.md; RICKLANTIS_VISUAL_EVIDENCE.md 9-10 |
 | `LM-FLAVOR-CORE` | Flavor Core chamber | interior | L4 | V0 | A | PROVISIONAL | DS-03 | +0.05,+0.84,+0.00 | LM-SIMPLE-RICKS | reference_images/CITADEL_IMAGE_GALLERY.md#18 (S03E07 Flavor Core); RICKLANTIS_VISUAL_EVIDENCE.md 10 |
 | `LM-WISHING-PORTAL` | Wishing Portal compound | landmark | L4 | V0 V-1 V-2 | A | PROVISIONAL | DS-03 DS-04 | -0.35,+0.82,+0.00 | — | RICKLANTIS_VISUAL_EVIDENCE.md 15; LOCATION_REGISTER.md (Wishing Portal; Waste Disposal Plant) |
-| `LM-WASTE-PLANT` | Waste Disposal Plant | landmark | L4 | V0 V-1 | B | PLACEHOLDER | DS-01 DS-02 DS-03 DS-04 | -0.22,+0.90,+0.00 | — | LOCATION_REGISTER.md (Waste Disposal Plant); UTILITY_SYSTEMS.md (waste) |
-| `LM-AIRLOCK-PODS` | Body-disposal airlock pods | utility | L4 | V0 V-1 | A | PLACEHOLDER | DS-03 | -0.50,+1.09,-0.02 | — | RICKLANTIS_VISUAL_EVIDENCE.md 17; EPISODE_EVIDENCE_RICKLANTIS.md (airlock) |
+| `LM-WASTE-PLANT` | Waste Disposal Plant | landmark | L4 | V0 V-1 | B | PLACEHOLDER | DS-01 DS-02 DS-03 DS-04 | -0.21,+0.83,+0.00 | — | LOCATION_REGISTER.md (Waste Disposal Plant); UTILITY_SYSTEMS.md (waste) |
+| `LM-AIRLOCK-PODS` | Body-disposal airlock pods | utility | L4 | V0 V-1 | A | PLACEHOLDER | DS-03 | -0.39,+0.84,-0.02 | — | RICKLANTIS_VISUAL_EVIDENCE.md 17; EPISODE_EVIDENCE_RICKLANTIS.md (airlock) |
 | `LM-MEGAFRUIT-FARM` | MegaFruit farm | natural | L5 | V0 | A | PROVISIONAL | DS-03 DS-04 | +0.15,-0.85,+0.00 | DIST-AGRICULTURAL | RICKLANTIS_VISUAL_EVIDENCE.md 14; CONTRADICTION_LOG.md C-005 |
 | `LM-CAFE-SANCHEZ` | Cafe Sanchez | landmark | L4 | V0 | A | PLACEHOLDER | DS-03 | +0.42,+0.20,+0.00 | — | RICKLANTIS_VISUAL_EVIDENCE.md 4 |
 | `LM-NEWSROOM` | Citadel Morning News studio | landmark | L4 | V0 V+1 | A | PLACEHOLDER | DS-03 | +0.50,-0.12,+0.00 | — | RICKLANTIS_VISUAL_EVIDENCE.md 8 |
 | `LM-SKYSCRAPER-REBUILD` | Skyscraper under reconstruction | landmark | L4 | V0 V+1 | A | PLACEHOLDER | DS-03 | -0.45,+0.15,+0.00 | DIST-CONSTRUCTION | RICKLANTIS_VISUAL_EVIDENCE.md 1 |
-| `LM-MORTY-MART` | Morty Mart | landmark | L4 | V0 | A | PLACEHOLDER | DS-03 | -0.62,-0.48,+0.00 | DIST-MORTYTOWN | RICKLANTIS_VISUAL_EVIDENCE.md 12 |
-| `LM-CREEPY-MORTY` | The Creepy Morty | landmark | L4 | V0 | A | PLACEHOLDER | DS-03 | -0.72,-0.62,+0.00 | DIST-MORTYTOWN | RICKLANTIS_VISUAL_EVIDENCE.md 13 |
+| `LM-MORTY-MART` | Morty Mart | landmark | L4 | V0 | A | PLACEHOLDER | DS-03 | -0.61,-0.48,+0.00 | DIST-MORTYTOWN | RICKLANTIS_VISUAL_EVIDENCE.md 12 |
+| `LM-CREEPY-MORTY` | The Creepy Morty | landmark | L4 | V0 | A | PLACEHOLDER | DS-03 | -0.68,-0.59,+0.00 | DIST-MORTYTOWN | RICKLANTIS_VISUAL_EVIDENCE.md 13 |
 | `LM-MORTYTOWN-RESIDENCE` | Mortytown residential interior (crib scene) | interior | L4 | V0 | A | PLACEHOLDER | DS-03 | -0.56,-0.68,+0.00 | DIST-MORTYTOWN | EPISODE_EVIDENCE_RICKLANTIS.md (residential/criminal interior with crib) |
-| `LM-MORTY-DAY-CARE` | Morty Day Care | landmark | L4 | V0 | B | PLACEHOLDER | DS-03 DS-04 | -0.50,-0.74,+0.00 | DIST-MORTYTOWN | DISTRICTS.md; LOCATION_REGISTER.md |
+| `LM-MORTY-DAY-CARE` | Morty Day Care | landmark | L4 | V0 | B | PLACEHOLDER | DS-03 DS-04 | -0.49,-0.72,+0.00 | DIST-MORTYTOWN | DISTRICTS.md; LOCATION_REGISTER.md |
 | `LM-MORTY-GAMES` | Morty Games | landmark | L4 | V0 | B | PLACEHOLDER | DS-03 DS-04 | -0.66,-0.36,+0.00 | DIST-MORTYTOWN | DISTRICTS.md; LOCATION_REGISTER.md |
 | `LM-MORTY-INSURANCE` | Morty Insurance | landmark | L4 | V0 V+1 | B | PLACEHOLDER | DS-03 DS-04 | -0.30,-0.42,+0.00 | DIST-COMMERCIAL-RING | DISTRICTS.md; LOCATION_REGISTER.md |
 | `LM-SALTY-RICK` | The Salty Rick | landmark | L4 | V0 | B | PLACEHOLDER | DS-03 DS-04 | +0.30,+0.40,+0.00 | DIST-COMMERCIAL-RING | LOCATION_REGISTER.md |
@@ -93,7 +93,7 @@
 | `UG-PHOENIX-VATS` | Operation Phoenix vats | machinery | L7 | V-3 | A | PROVISIONAL | DS-04 DS-05 | +0.00,+0.00,-0.35 | UG-DIM-DRIVE | EPISODE_EVIDENCE_RICKMURAI_JACK.md (Operation Phoenix vats feed biological material into the drive process) |
 | `UG-LAUNCH-CHAMBER` | Launch chamber (Evil Morty's spacecraft) | machinery | L7 | V-3 V-4 | A | ANCHORED | DS-04 DS-05 | +0.00,-0.03,-0.55 | — | EPISODE_EVIDENCE_SOLARICKS.md (surviving launch/technical chamber); EPISODE_EVIDENCE_RICKMURAI_JACK.md (spacecraft loaded into an exit chute) |
 | `UG-EXIT-CHUTE` | Spacecraft exit chute | machinery | L7 | V-3 V-4 | A | ANCHORED | DS-04 DS-05 DS-06 | +0.00,+0.00,-0.97 | — | EPISODE_EVIDENCE_RICKMURAI_JACK.md (launched from the bottom of the Citadel); EPISODE_EVIDENCE_SOLARICKS.md (launch track) |
-| `IF-MORTYBURG` | Mortyburg attachment interface | interface | L7 | V0 V-1 | A | PROVISIONAL | DS-01 DS-02 DS-03 DS-04 DS-05 | -0.50,-0.87,+0.00 | — | EPISODE_EVIDENCE_RICKMURAI_JACK.md (Mortyburg detachment); DIALOGUE_ARCHITECTURE_CROSSREF.md D-008, D-009 |
+| `IF-MORTYBURG` | Mortyburg attachment interface | interface | L7 | V0 V-1 | A | PROVISIONAL | DS-01 DS-02 DS-03 DS-04 DS-05 | -0.50,-0.87,-0.06 | — | EPISODE_EVIDENCE_RICKMURAI_JACK.md (Mortyburg detachment); DIALOGUE_ARCHITECTURE_CROSSREF.md D-008, D-009 |
 | `MB-THRUSTERS` | Mortyburg boosters / thrusters | machinery | L7 | V-1 | A | PROVISIONAL | DS-05 DS-06 | -1.16,-2.01,-0.10 | DOME-MB | DIALOGUE_ARCHITECTURE_CROSSREF.md D-010 |
 | `RUIN-DEBRIS-FIELD` | Post-destruction debris field | ruin | L7 | — | A | PROVISIONAL | DS-06 DS-07 DS-08 | +0.00,+0.00,+0.00 | — | EPISODE_EVIDENCE_SOLARICKS.md; CONTRADICTION_LOG.md C-009 |
 | `RUIN-LAUNCH-CHAMBER` | Ruined launch chamber | ruin | L7 | V-3 | A | ANCHORED | DS-06 | +0.00,-0.03,-0.55 | UG-LAUNCH-CHAMBER | EPISODE_EVIDENCE_SOLARICKS.md (surviving launch/technical chamber) |
@@ -376,7 +376,7 @@
 
 ### CIRC-HOVER-BAND — Hover / flying traffic band
 
-**Placement rationale:** Flying taxis and private flying cars exist (A). Band limits are a placeholder envelope for the 3D model's traffic layer.
+**Placement rationale:** Flying taxis and private flying cars exist (A). Band limits are a placeholder envelope for the 3D model's traffic layer. Envelope trimmed to r 0.8 / z 0.10 so the band stays under the glass (the lens is only 0.05 R tall at r 0.95).
 
 **Unknowns:** altitudes; lanes; takeoff/landing points
 
@@ -896,7 +896,7 @@
 
 ### IF-MORTYBURG — Mortyburg attachment interface
 
-**Placement rationale:** Engineered structural/transit interface with a closing entrance (A). Moved to the root of ARM-MB where the arm meets the main body, so the rail spur passes through it onto the arm.
+**Placement rationale:** Engineered structural/transit interface with a closing entrance (A). Moved to the root of ARM-MB where the arm meets the main body, so the rail spur passes through it onto the arm. Sits inside the 0.2 R-thick arm root (z −0.06 → +0.02).
 
 **Unknowns:** attachment count; diameter; service connections
 

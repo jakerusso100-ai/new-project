@@ -44,6 +44,19 @@ Result: ≈ 2,000 blocks in the main body plus each pod. Density and heights are
 
 Replacing the block-out boxes: the central monument spire with plinth (S01E10, #14/#15); the five-spire cluster with cyan strips (#02); the Presidential Building with a glazed drum on top (#12); the domed plaza building (#14/#15); Council Hall with grand stair, banners and turret (#24); Simple Rick's shed with stacks and the glass Flavor Core cylinder (#18); the Wishing Portal compound wall with the glowing pit (S03E07); the farm's fields, pond and farmhouse; the plaza pond (S01E10, #15). Other landmarks keep their boxes with a cyan sign strip.
 
+## Detail added in v2.2
+
+- Every generated block and every landmark is clipped to the **STL lens profile at its outer footprint edge** (not its centre), including anything on the roof — nothing pierces the glass. The hover-traffic envelope was trimmed to r 0.8 (the lens is only 0.05 R tall at r 0.95) and the rim storefronts moved inward to where the glass has headroom.
+- Building families now include tiered setbacks, domed and spired roofs, rounded towers (the curved silhouettes of `BUILDING_FAMILIES.md`), cyan facade light strips (#02), magenta/cyan/yellow neon in Mortytown (Morty Mart), industrial stacks, scaffolding in the construction zone, and a wider pale-green/teal palette from the frames.
+- Skybridges between close tall towers in the core (S01E10 elevated walkways, S03E07 elevated structures).
+- Street lights along the ring roads, sidewalks on the radials, trees lining every avenue.
+- Ring purlins on the glazing at r 0.45 and 0.75 in addition to the eight meridian ribs.
+- Farm: fields, pond, farmhouse and five Mega Trees with fruit (S03E07).
+- Transit: six station platforms and a moving commuter train on the loop; forty hover cars circulating on the two lanes (S03E07 flying traffic).
+- Pods: six avenues, a centre spire, and the same block generator.
+- Landmark name labels (toggle **labels**).
+- Lighting: warm hemisphere light for the interior haze of #02/#14, ACES tone mapping.
+
 ## Transit
 
 - Elevated rail loop at +0.05 R with 45 columns and a lit guide rail (S03E07 train; #02 elevated tube).

@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.1.0",
+  "schema_version": "2.2.0",
   "title": "Citadel of Ricks — Master Schematic Database",
   "generated_from": "Evidence registers in this repository (see SCHEMATIC.md for derivation rules)",
   "units": {
@@ -1950,9 +1950,9 @@
       "geometry": {
         "type": "annular_volume",
         "r_inner": 0.15,
-        "r_outer": 0.95,
+        "r_outer": 0.8,
         "z_min": 0.03,
-        "z_max": 0.12
+        "z_max": 0.1
       },
       "position": [
         0,
@@ -1964,7 +1964,7 @@
         "RICKLANTIS_VISUAL_EVIDENCE.md 2",
         "EVIDENCE_MATRIX.md E-007"
       ],
-      "rationale": "Flying taxis and private flying cars exist (A). Band limits are a placeholder envelope for the 3D model's traffic layer.",
+      "rationale": "Flying taxis and private flying cars exist (A). Band limits are a placeholder envelope for the 3D model's traffic layer. Envelope trimmed to r 0.8 / z 0.10 so the band stays under the glass (the lens is only 0.05 R tall at r 0.95).",
       "unknowns": [
         "altitudes",
         "lanes",
@@ -2609,8 +2609,8 @@
         "reference_images/CITADEL_IMAGE_GALLERY.md#14 (S05E10 plaza destruction wide)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground)"
       ],
-      "height_limit_U": 0.263,
-      "height_limit_m": 526
+      "height_limit_U": 0.271,
+      "height_limit_m": 541
     },
     {
       "id": "CIRC-CORE-WALKWAYS",
@@ -2757,8 +2757,8 @@
       "reference_images": [
         "reference_images/CITADEL_IMAGE_GALLERY.md#02 (S03E07 streetscape)"
       ],
-      "height_limit_U": 0.26,
-      "height_limit_m": 520
+      "height_limit_U": 0.267,
+      "height_limit_m": 533
     },
     {
       "id": "CIRC-ELEVATED-TUBE",
@@ -2871,8 +2871,8 @@
       "reference_images": [
         "reference_images/CITADEL_IMAGE_GALLERY.md#12 (S05E10 Presidential dining room)"
       ],
-      "height_limit_U": 0.259,
-      "height_limit_m": 517
+      "height_limit_U": 0.257,
+      "height_limit_m": 514
     },
     {
       "id": "LM-PLAZA-DOME-BUILDING",
@@ -2929,8 +2929,8 @@
         "reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#12 (S05E10 Presidential dining room)"
       ],
-      "height_limit_U": 0.248,
-      "height_limit_m": 496
+      "height_limit_U": 0.24,
+      "height_limit_m": 480
     },
     {
       "id": "LM-COUNCIL-HALL",
@@ -2988,8 +2988,8 @@
       "reference_images": [
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#24 (S01E10 civic building entrance)"
       ],
-      "height_limit_U": 0.257,
-      "height_limit_m": 514
+      "height_limit_U": 0.251,
+      "height_limit_m": 502
     },
     {
       "id": "LM-COUNCIL-CHAMBER",
@@ -3045,7 +3045,9 @@
       "reference_images": [
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#26 (S03E01 Council hall)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#06 (S01E10 Council chamber)"
-      ]
+      ],
+      "height_limit_U": 0.256,
+      "height_limit_m": 511
     },
     {
       "id": "LM-SHADOW-COUNCIL-HALL",
@@ -3087,7 +3089,9 @@
       "required_shots": [
         "S03E07 Shadow Council interior"
       ],
-      "reference_images": []
+      "reference_images": [],
+      "height_limit_U": 0.252,
+      "height_limit_m": 503
     },
     {
       "id": "LM-COURTHOUSE",
@@ -3131,7 +3135,9 @@
       "required_shots": [
         "any courtroom frame"
       ],
-      "reference_images": []
+      "reference_images": [],
+      "height_limit_U": 0.253,
+      "height_limit_m": 506
     },
     {
       "id": "LM-MORTY-AGENCY",
@@ -3180,7 +3186,9 @@
         "S07E05 Agency exterior",
         "S07E05 reception/database interior"
       ],
-      "reference_images": []
+      "reference_images": [],
+      "height_limit_U": 0.251,
+      "height_limit_m": 501
     },
     {
       "id": "LM-MILITIA-HQ",
@@ -3224,7 +3232,9 @@
       ],
       "reference_images": [
         "reference_images/CITADEL_IMAGE_GALLERY.md#20 (S01E10 security corridor)"
-      ]
+      ],
+      "height_limit_U": 0.249,
+      "height_limit_m": 497
     },
     {
       "id": "LM-POLICE-HQ",
@@ -3276,8 +3286,8 @@
         "S03E07 police exterior"
       ],
       "reference_images": [],
-      "height_limit_U": 0.227,
-      "height_limit_m": 453
+      "height_limit_U": 0.214,
+      "height_limit_m": 427
     },
     {
       "id": "LM-SHOOTING-RANGE",
@@ -3322,7 +3332,9 @@
       "required_shots": [
         "S03E07 shooting range"
       ],
-      "reference_images": []
+      "reference_images": [],
+      "height_limit_U": 0.219,
+      "height_limit_m": 437
     },
     {
       "id": "LM-MORTY-ACADEMY",
@@ -3375,8 +3387,8 @@
         "S03E07 locked entrance (regime change)"
       ],
       "reference_images": [],
-      "height_limit_U": 0.176,
-      "height_limit_m": 351
+      "height_limit_U": 0.157,
+      "height_limit_m": 313
     },
     {
       "id": "LM-SIMPLE-RICKS",
@@ -3437,8 +3449,8 @@
         "S03E07 SWAT breach"
       ],
       "reference_images": [],
-      "height_limit_U": 0.146,
-      "height_limit_m": 291
+      "height_limit_U": 0.106,
+      "height_limit_m": 211
     },
     {
       "id": "LM-FLAVOR-CORE",
@@ -3488,7 +3500,9 @@
       ],
       "reference_images": [
         "reference_images/CITADEL_IMAGE_GALLERY.md#18 (S03E07 Flavor Core)"
-      ]
+      ],
+      "height_limit_U": 0.118,
+      "height_limit_m": 235
     },
     {
       "id": "LM-WISHING-PORTAL",
@@ -3572,8 +3586,8 @@
         ]
       },
       "position": [
-        -0.22,
-        0.9,
+        -0.208,
+        0.834,
         0.0
       ],
       "evidence": [
@@ -3588,7 +3602,9 @@
       "required_shots": [
         "any"
       ],
-      "reference_images": []
+      "reference_images": [],
+      "height_limit_U": 0.091,
+      "height_limit_m": 181
     },
     {
       "id": "LM-AIRLOCK-PODS",
@@ -3614,8 +3630,8 @@
         ]
       },
       "position": [
-        -0.5,
-        1.09,
+        -0.393,
+        0.843,
         -0.02
       ],
       "azimuth": 115,
@@ -3723,7 +3739,9 @@
       "required_shots": [
         "S03E07 Cafe Sanchez exterior / taxi"
       ],
-      "reference_images": []
+      "reference_images": [],
+      "height_limit_U": 0.221,
+      "height_limit_m": 442
     },
     {
       "id": "LM-NEWSROOM",
@@ -3764,8 +3782,8 @@
         "S03E07 newsroom interior"
       ],
       "reference_images": [],
-      "height_limit_U": 0.217,
-      "height_limit_m": 434
+      "height_limit_U": 0.211,
+      "height_limit_m": 422
     },
     {
       "id": "LM-SKYSCRAPER-REBUILD",
@@ -3787,7 +3805,7 @@
         "size": [
           0.06,
           0.06,
-          0.224
+          0.217
         ],
         "features": [
           "scaffolding",
@@ -3811,8 +3829,8 @@
         "S03E07 skyscraper rebuild"
       ],
       "reference_images": [],
-      "height_limit_U": 0.224,
-      "height_limit_m": 447
+      "height_limit_U": 0.217,
+      "height_limit_m": 434
     },
     {
       "id": "LM-MORTY-MART",
@@ -3841,7 +3859,7 @@
         ]
       },
       "position": [
-        -0.62,
+        -0.615,
         -0.48,
         0.0
       ],
@@ -3856,7 +3874,9 @@
         "S03E07 Morty Mart exterior",
         "S03E07 interior"
       ],
-      "reference_images": []
+      "reference_images": [],
+      "height_limit_U": 0.15,
+      "height_limit_m": 299
     },
     {
       "id": "LM-CREEPY-MORTY",
@@ -3885,8 +3905,8 @@
         ]
       },
       "position": [
-        -0.72,
-        -0.62,
+        -0.679,
+        -0.59,
         0.0
       ],
       "evidence": [
@@ -3899,7 +3919,9 @@
       "required_shots": [
         "S03E07 Creepy Morty exterior"
       ],
-      "reference_images": []
+      "reference_images": [],
+      "height_limit_U": 0.081,
+      "height_limit_m": 161
     },
     {
       "id": "LM-MORTYTOWN-RESIDENCE",
@@ -3938,7 +3960,9 @@
       "required_shots": [
         "S03E07 crib interior"
       ],
-      "reference_images": []
+      "reference_images": [],
+      "height_limit_U": 0.106,
+      "height_limit_m": 212
     },
     {
       "id": "LM-MORTY-DAY-CARE",
@@ -3964,8 +3988,8 @@
         ]
       },
       "position": [
-        -0.5,
-        -0.74,
+        -0.486,
+        -0.721,
         0.0
       ],
       "evidence": [
@@ -3979,7 +4003,9 @@
       "required_shots": [
         "any"
       ],
-      "reference_images": []
+      "reference_images": [],
+      "height_limit_U": 0.111,
+      "height_limit_m": 221
     },
     {
       "id": "LM-MORTY-GAMES",
@@ -4020,7 +4046,9 @@
       "required_shots": [
         "any"
       ],
-      "reference_images": []
+      "reference_images": [],
+      "height_limit_U": 0.162,
+      "height_limit_m": 324
     },
     {
       "id": "LM-MORTY-INSURANCE",
@@ -4062,7 +4090,9 @@
       "required_shots": [
         "any"
       ],
-      "reference_images": []
+      "reference_images": [],
+      "height_limit_U": 0.212,
+      "height_limit_m": 424
     },
     {
       "id": "LM-SALTY-RICK",
@@ -4102,7 +4132,9 @@
       "required_shots": [
         "any"
       ],
-      "reference_images": []
+      "reference_images": [],
+      "height_limit_U": 0.216,
+      "height_limit_m": 431
     },
     {
       "id": "LM-BIG-RICKS-GUMBO",
@@ -4142,7 +4174,9 @@
       "required_shots": [
         "any"
       ],
-      "reference_images": []
+      "reference_images": [],
+      "height_limit_U": 0.205,
+      "height_limit_m": 410
     },
     {
       "id": "LM-REBUILD-A-MORTY",
@@ -4190,7 +4224,9 @@
       ],
       "reference_images": [
         "reference_images/CITADEL_IMAGE_GALLERY.md#11 (S05E10 Re-Build-A-Morty)"
-      ]
+      ],
+      "height_limit_U": 0.211,
+      "height_limit_m": 422
     },
     {
       "id": "LM-RICKINGHAM-PALACE",
@@ -4640,7 +4676,7 @@
         "size": [
           0.12,
           0.08,
-          0.1
+          0.08
         ],
         "features": [
           "closing entrance / blast door",
@@ -4652,14 +4688,14 @@
       "position": [
         -0.5,
         -0.866,
-        0.0
+        -0.06
       ],
       "azimuth": 240,
       "evidence": [
         "EPISODE_EVIDENCE_RICKMURAI_JACK.md (Mortyburg detachment)",
         "DIALOGUE_ARCHITECTURE_CROSSREF.md D-008, D-009"
       ],
-      "rationale": "Engineered structural/transit interface with a closing entrance (A). Moved to the root of ARM-MB where the arm meets the main body, so the rail spur passes through it onto the arm.",
+      "rationale": "Engineered structural/transit interface with a closing entrance (A). Moved to the root of ARM-MB where the arm meets the main body, so the rail spur passes through it onto the arm. Sits inside the 0.2 R-thick arm root (z −0.06 → +0.02).",
       "unknowns": [
         "attachment count",
         "diameter",
@@ -4991,47 +5027,59 @@
     }
   ],
   "height_envelope": {
-    "note": "Maximum building top (z, in U) allowed at radius r/R under the glazed lens, from the STL profile with a 5% clearance.",
+    "note": "Maximum building top (z, U) at radius r/R: 95% of the STL lens profile (reference_models/STL_MEASUREMENTS.md). Checked at the building footprint's OUTER edge.",
     "table": [
       [
-        0.0,
+        0,
         0.277
       ],
       [
         0.2,
-        0.272
+        0.271
       ],
       [
         0.4,
-        0.248
+        0.239
+      ],
+      [
+        0.5,
+        0.223
       ],
       [
         0.6,
-        0.214
+        0.207
       ],
       [
-        0.7,
-        0.19
+        0.68,
+        0.194
       ],
       [
-        0.8,
-        0.145
+        0.76,
+        0.168
       ],
       [
-        0.85,
-        0.12
+        0.83,
+        0.142
+      ],
+      [
+        0.88,
+        0.116
       ],
       [
         0.9,
-        0.09
+        0.103
       ],
       [
-        0.95,
-        0.05
+        0.93,
+        0.072
+      ],
+      [
+        0.96,
+        0.041
       ],
       [
         0.98,
-        0.02
+        0.021
       ],
       [
         1.0,

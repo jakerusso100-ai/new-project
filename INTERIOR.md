@@ -80,6 +80,10 @@ The arm exterior is left exactly as the STL has it. Inside the lenticular sectio
 - **Through-concourse (0)** — the main deck continues into the arm: floor, road, walkway, ceiling lights, glazed window bands, and a lit portal in each end face (disc rim and pod rim). City, arm and pod decks are one continuous floor, which the S05E10 train to Mortyburg requires.
 - **Service deck (−0.05 R)** — utilities, tanks, freight; `IF-MORTYBURG` (the disengage machinery) sits here under the root.
 
+## Arm windows
+
+Checked the STL surface across the arm width at three stations: it is a smooth lens with a central spine ridge and a shallow flank ledge near the pod end — **no window recesses or glazing**. The cyan strips in the Printables render are paint. Frame #23 does show a row of cyan lit panels along each arm flank, so twelve lit window panels per flank are placed flush on the measured surface at z ≈ +0.03 R (where the flank slope is ≈ 35°), lighting the through-concourse behind them. Existence A (frame), placement C. Toggle: **glass**.
+
 ## Pods
 
 Each pod repeats the shell (glass, ribs, hub, rim lights), a deck, a ring road, a small plaza and procedural blocks at 0.592 scale. `DOME-MB` (Mortyburg, B) uses the Mortytown family.

@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.3.2",
+  "schema_version": "2.3.3",
   "title": "Citadel of Ricks — Master Schematic Database",
   "generated_from": "Evidence registers in this repository (see SCHEMATIC.md for derivation rules)",
   "units": {
@@ -843,7 +843,8 @@
           "lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R",
           "cyan light strips along the edges (#23)",
           "level with the equatorial plane",
-          "interior: three enclosed levels inside the 0.2 R section (upper gallery +0.05, through-concourse 0, service deck −0.05); exterior surface unchanged"
+          "interior: three enclosed levels inside the 0.2 R section (upper gallery +0.05, through-concourse 0, service deck −0.05); exterior surface unchanged",
+          "row of lit window panels along each flank at deck level (#23); no other glazing on the arm"
         ],
         "interior_levels": [
           {
@@ -948,7 +949,8 @@
           "lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R",
           "cyan light strips along the edges (#23)",
           "level with the equatorial plane",
-          "interior: three enclosed levels inside the 0.2 R section (upper gallery +0.05, through-concourse 0, service deck −0.05); exterior surface unchanged"
+          "interior: three enclosed levels inside the 0.2 R section (upper gallery +0.05, through-concourse 0, service deck −0.05); exterior surface unchanged",
+          "row of lit window panels along each flank at deck level (#23); no other glazing on the arm"
         ],
         "interior_levels": [
           {
@@ -1053,7 +1055,8 @@
           "lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R",
           "cyan light strips along the edges (#23)",
           "level with the equatorial plane",
-          "interior: three enclosed levels inside the 0.2 R section (upper gallery +0.05, through-concourse 0, service deck −0.05); exterior surface unchanged"
+          "interior: three enclosed levels inside the 0.2 R section (upper gallery +0.05, through-concourse 0, service deck −0.05); exterior surface unchanged",
+          "row of lit window panels along each flank at deck level (#23); no other glazing on the arm"
         ],
         "interior_levels": [
           {
@@ -5461,6 +5464,12 @@
         0.12,
         0.0
       ]
-    ]
+    ],
+    "surface_notes": "STL top surface z(side) at r 1.1/1.3/1.5: smooth lens with a central spine ridge (+0.142 at the centreline vs +0.128 beside it at r 1.1) and a shallow flat ledge on each flank at z ≈ +0.033, |side| 0.20–0.24, near the pod end (r ≥ 1.5). No window recesses or glazing are modelled on the arms.",
+    "windows": {
+      "evidence": "exterior frame #23 shows a row of cyan lit panels along each arm flank; the Printables render paints cyan strips in the same place (paint, not geometry); the STL has no recess for them",
+      "placement": "row of lit window panels on each flank skin at z ≈ +0.03 R (|side| ≈ 0.235 R), 12 per flank, flush with the surface; they light the through-concourse behind them",
+      "confidence": "existence A (frame), placement C"
+    }
   }
 }

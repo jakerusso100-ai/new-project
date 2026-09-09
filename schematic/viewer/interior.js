@@ -195,7 +195,12 @@ DB.nodes.filter(n=>n.id.startsWith('ARM-')).forEach(n=>{ const pts=n.geometry.po
   put(new THREE.BoxGeometry(len,0.3,0.003),M({color:COL.deck,transparent:true,opacity:0.6}),r0+len/2,0,-0.05,'service deck');
   for(let k=0;k<8;k++) put(new THREE.CylinderGeometry(0.012,0.012,0.04,12).rotateX(Math.PI/2),M({color:0x7a8a7a}),r0+len*(k+0.5)/8,0.1,-0.03,'service tank');
 });
-// arms: exterior surface is the STL's own (no deck road, no edge lights added outside the mesh)
+// arms: exterior surface is the STL's own; the only exterior addition is the row of lit window panels each flank shows in frame #23,
+// placed flush on the measured surface (z ≈ +0.03 at |side| ≈ 0.235, flank slope ≈ 35°) so they light the through-concourse behind them
+DB.nodes.filter(n=>n.id.startsWith('ARM-')).forEach(n=>{ const pts=n.geometry.points; const a=Math.atan2(pts[0][1],pts[0][0]); const ca=Math.cos(a), sa=Math.sin(a); const r0=Math.hypot(pts[0][0],pts[0][1]), r1=Math.hypot(pts[2][0],pts[2][1]); const len=r1-r0;
+  const winMat=new THREE.MeshPhysicalMaterial({color:0x9fe8ff,emissive:0x3fd0ff,emissiveIntensity:0.9,transmission:0.4,roughness:0.15,transparent:true,opacity:0.85});
+  for(const sg of [1,-1]) for(let k=0;k<12;k++){ const rr_=r0+len*(k+0.5)/12; const u=sg*0.235; const [x,y]=[ca*rr_-sa*u, sa*rr_+ca*u]; const m=new THREE.Mesh(new THREE.BoxGeometry(0.03,0.012,0.002),winMat); m.position.set(x,y,0.03); m.rotation.z=a; m.rotateX(sg*35*Math.PI/180); m.rotateY(0); cat.glass.add(tag(m,n.id,'flank window panel (#23)')); }
+});
 
 // ---------------- UI + visibility
 const panel=document.createElement('div'); panel.innerHTML='<h2>Interior (generated)</h2>'+Object.keys(cat).map(k=>`<label class="row"><input type="checkbox" data-int="${k}" ${k==='labels'?'':'checked'}> ${k}</label>`).join('')+'<div class="sub">Generated fill inherits the placement class of its district; the inspector labels it GENERATED. See INTERIOR.md.</div>';

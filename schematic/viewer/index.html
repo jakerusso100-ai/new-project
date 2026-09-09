@@ -7,7 +7,9 @@
 <style>
   :root { color-scheme: dark; --bg:#0b0e13; --panel:#121821; --line:#243040; --text:#dce3ec; --muted:#8a97a8; --accent:#5bc0eb; }
   html, body { margin:0; height:100%; background:var(--bg); color:var(--text); font:13px/1.45 ui-monospace, Consolas, "SF Mono", monospace; }
-  #app { display:grid; grid-template-columns: 290px 1fr 360px; height:100vh; }
+  #app { display:grid; grid-template-columns: 290px minmax(0,1fr) 360px; grid-template-rows: minmax(0,1fr); height:100vh; max-height:100vh; }
+  #left, #right, #view { min-height:0; }
+  #view { height:100%; max-height:100vh; }
   #left, #right { background:var(--panel); border-color:var(--line); overflow:auto; padding:14px; box-sizing:border-box; }
   #left { border-right:1px solid var(--line); }
   #right { border-left:1px solid var(--line); }
@@ -35,7 +37,7 @@
   #hover { position:absolute; padding:3px 8px; background:#000c; border:1px solid var(--line); border-radius:4px; pointer-events:none; display:none; font-size:12px; }
   button { background:#1b2634; color:var(--text); border:1px solid var(--line); border-radius:4px; padding:5px 9px; font:inherit; cursor:pointer; margin:2px 2px 2px 0; }
   button:hover { border-color:var(--accent); }
-  @media (max-width: 1000px) { #app { grid-template-columns: 1fr; grid-template-rows: auto 60vh auto; } #left, #right { border:0; border-bottom:1px solid var(--line); } }
+  @media (max-width: 1000px) { #app { grid-template-columns: 1fr; grid-template-rows: auto 60vh auto; height:auto; max-height:none; } #view { height:60vh; } #left, #right { border:0; border-bottom:1px solid var(--line); } }
 </style>
 </head>
 <body>

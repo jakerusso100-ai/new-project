@@ -58,7 +58,7 @@ Geometry is now taken from cross-sections of the owner-supplied STL (`reference_
 | `KEEL-FIN-1…5` | ANCHORED | 5 tapering plates, az 36° + 72°k, r 0.47–0.75 → 0.41–0.49, z −0.40 → −1.80 | **Five** fins at 72°, 36° off the arms. The frame only ever showed two. |
 | `SHELL-UNDERSIDE` exit aperture | ANCHORED | disc r 0.03 at z −1.40 on the spike | Spacecraft launches from the bottom (S05E10). |
 | `DOME-S1`, `DOME-S2`, `DOME-MB` pods | LOCKED | lenses r 0.592, apex +0.186, depth −0.10, centres at 2.316 U, az 0° / 120° / 240° | 0.59-scale copies of the central lens on the same equatorial plane. Mortyburg is one of them (B). Azimuths relative to the interior UNKNOWN. |
-| `ARM-S1/S2/MB` | LOCKED | lenticular bridges 0.55 wide × 0.20 thick at the equator, r 0.9 → 1.77 | Level with the deck; cyan light strips along the edges. Three usable levels inside the 400 m section: top deck (+200 m, ramps and lifts to the city), through-concourse at deck level (city → arm → pod on one floor, carries the rail spur), service deck (−100 m). |
+| `ARM-S1/S2/MB` | LOCKED | lenticular bridges 0.55 wide × 0.20 thick at the equator, r 0.9 → 1.77 | Level with the deck; cyan light strips along the edges. 400 m thick at 1:1 — several decks inside. |
 | `PROP-PANEL-MAST` | PLACEHOLDER | 0.18 × 0.20 panel on a mast over one pod | In #23 only; not in the STL. Which pod is UNKNOWN. |
 
 **Still to settle from images:** pod azimuths relative to the plaza, which pod is Mortyburg, whether the show intends five fins (the fan model does; the frame shows two), and the absolute scale (§2, `SCALE_1_TO_1.md`).

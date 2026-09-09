@@ -93,7 +93,7 @@
 | `UG-PHOENIX-VATS` | Operation Phoenix vats | machinery | L7 | V-3 | A | PROVISIONAL | DS-04 DS-05 | +0.00,+0.00,-0.35 | UG-DIM-DRIVE | EPISODE_EVIDENCE_RICKMURAI_JACK.md (Operation Phoenix vats feed biological material into the drive process) |
 | `UG-LAUNCH-CHAMBER` | Launch chamber (Evil Morty's spacecraft) | machinery | L7 | V-3 V-4 | A | ANCHORED | DS-04 DS-05 | +0.00,-0.03,-0.55 | — | EPISODE_EVIDENCE_SOLARICKS.md (surviving launch/technical chamber); EPISODE_EVIDENCE_RICKMURAI_JACK.md (spacecraft loaded into an exit chute) |
 | `UG-EXIT-CHUTE` | Spacecraft exit chute | machinery | L7 | V-3 V-4 | A | ANCHORED | DS-04 DS-05 DS-06 | +0.00,+0.00,-0.97 | — | EPISODE_EVIDENCE_RICKMURAI_JACK.md (launched from the bottom of the Citadel); EPISODE_EVIDENCE_SOLARICKS.md (launch track) |
-| `IF-MORTYBURG` | Mortyburg attachment interface | interface | L7 | V0 V-1 | A | PROVISIONAL | DS-01 DS-02 DS-03 DS-04 DS-05 | -0.50,-0.87,-0.05 | — | EPISODE_EVIDENCE_RICKMURAI_JACK.md (Mortyburg detachment); DIALOGUE_ARCHITECTURE_CROSSREF.md D-008, D-009 |
+| `IF-MORTYBURG` | Mortyburg attachment interface | interface | L7 | V0 V-1 | A | PROVISIONAL | DS-01 DS-02 DS-03 DS-04 DS-05 | -0.50,-0.87,-0.06 | — | EPISODE_EVIDENCE_RICKMURAI_JACK.md (Mortyburg detachment); DIALOGUE_ARCHITECTURE_CROSSREF.md D-008, D-009 |
 | `MB-THRUSTERS` | Mortyburg boosters / thrusters | machinery | L7 | V-1 | A | PROVISIONAL | DS-05 DS-06 | -1.16,-2.01,-0.10 | DOME-MB | DIALOGUE_ARCHITECTURE_CROSSREF.md D-010 |
 | `RUIN-DEBRIS-FIELD` | Post-destruction debris field | ruin | L7 | — | A | PROVISIONAL | DS-06 DS-07 DS-08 | +0.00,+0.00,+0.00 | — | EPISODE_EVIDENCE_SOLARICKS.md; CONTRADICTION_LOG.md C-009 |
 | `RUIN-LAUNCH-CHAMBER` | Ruined launch chamber | ruin | L7 | V-3 | A | ANCHORED | DS-06 | +0.00,-0.03,-0.55 | UG-LAUNCH-CHAMBER | EPISODE_EVIDENCE_SOLARICKS.md (surviving launch/technical chamber) |
@@ -200,33 +200,33 @@
 
 ### ARM-S1 — Radial arm to DOME-S1
 
-**Placement rationale:** Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level. Numeric fit to #23: the arm slopes from the disc underside (z −0.03) down to the pod rim (z −0.28) over ≈0.85 R. Silhouette fit: arm width 0.44 R, sloping from z -0.03 at the disc to z -0.25 at the pod rim. STL: arc widths at the equator 0.50–0.66 R, 0.38–0.49 at −0.055, 0.20–0.25 at −0.096 and +0.10 — a lens-section bridge 0.2 R thick. Level with the deck, not sloping. The arm section is thick enough (0.2 R = 400 m) for three levels; the through-concourse is at deck level so the city, arm and pod decks are one continuous floor.
+**Placement rationale:** Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level. Numeric fit to #23: the arm slopes from the disc underside (z −0.03) down to the pod rim (z −0.28) over ≈0.85 R. Silhouette fit: arm width 0.44 R, sloping from z -0.03 at the disc to z -0.25 at the pod rim. STL: arc widths at the equator 0.50–0.66 R, 0.38–0.49 at −0.055, 0.20–0.25 at −0.096 and +0.10 — a lens-section bridge 0.2 R thick. Level with the deck, not sloping.
 
 **Unknowns:** width; section; what circulation it carries; whether arms are level with the ground plane
 
 **Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); CONTRADICTION_LOG.md C-002
 
-**Sub-features to model:** lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R; cyan light strips along the edges (#23); level with the equatorial plane; three usable levels inside the 0.2 R section: top deck (+0.10), through-concourse (0), service deck (−0.05)
+**Sub-features to model:** lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R; cyan light strips along the edges (#23); level with the equatorial plane
 
 ### ARM-S2 — Radial arm to DOME-S2
 
-**Placement rationale:** Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level. Numeric fit to #23: the arm slopes from the disc underside (z −0.03) down to the pod rim (z −0.28) over ≈0.85 R. Silhouette fit: arm width 0.44 R, sloping from z -0.03 at the disc to z -0.25 at the pod rim. STL: arc widths at the equator 0.50–0.66 R, 0.38–0.49 at −0.055, 0.20–0.25 at −0.096 and +0.10 — a lens-section bridge 0.2 R thick. Level with the deck, not sloping. The arm section is thick enough (0.2 R = 400 m) for three levels; the through-concourse is at deck level so the city, arm and pod decks are one continuous floor.
+**Placement rationale:** Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level. Numeric fit to #23: the arm slopes from the disc underside (z −0.03) down to the pod rim (z −0.28) over ≈0.85 R. Silhouette fit: arm width 0.44 R, sloping from z -0.03 at the disc to z -0.25 at the pod rim. STL: arc widths at the equator 0.50–0.66 R, 0.38–0.49 at −0.055, 0.20–0.25 at −0.096 and +0.10 — a lens-section bridge 0.2 R thick. Level with the deck, not sloping.
 
 **Unknowns:** width; section; what circulation it carries; whether arms are level with the ground plane
 
 **Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); CONTRADICTION_LOG.md C-002
 
-**Sub-features to model:** lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R; cyan light strips along the edges (#23); level with the equatorial plane; three usable levels inside the 0.2 R section: top deck (+0.10), through-concourse (0), service deck (−0.05)
+**Sub-features to model:** lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R; cyan light strips along the edges (#23); level with the equatorial plane
 
 ### ARM-MB — Radial arm to DOME-MB
 
-**Placement rationale:** Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level. Numeric fit to #23: the arm slopes from the disc underside (z −0.03) down to the pod rim (z −0.28) over ≈0.85 R. Silhouette fit: arm width 0.44 R, sloping from z -0.03 at the disc to z -0.25 at the pod rim. STL: arc widths at the equator 0.50–0.66 R, 0.38–0.49 at −0.055, 0.20–0.25 at −0.096 and +0.10 — a lens-section bridge 0.2 R thick. Level with the deck, not sloping. The arm section is thick enough (0.2 R = 400 m) for three levels; the through-concourse is at deck level so the city, arm and pod decks are one continuous floor.
+**Placement rationale:** Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level. Numeric fit to #23: the arm slopes from the disc underside (z −0.03) down to the pod rim (z −0.28) over ≈0.85 R. Silhouette fit: arm width 0.44 R, sloping from z -0.03 at the disc to z -0.25 at the pod rim. STL: arc widths at the equator 0.50–0.66 R, 0.38–0.49 at −0.055, 0.20–0.25 at −0.096 and +0.10 — a lens-section bridge 0.2 R thick. Level with the deck, not sloping.
 
 **Unknowns:** width; section; what circulation it carries; whether arms are level with the ground plane
 
 **Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); CONTRADICTION_LOG.md C-002
 
-**Sub-features to model:** lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R; cyan light strips along the edges (#23); level with the equatorial plane; three usable levels inside the 0.2 R section: top deck (+0.10), through-concourse (0), service deck (−0.05)
+**Sub-features to model:** lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R; cyan light strips along the edges (#23); level with the equatorial plane
 
 ### DOME-P — Principal transparent dome
 
@@ -896,7 +896,7 @@
 
 ### IF-MORTYBURG — Mortyburg attachment interface
 
-**Placement rationale:** Engineered structural/transit interface with a closing entrance (A). Moved to the root of ARM-MB where the arm meets the main body, so the rail spur passes through it onto the arm. Sits inside the 0.2 R-thick arm root (z −0.06 → +0.02). Placed on the arm service deck under the concourse.
+**Placement rationale:** Engineered structural/transit interface with a closing entrance (A). Moved to the root of ARM-MB where the arm meets the main body, so the rail spur passes through it onto the arm. Sits inside the 0.2 R-thick arm root (z −0.06 → +0.02).
 
 **Unknowns:** attachment count; diameter; service connections
 

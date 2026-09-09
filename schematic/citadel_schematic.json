@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.3.0",
+  "schema_version": "2.2.0",
   "title": "Citadel of Ricks — Master Schematic Database",
   "generated_from": "Evidence registers in this repository (see SCHEMATIC.md for derivation rules)",
   "units": {
@@ -842,31 +842,7 @@
         "features": [
           "lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R",
           "cyan light strips along the edges (#23)",
-          "level with the equatorial plane",
-          "three usable levels inside the 0.2 R section: top deck (+0.10), through-concourse (0), service deck (−0.05)"
-        ],
-        "levels": [
-          {
-            "id": "ARM+1",
-            "name": "top deck",
-            "z": 0.1,
-            "m": 200,
-            "use": "open promenade: road, landing pads, parapets, lights; ramps and lift towers down to the city ring road at r 0.9"
-          },
-          {
-            "id": "ARM0",
-            "name": "through-concourse",
-            "z": 0.0,
-            "m": 0,
-            "use": "enclosed concourse at main-deck level: rail spur, road, pedestrian way; runs from the city floor straight through the arm onto the pod deck (also at z 0)"
-          },
-          {
-            "id": "ARM-1",
-            "name": "service deck",
-            "z": -0.05,
-            "m": -100,
-            "use": "utilities, freight, Mortyburg disengage machinery under the root (IF-MORTYBURG)"
-          }
+          "level with the equatorial plane"
         ]
       },
       "position": [
@@ -884,7 +860,7 @@
         "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)",
         "CONTRADICTION_LOG.md C-002"
       ],
-      "rationale": "Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level. Numeric fit to #23: the arm slopes from the disc underside (z −0.03) down to the pod rim (z −0.28) over ≈0.85 R. Silhouette fit: arm width 0.44 R, sloping from z -0.03 at the disc to z -0.25 at the pod rim. STL: arc widths at the equator 0.50–0.66 R, 0.38–0.49 at −0.055, 0.20–0.25 at −0.096 and +0.10 — a lens-section bridge 0.2 R thick. Level with the deck, not sloping. The arm section is thick enough (0.2 R = 400 m) for three levels; the through-concourse is at deck level so the city, arm and pod decks are one continuous floor.",
+      "rationale": "Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level. Numeric fit to #23: the arm slopes from the disc underside (z −0.03) down to the pod rim (z −0.28) over ≈0.85 R. Silhouette fit: arm width 0.44 R, sloping from z -0.03 at the disc to z -0.25 at the pod rim. STL: arc widths at the equator 0.50–0.66 R, 0.38–0.49 at −0.055, 0.20–0.25 at −0.096 and +0.10 — a lens-section bridge 0.2 R thick. Level with the deck, not sloping.",
       "unknowns": [
         "width",
         "section",
@@ -947,31 +923,7 @@
         "features": [
           "lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R",
           "cyan light strips along the edges (#23)",
-          "level with the equatorial plane",
-          "three usable levels inside the 0.2 R section: top deck (+0.10), through-concourse (0), service deck (−0.05)"
-        ],
-        "levels": [
-          {
-            "id": "ARM+1",
-            "name": "top deck",
-            "z": 0.1,
-            "m": 200,
-            "use": "open promenade: road, landing pads, parapets, lights; ramps and lift towers down to the city ring road at r 0.9"
-          },
-          {
-            "id": "ARM0",
-            "name": "through-concourse",
-            "z": 0.0,
-            "m": 0,
-            "use": "enclosed concourse at main-deck level: rail spur, road, pedestrian way; runs from the city floor straight through the arm onto the pod deck (also at z 0)"
-          },
-          {
-            "id": "ARM-1",
-            "name": "service deck",
-            "z": -0.05,
-            "m": -100,
-            "use": "utilities, freight, Mortyburg disengage machinery under the root (IF-MORTYBURG)"
-          }
+          "level with the equatorial plane"
         ]
       },
       "position": [
@@ -989,7 +941,7 @@
         "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)",
         "CONTRADICTION_LOG.md C-002"
       ],
-      "rationale": "Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level. Numeric fit to #23: the arm slopes from the disc underside (z −0.03) down to the pod rim (z −0.28) over ≈0.85 R. Silhouette fit: arm width 0.44 R, sloping from z -0.03 at the disc to z -0.25 at the pod rim. STL: arc widths at the equator 0.50–0.66 R, 0.38–0.49 at −0.055, 0.20–0.25 at −0.096 and +0.10 — a lens-section bridge 0.2 R thick. Level with the deck, not sloping. The arm section is thick enough (0.2 R = 400 m) for three levels; the through-concourse is at deck level so the city, arm and pod decks are one continuous floor.",
+      "rationale": "Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level. Numeric fit to #23: the arm slopes from the disc underside (z −0.03) down to the pod rim (z −0.28) over ≈0.85 R. Silhouette fit: arm width 0.44 R, sloping from z -0.03 at the disc to z -0.25 at the pod rim. STL: arc widths at the equator 0.50–0.66 R, 0.38–0.49 at −0.055, 0.20–0.25 at −0.096 and +0.10 — a lens-section bridge 0.2 R thick. Level with the deck, not sloping.",
       "unknowns": [
         "width",
         "section",
@@ -1052,31 +1004,7 @@
         "features": [
           "lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R",
           "cyan light strips along the edges (#23)",
-          "level with the equatorial plane",
-          "three usable levels inside the 0.2 R section: top deck (+0.10), through-concourse (0), service deck (−0.05)"
-        ],
-        "levels": [
-          {
-            "id": "ARM+1",
-            "name": "top deck",
-            "z": 0.1,
-            "m": 200,
-            "use": "open promenade: road, landing pads, parapets, lights; ramps and lift towers down to the city ring road at r 0.9"
-          },
-          {
-            "id": "ARM0",
-            "name": "through-concourse",
-            "z": 0.0,
-            "m": 0,
-            "use": "enclosed concourse at main-deck level: rail spur, road, pedestrian way; runs from the city floor straight through the arm onto the pod deck (also at z 0)"
-          },
-          {
-            "id": "ARM-1",
-            "name": "service deck",
-            "z": -0.05,
-            "m": -100,
-            "use": "utilities, freight, Mortyburg disengage machinery under the root (IF-MORTYBURG)"
-          }
+          "level with the equatorial plane"
         ]
       },
       "position": [
@@ -1094,7 +1022,7 @@
         "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)",
         "CONTRADICTION_LOG.md C-002"
       ],
-      "rationale": "Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level. Numeric fit to #23: the arm slopes from the disc underside (z −0.03) down to the pod rim (z −0.28) over ≈0.85 R. Silhouette fit: arm width 0.44 R, sloping from z -0.03 at the disc to z -0.25 at the pod rim. STL: arc widths at the equator 0.50–0.66 R, 0.38–0.49 at −0.055, 0.20–0.25 at −0.096 and +0.10 — a lens-section bridge 0.2 R thick. Level with the deck, not sloping. The arm section is thick enough (0.2 R = 400 m) for three levels; the through-concourse is at deck level so the city, arm and pod decks are one continuous floor.",
+      "rationale": "Exterior #23 (third pass): the arms are long flat planks ≈0.35 R wide spanning ≈0.6 R between disc rim and pod rim, with cyan light strips along their sides, slightly below deck level. Numeric fit to #23: the arm slopes from the disc underside (z −0.03) down to the pod rim (z −0.28) over ≈0.85 R. Silhouette fit: arm width 0.44 R, sloping from z -0.03 at the disc to z -0.25 at the pod rim. STL: arc widths at the equator 0.50–0.66 R, 0.38–0.49 at −0.055, 0.20–0.25 at −0.096 and +0.10 — a lens-section bridge 0.2 R thick. Level with the deck, not sloping.",
       "unknowns": [
         "width",
         "section",
@@ -4748,7 +4676,7 @@
         "size": [
           0.12,
           0.08,
-          0.06
+          0.08
         ],
         "features": [
           "closing entrance / blast door",
@@ -4760,14 +4688,14 @@
       "position": [
         -0.5,
         -0.866,
-        -0.05
+        -0.06
       ],
       "azimuth": 240,
       "evidence": [
         "EPISODE_EVIDENCE_RICKMURAI_JACK.md (Mortyburg detachment)",
         "DIALOGUE_ARCHITECTURE_CROSSREF.md D-008, D-009"
       ],
-      "rationale": "Engineered structural/transit interface with a closing entrance (A). Moved to the root of ARM-MB where the arm meets the main body, so the rail spur passes through it onto the arm. Sits inside the 0.2 R-thick arm root (z −0.06 → +0.02). Placed on the arm service deck under the concourse.",
+      "rationale": "Engineered structural/transit interface with a closing entrance (A). Moved to the root of ARM-MB where the arm meets the main body, so the rail spur passes through it onto the arm. Sits inside the 0.2 R-thick arm root (z −0.06 → +0.02).",
       "unknowns": [
         "attachment count",
         "diameter",
@@ -5185,28 +5113,6 @@
         ]
       },
       {
-        "id": "ARM+1",
-        "name": "Arm top decks",
-        "z": [
-          0.1,
-          0.1
-        ],
-        "m": [
-          200,
-          200
-        ],
-        "extent_r": [
-          0.9,
-          1.77
-        ],
-        "contents": [
-          "open promenade on each arm",
-          "road and landing pads",
-          "ramps and lift towers to the ring road",
-          "parapets and edge lights"
-        ]
-      },
-      {
         "id": "DK0",
         "name": "Main deck — surface city",
         "z": [
@@ -5228,28 +5134,6 @@
           "districts to the rim",
           "farm at the rim (low glass)",
           "arm decks to the pods"
-        ]
-      },
-      {
-        "id": "ARM0",
-        "name": "Arm through-concourses",
-        "z": [
-          0.0,
-          0.04
-        ],
-        "m": [
-          0,
-          80
-        ],
-        "extent_r": [
-          0.9,
-          1.77
-        ],
-        "contents": [
-          "rail spur to the pod",
-          "road",
-          "pedestrian concourse",
-          "continuous with the city and pod decks"
         ]
       },
       {

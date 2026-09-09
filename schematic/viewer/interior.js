@@ -175,27 +175,8 @@ const dd=NB['UG-DIM-DRIVE'].geometry; cat.underground.add(tag(meshAt(new THREE.C
 cat.underground.add(tag(meshAt(new THREE.BoxGeometry(0.5,0.05,0.008),M({color:0x9aa0aa}),0,0,-0.33),'UG-DIM-DRIVE','suspended walkway'));
 cat.underground.add(tag(meshAt(new THREE.TorusKnotGeometry(0.05,0.006,64,8,2,5),EM(0xffc020,1),-0.12,0.06,-0.3),'UG-DIM-DRIVE','portal-array display'));
 cat.underground.add(tag(meshAt(new THREE.CylinderGeometry(0.03,0.03,0.12,24).rotateX(Math.PI/2),new THREE.MeshStandardMaterial({color:0x5be0ff,emissive:0x3fd0ff,emissiveIntensity:1.5,transparent:true,opacity:0.7}),0,0,-0.30),'UG-DIM-DRIVE','drive core'));
-// arms: usable decks — top promenade (+0.10) with ramps and lift towers, through-concourse (0) into the pod, service deck (−0.05)
-DB.nodes.filter(n=>n.id.startsWith('ARM-')).forEach(n=>{ const pts=n.geometry.points; const a=Math.atan2(pts[0][1],pts[0][0]); const ca=Math.cos(a), sa=Math.sin(a); const r0=Math.hypot(pts[0][0],pts[0][1]), r1=Math.hypot(pts[2][0],pts[2][1]); const len=r1-r0; const W=n.geometry.width||0.5; const at=(r,side,z)=>[ca*r-sa*side, sa*r+ca*side, z];
-  const put=(geo,mat,r,side,z,label,extraRot)=>{ const [x,y,zz]=at(r,side,z); const m=meshAt(geo,mat,x,y,zz,a); if(extraRot) m.quaternion.multiply(extraRot); cat.streets.add(tag(m,n.id,label)); return m; };
-  // top deck
-  put(new THREE.BoxGeometry(len,W*0.9,0.004),M({color:COL.plaza}),r0+len/2,0,0.1,'arm top deck');
-  put(new THREE.BoxGeometry(len,0.04,0.003),roadMat,r0+len/2,0,0.104,'arm top-deck road');
-  for(const sg of [1,-1]){ put(new THREE.BoxGeometry(len,0.006,0.012),M({color:COL.hull}),r0+len/2,sg*W*0.44,0.104,'parapet'); for(let k=0;k<12;k++){ put(new THREE.BoxGeometry(0.02,0.004,0.004),EM(COL.cyan,0.9),r0+len*(k+0.5)/12,sg*W*0.43,0.112,'deck light'); } }
-  for(let k=0;k<3;k++){ put(new THREE.CylinderGeometry(0.03,0.03,0.003,32).rotateX(Math.PI/2),M({color:0x9aa0aa}),r0+len*(0.25+k*0.25),W*0.28,0.104,'landing pad'); put(new THREE.TorusGeometry(0.028,0.002,6,32),EM(0xffd060,0.8),r0+len*(0.25+k*0.25),W*0.28,0.106,'pad ring'); }
-  for(let k=0;k<4;k++){ const bx=put(new THREE.BoxGeometry(0.03,0.02,0.02),M({color:pick(COL.bldg)}),r0+len*(0.2+k*0.2),-W*0.3,0.104,'deck pavilion'); }
-  // ramps from the ring road (r 0.9, z 0) up onto the arm root top (r0+0.02, z 0.10), one each side of the concourse mouth
-  for(const sg of [1,-1]){ const rA=0.78, rB=r0+0.03; const L=Math.hypot(rB-rA,0.10); const pitch=new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,1,0),-Math.atan2(0.10,rB-rA)); put(new THREE.BoxGeometry(L,0.035,0.006),roadMat,(rA+rB)/2,sg*W*0.32,0.05,'ramp',pitch); for(let k=1;k<8;k++){ put(new THREE.CylinderGeometry(0.003,0.003,0.10*k/8,8).rotateX(Math.PI/2),M({color:0x9aa0aa}),rA+(rB-rA)*k/8,sg*W*0.32,0.10*k/16,'ramp pier'); } }
-  // lift towers at the arm root and at the pod end
-  for(const rr_ of [r0+0.04,r1-0.03]) for(const sg of [1,-1]){ put(new THREE.CylinderGeometry(0.012,0.012,0.12,16).rotateX(Math.PI/2),M({color:0xe3e8dc}),rr_,sg*W*0.42,0.06,'lift tower'); put(new THREE.BoxGeometry(0.004,0.004,0.11),EM(COL.cyan,0.8),rr_,sg*W*0.42+sg*0.013,0.055,'lift light'); }
-  // through-concourse at deck level: floor, lit mouth portals at both ends, glazed side bands
-  put(new THREE.BoxGeometry(len+0.1,0.22,0.003),M({color:0xd0cbb3}),r0+len/2-0.02,0,0.004,'concourse floor');
-  put(new THREE.BoxGeometry(len+0.1,0.03,0.003),roadMat,r0+len/2-0.02,-0.06,0.006,'concourse road');
-  for(const rr_ of [r0-0.02,r1+0.02]){ put(new THREE.BoxGeometry(0.01,0.24,0.045),M({color:0x1b2028}),rr_,0,0.0,'concourse portal'); put(new THREE.BoxGeometry(0.012,0.25,0.005),EM(COL.cyan,1.1),rr_,0,0.046,'portal lintel light'); }
-  for(const sg of [1,-1]) put(new THREE.BoxGeometry(len,0.004,0.02),new THREE.MeshPhysicalMaterial({color:COL.glass,transparent:true,opacity:0.5,transmission:0.5}),r0+len/2,sg*0.115,0.025,'concourse window band');
-  // service deck below
-  put(new THREE.BoxGeometry(len,W*0.6,0.003),M({color:COL.deck,transparent:true,opacity:0.6}),r0+len/2,0,-0.05,'arm service deck');
-});
+// arms: deck road + edge lights
+DB.nodes.filter(n=>n.id.startsWith('ARM-')).forEach(n=>{ const pts=n.geometry.points; const a=Math.atan2(pts[0][1],pts[0][0]); const r0=Math.hypot(pts[0][0],pts[0][1]), r1=Math.hypot(pts[2][0],pts[2][1]); const len=r1-r0; cat.streets.add(tag(meshAt(new THREE.BoxGeometry(len,0.05,0.003),roadMat,Math.cos(a)*(r0+len/2),Math.sin(a)*(r0+len/2),0.102,a),n.id,'arm deck road')); for(const sg of [1,-1]) cat.streets.add(tag(meshAt(new THREE.BoxGeometry(len,0.006,0.004),EM(COL.cyan,0.8),Math.cos(a)*(r0+len/2)-Math.sin(a)*sg*0.27,Math.sin(a)*(r0+len/2)+Math.cos(a)*sg*0.27,0.0,a),n.id,'arm edge light')); });
 
 // ---------------- UI + visibility
 const panel=document.createElement('div'); panel.innerHTML='<h2>Interior (generated)</h2>'+Object.keys(cat).map(k=>`<label class="row"><input type="checkbox" data-int="${k}" ${k==='labels'?'':'checked'}> ${k}</label>`).join('')+'<div class="sub">Generated fill inherits the placement class of its district; the inspector labels it GENERATED. See INTERIOR.md.</div>';

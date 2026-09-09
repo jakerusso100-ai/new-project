@@ -7,9 +7,13 @@ Each image should also get a row in `reference_images/CAMERA_MATCH.md` (see temp
 | Node | Placement | Required shots | Images logged |
 |---|---|---|---|
 | `SHELL-DRUM` Central drum (city deck and wall) | LOCKED | - [ ] S01E10 exterior<br>- [ ] S05E10 wide shots | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view) |
-| `SHELL-LOWER-BODY` Hanging keel (lower structural body) | ANCHORED | - [ ] S01E10 exterior establishing<br>- [ ] S03E01 damaged exterior<br>- [ ] S05E10 tilting/explosion wide shot | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)<br>reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram) |
+| `SHELL-UNDERHUB` Under-hub (keel mount block) | ANCHORED | - [ ] any exterior from below | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view) |
+| `KEEL-FIN-1` Keel fin 1 | ANCHORED | - [ ] exterior from below<br>- [ ] S05E10 tilting wide shot | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view) |
+| `KEEL-FIN-2` Keel fin 2 | ANCHORED | - [ ] exterior from below<br>- [ ] S05E10 tilting wide shot | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view) |
+| `KEEL-FIN-3` Keel fin 3 | ANCHORED | - [ ] exterior from below<br>- [ ] S05E10 tilting wide shot | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view) |
+| `SHELL-LOWER-BODY` Keel energy blade | ANCHORED | - [ ] S01E10 exterior establishing<br>- [ ] S03E01 damaged exterior<br>- [ ] S05E10 tilting/explosion wide shot | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)<br>reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram) |
 | `SHELL-PLATES` Drum rim plating | PLACEHOLDER | - [ ] S01E10 exterior establishing<br>- [ ] S03E01 damaged exterior | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)<br>reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram) |
-| `SHELL-UNDERSIDE` Keel tip with exit aperture | ANCHORED | - [ ] S05E10 spacecraft exit shot<br>- [ ] S06E01 ruin exterior approach | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)<br>reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram) |
+| `SHELL-UNDERSIDE` Blade exit aperture | ANCHORED | - [ ] S05E10 spacecraft exit shot<br>- [ ] S06E01 ruin exterior approach | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)<br>reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram) |
 | `ARM-S1` Radial arm to DOME-S1 | ANCHORED | - [ ] any exterior frame showing an arm<br>- [ ] S05E10 disengagement exterior | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)<br>reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram) |
 | `ARM-S2` Radial arm to DOME-S2 | ANCHORED | - [ ] any exterior frame showing an arm<br>- [ ] S05E10 disengagement exterior | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)<br>reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram) |
 | `ARM-MB` Radial arm to DOME-MB | ANCHORED | - [ ] any exterior frame showing an arm<br>- [ ] S05E10 disengagement exterior | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)<br>reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram) |
@@ -17,6 +21,10 @@ Each image should also get a row in `reference_images/CAMERA_MATCH.md` (see temp
 | `DOME-S1` Secondary dome 1 | ANCHORED | - [ ] S01E10 exterior establishing<br>- [ ] S05E10 wide shots<br>- [ ] any aerial view | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)<br>reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram) |
 | `DOME-S2` Secondary dome 2 | ANCHORED | - [ ] as DOME-S1 | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)<br>reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram) |
 | `DOME-MB` Mortyburg dome (detachable section) | ANCHORED | - [ ] S05E10 disengagement exterior<br>- [ ] S05E10 boosters firing<br>- [ ] S05E10 train arrival interior<br>- [ ] S06E01 stranded-section exterior | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)<br>reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram) |
+| `DOME-P-HUB` Central hub cap on the main dome | ANCHORED | - [ ] any exterior | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view) |
+| `DOME-S1-HUB` Hub cap on DOME-S1 | ANCHORED | - [ ] any exterior | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view) |
+| `DOME-S2-HUB` Hub cap on DOME-S2 | ANCHORED | - [ ] any exterior | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view) |
+| `DOME-MB-HUB` Hub cap on DOME-MB | ANCHORED | - [ ] any exterior | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view) |
 | `PROP-PANEL-MAST` Panel / antenna mast on a pod | PLACEHOLDER | - [ ] any exterior | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view) |
 | `CIRC-RING-1` Inner circumferential road | PROVISIONAL | - [ ] S03E07 aerial/street montage<br>- [ ] S05E10 plaza-flood aerial | _none yet_ |
 | `CIRC-RING-2` Middle circumferential road | PROVISIONAL | - [ ] as CIRC-RING-1 | _none yet_ |
@@ -92,4 +100,4 @@ Each image should also get a row in `reference_images/CAMERA_MATCH.md` (see temp
 | `RUIN-BEACON` Summer's beacon on the ruins | PLACEHOLDER | - [ ] S06E01 beacon placement | _none yet_ |
 | `NEW-CITADEL` New Citadel construction (Boss Hog Rick) | PROVISIONAL | - [ ] S08E03 New Citadel exterior<br>- [ ] S08E03 construction/lab interiors<br>- [ ] S08E03 destruction | reference_images/CITADEL_IMAGE_GALLERY.md#21 (S08E03 Boss Hog throne room) |
 
-**53 images logged against 151 required shots.**
+**61 images logged against 162 required shots.**

@@ -150,7 +150,10 @@ def draw_plan_node(P, n, labels=True):
     elif t == "point":
         out.append(P.circle(x, y, max(g["radius"], 0.008), st))
     elif t == "path":
-        out.append(P.polyline(g["points"], node_style(n, fill=False)))
+        sty = node_style(n, fill=False)
+        if g.get("width", 0) >= 0.05:
+            sty = sty.replace(f'stroke-width="{PLACEMENT_STYLE[n["placement"]]["width"]}"', f'stroke-width="{g["width"]*P.S:.1f}" stroke-linecap="butt"').replace('stroke-opacity', 'stroke-opacity="0.35" data-x')
+        out.append(P.polyline(g["points"], sty))
         mid = g["points"][len(g["points"]) // 2]
         label_at = (mid[0], mid[1])
     elif t == "annular_volume":
@@ -359,7 +362,7 @@ def svg_open(W, H):
             f'<rect width="{W}" height="{H}" fill="#0b0e13"/>')
 
 
-def grid_plan(P, W, H, rmax=2.6):
+def grid_plan(P, W, H, rmax=2.75):
     out = []
     for r in [0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0, 2.25, 2.5]:
         if r <= rmax:
@@ -400,7 +403,7 @@ def grid_elev(E, W, H, bands=False):
 PLAN_ORDER = ["shell", "dome", "district", "circulation", "utility", "natural", "landmark", "interior", "machinery", "interface", "ruin", "variant", "prop"]
 
 
-def build_plan(d, W=1500, H=1500, scale=270):
+def build_plan(d, W=1500, H=1500, scale=250):
     P = Plan(W / 2 - 40, H / 2 - 60, scale)
     nodes = select(d["layers"], d["state"])
     nodes.sort(key=lambda n: PLAN_ORDER.index(n["kind"]))
@@ -415,7 +418,7 @@ def build_plan(d, W=1500, H=1500, scale=270):
     return "\n".join(body)
 
 
-def build_elev(d, W=1700, H=1000, scale=300):
+def build_elev(d, W=1700, H=1000, scale=280):
     axis = "x" if d["projection"] in ("elevation_y", "section_y") else "y"
     section = d["projection"].startswith("section")
     E = Elev(W / 2 - 60, 430, scale, axis)

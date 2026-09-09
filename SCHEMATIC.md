@@ -1,6 +1,6 @@
-# Citadel of Ricks — Master Schematic (v1.3)
+# Citadel of Ricks — Master Schematic (v1.7)
 
-**Status:** complete schematic built from every evidence register in this repository, then corrected against the reference images in `reference_images/` (16 inspected; see `reference_images/CAMERA_MATCH.md` for what each one changed). v1.3 incorporates the full exterior frame (BATCH_02 #23), which fixed the global massing. It is the bridge between the research phase (100% complete) and the interactive 3D model: every reconstructable feature now has an ID, a layer, a vertical band, a state list, a normalized position, a placement-trust class, the evidence behind it, its unknowns, and the reference shots it still needs.
+**Status:** complete schematic built from every evidence register in this repository, then corrected against the reference images in `reference_images/` (16 inspected; see `reference_images/CAMERA_MATCH.md` for what each one changed). v1.3–v1.7 incorporate the full exterior frame (BATCH_02 #23) through four side-by-side passes against the viewer, which fixed the global massing. It is the bridge between the research phase (100% complete) and the interactive 3D model: every reconstructable feature now has an ID, a layer, a vertical band, a state list, a normalized position, a placement-trust class, the evidence behind it, its unknowns, and the reference shots it still needs.
 
 **Scope change:** the research-phase lock on schematic/3D output was lifted by the project owner on 2026-09-08. The evidence discipline is unchanged — the schematic does not convert a convenient assumption into canon; it gives every assumption a labelled slot so an image can overturn it.
 
@@ -8,7 +8,7 @@
 
 | File | What it is |
 |---|---|
-| `schematic/citadel_schematic.json` | **Single source of truth.** 74 nodes + units, coordinate system, bands, states, scale anchors, drawing list. Everything else is generated from it. |
+| `schematic/citadel_schematic.json` | **Single source of truth.** 93 nodes + units, coordinate system, bands, states, scale anchors, drawing list. Everything else is generated from it. |
 | `schematic/build.py` | Validates the JSON and regenerates every derived file. `python schematic/build.py` |
 | `schematic/drawings/*.svg` | Eight-drawing set: `TOP_MASTER`, `DISTRICT_MAP`, `TRANSIT_MASTER`, `SIDE_MASTER`, `FRONT_MASTER`, `SECTION_A`, `SECTION_B`, `STATE_COMPARISON`. |
 | `schematic/NODE_REGISTER.md` | Generated table of all nodes plus per-node rationale/unknowns/sub-features. |
@@ -51,16 +51,19 @@ Fixed by the full exterior frame (`CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md` #23) a
 
 | Node | Placement | Envelope (U) | Basis |
 |---|---|---|---|
-| `SHELL-DRUM` central drum | LOCKED | cylinder r 1.00, z +0.25 → −0.28 | The city rides on a thick round drum; its plated rim wall rises 0.25 above deck and the arms and keel attach below. Defines the unit. |
-| `DOME-P` glazed cap | LOCKED | spherical cap r 1.00, height 0.30, base at z +0.25 | Shallow, radially segmented cap — **not** a hemisphere. #23 and #04 agree. |
-| `SHELL-LOWER-BODY` hanging keel | ANCHORED | tapered cylinder r 0.45 → 0.03, z −0.28 → −1.60 | Faceted keel with a cyan vertical energy strip, ending in a spike. Depth ≈ 1.6 drum radii (#23); hologram #04 shows the same funnel. |
-| `SHELL-UNDERSIDE` keel tip | ANCHORED | disc r 0.04 at z −1.60, aperture r 0.03 on axis | Spacecraft launches from the bottom point (S05E10). |
-| `SHELL-PLATES` rim plating | PLACEHOLDER | 16 segments on the drum rim | Plating exists (#23); count is a placeholder. |
-| `DOME-S1`, `DOME-S2`, `DOME-MB` satellite pods | ANCHORED | caps r 0.50, height 0.15, on short drums, centres at 2.00 U, az 0° / 120° / 240° | Three discs, each ≈ half the drum's diameter, held out on arms at ~120° (#23, #04). Azimuths relative to the city interior UNKNOWN. |
-| `ARM-S1/S2/MB` radial arms | ANCHORED | flat decks 0.30 wide, r 1.00 → 1.50 at deck level | Long flat bridges from drum rim to pod rim (#23). What they carry is UNKNOWN; ARM-MB must carry the rail spur. |
-| `PROP-PANEL-MAST` | PLACEHOLDER | 0.20 × 0.25 panel on a mast over one pod | A square panel/antenna stands over one pod in #23; which pod is UNKNOWN. |
+| `SHELL-DRUM` central disc | LOCKED | cylinder r 1.00, z +0.10 → −0.12 | The city rides on a **thin** round disc (rim ≈ 0.2 R deep) with cyan light strips on the plated rim. Defines the unit. |
+| `DOME-P` glazed cap | LOCKED | spherical cap r 1.00, height 0.26, base at z +0.10 | Shallow, radially segmented (8) cap — **not** a hemisphere. #23 and #04 agree. |
+| `DOME-P-HUB` | ANCHORED | cap r 0.22, height 0.04 at the apex (z 0.36) | Raised circular hub where the segment ribs meet; every pod has one too. |
+| `SHELL-UNDERHUB` keel mount | ANCHORED | cylinder r 0.48 → 0.42, z −0.12 → −0.32 | Faceted block under the centre of the disc; the keel hangs from it. Natural home for the Drive stack. |
+| `SHELL-LOWER-BODY` keel energy blade | ANCHORED | cone r 0.20 → 0, z −0.32 → −1.60 | Broad bright cyan crystalline blade on the axis, the longest element of the keel (tip ≈ 1.56 R below the disc underside, measured on #23). |
+| `KEEL-FIN-1/2/3` | ANCHORED (count PROVISIONAL) | slabs 0.12 × 0.40 × 1.05 at r 0.27, aligned with the arms (az 0° / 120° / 240°) | Flat plated fins flank the blade, ending ≈ 1.2 R down with angled tips. Two are clearly visible; three assumed by symmetry — count UNKNOWN. Keel is ≈ 0.87 R across at the root. |
+| `SHELL-UNDERSIDE` blade exit aperture | ANCHORED | disc r 0.035 at z −1.05 | Spacecraft launches from the bottom (S05E10); placed where the blade is still wide enough for the chute. |
+| `SHELL-PLATES` rim plating | PLACEHOLDER | 16 segments on the disc rim | Plating exists (#23); count is a placeholder. |
+| `DOME-S1`, `DOME-S2`, `DOME-MB` satellite pods | ANCHORED | caps r 0.55, height 0.16, on thin rims (z +0.04 → −0.06), centres at 2.10 U, az 0° / 120° / 240° | Three discs ≈ 0.55 R in radius with the same segmented cap + hub, on long arms (#23 measured: pod centres 150–210 px from the disc centre at R = 80 px; #04 agrees). Azimuths relative to the city interior UNKNOWN. |
+| `ARM-S1/S2/MB` radial arms | ANCHORED | flat planks 0.34 wide, r 0.95 → 1.58, just below deck | Long flat planks with cyan light strips along their sides (#23). What they carry is UNKNOWN; ARM-MB must carry the rail spur. |
+| `PROP-PANEL-MAST` | PLACEHOLDER | 0.18 × 0.20 panel on a mast over one pod | A square panel/antenna stands over one pod in #23; which pod is UNKNOWN. |
 
-**Still to settle from images:** cap height (est. 0.30), keel depth (est. 1.60), pod azimuths relative to the plaza, and which pod is Mortyburg. A second exterior at a different angle (S01E10 or S03E01) would move all of these from ratio estimates to measured values.
+**Still to settle from images:** cap height (est. 0.26), blade depth (est. 1.60), fin count, pod azimuths relative to the plaza, and which pod is Mortyburg. A second exterior at a different angle (S01E10 or S03E01) would move all of these from ratio estimates to measured values.
 
 ## 4. Vertical stack
 
@@ -68,16 +71,16 @@ The Citadel is not one city plane. Eight bands, from the top down (all z in U, a
 
 | Band | z range | Contents | Nodes |
 |---|---|---|---|
-| V+3 dome cap | +0.25 → +0.55 | glazed cap over the drum; tallest spires may reach into it | `DOME-P`, `LM-SPIRE-CLUSTER` tops |
-| V+2 hover band | +0.06 → +0.30 | flying taxis, private flying cars, elevated tracks and walkways | `CIRC-HOVER-BAND`, `CIRC-TRAM-PLAZA`, `CIRC-ELEVATED-TUBE`, `CIRC-CORE-WALKWAYS` |
-| V+1 building volume | 0 → +0.55 | skyline inside the drum wall and cap | all L4 boxes |
-| V0 ground plane | 0 | streets, sidewalks, plaza, farm terrain; deck level of the arms | rings, radials, `LM-CENTRAL-PLAZA`, `LM-MEGAFRUIT-FARM`, `ARM-*` |
-| V−1 subsurface service (drum lower deck) | −0.02 → −0.08 | sewers (person-sized), manholes, conduits, Mortyburg interface underside | `UG-SEWERS`, `CIRC-MANHOLE` |
-| V−2 portal-fluid "cave base" | −0.10 → −0.28 | underground production, containers, large central vat — bottom of the drum | `UG-PORTAL-FLUID` |
-| V−3 Dimensional Drive / launch (keel) | −0.35 → −0.85 | drive void spanned by suspended walkways, glass-domed control enclosure, Operation Phoenix vats, launch chamber | `UG-DIM-DRIVE`, `UG-CONTROL-ENCLOSURE`, `UG-PHOENIX-VATS`, `UG-LAUNCH-CHAMBER` |
-| V−4 exit chute / keel spike | −0.85 → −1.60 | chute down the keel to the tip aperture | `UG-EXIT-CHUTE`, `SHELL-UNDERSIDE` |
+| V+3 dome cap | +0.10 → +0.36 | glazed cap with central hub; skyline reaches into it | `DOME-P`, `DOME-P-HUB`, `LM-SPIRE-CLUSTER` tops |
+| V+2 hover band | +0.05 → +0.20 | flying taxis, private flying cars, elevated tracks and walkways | `CIRC-HOVER-BAND`, `CIRC-TRAM-PLAZA`, `CIRC-ELEVATED-TUBE`, `CIRC-CORE-WALKWAYS` |
+| V+1 building volume | 0 → +0.30 | skyline inside the disc rim and cap (apex 0.36) | all L4 boxes |
+| V0 ground plane | 0 | streets, sidewalks, plaza, farm terrain; deck level of the arms and pods | rings, radials, `LM-CENTRAL-PLAZA`, `LM-MEGAFRUIT-FARM`, `ARM-*` |
+| V−1 disc lower deck | −0.02 → −0.12 | sewers (person-sized), manholes, conduits, Mortyburg interface underside | `UG-SEWERS`, `CIRC-MANHOLE` |
+| V−2 portal-fluid "cave base" | −0.14 → −0.26 | underground production, containers, large central vat — inside the under-hub | `UG-PORTAL-FLUID` |
+| V−3 Dimensional Drive / launch | −0.26 → −0.60 | drive void spanned by suspended walkways, glass-domed control enclosure, Operation Phoenix vats; launch chamber between the keel fins | `UG-DIM-DRIVE`, `UG-CONTROL-ENCLOSURE`, `UG-PHOENIX-VATS`, `UG-LAUNCH-CHAMBER` |
+| V−4 keel blade / exit chute | −0.60 → −1.55 | chute inside the energy blade to the exit aperture | `UG-EXIT-CHUTE`, `SHELL-UNDERSIDE`, `KEEL-FIN-*` |
 
-The stack now lives in two masses: the drum (V+3 … V−2) and the hanging keel (V−3, V−4). This is a real result of the exterior frame — the keel is exactly where a Citadel-scale Drive with a visible energy strip would be, and its spike tip is the launch point. Band boundaries are still conventions chosen so the S05E10 descent order (city → manhole → sewers → portal-fluid cave → Drive → chute → space) reads top-to-bottom; the *order* is source-established, the *depths* are ratio estimates. See `SECTION_A.svg` / `SECTION_B.svg`.
+The stack now lives in three masses: the thin disc (V+3 … V−1), the under-hub block (V−2, V−3) and the hanging keel (V−4). This is a real result of the exterior frame — the glowing blade is exactly where a Citadel-scale Drive's output would be, and the launch chute runs down inside it. Band boundaries are still conventions chosen so the S05E10 descent order (city → manhole → sewers → portal-fluid cave → Drive → chute → space) reads top-to-bottom; the *order* is source-established, the *depths* are ratio estimates. See `SECTION_A.svg` / `SECTION_B.svg`.
 
 ## 5. Plan organisation (L2 / L3)
 

@@ -42,13 +42,14 @@
 <div id="app">
   <aside id="left">
     <h1>Citadel of Ricks — Schematic Viewer</h1>
-    <div class="sub">Interactive block-out of <code>citadel_schematic.json</code>. Units: U = principal-dome radius. Absolute scale UNKNOWN.</div>
+    <div class="sub">Interactive block-out of <code>citadel_schematic.json</code>. Units: U = central drum radius. Absolute scale UNKNOWN.</div>
     <h2>State</h2>
     <select id="state"></select>
     <h2>Views</h2>
     <div>
-      <button data-view="iso">Isometric</button><button data-view="top">Plan</button><button data-view="side">Side</button><button data-view="front">Front</button><button data-view="under">Underground</button>
+      <button data-view="iso">Isometric</button><button data-view="top">Plan</button><button data-view="side">Side</button><button data-view="front">Front</button><button data-view="under">Underground</button><button data-view="ref23">Match exterior #23</button>
     </div>
+    <label class="row"><input type="checkbox" id="helpers" checked> Show grid &amp; axes</label>
     <label class="row"><input type="checkbox" id="cut" > Cut away dome &amp; shell (see interior)</label>
     <h2>Geometry layers</h2>
     <div id="layers"></div>
@@ -119,6 +120,7 @@ document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>{
   if(v==='top'){orbit.theta=-Math.PI/2;orbit.phi=0.05;orbit.r=6.2;}
   if(v==='side'){orbit.theta=-Math.PI/2;orbit.phi=Math.PI/2;orbit.r=6.2;}
   if(v==='front'){orbit.theta=0;orbit.phi=Math.PI/2;orbit.r=6.2;}
+  if(v==='ref23'){orbit.theta=-1.05;orbit.phi=1.1;orbit.r=4.8;orbit.target.set(0,0,-0.35);}
   if(v==='under'){orbit.theta=Math.PI/4;orbit.phi=Math.PI*0.72;orbit.r=2.6;orbit.target.set(0,0,-0.7); document.getElementById('cut').checked=true; refreshVisibility();}
   applyCam();
 });
@@ -128,7 +130,7 @@ addEventListener('resize', resize);
 // ---------------------------------------------------------------- geometry builders (Z-up)
 function mat(n, extra){ const o = Object.assign({ color:KIND_COLOR[n.kind]||0x999999, transparent:true, opacity:PLACE_OPACITY[n.placement], roughness:0.7, metalness:0.1, side:THREE.DoubleSide }, extra||{}); return new THREE.MeshStandardMaterial(o); }
 function wire(n){ return new THREE.MeshBasicMaterial({ color:KIND_COLOR[n.kind]||0x999999, wireframe:true, transparent:true, opacity: n.placement==='PLACEHOLDER'?0.5:0.25 }); }
-function cap(r,hh,lo){ const Rs=(r*r+hh*hh)/(2*hh); const th=Math.acos((Rs-hh)/Rs); const g=new THREE.SphereGeometry(Rs,lo?24:64,lo?8:24,0,Math.PI*2,0,th); g.rotateX(Math.PI/2); g.translate(0,0,-(Rs-hh)); return g; }
+function cap(r,hh,lo){ const Rs=(r*r+hh*hh)/(2*hh); const th=Math.acos((Rs-hh)/Rs); const g=new THREE.SphereGeometry(Rs,lo?8:64,lo?3:24,0,Math.PI*2,0,th); g.rotateX(Math.PI/2); g.translate(0,0,-(Rs-hh)); return g; }
 function hemi(r,lo){ const g=new THREE.SphereGeometry(r,lo?20:48,lo?10:24,0,Math.PI*2,0,Math.PI/2); g.rotateX(Math.PI/2); return g; }
 function cyl(rt, rb, zt, zb){ const g=new THREE.CylinderGeometry(rt, rb, zt-zb, 48, 1, false); g.rotateX(Math.PI/2); g.translate(0,0,(zt+zb)/2); return g; }
 function box(sx,sy,sz){ const g=new THREE.BoxGeometry(sx,sy,sz); g.translate(0,0,sz/2); return g; }
@@ -142,14 +144,15 @@ function buildNode(n){
   switch(g.type){
     case 'hemisphere': { const isDome=n.kind==='dome'; const m=add(G, hemi(g.radius), isDome?mat(n,{opacity:0.12}):M, x,y,z); if(isDome) add(G, hemi(g.radius,true), new THREE.MeshBasicMaterial({color:KIND_COLOR.dome, wireframe:true, transparent:true, opacity:0.18}), x,y,z); if(g.body_depth) add(G, cyl(g.radius,g.radius*0.9,0,-g.body_depth), mat(n,{color:0x7a7f8a,opacity:0.6}), x,y,z); break; }
     case 'cap': { const isDome=n.kind==='dome'; add(G, cap(g.radius,g.height), isDome?mat(n,{opacity:0.14}):M, x,y,g.z_base); if(isDome) add(G, cap(g.radius,g.height,true), new THREE.MeshBasicMaterial({color:KIND_COLOR.dome, wireframe:true, transparent:true, opacity:0.2}), x,y,g.z_base); if(g.drum_bottom!==undefined) add(G, cyl(g.radius,g.radius*0.96,g.z_base,g.drum_bottom), mat(n,{color:0x9aa0aa,opacity:0.7}), x,y,0); break; }
-    case 'cylinder': { const isShell=n.kind==='shell'; add(G, cyl(g.radius_top,g.radius_bottom,g.z_top,g.z_bottom), isShell?mat(n,{opacity:0.35}):mat(n,{opacity:0.3}), x,y,0); if(!isShell) add(G, cyl(g.radius_top,g.radius_bottom,g.z_top,g.z_bottom), W, x,y,0); break; }
+    case 'cylinder': { if(n.id==='SHELL-LOWER-BODY'){ add(G, cyl(g.radius_top,g.radius_bottom,g.z_top,g.z_bottom), new THREE.MeshStandardMaterial({color:0x8af0ff, emissive:0x3fd0ff, emissiveIntensity:1.4, transparent:true, opacity:0.95}), x,y,0); break; }
+      const isShell=n.kind==='shell'; add(G, cyl(g.radius_top,g.radius_bottom,g.z_top,g.z_bottom), isShell?mat(n,{opacity:0.35}):mat(n,{opacity:0.3}), x,y,0); if(!isShell) add(G, cyl(g.radius_top,g.radius_bottom,g.z_top,g.z_bottom), W, x,y,0); break; }
     case 'disc': { add(G, new THREE.CircleGeometry(g.radius,64), M, x,y,(g.z!==undefined?g.z:z)+0.001); if(g.aperture_radius){ const [ax,ay]=g.aperture_offset||[0,0]; add(G, new THREE.RingGeometry(g.aperture_radius*0.9,g.aperture_radius*1.3,32), mat(n,{color:0xff5c5c,opacity:0.9}), x+ax,y+ay,(g.z!==undefined?g.z:z)-0.002); } break; }
     case 'ring': add(G, new THREE.TorusGeometry(g.radius, g.width/2, 8, 96), M, x,y,(g.z||0)); break;
     case 'radial_array': for(let i=0;i<g.count;i++){ const a=(g.az_start+360*i/g.count)*Math.PI/180; const len=g.r_outer-g.r_inner; const m=add(G, box(len,g.width,0.004), M, 0,0,g.z||0, a); m.position.set(Math.cos(a)*(g.r_inner+len/2), Math.sin(a)*(g.r_inner+len/2), g.z||0); } break;
     case 'sector': { const span=(g.az_end-g.az_start)*Math.PI/180; const geo=new THREE.RingGeometry(Math.max(g.r_inner,0.001), g.r_outer, 64, 1, g.az_start*Math.PI/180, span); add(G, geo, mat(n,{opacity:0.16}), 0,0,0.002); add(G, geo, W, 0,0,0.003); break; }
     case 'box': case 'room': case 'storefront': { add(G, box(...g.size), M, x,y,z, az); add(G, box(...g.size), W, x,y,z, az); break; }
     case 'point': add(G, new THREE.SphereGeometry(Math.max(g.radius,0.012),16,12), M, x,y,z); break;
-    case 'path': { const pts=g.points.map(p=>new THREE.Vector3(...p)); add(G, new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), 32, g.width/2, 8, false), M); break; }
+    case 'path': { const pts=g.points.map(p=>new THREE.Vector3(...p)); if(n.kind==='shell'){ for(let k=0;k<pts.length-1;k++){ const a=pts[k], b=pts[k+1]; const len=a.distanceTo(b); const m=add(G, new THREE.BoxGeometry(len, g.width, 0.035), M); m.position.copy(a).lerp(b,0.5); m.rotation.z=Math.atan2(b.y-a.y, b.x-a.x); const w=add(G, new THREE.BoxGeometry(len, g.width, 0.035), W); w.position.copy(m.position); w.rotation.z=m.rotation.z; } } else add(G, new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts), 32, g.width/2, 8, false), M); break; }
     case 'annular_volume': { const geo=new THREE.CylinderGeometry(g.r_outer,g.r_outer,g.z_max-g.z_min,64,1,true); geo.rotateX(Math.PI/2); geo.translate(0,0,(g.z_max+g.z_min)/2); add(G, geo, mat(n,{opacity:0.07})); const gi=new THREE.CylinderGeometry(g.r_inner,g.r_inner,g.z_max-g.z_min,48,1,true); gi.rotateX(Math.PI/2); gi.translate(0,0,(g.z_max+g.z_min)/2); add(G, gi, mat(n,{opacity:0.07})); break; }
     case 'cavern': { add(G, cyl(g.radius, g.radius*0.85, g.z_top, g.z_bottom), mat(n,{opacity:0.3}), x,y,0); add(G, cyl(g.radius, g.radius*0.85, g.z_top, g.z_bottom), W, x,y,0); break; }
     case 'compound': { add(G, new THREE.TorusGeometry(g.wall_radius, 0.006, 6, 64), M, x,y,z+g.wall_height/2); const wallGeo=new THREE.CylinderGeometry(g.wall_radius,g.wall_radius,g.wall_height,48,1,true); wallGeo.rotateX(Math.PI/2); wallGeo.translate(0,0,g.wall_height/2); add(G, wallGeo, mat(n,{opacity:0.3}), x,y,z); add(G, box(...g.building_size), M, x,y,z); break; }
@@ -185,6 +188,7 @@ function refreshVisibility(){
   const plOn=new Set([...document.querySelectorAll('[data-placement]:checked')].map(e=>e.dataset.placement));
   DB.nodes.forEach(n=>{ const G=groups[n.id]; if(!G) return; let v=layersOn.has(n.layer)&&plOn.has(n.placement)&&(st==='all'||n.states.includes(st)); if(cut&&(n.kind==='dome'||n.kind==='shell')&&n.id!=='SHELL-UNDERSIDE') v=false; G.visible=v; });
 }
+document.getElementById('helpers').addEventListener('change', e=>{ grid.visible=axes.visible=e.target.checked; });
 [stateSel, document.getElementById('cut'), ...document.querySelectorAll('[data-layer],[data-placement]')].forEach(e=>e.addEventListener('change', refreshVisibility));
 refreshVisibility();
 

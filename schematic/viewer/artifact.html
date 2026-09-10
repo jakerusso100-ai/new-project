@@ -1,8 +1,3 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Citadel Schematic Viewer</title>
 <style>
   :root { color-scheme: dark; --bg:#0b0e13; --panel:#121821; --line:#243040; --text:#dce3ec; --muted:#8a97a8; --accent:#5bc0eb; }
@@ -466,5 +461,3 @@ resize(); applyCam();
 (function(){ const q=new URLSearchParams(location.search); if(q.get('solo')==='1'){ document.getElementById('left').style.display='none'; document.getElementById('right').style.display='none'; const app=document.getElementById('app'); app.style.gridTemplateColumns='1fr'; app.style.gridTemplateRows='1fr'; app.style.height='100vh'; document.getElementById('view').style.height='100vh'; } if(q.get('nogrid')==='1'){ document.getElementById('helpers').checked=false; grid.visible=axes.visible=false; } setTimeout(()=>{ if(q.get('cut')==='1'){ document.getElementById('cut').checked=true; } const v=q.get('view'); const b=v&&document.querySelector(`[data-view=${v}]`); if(b) b.click(); else if(q.get('cut')==='1') refreshVisibility(); resize(); applyCam(); },50); })();
 (function loop(){ requestAnimationFrame(loop); if(canvas.width!==canvas.clientWidth*renderer.getPixelRatio()) resize(); renderer.render(scene,camera); })();
 </script>
-</body>
-</html>

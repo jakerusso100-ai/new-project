@@ -534,6 +534,12 @@ def build_viewer(mesh_path=None):
     with open(os.path.join(VIEWER_DIR, "index.html"), "w", encoding="utf-8") as f:
         f.write(html.replace("/*__MESH_B64__*/null", "null"))
     print("wrote viewer/index.html")
+    # artifact build: same page without the <!doctype>/<html>/<head>/<body> wrapper, for publishing
+    plain = html.replace("/*__MESH_B64__*/null", "null")
+    body = plain[plain.index("<title>"):plain.rindex("</body>")]
+    with open(os.path.join(VIEWER_DIR, "artifact.html"), "w", encoding="utf-8") as f:
+        f.write(body)
+    print("wrote viewer/artifact.html")
     if mesh_path:
         import base64
         b64 = base64.b64encode(open(mesh_path, "rb").read()).decode("ascii")

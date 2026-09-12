@@ -70,6 +70,10 @@ Sections at r = 1.05 / 1.2 / 1.35 / 1.5 / 1.65 R along the arm. Half-width in R 
 
 Underside at −0.108 R everywhere; top at +0.15 R at the root falling to +0.12 R mid-arm. The section widens again to 0.33 R where it merges into the pod (r ≥ 1.65). Stored as `arm_section` in the JSON; the arm interior levels are sized from it.
 
+## Arm shoulder shelf (window recess) and fin faces
+
+Top-surface scan z(side) at r 1.30-1.70 on all three arms (identical to 0.001 R, so the arms are true copies): from **r ~1.45 a flat shelf appears on both shoulders at z = +0.033 R**, |side| 0.21-0.24 at r 1.45 widening to 0.18-0.26+ by r 1.65-1.70, and runs into the pod. Mid-arm (r <= 1.40) the shoulder is a smooth slope with no ledge. This shelf is where the Printables render paints the teal panels, and where frame #23 shows the lit strips near the pods: it is the window recess. The fin faces (fin at az 72 deg, depths 0.5-1.5 R) are smooth tapers with no step; the dark fin panels in the render are paint only.
+
 ## STL vs. silhouette fit vs. schematic
 
 | Element | Silhouette fit (frame #23) | STL | Adopted (v2.1) |

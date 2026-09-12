@@ -60,6 +60,7 @@ Each image should also get a row in `reference_images/CAMERA_MATCH.md` (see temp
 | `LM-PLAZA-DOME-BUILDING` Domed building at the plaza edge | PROVISIONAL | - [ ] S05E10 plaza wide<br>- [ ] S05E10 plaza reverse | reference_images/CITADEL_IMAGE_GALLERY.md#14 (S05E10 plaza destruction wide)<br>reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground)<br>reference_images/CITADEL_IMAGE_GALLERY.md#12 (S05E10 Presidential dining room) |
 | `LM-COUNCIL-HALL` Council Hall (Council of Ricks) | PROVISIONAL | - [ ] S01E10 Council chamber interior<br>- [ ] S01E10 Council approach<br>- [ ] S03E01 Council/security areas | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#24 (S01E10 civic building entrance) |
 | `LM-COUNCIL-CHAMBER` Council chamber (interior) | PROVISIONAL | - [ ] S01E10 Council chamber wide<br>- [ ] S01E10 Council chamber reverse | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#26 (S03E01 Council hall)<br>reference_images/CITADEL_IMAGE_GALLERY.md#06 (S01E10 Council chamber) |
+| `LM-RICK-LASER-SCISSORS` Rick, Laser, Scissors room (Council) | PLACEHOLDER | - [ ] S03E01 Council allocation scene | _none yet_ |
 | `LM-SHADOW-COUNCIL-HALL` Shadow Council Hall | PLACEHOLDER | - [ ] S03E07 Shadow Council interior | _none yet_ |
 | `LM-COURTHOUSE` Courthouse / judicial facility | PLACEHOLDER | - [ ] any courtroom frame | _none yet_ |
 | `LM-MORTY-AGENCY` Morty Agency | PLACEHOLDER | - [ ] S07E05 Agency exterior<br>- [ ] S07E05 reception/database interior | _none yet_ |
@@ -102,4 +103,4 @@ Each image should also get a row in `reference_images/CAMERA_MATCH.md` (see temp
 | `RUIN-BEACON` Summer's beacon on the ruins | PLACEHOLDER | - [ ] S06E01 beacon placement | _none yet_ |
 | `NEW-CITADEL` New Citadel construction (Boss Hog Rick) | PROVISIONAL | - [ ] S08E03 New Citadel exterior<br>- [ ] S08E03 construction/lab interiors<br>- [ ] S08E03 destruction | reference_images/CITADEL_IMAGE_GALLERY.md#21 (S08E03 Boss Hog throne room) |
 
-**94 images logged against 161 required shots.**
+**94 images logged against 162 required shots.**

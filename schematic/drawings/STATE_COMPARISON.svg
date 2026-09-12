@@ -46,12 +46,13 @@
 <path d="M 294.4,271.5 A 57.0 57.0 0 0 0 245.0,243.0 L 245.0,264.0 A 36.0 36.0 0 0 1 276.2,282.0 Z" stroke="#8fd18f" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#8fd18f" fill-opacity="0.12"/>
 <path d="M 245.0,241.2 A 58.8 58.8 0 0 0 189.7,279.9 L 211.2,287.7 A 36.0 36.0 0 0 1 245.0,264.0 Z" stroke="#8fd18f" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#8fd18f" fill-opacity="0.12"/>
 <circle cx="245.0" cy="300.0" r="2.1" stroke="#ff8a65" stroke-width="1.8" stroke-opacity="0.9" fill="#ff8a65" fill-opacity="0.12" />
-<rect x="228.2" y="293.4" width="9.6" height="6.0" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="254.0" y="291.6" width="6.0" height="4.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="238.4" y="312.0" width="7.2" height="4.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="241.4" y="249.0" width="13.2" height="8.4" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-120.0 248.0 253.2)"/>
-<rect x="229.5" y="247.6" width="6.0" height="4.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="230.0" y="294.0" width="6.0" height="4.8" stroke="#ffb199" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ffb199" fill-opacity="0.12"/>
+<rect x="229.6" y="290.7" width="4.8" height="7.8" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-157.5 232.0 294.6)"/>
+<rect x="255.9" y="291.6" width="4.2" height="6.0" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-22.5 258.0 294.6)"/>
+<rect x="237.5" y="309.4" width="4.2" height="7.2" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-247.5 239.6 313.0)"/>
+<rect x="225.1" y="250.0" width="7.8" height="12.0" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-110.0 229.0 256.0)"/>
+<rect x="237.9" y="254.7" width="3.6" height="4.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-97.0 239.7 257.1)"/>
+<rect x="229.0" y="292.2" width="6.0" height="4.8" stroke="#ffb199" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ffb199" fill-opacity="0.12" transform="rotate(-157.5 232.0 294.6)"/>
+<rect x="231.1" y="293.7" width="1.8" height="1.8" stroke="#ffb199" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ffb199" fill-opacity="0.12" transform="rotate(-157.5 232.0 294.6)"/>
 <rect x="211.4" y="349.6" width="7.2" height="4.8" stroke="#ffd166" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ffd166" fill-opacity="0.12" transform="rotate(-240.0 215.0 352.0)"/>
 <rect x="460" y="90" width="420" height="390" fill="none" stroke="#2a3644"/>
 <text x="470" y="110" font-size="13" fill="#fff" font-weight="bold">DS-02 Post-Rickshank damage and repair</text>
@@ -99,12 +100,13 @@
 <path d="M 675.0,241.2 A 58.8 58.8 0 0 0 619.7,279.9 L 641.2,287.7 A 36.0 36.0 0 0 1 675.0,264.0 Z" stroke="#8fd18f" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#8fd18f" fill-opacity="0.12"/>
 <path d="M 643.8,282.0 A 36.0 36.0 0 0 0 640.2,309.3 L 654.7,305.4 A 21.0 21.0 0 0 1 656.8,289.5 Z" stroke="#8fd18f" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#8fd18f" fill-opacity="0.12"/>
 <circle cx="675.0" cy="300.0" r="2.1" stroke="#ff8a65" stroke-width="1.8" stroke-opacity="0.9" fill="#ff8a65" fill-opacity="0.12" />
-<rect x="658.2" y="293.4" width="9.6" height="6.0" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="684.0" y="291.6" width="6.0" height="4.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="668.4" y="312.0" width="7.2" height="4.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="671.4" y="249.0" width="13.2" height="8.4" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-120.0 678.0 253.2)"/>
-<rect x="659.5" y="247.6" width="6.0" height="4.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="660.0" y="294.0" width="6.0" height="4.8" stroke="#ffb199" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ffb199" fill-opacity="0.12"/>
+<rect x="659.6" y="290.7" width="4.8" height="7.8" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-157.5 662.0 294.6)"/>
+<rect x="685.9" y="291.6" width="4.2" height="6.0" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-22.5 688.0 294.6)"/>
+<rect x="667.5" y="309.4" width="4.2" height="7.2" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-247.5 669.6 313.0)"/>
+<rect x="655.1" y="250.0" width="7.8" height="12.0" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-110.0 659.0 256.0)"/>
+<rect x="667.9" y="254.7" width="3.6" height="4.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-97.0 669.7 257.1)"/>
+<rect x="659.0" y="292.2" width="6.0" height="4.8" stroke="#ffb199" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ffb199" fill-opacity="0.12" transform="rotate(-157.5 662.0 294.6)"/>
+<rect x="661.1" y="293.7" width="1.8" height="1.8" stroke="#ffb199" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ffb199" fill-opacity="0.12" transform="rotate(-157.5 662.0 294.6)"/>
 <rect x="641.4" y="349.6" width="7.2" height="4.8" stroke="#ffd166" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ffd166" fill-opacity="0.12" transform="rotate(-240.0 645.0 352.0)"/>
 <rect x="890" y="90" width="420" height="390" fill="none" stroke="#2a3644"/>
 <text x="900" y="110" font-size="13" fill="#fff" font-weight="bold">DS-03 Rebuilt / Ricklantis-era Citadel</text>
@@ -162,30 +164,30 @@
 <circle cx="1105.0" cy="300.0" r="18.0" stroke="#c98bff" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="none" />
 <circle cx="1105.0" cy="300.0" r="36.0" stroke="#c98bff" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="none" />
 <circle cx="1105.0" cy="300.0" r="2.1" stroke="#ff8a65" stroke-width="1.8" stroke-opacity="0.9" fill="#ff8a65" fill-opacity="0.12" />
-<circle cx="1109.8" cy="294.0" r="7.2" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" />
-<rect x="1115.2" y="305.4" width="8.4" height="8.4" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="1090.0" y="304.2" width="6.0" height="6.0" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="1114.0" y="291.6" width="6.0" height="4.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="1112.8" y="307.2" width="6.0" height="4.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="1079.2" y="313.8" width="8.4" height="6.0" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="1073.8" y="330.0" width="8.4" height="6.0" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="1101.4" y="249.0" width="13.2" height="8.4" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-120.0 1108.0 253.2)"/>
-<circle cx="1084.0" cy="250.8" r="4.2" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="none" />
-<rect x="1082.2" y="249.0" width="3.6" height="3.6" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="1089.5" y="247.6" width="6.0" height="4.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
+<circle cx="1110.4" cy="287.0" r="2.4" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" />
+<rect x="1089.6" y="303.0" width="4.8" height="4.8" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-202.5 1092.0 305.4)"/>
+<rect x="1097.5" y="310.0" width="4.2" height="6.0" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-247.5 1099.6 313.0)"/>
+<rect x="1115.9" y="291.6" width="4.2" height="6.0" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-22.5 1118.0 294.6)"/>
+<rect x="1108.3" y="310.0" width="4.2" height="6.0" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-292.5 1110.4 313.0)"/>
+<rect x="1078.4" y="309.9" width="5.4" height="7.8" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-210.0 1081.1 313.8)"/>
+<rect x="1081.3" y="332.5" width="5.4" height="7.8" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-240.0 1084.0 336.4)"/>
+<rect x="1085.1" y="250.0" width="7.8" height="12.0" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-110.0 1089.0 256.0)"/>
+<circle cx="1079.2" cy="263.1" r="4.2" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="none" />
+<rect x="1077.4" y="261.3" width="3.6" height="3.6" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>
+<rect x="1097.9" y="254.7" width="3.6" height="4.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-97.0 1099.7 257.1)"/>
 <rect x="1129.3" y="287.4" width="1.8" height="1.2" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
 <rect x="1133.2" y="305.7" width="3.6" height="3.0" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
 <rect x="1076.2" y="289.2" width="3.6" height="3.6" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="1066.9" y="327.9" width="2.4" height="1.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="1063.1" y="334.5" width="2.4" height="1.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="1074.9" y="342.4" width="1.8" height="1.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
+<rect x="1066.9" y="327.9" width="2.4" height="1.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-218.0 1068.1 328.8)"/>
+<rect x="1066.7" y="331.4" width="2.4" height="1.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-221.0 1067.9 332.3)"/>
+<rect x="1075.9" y="340.9" width="1.8" height="1.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-236.0 1076.8 341.8)"/>
 <rect x="1064.5" y="320.7" width="1.8" height="1.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
 <rect x="1085.8" y="324.0" width="2.4" height="2.4" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
 <rect x="1122.1" y="275.4" width="1.8" height="1.2" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="1132.9" y="317.4" width="1.8" height="1.2" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="1081.0" y="315.6" width="4.8" height="2.4" stroke="#ffb199" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ffb199" fill-opacity="0.12"/>
-<circle cx="1108.0" cy="249.6" r="1.8" stroke="#ffb199" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ffb199" fill-opacity="0.12" />
-<rect x="1070.8" y="340.2" width="1.2" height="1.2" stroke="#ffb199" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ffb199" fill-opacity="0.12"/>
+<rect x="1131.6" y="316.6" width="1.8" height="1.2" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(32.0 1132.5 317.2)"/>
+<rect x="1078.7" y="312.6" width="4.8" height="2.4" stroke="#ffb199" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ffb199" fill-opacity="0.12" transform="rotate(-210.0 1081.1 313.8)"/>
+<circle cx="1084.9" cy="257.8" r="1.8" stroke="#ffb199" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ffb199" fill-opacity="0.12" />
+<rect x="1073.4" y="339.1" width="1.2" height="1.2" stroke="#ffb199" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ffb199" fill-opacity="0.12" transform="rotate(-232.0 1074.0 339.7)"/>
 <rect x="1071.4" y="349.6" width="7.2" height="4.8" stroke="#ffd166" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ffd166" fill-opacity="0.12" transform="rotate(-240.0 1075.0 352.0)"/>
 <rect x="1320" y="90" width="420" height="390" fill="none" stroke="#2a3644"/>
 <text x="1330" y="110" font-size="13" fill="#fff" font-weight="bold">DS-04 Late / President Morty era</text>
@@ -236,23 +238,23 @@
 <circle cx="1535.0" cy="300.0" r="18.0" stroke="#c98bff" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="none" />
 <circle cx="1535.0" cy="300.0" r="36.0" stroke="#c98bff" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="none" />
 <circle cx="1535.0" cy="300.0" r="2.1" stroke="#ff8a65" stroke-width="1.8" stroke-opacity="0.9" fill="#ff8a65" fill-opacity="0.12" />
-<circle cx="1539.8" cy="294.0" r="7.2" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" />
-<rect x="1531.4" y="285.6" width="7.2" height="6.0" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="1545.2" y="305.4" width="8.4" height="8.4" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="1520.0" y="304.2" width="6.0" height="6.0" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="1544.0" y="291.6" width="6.0" height="4.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="1542.8" y="307.2" width="6.0" height="4.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="1509.2" y="313.8" width="8.4" height="6.0" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="1503.8" y="330.0" width="8.4" height="6.0" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="1531.4" y="249.0" width="13.2" height="8.4" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-120.0 1538.0 253.2)"/>
-<circle cx="1514.0" cy="250.8" r="4.2" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="none" />
-<rect x="1512.2" y="249.0" width="3.6" height="3.6" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="1519.5" y="247.6" width="6.0" height="4.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="1504.9" y="342.4" width="1.8" height="1.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
+<circle cx="1540.4" cy="287.0" r="2.4" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" />
+<rect x="1527.2" y="283.4" width="4.8" height="7.2" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-112.5 1529.6 287.0)"/>
+<rect x="1519.6" y="303.0" width="4.8" height="4.8" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-202.5 1522.0 305.4)"/>
+<rect x="1527.5" y="310.0" width="4.2" height="6.0" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-247.5 1529.6 313.0)"/>
+<rect x="1545.9" y="291.6" width="4.2" height="6.0" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-22.5 1548.0 294.6)"/>
+<rect x="1538.3" y="310.0" width="4.2" height="6.0" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-292.5 1540.4 313.0)"/>
+<rect x="1508.4" y="309.9" width="5.4" height="7.8" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-210.0 1511.1 313.8)"/>
+<rect x="1511.3" y="332.5" width="5.4" height="7.8" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-240.0 1514.0 336.4)"/>
+<rect x="1515.1" y="250.0" width="7.8" height="12.0" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-110.0 1519.0 256.0)"/>
+<circle cx="1509.2" cy="263.1" r="4.2" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="none" />
+<rect x="1507.4" y="261.3" width="3.6" height="3.6" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>
+<rect x="1527.9" y="254.7" width="3.6" height="4.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-97.0 1529.7 257.1)"/>
+<rect x="1505.9" y="340.9" width="1.8" height="1.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-236.0 1506.8 341.8)"/>
 <rect x="1494.5" y="320.7" width="1.8" height="1.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
 <rect x="1515.8" y="324.0" width="2.4" height="2.4" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
 <rect x="1552.1" y="275.4" width="1.8" height="1.2" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="1562.9" y="317.4" width="1.8" height="1.2" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
+<rect x="1561.6" y="316.6" width="1.8" height="1.2" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(32.0 1562.5 317.2)"/>
 <rect x="1524.8" y="329.1" width="2.4" height="1.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
 <circle cx="1539.8" cy="297.0" r="13.2" stroke="#ff5c5c" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff5c5c" fill-opacity="0.12" />
 <circle cx="1535.0" cy="300.0" r="16.8" stroke="#ff5c5c" stroke-width="1.8" stroke-opacity="0.9" fill="#ff5c5c" fill-opacity="0.12" />
@@ -315,10 +317,10 @@
 <circle cx="245.0" cy="700.0" r="18.0" stroke="#c98bff" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="none" />
 <circle cx="245.0" cy="700.0" r="36.0" stroke="#c98bff" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="none" />
 <circle cx="245.0" cy="700.0" r="2.1" stroke="#ff8a65" stroke-width="1.8" stroke-opacity="0.9" fill="#ff8a65" fill-opacity="0.12" />
-<circle cx="249.8" cy="694.0" r="7.2" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" />
-<rect x="241.4" y="685.6" width="7.2" height="6.0" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="255.2" y="705.4" width="8.4" height="8.4" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>
-<rect x="241.4" y="649.0" width="13.2" height="8.4" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-120.0 248.0 653.2)"/>
+<circle cx="250.4" cy="687.0" r="2.4" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" />
+<rect x="237.2" y="683.4" width="4.8" height="7.2" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-112.5 239.6 687.0)"/>
+<rect x="229.6" y="703.0" width="4.8" height="4.8" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-202.5 232.0 705.4)"/>
+<rect x="225.1" y="650.0" width="7.8" height="12.0" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-110.0 229.0 656.0)"/>
 <circle cx="249.8" cy="697.0" r="13.2" stroke="#ff5c5c" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff5c5c" fill-opacity="0.12" />
 <circle cx="245.0" cy="700.0" r="16.8" stroke="#ff5c5c" stroke-width="1.8" stroke-opacity="0.9" fill="#ff5c5c" fill-opacity="0.12" />
 <circle cx="255.2" cy="700.0" r="3.0" stroke="#ff5c5c" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff5c5c" fill-opacity="0.12" />
@@ -358,6 +360,6 @@
 <text x="1342" y="904" font-size="16" fill="#fff" font-family="ui-monospace, Consolas, monospace" font-weight="bold">STATE_COMPARISON</text>
 <text x="1342" y="924" font-size="12" fill="#ccc" font-family="ui-monospace, Consolas, monospace">State comparison DS-01 .. DS-08</text>
 <text x="1342" y="942" font-size="11" fill="#aaa" font-family="ui-monospace, Consolas, monospace">State: all   Layers: L0,L1,L3,L4,L7</text>
-<text x="1342" y="958" font-size="11" fill="#aaa" font-family="ui-monospace, Consolas, monospace">Units: U = DOME-P radius (absolute scale UNKNOWN)   Built 2026-09-10</text>
+<text x="1342" y="958" font-size="11" fill="#aaa" font-family="ui-monospace, Consolas, monospace">Units: U = DOME-P radius (absolute scale UNKNOWN)   Built 2026-09-12</text>
 <text x="1342" y="972" font-size="10" fill="#888" font-family="ui-monospace, Consolas, monospace">Citadel of Ricks reconstruction — generated from citadel_schematic.json</text>
 </svg>

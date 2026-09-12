@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.3.3",
+  "schema_version": "2.4.0",
   "title": "Citadel of Ricks — Master Schematic Database",
   "generated_from": "Evidence registers in this repository (see SCHEMATIC.md for derivation rules)",
   "units": {
@@ -844,7 +844,7 @@
           "cyan light strips along the edges (#23)",
           "level with the equatorial plane",
           "interior: three enclosed levels inside the 0.2 R section (upper gallery +0.05, through-concourse 0, service deck −0.05); exterior surface unchanged",
-          "row of lit window panels along each flank at deck level (#23); no other glazing on the arm"
+          "lit window panels on the STL shoulder shelf (z +0.033, r >= 1.45) at the pod end of each arm"
         ],
         "interior_levels": [
           {
@@ -950,7 +950,7 @@
           "cyan light strips along the edges (#23)",
           "level with the equatorial plane",
           "interior: three enclosed levels inside the 0.2 R section (upper gallery +0.05, through-concourse 0, service deck −0.05); exterior surface unchanged",
-          "row of lit window panels along each flank at deck level (#23); no other glazing on the arm"
+          "lit window panels on the STL shoulder shelf (z +0.033, r >= 1.45) at the pod end of each arm"
         ],
         "interior_levels": [
           {
@@ -1056,7 +1056,7 @@
           "cyan light strips along the edges (#23)",
           "level with the equatorial plane",
           "interior: three enclosed levels inside the 0.2 R section (upper gallery +0.05, through-concourse 0, service deck −0.05); exterior surface unchanged",
-          "row of lit window panels along each flank at deck level (#23); no other glazing on the arm"
+          "lit window panels on the STL shoulder shelf (z +0.033, r >= 1.45) at the pod end of each arm"
         ],
         "interior_levels": [
           {
@@ -1773,7 +1773,7 @@
       "geometry": {
         "type": "radial_array",
         "count": 8,
-        "r_inner": 0.12,
+        "r_inner": 0.18,
         "r_outer": 0.98,
         "width": 0.03,
         "z": 0.0,
@@ -1971,7 +1971,7 @@
       ],
       "geometry": {
         "type": "ring",
-        "radius": 0.22,
+        "radius": 0.19,
         "width": 0.015,
         "z": 0.06,
         "features": [
@@ -2071,8 +2071,8 @@
         "radius": 0.006
       },
       "position": [
-        0.16,
-        -0.08,
+        0.155,
+        -0.06,
         0.0
       ],
       "evidence": [
@@ -2684,8 +2684,8 @@
         "reference_images/CITADEL_IMAGE_GALLERY.md#14 (S05E10 plaza destruction wide)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground)"
       ],
-      "height_limit_U": 0.271,
-      "height_limit_m": 541
+      "height_limit_U": 0.27,
+      "height_limit_m": 540
     },
     {
       "id": "CIRC-CORE-WALKWAYS",
@@ -2703,7 +2703,7 @@
       ],
       "geometry": {
         "type": "ring",
-        "radius": 0.2,
+        "radius": 0.185,
         "width": 0.02,
         "z": 0.12
       },
@@ -2750,7 +2750,7 @@
       ],
       "geometry": {
         "type": "terrain_patch",
-        "radius": 0.06,
+        "radius": 0.04,
         "features": [
           "pond/pool",
           "boulders",
@@ -2758,8 +2758,8 @@
         ]
       },
       "position": [
-        -0.11,
-        0.04,
+        -0.1,
+        0.03,
         0
       ],
       "parent": "LM-CENTRAL-PLAZA",
@@ -2800,9 +2800,9 @@
       ],
       "geometry": {
         "type": "cylinder",
-        "radius_top": 0.02,
-        "radius_bottom": 0.12,
-        "z_top": 0.26,
+        "radius_top": 0.01,
+        "radius_bottom": 0.04,
+        "z_top": 0.253,
         "z_bottom": 0.0,
         "features": [
           "several tapering spires",
@@ -2811,15 +2811,15 @@
         ]
       },
       "position": [
-        0.08,
-        0.1,
+        0.0899,
+        0.2171,
         0
       ],
       "parent": "DIST-CIVIC-CORE",
       "evidence": [
         "reference_images/CITADEL_IMAGE_GALLERY.md#02 (S03E07 streetscape)"
       ],
-      "rationale": "The S03E07 streetscape (gallery #02) has a cluster of very tall spires on the vanishing point behind lower blocks; the tallest masses are therefore central, supporting the core-to-rim height gradient. Placed in the civic core; exact position UNKNOWN.",
+      "rationale": "The S03E07 streetscape (gallery #02) has a cluster of very tall spires on the vanishing point behind lower blocks; the tallest masses are therefore central, supporting the core-to-rim height gradient. Placed in the civic core; exact position UNKNOWN. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).",
       "unknowns": [
         "spire count",
         "heights vs dome",
@@ -2832,8 +2832,9 @@
       "reference_images": [
         "reference_images/CITADEL_IMAGE_GALLERY.md#02 (S03E07 streetscape)"
       ],
-      "height_limit_U": 0.267,
-      "height_limit_m": 533
+      "height_limit_U": 0.253,
+      "height_limit_m": 505,
+      "azimuth": 67.5
     },
     {
       "id": "CIRC-ELEVATED-TUBE",
@@ -2913,8 +2914,8 @@
       "geometry": {
         "type": "box",
         "size": [
+          0.08,
           0.12,
-          0.1,
           0.2
         ],
         "features": [
@@ -2924,15 +2925,15 @@
         ]
       },
       "position": [
-        0.0,
-        0.19,
-        0.0
+        -0.0899,
+        0.2171,
+        0
       ],
       "evidence": [
         "reference_images/CITADEL_IMAGE_GALLERY.md#12 (S05E10 Presidential dining room)",
         "EPISODE_EVIDENCE_RICKMURAI_JACK.md (Rick and Morty exit it during the collapse)"
       ],
-      "rationale": "Exited into the collapse sequence that also shows the plaza; placed on the plaza edge. Tallest civic mass by convention. Gallery #12 (dining room) shows a circular panoramic glazed room high above the skyline with spires and a domed building visible below, consistent with a tall building whose top level is a round glazed chamber.",
+      "rationale": "Exited into the collapse sequence that also shows the plaza; placed on the plaza edge. Tallest civic mass by convention. Gallery #12 (dining room) shows a circular panoramic glazed room high above the skyline with spires and a domed building visible below, consistent with a tall building whose top level is a round glazed chamber. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).",
       "unknowns": [
         "footprint",
         "height",
@@ -2946,8 +2947,9 @@
       "reference_images": [
         "reference_images/CITADEL_IMAGE_GALLERY.md#12 (S05E10 Presidential dining room)"
       ],
-      "height_limit_U": 0.257,
-      "height_limit_m": 514
+      "height_limit_U": 0.247,
+      "height_limit_m": 494,
+      "azimuth": 112.5
     },
     {
       "id": "LM-PLAZA-DOME-BUILDING",
@@ -2968,8 +2970,8 @@
       "geometry": {
         "type": "box",
         "size": [
-          0.14,
-          0.14,
+          0.08,
+          0.08,
           0.1
         ],
         "features": [
@@ -2979,8 +2981,8 @@
         ]
       },
       "position": [
-        0.24,
-        -0.16,
+        -0.2171,
+        -0.0899,
         0
       ],
       "parent": "DIST-CIVIC-CORE",
@@ -2989,7 +2991,7 @@
         "reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#12 (S05E10 Presidential dining room)"
       ],
-      "rationale": "A large pale domed building with an orange roof stands at the plaza edge in the S05E10 collapse frames and a similar dome is visible from the Presidential dining room (#12). Side of the plaza is camera-relative, so the azimuth is placeholder.",
+      "rationale": "A large pale domed building with an orange roof stands at the plaza edge in the S05E10 collapse frames and a similar dome is visible from the Presidential dining room (#12). Side of the plaza is camera-relative, so the azimuth is placeholder. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).",
       "unknowns": [
         "function",
         "exact position",
@@ -3004,8 +3006,9 @@
         "reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#12 (S05E10 Presidential dining room)"
       ],
-      "height_limit_U": 0.24,
-      "height_limit_m": 480
+      "height_limit_U": 0.25,
+      "height_limit_m": 499,
+      "azimuth": 202.5
     },
     {
       "id": "LM-COUNCIL-HALL",
@@ -3025,8 +3028,8 @@
       "geometry": {
         "type": "box",
         "size": [
-          0.16,
-          0.1,
+          0.08,
+          0.13,
           0.14
         ],
         "features": [
@@ -3038,9 +3041,9 @@
         ]
       },
       "position": [
-        -0.2,
-        0.06,
-        0.0
+        -0.2171,
+        0.0899,
+        0
       ],
       "evidence": [
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#24 (S01E10 civic building entrance)",
@@ -3048,7 +3051,7 @@
         "LOCATION_REGISTER.md (Council Hall)",
         "EVIDENCE_MATRIX.md E-008"
       ],
-      "rationale": "Council chamber with stage/seating is direct (A). Its exterior and its position relative to the later Presidential Building are UNKNOWN. Placed in the civic core. States end at DS-02 because the Council is destroyed in Rickshank; whether the building persists is UNKNOWN. Gallery #24 (S01E10) shows the civic building the arriving Ricks face: a broad multi-storey glazed façade with three large emblem banners, a grand stair, a domed turret and tall spires behind. Identified as the Council building by the Council-era emblem; position still not shown.",
+      "rationale": "Council chamber with stage/seating is direct (A). Its exterior and its position relative to the later Presidential Building are UNKNOWN. Placed in the civic core. States end at DS-02 because the Council is destroyed in Rickshank; whether the building persists is UNKNOWN. Gallery #24 (S01E10) shows the civic building the arriving Ricks face: a broad multi-storey glazed façade with three large emblem banners, a grand stair, a domed turret and tall spires behind. Identified as the Council building by the Council-era emblem; position still not shown. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).",
       "unknowns": [
         "exterior massing",
         "floor count",
@@ -3063,8 +3066,9 @@
       "reference_images": [
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#24 (S01E10 civic building entrance)"
       ],
-      "height_limit_U": 0.251,
-      "height_limit_m": 502
+      "height_limit_U": 0.247,
+      "height_limit_m": 493,
+      "azimuth": 157.5
     },
     {
       "id": "LM-COUNCIL-CHAMBER",
@@ -3098,9 +3102,9 @@
         ]
       },
       "position": [
-        -0.2,
-        0.06,
-        0.0
+        -0.2171,
+        0.0899,
+        0
       ],
       "evidence": [
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#26 (S03E01 Council hall)",
@@ -3121,8 +3125,56 @@
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#26 (S03E01 Council hall)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#06 (S01E10 Council chamber)"
       ],
-      "height_limit_U": 0.256,
-      "height_limit_m": 511
+      "height_limit_U": 0.249,
+      "height_limit_m": 497,
+      "azimuth": 157.5
+    },
+    {
+      "id": "LM-RICK-LASER-SCISSORS",
+      "name": "Rick, Laser, Scissors room (Council)",
+      "kind": "interior",
+      "layer": "L4",
+      "band": [
+        "V0"
+      ],
+      "existence": "A",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-01",
+        "DS-02"
+      ],
+      "parent": "LM-COUNCIL-HALL",
+      "geometry": {
+        "type": "room",
+        "size": [
+          0.03,
+          0.03,
+          0.02
+        ],
+        "features": [
+          "game the Council uses to decide Morty allocation (S03E01)"
+        ]
+      },
+      "position": [
+        -0.2171,
+        0.0899,
+        0
+      ],
+      "azimuth": 157.5,
+      "evidence": [
+        "LOCATION_REGISTER.md (Rick, Laser, Scissors: Council uses it to decide Morty allocation; Rickshank)"
+      ],
+      "rationale": "Named Council activity from S03E01. Modelled as a room inside the Council Hall because the Council performs it; no frame places it, so PLACEHOLDER.",
+      "unknowns": [
+        "whether it has its own building",
+        "room size"
+      ],
+      "required_shots": [
+        "S03E01 Council allocation scene"
+      ],
+      "reference_images": [],
+      "height_limit_U": 0.255,
+      "height_limit_m": 510
     },
     {
       "id": "LM-SHADOW-COUNCIL-HALL",
@@ -3142,21 +3194,21 @@
       "geometry": {
         "type": "box",
         "size": [
-          0.1,
+          0.07,
           0.1,
           0.1
         ]
       },
       "position": [
-        -0.2,
-        -0.12,
-        0.0
+        -0.0899,
+        -0.2171,
+        0
       ],
       "evidence": [
         "RICKLANTIS_VISUAL_EVIDENCE.md 16",
         "CONTRADICTION_LOG.md C-004"
       ],
-      "rationale": "Dedicated interior with designated seats (A). Not proven to be the old Council Hall; kept as a separate node in the civic core.",
+      "rationale": "Dedicated interior with designated seats (A). Not proven to be the old Council Hall; kept as a separate node in the civic core. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).",
       "unknowns": [
         "exterior",
         "identity with LM-COUNCIL-HALL"
@@ -3165,8 +3217,9 @@
         "S03E07 Shadow Council interior"
       ],
       "reference_images": [],
-      "height_limit_U": 0.252,
-      "height_limit_m": 503
+      "height_limit_U": 0.249,
+      "height_limit_m": 498,
+      "azimuth": 247.5
     },
     {
       "id": "LM-COURTHOUSE",
@@ -3188,22 +3241,22 @@
       "geometry": {
         "type": "box",
         "size": [
+          0.07,
           0.1,
-          0.08,
           0.1
         ]
       },
       "position": [
-        0.2,
-        0.1,
-        0.0
+        0.2171,
+        0.0899,
+        0
       ],
       "evidence": [
         "CIVIC_SYSTEMS.md (courts/law)",
         "LOCATION_REGISTER.md",
         "CONTRADICTION_LOG.md C-004"
       ],
-      "rationale": "Judicial function exists; no building shown. Civic-core slot.",
+      "rationale": "Judicial function exists; no building shown. Civic-core slot. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).",
       "unknowns": [
         "everything physical"
       ],
@@ -3211,8 +3264,9 @@
         "any courtroom frame"
       ],
       "reference_images": [],
-      "height_limit_U": 0.253,
-      "height_limit_m": 506
+      "height_limit_U": 0.249,
+      "height_limit_m": 498,
+      "azimuth": 22.5
     },
     {
       "id": "LM-MORTY-AGENCY",
@@ -3232,8 +3286,8 @@
       "geometry": {
         "type": "box",
         "size": [
+          0.07,
           0.1,
-          0.08,
           0.1
         ],
         "features": [
@@ -3243,15 +3297,15 @@
         ]
       },
       "position": [
-        0.18,
-        -0.16,
-        0.0
+        0.0899,
+        -0.2171,
+        0
       ],
       "evidence": [
         "EPISODE_EVIDENCE_UNMORTRICKEN.md",
         "DIALOGUE_ARCHITECTURE_CROSSREF.md D-012, D-013"
       ],
-      "rationale": "Administrative facility with controlled access (A/B). Placed in the civic core as an administrative function; adjacency to anything is explicitly NOT established.",
+      "rationale": "Administrative facility with controlled access (A/B). Placed in the civic core as an administrative function; adjacency to anything is explicitly NOT established. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).",
       "unknowns": [
         "footprint",
         "district",
@@ -3262,8 +3316,9 @@
         "S07E05 reception/database interior"
       ],
       "reference_images": [],
-      "height_limit_U": 0.251,
-      "height_limit_m": 501
+      "height_limit_U": 0.249,
+      "height_limit_m": 498,
+      "azimuth": 292.5
     },
     {
       "id": "LM-MILITIA-HQ",
@@ -3283,22 +3338,22 @@
       "geometry": {
         "type": "box",
         "size": [
+          0.07,
           0.12,
-          0.08,
           0.08
         ]
       },
       "position": [
-        -0.05,
-        -0.24,
-        0.0
+        -0.0899,
+        -0.2171,
+        0
       ],
       "evidence": [
         "reference_images/CITADEL_IMAGE_GALLERY.md#20 (S01E10 security corridor)",
         "CITADEL_POLICE.md (Council era militia, SEAL Team Ricks)",
         "LOCATION_REGISTER.md"
       ],
-      "rationale": "Council-era security force exists; the facility is inferred. Near the civic core for government access. Gallery #20 shows armed Ricks in a glazed corridor with planting, so security circulation shares the civic core's glazed, vegetated language.",
+      "rationale": "Council-era security force exists; the facility is inferred. Near the civic core for government access. Gallery #20 shows armed Ricks in a glazed corridor with planting, so security circulation shares the civic core's glazed, vegetated language. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).",
       "unknowns": [
         "whether it is the same site as LM-POLICE-HQ in later states"
       ],
@@ -3308,8 +3363,9 @@
       "reference_images": [
         "reference_images/CITADEL_IMAGE_GALLERY.md#20 (S01E10 security corridor)"
       ],
-      "height_limit_U": 0.249,
-      "height_limit_m": 497
+      "height_limit_U": 0.248,
+      "height_limit_m": 495,
+      "azimuth": 247.5
     },
     {
       "id": "LM-POLICE-HQ",
@@ -3329,8 +3385,8 @@
       "geometry": {
         "type": "box",
         "size": [
-          0.14,
-          0.1,
+          0.09,
+          0.13,
           0.1
         ],
         "features": [
@@ -3341,8 +3397,8 @@
         ]
       },
       "position": [
-        -0.36,
-        -0.28,
+        -0.3984,
+        -0.23,
         0.0
       ],
       "evidence": [
@@ -3350,7 +3406,7 @@
         "CITADEL_POLICE.md",
         "EVIDENCE_MATRIX.md E-009"
       ],
-      "rationale": "Police patrol Mortytown and dispatch to 'Fifth and Burp'; HQ placed between the civic core and Mortytown so patrol routes are short. Integrated into the street network per CITADEL_POLICE.md.",
+      "rationale": "Police patrol Mortytown and dispatch to 'Fifth and Burp'; HQ placed between the civic core and Mortytown so patrol routes are short. Integrated into the street network per CITADEL_POLICE.md. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).",
       "unknowns": [
         "footprint",
         "whether HQ and Academy are one building"
@@ -3361,8 +3417,9 @@
         "S03E07 police exterior"
       ],
       "reference_images": [],
-      "height_limit_U": 0.214,
-      "height_limit_m": 427
+      "height_limit_U": 0.212,
+      "height_limit_m": 423,
+      "azimuth": 210
     },
     {
       "id": "LM-SHOOTING-RANGE",
@@ -3392,14 +3449,14 @@
         ]
       },
       "position": [
-        -0.36,
-        -0.28,
+        -0.3984,
+        -0.23,
         0.0
       ],
       "evidence": [
         "RICKLANTIS_VISUAL_EVIDENCE.md 5"
       ],
-      "rationale": "Directly shown interior.",
+      "rationale": "Directly shown interior. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).",
       "unknowns": [
         "lane count",
         "range length"
@@ -3408,8 +3465,9 @@
         "S03E07 shooting range"
       ],
       "reference_images": [],
-      "height_limit_U": 0.219,
-      "height_limit_m": 437
+      "height_limit_U": 0.217,
+      "height_limit_m": 434,
+      "azimuth": 210
     },
     {
       "id": "LM-MORTY-ACADEMY",
@@ -3429,8 +3487,8 @@
       "geometry": {
         "type": "box",
         "size": [
-          0.14,
-          0.1,
+          0.09,
+          0.13,
           0.06
         ],
         "features": [
@@ -3441,15 +3499,15 @@
         ]
       },
       "position": [
-        -0.45,
-        -0.55,
+        -0.35,
+        -0.6062,
         0.0
       ],
       "evidence": [
         "RICKLANTIS_VISUAL_EVIDENCE.md 6",
         "CIVIC_SYSTEMS.md (education)"
       ],
-      "rationale": "Morty-serving institution; placed on the inner edge of Mortytown (C). Adjacency is not shown.",
+      "rationale": "Morty-serving institution; placed on the inner edge of Mortytown (C). Adjacency is not shown. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).",
       "unknowns": [
         "district",
         "footprint",
@@ -3462,8 +3520,9 @@
         "S03E07 locked entrance (regime change)"
       ],
       "reference_images": [],
-      "height_limit_U": 0.157,
-      "height_limit_m": 313
+      "height_limit_U": 0.158,
+      "height_limit_m": 315,
+      "azimuth": 240
     },
     {
       "id": "LM-SIMPLE-RICKS",
@@ -3487,8 +3546,8 @@
       "geometry": {
         "type": "box",
         "size": [
-          0.22,
-          0.14,
+          0.13,
+          0.2,
           0.1
         ],
         "features": [
@@ -3501,17 +3560,17 @@
         ]
       },
       "position": [
-        0.05,
-        0.78,
+        -0.2668,
+        0.733,
         0.0
       ],
-      "azimuth": 120,
+      "azimuth": 110,
       "evidence": [
         "SIMPLE_RICKS_FACTORY.md",
         "RICKLANTIS_VISUAL_EVIDENCE.md 9-10",
         "EVIDENCE_MATRIX.md E-010"
       ],
-      "rationale": "Large industrial complex with multiple internal security zones (A). Placed in DIST-INDUSTRIAL. Footprint is the largest single building envelope by convention.",
+      "rationale": "Large industrial complex with multiple internal security zones (A). Placed in DIST-INDUSTRIAL. Footprint is the largest single building envelope by convention. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).",
       "unknowns": [
         "footprint",
         "floor plan",
@@ -3524,8 +3583,8 @@
         "S03E07 SWAT breach"
       ],
       "reference_images": [],
-      "height_limit_U": 0.106,
-      "height_limit_m": 211
+      "height_limit_U": 0.101,
+      "height_limit_m": 201
     },
     {
       "id": "LM-FLAVOR-CORE",
@@ -3556,15 +3615,15 @@
         ]
       },
       "position": [
-        0.05,
-        0.84,
+        -0.3358,
+        0.704,
         0.0
       ],
       "evidence": [
         "reference_images/CITADEL_IMAGE_GALLERY.md#18 (S03E07 Flavor Core)",
         "RICKLANTIS_VISUAL_EVIDENCE.md 10"
       ],
-      "rationale": "Secured chamber inside the factory, at the far end from the entrance by convention. Gallery #18 shows a circular chamber with a large central cylindrical tank fed by tubes, the Simple Rick chair beside it, and observation glazing around the perimeter. Geometry changed from a box to a cylinder.",
+      "rationale": "Secured chamber inside the factory, at the far end from the entrance by convention. Gallery #18 shows a circular chamber with a large central cylindrical tank fed by tubes, the Simple Rick chair beside it, and observation glazing around the perimeter. Geometry changed from a box to a cylinder. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).",
       "unknowns": [
         "dimensions",
         "position within factory"
@@ -3576,8 +3635,9 @@
       "reference_images": [
         "reference_images/CITADEL_IMAGE_GALLERY.md#18 (S03E07 Flavor Core)"
       ],
-      "height_limit_U": 0.118,
-      "height_limit_m": 235
+      "height_limit_U": 0.146,
+      "height_limit_m": 292,
+      "azimuth": 115.5
     },
     {
       "id": "LM-WISHING-PORTAL",
@@ -3612,17 +3672,17 @@
         ]
       },
       "position": [
-        -0.35,
-        0.82,
+        -0.4302,
+        0.6144,
         0.0
       ],
-      "azimuth": 113,
+      "azimuth": 125,
       "evidence": [
         "RICKLANTIS_VISUAL_EVIDENCE.md 15",
         "LOCATION_REGISTER.md (Wishing Portal; Waste Disposal Plant)",
         "CIVIC_SYSTEMS.md (waste)"
       ],
-      "rationale": "Rusty building inside a tall circular wall with a gated entrance (A). It is a waste-disposal facility; grouped with industry at the rim. The portal pit is assumed to drop into V-1/V-2.",
+      "rationale": "Rusty building inside a tall circular wall with a gated entrance (A). It is a waste-disposal facility; grouped with industry at the rim. The portal pit is assumed to drop into V-1/V-2. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).",
       "unknowns": [
         "disposal machinery",
         "destination",
@@ -3655,21 +3715,21 @@
       "geometry": {
         "type": "box",
         "size": [
-          0.1,
+          0.06,
           0.08,
           0.06
         ]
       },
       "position": [
-        -0.208,
-        0.834,
+        -0.0877,
+        0.7146,
         0.0
       ],
       "evidence": [
         "LOCATION_REGISTER.md (Waste Disposal Plant)",
         "UTILITY_SYSTEMS.md (waste)"
       ],
-      "rationale": "Named in secondary sources; placed next to the Wishing Portal because both are waste infrastructure. Not proven to be the same site.",
+      "rationale": "Named in secondary sources; placed next to the Wishing Portal because both are waste infrastructure. Not proven to be the same site. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).",
       "unknowns": [
         "identity with LM-WISHING-PORTAL",
         "everything physical"
@@ -3678,8 +3738,9 @@
         "any"
       ],
       "reference_images": [],
-      "height_limit_U": 0.091,
-      "height_limit_m": 181
+      "height_limit_U": 0.161,
+      "height_limit_m": 321,
+      "azimuth": 97
     },
     {
       "id": "LM-AIRLOCK-PODS",
@@ -3706,7 +3767,7 @@
       },
       "position": [
         -0.393,
-        0.843,
+        0.8429,
         -0.02
       ],
       "azimuth": 115,
@@ -3714,7 +3775,7 @@
         "RICKLANTIS_VISUAL_EVIDENCE.md 17",
         "EPISODE_EVIDENCE_RICKLANTIS.md (airlock)"
       ],
-      "rationale": "Pods expel bodies into space, so they must penetrate the outer hull. Placed on the rim beside the waste facilities (C). Separate system from the Wishing Portal per the evidence register.",
+      "rationale": "Pods expel bodies into space, so they must penetrate the outer hull. Placed on the rim beside the waste facilities (C). Separate system from the Wishing Portal per the evidence register. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).",
       "unknowns": [
         "count",
         "location",
@@ -3743,7 +3804,7 @@
       "parent": "DIST-AGRICULTURAL",
       "geometry": {
         "type": "terrain_patch",
-        "radius": 0.1,
+        "radius": 0.09,
         "features": [
           "cultivated rows",
           "Mega Trees / Mega Fruit",
@@ -3753,16 +3814,16 @@
         ]
       },
       "position": [
-        0.15,
-        -0.85,
+        0.3541,
+        -0.695,
         0.0
       ],
-      "azimuth": 300,
+      "azimuth": 297,
       "evidence": [
         "RICKLANTIS_VISUAL_EVIDENCE.md 14",
         "CONTRADICTION_LOG.md C-005"
       ],
-      "rationale": "Directly shown open farm with Farmer Rick and robot dog.",
+      "rationale": "Directly shown open farm with Farmer Rick and robot dog. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).",
       "unknowns": [
         "area",
         "enclosure"
@@ -3816,7 +3877,7 @@
       ],
       "reference_images": [],
       "height_limit_U": 0.221,
-      "height_limit_m": 442
+      "height_limit_m": 441
     },
     {
       "id": "LM-NEWSROOM",
@@ -3857,8 +3918,8 @@
         "S03E07 newsroom interior"
       ],
       "reference_images": [],
-      "height_limit_U": 0.211,
-      "height_limit_m": 422
+      "height_limit_U": 0.21,
+      "height_limit_m": 419
     },
     {
       "id": "LM-SKYSCRAPER-REBUILD",
@@ -3880,7 +3941,7 @@
         "size": [
           0.06,
           0.06,
-          0.217
+          0.215
         ],
         "features": [
           "scaffolding",
@@ -3904,8 +3965,8 @@
         "S03E07 skyscraper rebuild"
       ],
       "reference_images": [],
-      "height_limit_U": 0.217,
-      "height_limit_m": 434
+      "height_limit_U": 0.215,
+      "height_limit_m": 430
     },
     {
       "id": "LM-MORTY-MART",
@@ -3934,14 +3995,14 @@
         ]
       },
       "position": [
-        -0.615,
-        -0.48,
+        -0.6146,
+        -0.4802,
         0.0
       ],
       "evidence": [
         "RICKLANTIS_VISUAL_EVIDENCE.md 12"
       ],
-      "rationale": "Street-facing retail in Mortytown (A).",
+      "rationale": "Street-facing retail in Mortytown (A). Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).",
       "unknowns": [
         "block"
       ],
@@ -3950,8 +4011,9 @@
         "S03E07 interior"
       ],
       "reference_images": [],
-      "height_limit_U": 0.15,
-      "height_limit_m": 299
+      "height_limit_U": 0.148,
+      "height_limit_m": 295,
+      "azimuth": 218
     },
     {
       "id": "LM-CREEPY-MORTY",
@@ -3980,14 +4042,14 @@
         ]
       },
       "position": [
-        -0.679,
-        -0.59,
+        -0.6189,
+        -0.538,
         0.0
       ],
       "evidence": [
         "RICKLANTIS_VISUAL_EVIDENCE.md 13"
       ],
-      "rationale": "Named venue with exterior entrance in Mortytown (A/B).",
+      "rationale": "Named venue with exterior entrance in Mortytown (A/B). Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).",
       "unknowns": [
         "interior"
       ],
@@ -3995,8 +4057,9 @@
         "S03E07 Creepy Morty exterior"
       ],
       "reference_images": [],
-      "height_limit_U": 0.081,
-      "height_limit_m": 161
+      "height_limit_U": 0.131,
+      "height_limit_m": 262,
+      "azimuth": 221
     },
     {
       "id": "LM-MORTYTOWN-RESIDENCE",
@@ -4021,14 +4084,14 @@
         ]
       },
       "position": [
-        -0.56,
-        -0.68,
+        -0.5172,
+        -0.6619,
         0.0
       ],
       "evidence": [
         "EPISODE_EVIDENCE_RICKLANTIS.md (residential/criminal interior with crib)"
       ],
-      "rationale": "Proves occupied residential interiors exist in Mortytown.",
+      "rationale": "Proves occupied residential interiors exist in Mortytown. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).",
       "unknowns": [
         "building"
       ],
@@ -4036,8 +4099,9 @@
         "S03E07 crib interior"
       ],
       "reference_images": [],
-      "height_limit_U": 0.106,
-      "height_limit_m": 212
+      "height_limit_U": 0.126,
+      "height_limit_m": 252,
+      "azimuth": 232
     },
     {
       "id": "LM-MORTY-DAY-CARE",
@@ -4063,15 +4127,15 @@
         ]
       },
       "position": [
-        -0.486,
-        -0.721,
+        -0.4697,
+        -0.6964,
         0.0
       ],
       "evidence": [
         "DISTRICTS.md",
         "LOCATION_REGISTER.md"
       ],
-      "rationale": "Named business; Morty-serving so slotted in Mortytown (C).",
+      "rationale": "Named business; Morty-serving so slotted in Mortytown (C). Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).",
       "unknowns": [
         "all"
       ],
@@ -4079,8 +4143,9 @@
         "any"
       ],
       "reference_images": [],
-      "height_limit_U": 0.111,
-      "height_limit_m": 221
+      "height_limit_U": 0.123,
+      "height_limit_m": 245,
+      "azimuth": 236
     },
     {
       "id": "LM-MORTY-GAMES",
@@ -4122,8 +4187,8 @@
         "any"
       ],
       "reference_images": [],
-      "height_limit_U": 0.162,
-      "height_limit_m": 324
+      "height_limit_U": 0.16,
+      "height_limit_m": 319
     },
     {
       "id": "LM-MORTY-INSURANCE",
@@ -4166,8 +4231,8 @@
         "any"
       ],
       "reference_images": [],
-      "height_limit_U": 0.212,
-      "height_limit_m": 424
+      "height_limit_U": 0.211,
+      "height_limit_m": 421
     },
     {
       "id": "LM-SALTY-RICK",
@@ -4208,8 +4273,8 @@
         "any"
       ],
       "reference_images": [],
-      "height_limit_U": 0.216,
-      "height_limit_m": 431
+      "height_limit_U": 0.215,
+      "height_limit_m": 430
     },
     {
       "id": "LM-BIG-RICKS-GUMBO",
@@ -4235,9 +4300,9 @@
         ]
       },
       "position": [
-        0.48,
-        -0.3,
-        0.0
+        0.4579,
+        -0.2862,
+        0
       ],
       "evidence": [
         "DISTRICTS.md"
@@ -4251,7 +4316,8 @@
       ],
       "reference_images": [],
       "height_limit_U": 0.205,
-      "height_limit_m": 410
+      "height_limit_m": 409,
+      "azimuth": -32
     },
     {
       "id": "LM-REBUILD-A-MORTY",
@@ -4301,7 +4367,7 @@
         "reference_images/CITADEL_IMAGE_GALLERY.md#11 (S05E10 Re-Build-A-Morty)"
       ],
       "height_limit_U": 0.211,
-      "height_limit_m": 422
+      "height_limit_m": 421
     },
     {
       "id": "LM-RICKINGHAM-PALACE",
@@ -5465,11 +5531,17 @@
         0.0
       ]
     ],
-    "surface_notes": "STL top surface z(side) at r 1.1/1.3/1.5: smooth lens with a central spine ridge (+0.142 at the centreline vs +0.128 beside it at r 1.1) and a shallow flat ledge on each flank at z ≈ +0.033, |side| 0.20–0.24, near the pod end (r ≥ 1.5). No window recesses or glazing are modelled on the arms.",
+    "surface_notes": "STL top surface z(side) at r 1.1-1.7 on all three arms: smooth lens with a central spine ridge; from r ~1.45 a FLAT SHELF appears on both shoulders at z = +0.033 R (|side| 0.21-0.24 at r 1.45, widening to 0.18-0.26+ by r 1.65-1.70) and runs to the pod. Fin faces are smooth tapers with no recess (the dark fin panels in the Printables render are paint).",
     "windows": {
-      "evidence": "exterior frame #23 shows a row of cyan lit panels along each arm flank; the Printables render paints cyan strips in the same place (paint, not geometry); the STL has no recess for them",
-      "placement": "row of lit window panels on each flank skin at z ≈ +0.03 R (|side| ≈ 0.235 R), 12 per flank, flush with the surface; they light the through-concourse behind them",
-      "confidence": "existence A (frame), placement C"
+      "evidence": "the STL has a flat shelf on both shoulders of each arm at z +0.033 R from r ~1.45 to the pod, the recess the Printables render paints teal; frame #23 shows a row of cyan lit panels on the arm flanks near the pods",
+      "placement": "lit window panels lie flush on that shelf, both shoulders, r 1.47-1.72, |side| ~0.215-0.255 R, 6 per shoulder; none mid-arm because the STL has no recess there",
+      "confidence": "existence A (frame + STL recess), placement B (recess measured)",
+      "r_start": 1.47,
+      "r_end": 1.72,
+      "z": 0.033,
+      "side_inner": 0.215,
+      "side_outer": 0.255,
+      "count_per_shoulder": 6
     }
   }
 }

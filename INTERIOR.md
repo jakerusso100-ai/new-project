@@ -72,17 +72,20 @@ Replacing the block-out boxes: the central monument spire with plinth (S01E10, #
 - Cave-base cavern wall with the glowing central vat (S05E10).
 - Dimensional Drive void with the long suspended walkway and the portal-array display beside the existing control enclosure and Phoenix vats (#13).
 
-## Arms (interior only)
+## Arms: the bridges (v2.5)
 
-The arm exterior is left exactly as the STL has it. Inside the lenticular section (measured from the STL: half-width 0.25 R at deck level, 0.20 at ±0.05, 0.14 at +0.08; underside −0.108, top +0.12–0.15) three enclosed levels are built, each sized to the section, visible through the end portals and in cut-away:
+Designed as what they are: bridges that carry the road, the rail and the walkways from the city floor to the pod floor, and nothing else.
 
-- **Upper gallery (+0.05 R, 100 m)** — floor on columns with hover-vehicle hangar bays along both flanks.
-- **Through-concourse (0)** — the main deck continues into the arm: floor, road, walkway, ceiling lights, glazed window bands, and a lit portal in each end face (disc rim and pod rim). City, arm and pod decks are one continuous floor, which the S05E10 train to Mortyburg requires.
-- **Service deck (−0.05 R)** — utilities, tanks, freight; `IF-MORTYBURG` (the disengage machinery) sits here under the root.
+- **Six primary avenues at 60 deg**, three of which run straight into the three bridges; each avenue continues as the bridge road and joins the pod avenue on the far side (the pod avenues are at 60 deg too, so they line up).
+- **Through-concourse at deck level (0 to +0.045 R, 90 m tall)**, filling the section: the avenue road down the centre, walkways either side, a low arcade of bridge-side buildings along both flanks (under the hull section), structural ribs following the hull, cyan light strips along the outer edges (#23); a portal in the disc rim (r 0.995) and one in the pod rim. The Mortyburg rail spur leaves the elevated loop at the Mortytown avenue, descends on columns to a low viaduct beside the avenue, passes the rim portal, runs the bridge on its left flank and enters the pod beside the pod avenue.
+- **Utility deck below (-0.06 to -0.01 R)**: services, freight, the disengage machinery at the Mortyburg root; continuous with the city sub-decks.
+- **Spine skylight**: STL arm triangles within 0.07 R of the spine ridge and above +0.095 R render as glazing so the concourse is lit from above. Design decision on the owner's request (placement C): the STL has a raised spine there and the Printables render a lighter centre strip; frame #23 shows the arms lit; no frame shows the arm roof.
+- **Window bands** at the pod end: vertical panes in the STL's own through-slot (below).
+- Removed: the upper gallery and hangar bays (they led nowhere), the hover lanes and vehicles (owner request). The block and tree generators skip the bridge roots (r > 0.86, |side| < 0.33 R) so the portals open onto clear ground; `__auditInterior()` reports `block_arm` and `tree_arm` counts.
 
-## Arm windows
+## Arm windows (v2.5: the STL slot)
 
-Re-scanned the STL top surface on all three arms at r 1.30-1.70: the shoulders are a smooth slope mid-arm, but **from r ~1.45 to the pod there is a flat shelf at z = +0.033 R on both shoulders** (0.03 R wide at r 1.45, 0.08 R by r 1.70). That shelf is the recess the Printables render paints teal and where frame #23 shows the lit strips beside the pods. Six lit window panels per shoulder now lie flush on that shelf (r 1.47-1.72); the earlier row along the whole flank was removed because the STL has no recess mid-arm. Existence A (frame + STL recess), placement B (recess measured). Parameters in `arm_section.windows`. Toggle: **glass**.
+Re-sectioned the STL along each arm every 0.025 R. What v2.4 called a shelf is the ledge in front of a **horizontal slot cut into both shoulders under an overhanging upper slab, r 1.40 to 1.75**: floor +0.0335 R, ceiling rising from +0.035 to +0.0575 R toward the pod, the slot running inward to a 0.094 R spine, the slab face at |side| ~0.18-0.19 R. That is the arms' window band (the Printables render paints it teal; frame #23 shows the lit strips beside the pods). The viewer now stands vertical glazing panes in the slab face, sized to the slot at each r (from 2 m tall at the root of the slot to about 48 m by the pod). Existence A, placement A (slot measured). Parameters in `arm_section.windows`; the full section table is `arm_section.half_width_by_r`. Toggle: **glass**.
 
 ## Layout audit (v2.4, 2026-09-12)
 

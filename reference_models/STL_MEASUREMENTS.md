@@ -70,9 +70,11 @@ Sections at r = 1.05 / 1.2 / 1.35 / 1.5 / 1.65 R along the arm. Half-width in R 
 
 Underside at −0.108 R everywhere; top at +0.15 R at the root falling to +0.12 R mid-arm. The section widens again to 0.33 R where it merges into the pod (r ≥ 1.65). Stored as `arm_section` in the JSON; the arm interior levels are sized from it.
 
-## Arm shoulder shelf (window recess) and fin faces
+## Arm section along the arm, and the shoulder window slot
 
-Top-surface scan z(side) at r 1.30-1.70 on all three arms (identical to 0.001 R, so the arms are true copies): from **r ~1.45 a flat shelf appears on both shoulders at z = +0.033 R**, |side| 0.21-0.24 at r 1.45 widening to 0.18-0.26+ by r 1.65-1.70, and runs into the pod. Mid-arm (r <= 1.40) the shoulder is a smooth slope with no ledge. This shelf is where the Printables render paints the teal panels, and where frame #23 shows the lit strips near the pods: it is the window recess. The fin faces (fin at az 72 deg, depths 0.5-1.5 R) are smooth tapers with no step; the dark fin panels in the render are paint only.
+Cross-sections perpendicular to the arm axis every 0.05 R from r 0.95 to 1.75 (all three arms identical to 0.001 R; table in `arm_section.half_width_by_r`): the section is narrowest at r 1.30 (half-width 0.249 R at the equator, 0.20 at +0.05, 0.10 at +0.09) and flares to 0.31 R at the disc fillet and 0.34 R at the pod fillet.
+
+**From r 1.40 to 1.75 a horizontal slot is cut into both shoulders under an overhanging upper slab**: floor at z +0.0335 R, ceiling rising from +0.035 at r 1.40 to +0.0575 at r 1.725, the slot running inward to a 0.094 R spine; the slab face sits at |side| ~0.18-0.19 R and the flat "shelf" reported in v2.4 is the ledge outside it (the slot floor continued). The STL is a thin shell (~0.005 R between outer and inner surface on the flanks). This is the window band: the Printables render paints the openings teal and frame #23 shows the lit strips on the arm flanks beside the pods. The viewer stands vertical glazing panes in the openings (existence A, placement A). Fin faces are smooth tapers with no recess.
 
 ## STL vs. silhouette fit vs. schematic
 

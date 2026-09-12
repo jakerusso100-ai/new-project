@@ -1,4 +1,4 @@
-# Citadel of Ricks — Master Schematic (v2.1)
+# Citadel of Ricks — Master Schematic (v2.5)
 
 **Status:** complete schematic built from every evidence register in this repository, then corrected against the reference images in `reference_images/` (16 inspected; see `reference_images/CAMERA_MATCH.md` for what each one changed). v1.3–v1.7 corrected the global massing against the full exterior frame (BATCH_02 #23) by eye; v2.0 replaced those values with a numeric silhouette fit (≈4,150 render-and-compare evaluations, `reference_images/EXTERIOR_FIT_23.md`); v2.1 replaces the exterior with measured cross-sections of the owner-supplied STL (`reference_models/STL_MEASUREMENTS.md`), sets a provisional 1:1 scale (`SCALE_1_TO_1.md`, R = 2,000 m) and adds the interior deck stack that fits inside that shell. It is the bridge between the research phase (100% complete) and the interactive 3D model: every reconstructable feature now has an ID, a layer, a vertical band, a state list, a normalized position, a placement-trust class, the evidence behind it, its unknowns, and the reference shots it still needs.
 

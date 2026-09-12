@@ -73,40 +73,40 @@
 <text x="798.3" y="862.6" font-size="10" text-anchor="middle" fill="#8fd18f" font-family="ui-monospace, Consolas, monospace">DIST-AGRICULTURAL</text>
 <path d="M 593.1,622.5 A 135.0 135.0 0 0 0 579.6,724.9 L 633.9,710.4 A 78.8 78.8 0 0 1 641.8,650.6 Z" stroke="#8fd18f" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#8fd18f" fill-opacity="0.12"/>
 <text x="604.0" y="679.1" font-size="10" text-anchor="middle" fill="#8fd18f" font-family="ui-monospace, Consolas, monospace">DIST-CONSTRUCTION</text>
-<rect x="609.2" y="498.1" width="4.5" height="4.5" stroke="#c98bff" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#c98bff" fill-opacity="0.12"/>
-<rect x="616.0" y="498.1" width="4.5" height="4.5" stroke="#c98bff" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#c98bff" fill-opacity="0.12"/>
-<rect x="622.7" y="498.1" width="4.5" height="4.5" stroke="#c98bff" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#c98bff" fill-opacity="0.12"/>
-<rect x="629.5" y="498.1" width="4.5" height="4.5" stroke="#c98bff" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#c98bff" fill-opacity="0.12"/>
-<text x="621.6" y="503.3" font-size="10" text-anchor="middle" fill="#c98bff" font-family="ui-monospace, Consolas, monospace">LM-AIRLOCK-PODS</text>
+<rect x="615.9" y="495.1" width="4.5" height="4.5" stroke="#c98bff" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#c98bff" fill-opacity="0.12"/>
+<rect x="622.6" y="495.1" width="4.5" height="4.5" stroke="#c98bff" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#c98bff" fill-opacity="0.12"/>
+<rect x="629.4" y="495.1" width="4.5" height="4.5" stroke="#c98bff" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#c98bff" fill-opacity="0.12"/>
+<rect x="636.1" y="495.1" width="4.5" height="4.5" stroke="#c98bff" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#c98bff" fill-opacity="0.12"/>
+<text x="628.2" y="500.4" font-size="10" text-anchor="middle" fill="#c98bff" font-family="ui-monospace, Consolas, monospace">LM-AIRLOCK-PODS</text>
 <circle cx="687.5" cy="683.2" r="9.0" stroke="#4caf50" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#4caf50" fill-opacity="0.12" />
 <text x="687.5" y="686.2" font-size="10" text-anchor="middle" fill="#4caf50" font-family="ui-monospace, Consolas, monospace">LM-CORE-WATER</text>
-<circle cx="789.7" cy="846.4" r="20.2" stroke="#4caf50" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#4caf50" fill-opacity="0.12" />
-<text x="789.7" y="849.4" font-size="10" text-anchor="middle" fill="#4caf50" font-family="ui-monospace, Consolas, monospace">LM-MEGAFRUIT-FARM</text>
+<circle cx="756.6" cy="863.9" r="13.5" stroke="#4caf50" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#4caf50" fill-opacity="0.12" />
+<text x="756.6" y="866.9" font-size="10" text-anchor="middle" fill="#4caf50" font-family="ui-monospace, Consolas, monospace">LM-MEGAFRUIT-FARM</text>
 <circle cx="710.0" cy="690.0" r="36.0" stroke="#ff8a65" stroke-width="1.8" stroke-opacity="0.9" fill="#ff8a65" fill-opacity="0.12" />
 <text x="710.0" y="693.0" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-CENTRAL-PLAZA</text>
 <circle cx="710.0" cy="690.0" r="7.9" stroke="#ff8a65" stroke-width="1.8" stroke-opacity="0.9" fill="#ff8a65" fill-opacity="0.12" />
 <text x="710.0" y="700.1" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-CENTRAL-MONUMENT</text>
-<circle cx="730.2" cy="641.2" r="8.1" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" />
-<text x="730.2" y="651.4" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-SPIRE-CLUSTER</text>
-<rect x="652.2" y="701.2" width="18.0" height="18.0" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-202.5 661.2 710.2)"/>
-<text x="661.2" y="713.2" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-PLAZA-DOME-BUILDING</text>
-<rect x="681.9" y="727.6" width="15.8" height="22.5" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-247.5 689.8 738.8)"/>
-<text x="689.8" y="741.8" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-SHADOW-COUNCIL-HALL</text>
-<rect x="751.0" y="658.5" width="15.8" height="22.5" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-22.5 758.8 669.8)"/>
-<text x="758.8" y="672.8" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-COURTHOUSE</text>
-<rect x="722.4" y="727.6" width="15.8" height="22.5" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-292.5 730.2 738.8)"/>
-<text x="730.2" y="741.8" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-MORTY-AGENCY</text>
+<circle cx="723.7" cy="638.9" r="8.1" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" />
+<text x="723.7" y="649.2" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-SPIRE-CLUSTER</text>
+<rect x="652.1" y="698.2" width="15.8" height="18.0" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-199.0 660.0 707.2)"/>
+<text x="660.0" y="710.2" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-PLAZA-DOME-BUILDING</text>
+<rect x="662.2" y="716.8" width="15.8" height="15.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-221.0 670.1 724.7)"/>
+<text x="670.1" y="727.7" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-SHADOW-COUNCIL-HALL</text>
+<rect x="752.4" y="664.7" width="15.8" height="18.0" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-18.0 760.3 673.7)"/>
+<text x="760.3" y="676.7" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-COURTHOUSE</text>
+<rect x="702.1" y="731.6" width="15.8" height="22.5" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-270.0 710.0 742.9)"/>
+<text x="710.0" y="745.9" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-MORTY-AGENCY</text>
 <rect x="610.2" y="727.1" width="20.2" height="29.2" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-210.0 620.4 741.8)"/>
 <text x="620.4" y="744.8" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-POLICE-HQ</text>
-<rect x="621.1" y="811.8" width="20.2" height="29.2" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-240.0 631.2 826.4)"/>
-<text x="631.2" y="829.4" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-MORTY-ACADEMY</text>
-<rect x="635.3" y="502.6" width="29.2" height="45.0" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-110.0 650.0 525.1)"/>
-<text x="650.0" y="528.1" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-SIMPLE-RICKS</text>
-<circle cx="613.2" cy="551.8" r="15.8" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="none" />
-<rect x="606.5" y="545.0" width="13.5" height="13.5" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>
-<text x="613.2" y="554.8" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-WISHING-PORTAL</text>
-<rect x="683.5" y="520.2" width="13.5" height="18.0" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-97.0 690.3 529.2)"/>
-<text x="690.3" y="532.2" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-WASTE-PLANT</text>
+<rect x="596.0" y="781.5" width="15.8" height="29.2" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-225.0 603.9 796.1)"/>
+<text x="603.9" y="799.1" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-MORTY-ACADEMY</text>
+<rect x="652.4" y="490.7" width="27.0" height="45.0" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-104.0 665.9 513.2)"/>
+<text x="665.9" y="516.2" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-SIMPLE-RICKS</text>
+<circle cx="582.7" cy="562.7" r="13.5" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="none" />
+<rect x="576.0" y="556.0" width="13.5" height="13.5" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>
+<text x="582.7" y="565.7" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-WISHING-PORTAL</text>
+<rect x="709.5" y="501.1" width="13.5" height="18.0" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-88.0 716.3 510.1)"/>
+<text x="716.3" y="513.1" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-WASTE-PLANT</text>
 <rect x="801.1" y="642.8" width="6.8" height="4.5" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
 <text x="804.5" y="648.0" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-CAFE-SANCHEZ</text>
 <rect x="815.8" y="711.4" width="13.5" height="11.2" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
@@ -117,22 +117,22 @@
 <text x="571.7" y="801.0" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-MORTY-MART</text>
 <rect x="566.2" y="807.7" width="9.0" height="6.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-221.0 570.7 811.0)"/>
 <text x="570.7" y="814.0" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-CREEPY-MORTY</text>
-<rect x="600.9" y="843.3" width="6.8" height="6.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-236.0 604.3 846.7)"/>
-<text x="604.3" y="849.7" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-MORTY-DAY-CARE</text>
-<rect x="558.1" y="767.6" width="6.8" height="6.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
-<text x="561.5" y="774.0" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-MORTY-GAMES</text>
-<rect x="638.0" y="780.0" width="9.0" height="9.0" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
-<text x="642.5" y="787.5" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-MORTY-INSURANCE</text>
+<rect x="590.3" y="835.6" width="6.8" height="6.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-232.0 593.6 838.9)"/>
+<text x="593.6" y="841.9" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-MORTY-DAY-CARE</text>
+<rect x="553.6" y="768.0" width="6.8" height="6.8" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-208.0 557.0 771.3)"/>
+<text x="557.0" y="774.3" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-MORTY-GAMES</text>
+<rect x="634.0" y="777.0" width="9.0" height="9.0" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(-232.0 638.5 781.5)"/>
+<text x="638.5" y="784.5" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-MORTY-INSURANCE</text>
 <rect x="774.1" y="597.8" width="6.8" height="4.5" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12"/>
 <text x="777.5" y="603.0" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-SALTY-RICK</text>
 <rect x="809.7" y="752.1" width="6.8" height="4.5" stroke="#ff8a65" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ff8a65" fill-opacity="0.12" transform="rotate(32.0 813.0 754.4)"/>
 <text x="813.0" y="757.4" font-size="10" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-BIG-RICKS-GUMBO</text>
 <rect x="611.4" y="737.2" width="18.0" height="9.0" stroke="#ffb199" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ffb199" fill-opacity="0.12" transform="rotate(-210.0 620.4 741.8)"/>
 <text x="620.4" y="744.8" font-size="9" text-anchor="middle" fill="#ffb199" font-family="ui-monospace, Consolas, monospace">LM-SHOOTING-RANGE</text>
-<circle cx="634.4" cy="531.6" r="6.8" stroke="#ffb199" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ffb199" fill-opacity="0.12" />
-<text x="634.4" y="540.7" font-size="9" text-anchor="middle" fill="#ffb199" font-family="ui-monospace, Consolas, monospace">LM-FLAVOR-CORE</text>
-<rect x="591.4" y="836.7" width="4.5" height="4.5" stroke="#ffb199" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ffb199" fill-opacity="0.12" transform="rotate(-232.0 593.6 838.9)"/>
-<text x="593.6" y="841.9" font-size="9" text-anchor="middle" fill="#ffb199" font-family="ui-monospace, Consolas, monospace">LM-MORTYTOWN-RESIDENCE</text>
+<circle cx="633.9" cy="526.9" r="6.8" stroke="#ffb199" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ffb199" fill-opacity="0.12" />
+<text x="633.9" y="536.0" font-size="9" text-anchor="middle" fill="#ffb199" font-family="ui-monospace, Consolas, monospace">LM-FLAVOR-CORE</text>
+<rect x="581.3" y="828.2" width="4.5" height="4.5" stroke="#ffb199" stroke-width="1.3" stroke-opacity="0.7" stroke-dasharray="2,4" fill="#ffb199" fill-opacity="0.12" transform="rotate(-228.0 583.5 830.4)"/>
+<text x="583.5" y="833.4" font-size="9" text-anchor="middle" fill="#ffb199" font-family="ui-monospace, Consolas, monospace">LM-MORTYTOWN-RESIDENCE</text>
 <text x="30" y="1250" font-size="12" fill="#fff" font-family="ui-monospace, Consolas, monospace" font-weight="bold">PLACEMENT CLASS (line style)</text>
 <line x1="30" y1="1262" x2="80" y2="1262" stroke="#fff" stroke-width="2.6"/>
 <text x="88" y="1266" font-size="11" fill="#ddd" font-family="ui-monospace, Consolas, monospace">LOCKED — Existence A and geometry directly supported</text>

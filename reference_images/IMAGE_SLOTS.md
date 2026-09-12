@@ -31,7 +31,7 @@ Each image should also get a row in `reference_images/CAMERA_MATCH.md` (see temp
 | `CIRC-RING-1` Inner circumferential road | PROVISIONAL | - [ ] S03E07 aerial/street montage<br>- [ ] S05E10 plaza-flood aerial | _none yet_ |
 | `CIRC-RING-2` Middle circumferential road | PROVISIONAL | - [ ] as CIRC-RING-1 | _none yet_ |
 | `CIRC-RING-3` Outer circumferential road | PROVISIONAL | - [ ] as CIRC-RING-1 | _none yet_ |
-| `CIRC-RADIALS` Radial avenues (8) | PROVISIONAL | - [ ] S03E07 street montage<br>- [ ] any aerial view | _none yet_ |
+| `CIRC-RADIALS` Radial avenues (6; three aligned with the bridges) | PROVISIONAL | - [ ] S03E07 street montage<br>- [ ] any aerial view | _none yet_ |
 | `CIRC-5TH-BURP` Fifth and [Burp] Avenue intersection | PROVISIONAL | - [ ] S03E07 police dispatch / Mortytown street | _none yet_ |
 | `CIRC-RAIL-LOOP` Commuter rail loop | PROVISIONAL | - [ ] S03E07 train commute exterior<br>- [ ] S05E10 tramway flood<br>- [ ] S05E10 train to Mortyburg | _none yet_ |
 | `CIRC-RAIL-MB-SPUR` Rail spur to Mortyburg | PROVISIONAL | - [ ] S05E10 train to Mortyburg interior/exterior | _none yet_ |

@@ -29,7 +29,7 @@
 | `CIRC-RING-1` | Inner circumferential road | circulation | L2 | V0 | B | PROVISIONAL | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | — | GEOMETRY_DATABASE.md G-005; EXTERIOR.md (radial/circular organisation) |
 | `CIRC-RING-2` | Middle circumferential road | circulation | L2 | V0 | B | PROVISIONAL | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | — | GEOMETRY_DATABASE.md G-005 |
 | `CIRC-RING-3` | Outer circumferential road | circulation | L2 | V0 | B | PROVISIONAL | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | — | GEOMETRY_DATABASE.md G-005 |
-| `CIRC-RADIALS` | Radial avenues (8) | circulation | L2 | V0 | B | PROVISIONAL | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | — | GEOMETRY_DATABASE.md G-004 |
+| `CIRC-RADIALS` | Radial avenues (6; three aligned with the bridges) | circulation | L2 | V0 | B | PROVISIONAL | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | — | GEOMETRY_DATABASE.md G-004 |
 | `CIRC-5TH-BURP` | Fifth and [Burp] Avenue intersection | circulation | L2 | V0 | A | PROVISIONAL | DS-03 | -0.42,-0.42,+0.00 | — | DIALOGUE_ARCHITECTURE_CROSSREF.md D-001; RICKLANTIS_VISUAL_EVIDENCE.md (dispatch associates it with Mortytown) |
 | `CIRC-RAIL-LOOP` | Commuter rail loop | circulation | L2 | V0 V+2 | A | PROVISIONAL | DS-03 DS-04 DS-05 | +0.00,+0.00,+0.05 | — | RICKLANTIS_VISUAL_EVIDENCE.md 7; DIALOGUE_ARCHITECTURE_CROSSREF.md D-004 |
 | `CIRC-RAIL-MB-SPUR` | Rail spur to Mortyburg | circulation | L2 | V0 V+2 | A | PROVISIONAL | DS-04 DS-05 | +0.00,+0.00,+0.05 | — | DIALOGUE_ARCHITECTURE_CROSSREF.md D-008; EPISODE_EVIDENCE_RICKMURAI_JACK.md (train route connecting affected area to Mortyburg) |
@@ -52,35 +52,35 @@
 | `LM-CENTRAL-MONUMENT` | Central monument tower (Rick statue) | landmark | L4 | V0 V+1 V+2 | A | ANCHORED | DS-01 DS-02 DS-03 DS-04 DS-05 | +0.00,+0.00,+0.00 | LM-CENTRAL-PLAZA | reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground); reference_images/CITADEL_IMAGE_GALLERY.md#14 (S05E10 plaza destruction wide) |
 | `CIRC-CORE-WALKWAYS` | Elevated curved walkways around the core | circulation | L2 | V+2 | A | PROVISIONAL | DS-01 DS-02 | +0.00,+0.00,+0.12 | LM-CENTRAL-PLAZA | reference_images/CITADEL_IMAGE_GALLERY.md#01 (S01E10 arrival plaza); VERTICAL_LAYERS.md (elevated circulation) |
 | `LM-CORE-WATER` | Atrium water feature and rock garden | natural | L5 | V0 | A | PROVISIONAL | DS-01 DS-02 DS-03 DS-04 DS-05 | -0.10,+0.03,+0.00 | LM-CENTRAL-PLAZA | reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground); reference_images/CITADEL_IMAGE_GALLERY.md#01 (S01E10 arrival plaza) |
-| `LM-SPIRE-CLUSTER` | Central spire cluster (DS-03 skyline) | landmark | L4 | V0 V+1 V+2 | A | PROVISIONAL | DS-03 DS-04 DS-05 | +0.09,+0.22,+0.00 | DIST-CIVIC-CORE | reference_images/CITADEL_IMAGE_GALLERY.md#02 (S03E07 streetscape) |
+| `LM-SPIRE-CLUSTER` | Central spire cluster (DS-03 skyline) | landmark | L4 | V0 V+1 V+2 | A | PROVISIONAL | DS-03 DS-04 DS-05 | +0.06,+0.23,+0.00 | DIST-CIVIC-CORE | reference_images/CITADEL_IMAGE_GALLERY.md#02 (S03E07 streetscape) |
 | `CIRC-ELEVATED-TUBE` | Elevated transit tube crossing the street | circulation | L2 | V+2 | A | PROVISIONAL | DS-03 DS-04 | +0.00,+0.00,+0.07 | CIRC-RAIL-LOOP | reference_images/CITADEL_IMAGE_GALLERY.md#02 (S03E07 streetscape); RICKLANTIS_VISUAL_EVIDENCE.md 7 |
-| `LM-PRESIDENTIAL-BUILDING` | Presidential Building | landmark | L4 | V0 V+1 | A | PROVISIONAL | DS-04 DS-05 | -0.09,+0.22,+0.00 | — | reference_images/CITADEL_IMAGE_GALLERY.md#12 (S05E10 Presidential dining room); EPISODE_EVIDENCE_RICKMURAI_JACK.md (Rick and Morty exit it during the collapse) |
-| `LM-PLAZA-DOME-BUILDING` | Domed building at the plaza edge | landmark | L4 | V0 V+1 | A | PROVISIONAL | DS-03 DS-04 DS-05 | -0.22,-0.09,+0.00 | DIST-CIVIC-CORE | reference_images/CITADEL_IMAGE_GALLERY.md#14 (S05E10 plaza destruction wide); reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground) |
-| `LM-COUNCIL-HALL` | Council Hall (Council of Ricks) | landmark | L4 | V0 V+1 | A | PROVISIONAL | DS-01 DS-02 | -0.22,+0.09,+0.00 | — | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#24 (S01E10 civic building entrance); COUNCIL_CHAMBER.md |
-| `LM-COUNCIL-CHAMBER` | Council chamber (interior) | interior | L4 | V0 | A | PROVISIONAL | DS-01 DS-02 | -0.22,+0.09,+0.00 | LM-COUNCIL-HALL | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#26 (S03E01 Council hall); reference_images/CITADEL_IMAGE_GALLERY.md#06 (S01E10 Council chamber) |
-| `LM-RICK-LASER-SCISSORS` | Rick, Laser, Scissors room (Council) | interior | L4 | V0 | A | PLACEHOLDER | DS-01 DS-02 | -0.22,+0.09,+0.00 | LM-COUNCIL-HALL | LOCATION_REGISTER.md (Rick, Laser, Scissors: Council uses it to decide Morty allocation; Rickshank) |
-| `LM-SHADOW-COUNCIL-HALL` | Shadow Council Hall | landmark | L4 | V0 V+1 | A | PLACEHOLDER | DS-03 DS-04 | -0.09,-0.22,+0.00 | — | RICKLANTIS_VISUAL_EVIDENCE.md 16; CONTRADICTION_LOG.md C-004 |
-| `LM-COURTHOUSE` | Courthouse / judicial facility | landmark | L4 | V0 V+1 | B | PLACEHOLDER | DS-01 DS-02 DS-03 DS-04 | +0.22,+0.09,+0.00 | — | CIVIC_SYSTEMS.md (courts/law); LOCATION_REGISTER.md |
-| `LM-MORTY-AGENCY` | Morty Agency | landmark | L4 | V0 V+1 | A | PLACEHOLDER | DS-03 DS-04 | +0.09,-0.22,+0.00 | — | EPISODE_EVIDENCE_UNMORTRICKEN.md; DIALOGUE_ARCHITECTURE_CROSSREF.md D-012, D-013 |
-| `LM-MILITIA-HQ` | Citadel militia / SEAL Team Ricks base | landmark | L4 | V0 V+1 | A | PLACEHOLDER | DS-01 DS-02 | -0.09,-0.22,+0.00 | — | reference_images/CITADEL_IMAGE_GALLERY.md#20 (S01E10 security corridor); CITADEL_POLICE.md (Council era militia, SEAL Team Ricks) |
+| `LM-PRESIDENTIAL-BUILDING` | Presidential Building | landmark | L4 | V0 V+1 | A | PROVISIONAL | DS-04 DS-05 | -0.04,+0.23,+0.00 | — | reference_images/CITADEL_IMAGE_GALLERY.md#12 (S05E10 Presidential dining room); EPISODE_EVIDENCE_RICKMURAI_JACK.md (Rick and Morty exit it during the collapse) |
+| `LM-PLAZA-DOME-BUILDING` | Domed building at the plaza edge | landmark | L4 | V0 V+1 | A | PROVISIONAL | DS-03 DS-04 DS-05 | -0.22,-0.08,+0.00 | DIST-CIVIC-CORE | reference_images/CITADEL_IMAGE_GALLERY.md#14 (S05E10 plaza destruction wide); reference_images/CITADEL_IMAGE_GALLERY.md#15 (S05E10 plaza destruction ground) |
+| `LM-COUNCIL-HALL` | Council Hall (Council of Ricks) | landmark | L4 | V0 V+1 | A | PROVISIONAL | DS-01 DS-02 | -0.20,+0.12,+0.00 | — | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#24 (S01E10 civic building entrance); COUNCIL_CHAMBER.md |
+| `LM-COUNCIL-CHAMBER` | Council chamber (interior) | interior | L4 | V0 | A | PROVISIONAL | DS-01 DS-02 | -0.20,+0.12,+0.00 | LM-COUNCIL-HALL | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#26 (S03E01 Council hall); reference_images/CITADEL_IMAGE_GALLERY.md#06 (S01E10 Council chamber) |
+| `LM-RICK-LASER-SCISSORS` | Rick, Laser, Scissors room (Council) | interior | L4 | V0 | A | PLACEHOLDER | DS-01 DS-02 | -0.20,+0.12,+0.00 | LM-COUNCIL-HALL | LOCATION_REGISTER.md (Rick, Laser, Scissors: Council uses it to decide Morty allocation; Rickshank) |
+| `LM-SHADOW-COUNCIL-HALL` | Shadow Council Hall | landmark | L4 | V0 V+1 | A | PLACEHOLDER | DS-03 DS-04 | -0.18,-0.15,+0.00 | — | RICKLANTIS_VISUAL_EVIDENCE.md 16; CONTRADICTION_LOG.md C-004 |
+| `LM-COURTHOUSE` | Courthouse / judicial facility | landmark | L4 | V0 V+1 | B | PLACEHOLDER | DS-01 DS-02 DS-03 DS-04 | +0.22,+0.07,+0.00 | — | CIVIC_SYSTEMS.md (courts/law); LOCATION_REGISTER.md |
+| `LM-MORTY-AGENCY` | Morty Agency | landmark | L4 | V0 V+1 | A | PLACEHOLDER | DS-03 DS-04 | -0.00,-0.23,+0.00 | — | EPISODE_EVIDENCE_UNMORTRICKEN.md; DIALOGUE_ARCHITECTURE_CROSSREF.md D-012, D-013 |
+| `LM-MILITIA-HQ` | Citadel militia / SEAL Team Ricks base | landmark | L4 | V0 V+1 | A | PLACEHOLDER | DS-01 DS-02 | -0.18,-0.15,+0.00 | — | reference_images/CITADEL_IMAGE_GALLERY.md#20 (S01E10 security corridor); CITADEL_POLICE.md (Council era militia, SEAL Team Ricks) |
 | `LM-POLICE-HQ` | Citadel Police HQ and Academy | landmark | L4 | V0 V+1 | A | PROVISIONAL | DS-03 DS-04 | -0.40,-0.23,+0.00 | — | RICKLANTIS_VISUAL_EVIDENCE.md 5; CITADEL_POLICE.md |
 | `LM-SHOOTING-RANGE` | Police Academy shooting range | interior | L4 | V0 | A | PROVISIONAL | DS-03 | -0.40,-0.23,+0.00 | LM-POLICE-HQ | RICKLANTIS_VISUAL_EVIDENCE.md 5 |
-| `LM-MORTY-ACADEMY` | Morty Academy | landmark | L4 | V0 V+1 | A | PROVISIONAL | DS-03 DS-04 | -0.35,-0.61,+0.00 | — | RICKLANTIS_VISUAL_EVIDENCE.md 6; CIVIC_SYSTEMS.md (education) |
-| `LM-SIMPLE-RICKS` | Simple Rick's Wafer Cookie Factory | landmark | L4 | V0 V+1 V-1 | A | PROVISIONAL | DS-01 DS-02 DS-03 DS-04 DS-05 | -0.27,+0.73,+0.00 | — | SIMPLE_RICKS_FACTORY.md; RICKLANTIS_VISUAL_EVIDENCE.md 9-10 |
-| `LM-FLAVOR-CORE` | Flavor Core chamber | interior | L4 | V0 | A | PROVISIONAL | DS-03 | -0.34,+0.70,+0.00 | LM-SIMPLE-RICKS | reference_images/CITADEL_IMAGE_GALLERY.md#18 (S03E07 Flavor Core); RICKLANTIS_VISUAL_EVIDENCE.md 10 |
-| `LM-WISHING-PORTAL` | Wishing Portal compound | landmark | L4 | V0 V-1 V-2 | A | PROVISIONAL | DS-03 DS-04 | -0.43,+0.61,+0.00 | — | RICKLANTIS_VISUAL_EVIDENCE.md 15; LOCATION_REGISTER.md (Wishing Portal; Waste Disposal Plant) |
-| `LM-WASTE-PLANT` | Waste Disposal Plant | landmark | L4 | V0 V-1 | B | PLACEHOLDER | DS-01 DS-02 DS-03 DS-04 | -0.09,+0.71,+0.00 | — | LOCATION_REGISTER.md (Waste Disposal Plant); UTILITY_SYSTEMS.md (waste) |
-| `LM-AIRLOCK-PODS` | Body-disposal airlock pods | utility | L4 | V0 V-1 | A | PLACEHOLDER | DS-03 | -0.39,+0.84,-0.02 | — | RICKLANTIS_VISUAL_EVIDENCE.md 17; EPISODE_EVIDENCE_RICKLANTIS.md (airlock) |
-| `LM-MEGAFRUIT-FARM` | MegaFruit farm | natural | L5 | V0 | A | PROVISIONAL | DS-03 DS-04 | +0.35,-0.69,+0.00 | DIST-AGRICULTURAL | RICKLANTIS_VISUAL_EVIDENCE.md 14; CONTRADICTION_LOG.md C-005 |
+| `LM-MORTY-ACADEMY` | Morty Academy | landmark | L4 | V0 V+1 | A | PROVISIONAL | DS-03 DS-04 | -0.47,-0.47,+0.00 | — | RICKLANTIS_VISUAL_EVIDENCE.md 6; CIVIC_SYSTEMS.md (education) |
+| `LM-SIMPLE-RICKS` | Simple Rick's Wafer Cookie Factory | landmark | L4 | V0 V+1 V-1 | A | PROVISIONAL | DS-01 DS-02 DS-03 DS-04 DS-05 | -0.20,+0.79,+0.00 | — | SIMPLE_RICKS_FACTORY.md; RICKLANTIS_VISUAL_EVIDENCE.md 9-10 |
+| `LM-FLAVOR-CORE` | Flavor Core chamber | interior | L4 | V0 | A | PROVISIONAL | DS-03 | -0.34,+0.72,+0.00 | LM-SIMPLE-RICKS | reference_images/CITADEL_IMAGE_GALLERY.md#18 (S03E07 Flavor Core); RICKLANTIS_VISUAL_EVIDENCE.md 10 |
+| `LM-WISHING-PORTAL` | Wishing Portal compound | landmark | L4 | V0 V-1 V-2 | A | PROVISIONAL | DS-03 DS-04 | -0.57,+0.57,+0.00 | — | RICKLANTIS_VISUAL_EVIDENCE.md 15; LOCATION_REGISTER.md (Wishing Portal; Waste Disposal Plant) |
+| `LM-WASTE-PLANT` | Waste Disposal Plant | landmark | L4 | V0 V-1 | B | PLACEHOLDER | DS-01 DS-02 DS-03 DS-04 | +0.03,+0.80,+0.00 | — | LOCATION_REGISTER.md (Waste Disposal Plant); UTILITY_SYSTEMS.md (waste) |
+| `LM-AIRLOCK-PODS` | Body-disposal airlock pods | utility | L4 | V0 V-1 | A | PLACEHOLDER | DS-03 | -0.36,+0.86,-0.02 | — | RICKLANTIS_VISUAL_EVIDENCE.md 17; EPISODE_EVIDENCE_RICKLANTIS.md (airlock) |
+| `LM-MEGAFRUIT-FARM` | MegaFruit farm | natural | L5 | V0 | A | PROVISIONAL | DS-03 DS-04 | +0.21,-0.77,+0.00 | DIST-AGRICULTURAL | RICKLANTIS_VISUAL_EVIDENCE.md 14; CONTRADICTION_LOG.md C-005 |
 | `LM-CAFE-SANCHEZ` | Cafe Sanchez | landmark | L4 | V0 | A | PLACEHOLDER | DS-03 | +0.42,+0.20,+0.00 | — | RICKLANTIS_VISUAL_EVIDENCE.md 4 |
 | `LM-NEWSROOM` | Citadel Morning News studio | landmark | L4 | V0 V+1 | A | PLACEHOLDER | DS-03 | +0.50,-0.12,+0.00 | — | RICKLANTIS_VISUAL_EVIDENCE.md 8 |
 | `LM-SKYSCRAPER-REBUILD` | Skyscraper under reconstruction | landmark | L4 | V0 V+1 | A | PLACEHOLDER | DS-03 | -0.45,+0.15,+0.00 | DIST-CONSTRUCTION | RICKLANTIS_VISUAL_EVIDENCE.md 1 |
 | `LM-MORTY-MART` | Morty Mart | landmark | L4 | V0 | A | PLACEHOLDER | DS-03 | -0.61,-0.48,+0.00 | DIST-MORTYTOWN | RICKLANTIS_VISUAL_EVIDENCE.md 12 |
 | `LM-CREEPY-MORTY` | The Creepy Morty | landmark | L4 | V0 | A | PLACEHOLDER | DS-03 | -0.62,-0.54,+0.00 | DIST-MORTYTOWN | RICKLANTIS_VISUAL_EVIDENCE.md 13 |
-| `LM-MORTYTOWN-RESIDENCE` | Mortytown residential interior (crib scene) | interior | L4 | V0 | A | PLACEHOLDER | DS-03 | -0.52,-0.66,+0.00 | DIST-MORTYTOWN | EPISODE_EVIDENCE_RICKLANTIS.md (residential/criminal interior with crib) |
-| `LM-MORTY-DAY-CARE` | Morty Day Care | landmark | L4 | V0 | B | PLACEHOLDER | DS-03 DS-04 | -0.47,-0.70,+0.00 | DIST-MORTYTOWN | DISTRICTS.md; LOCATION_REGISTER.md |
-| `LM-MORTY-GAMES` | Morty Games | landmark | L4 | V0 | B | PLACEHOLDER | DS-03 DS-04 | -0.66,-0.36,+0.00 | DIST-MORTYTOWN | DISTRICTS.md; LOCATION_REGISTER.md |
-| `LM-MORTY-INSURANCE` | Morty Insurance | landmark | L4 | V0 V+1 | B | PLACEHOLDER | DS-03 DS-04 | -0.30,-0.42,+0.00 | DIST-COMMERCIAL-RING | DISTRICTS.md; LOCATION_REGISTER.md |
+| `LM-MORTYTOWN-RESIDENCE` | Mortytown residential interior (crib scene) | interior | L4 | V0 | A | PLACEHOLDER | DS-03 | -0.56,-0.62,+0.00 | DIST-MORTYTOWN | EPISODE_EVIDENCE_RICKLANTIS.md (residential/criminal interior with crib) |
+| `LM-MORTY-DAY-CARE` | Morty Day Care | landmark | L4 | V0 | B | PLACEHOLDER | DS-03 DS-04 | -0.52,-0.66,+0.00 | DIST-MORTYTOWN | DISTRICTS.md; LOCATION_REGISTER.md |
+| `LM-MORTY-GAMES` | Morty Games | landmark | L4 | V0 | B | PLACEHOLDER | DS-03 DS-04 | -0.68,-0.36,+0.00 | DIST-MORTYTOWN | DISTRICTS.md; LOCATION_REGISTER.md |
+| `LM-MORTY-INSURANCE` | Morty Insurance | landmark | L4 | V0 V+1 | B | PLACEHOLDER | DS-03 DS-04 | -0.32,-0.41,+0.00 | DIST-COMMERCIAL-RING | DISTRICTS.md; LOCATION_REGISTER.md |
 | `LM-SALTY-RICK` | The Salty Rick | landmark | L4 | V0 | B | PLACEHOLDER | DS-03 DS-04 | +0.30,+0.40,+0.00 | DIST-COMMERCIAL-RING | LOCATION_REGISTER.md |
 | `LM-BIG-RICKS-GUMBO` | Big Rick's Gumbo Hutch | landmark | L4 | V0 | B | PLACEHOLDER | DS-03 DS-04 | +0.46,-0.29,+0.00 | DIST-COMMERCIAL-RING | DISTRICTS.md |
 | `LM-REBUILD-A-MORTY` | Re-Build-A-Morty | landmark | L4 | V0 | A | PLACEHOLDER | DS-04 | -0.15,-0.50,+0.00 | DIST-COMMERCIAL-RING | reference_images/CITADEL_IMAGE_GALLERY.md#11 (S05E10 Re-Build-A-Morty); LOCATION_REGISTER.md (Re-Build-A-Morty, Rickmurai Jack) |
@@ -207,7 +207,7 @@
 
 **Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); CONTRADICTION_LOG.md C-002
 
-**Sub-features to model:** lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R; cyan light strips along the edges (#23); level with the equatorial plane; interior: three enclosed levels inside the 0.2 R section (upper gallery +0.05, through-concourse 0, service deck −0.05); exterior surface unchanged; lit window panels on the STL shoulder shelf (z +0.033, r >= 1.45) at the pod end of each arm
+**Sub-features to model:** lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R; cyan light strips along the edges (#23); level with the equatorial plane; interior: two levels inside the 0.2 R section (through-concourse 0 to +0.045, utility deck below); exterior surface unchanged; glazed skylight strip along the spine ridge (|side| < 0.07 R, above +0.095 R); through-slot window band on both shoulders, r 1.40-1.75 (STL), glazed with vertical panes
 
 ### ARM-S2 — Radial arm to DOME-S2
 
@@ -217,7 +217,7 @@
 
 **Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); CONTRADICTION_LOG.md C-002
 
-**Sub-features to model:** lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R; cyan light strips along the edges (#23); level with the equatorial plane; interior: three enclosed levels inside the 0.2 R section (upper gallery +0.05, through-concourse 0, service deck −0.05); exterior surface unchanged; lit window panels on the STL shoulder shelf (z +0.033, r >= 1.45) at the pod end of each arm
+**Sub-features to model:** lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R; cyan light strips along the edges (#23); level with the equatorial plane; interior: two levels inside the 0.2 R section (through-concourse 0 to +0.045, utility deck below); exterior surface unchanged; glazed skylight strip along the spine ridge (|side| < 0.07 R, above +0.095 R); through-slot window band on both shoulders, r 1.40-1.75 (STL), glazed with vertical panes
 
 ### ARM-MB — Radial arm to DOME-MB
 
@@ -227,7 +227,7 @@
 
 **Evidence:** reference_models/STL_MEASUREMENTS.md (cross-sections of citadel_1_2_10_5.stl); reference_images/EXTERIOR_FIT_23.md (silhouette fit, ~4,000 comparisons); reference_images/EXTERIOR_FIT_23.md (numeric camera + geometry fit to #23); reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view); reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram); CONTRADICTION_LOG.md C-002
 
-**Sub-features to model:** lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R; cyan light strips along the edges (#23); level with the equatorial plane; interior: three enclosed levels inside the 0.2 R section (upper gallery +0.05, through-concourse 0, service deck −0.05); exterior surface unchanged; lit window panels on the STL shoulder shelf (z +0.033, r >= 1.45) at the pod end of each arm
+**Sub-features to model:** lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R; cyan light strips along the edges (#23); level with the equatorial plane; interior: two levels inside the 0.2 R section (through-concourse 0 to +0.045, utility deck below); exterior surface unchanged; glazed skylight strip along the spine ridge (|side| < 0.07 R, above +0.095 R); through-slot window band on both shoulders, r 1.40-1.75 (STL), glazed with vertical panes
 
 ### DOME-P — Principal transparent dome
 
@@ -333,9 +333,9 @@
 
 **Evidence:** GEOMETRY_DATABASE.md G-005
 
-### CIRC-RADIALS — Radial avenues (8)
+### CIRC-RADIALS — Radial avenues (6; three aligned with the bridges)
 
-**Placement rationale:** Radial organisation is supported (B); eight is a modelling convention.
+**Placement rationale:** Radial organisation is supported (B). Six avenues at 60 deg is the modelling convention chosen so that three of them run straight into the three bridge concourses (az 0, 120, 240) and continue as the bridge road onto the pod avenues; the other three are their continuations across the city.
 
 **Unknowns:** count; which radial is 'Fifth'; which carry the rail
 
@@ -359,7 +359,7 @@
 
 ### CIRC-RAIL-MB-SPUR — Rail spur to Mortyburg
 
-**Placement rationale:** Route exists and passes through the Mortyburg interface (A). Now runs along ARM-MB to the pod. Path remains a straight provisional connector.
+**Placement rationale:** Route exists and passes through the Mortyburg interface (A). Leaves the elevated loop at the Mortytown avenue, descends on columns to a low viaduct beside the avenue, passes the disc-rim portal, runs the bridge concourse on its left flank and enters the pod beside the pod avenue.
 
 **Unknowns:** route; stations; whether the spur is the same track as the loop
 
@@ -377,7 +377,7 @@
 
 ### CIRC-HOVER-BAND — Hover / flying traffic band
 
-**Placement rationale:** Flying taxis and private flying cars exist (A). Band limits are a placeholder envelope for the 3D model's traffic layer. Envelope trimmed to r 0.8 / z 0.10 so the band stays under the glass (the lens is only 0.05 R tall at r 0.95).
+**Placement rationale:** Flying taxis and private flying cars exist (A). Band limits are a placeholder envelope for the 3D model's traffic layer. Envelope trimmed to r 0.8 / z 0.10 so the band stays under the glass (the lens is only 0.05 R tall at r 0.95). v2.5: the viewer no longer draws lanes or vehicles for it (owner request); the node remains as evidence of the traffic layer.
 
 **Unknowns:** altitudes; lanes; takeoff/landing points
 
@@ -525,7 +525,7 @@
 
 ### LM-SPIRE-CLUSTER — Central spire cluster (DS-03 skyline)
 
-**Placement rationale:** The S03E07 streetscape (gallery #02) has a cluster of very tall spires on the vanishing point behind lower blocks; the tallest masses are therefore central, supporting the core-to-rim height gradient. Placed in the civic core; exact position UNKNOWN. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).
+**Placement rationale:** The S03E07 streetscape (gallery #02) has a cluster of very tall spires on the vanishing point behind lower blocks; the tallest masses are therefore central, supporting the core-to-rim height gradient. Placed in the civic core; exact position UNKNOWN. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged). v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** spire count; heights vs dome; exact position
 
@@ -543,7 +543,7 @@
 
 ### LM-PRESIDENTIAL-BUILDING — Presidential Building
 
-**Placement rationale:** Exited into the collapse sequence that also shows the plaza; placed on the plaza edge. Tallest civic mass by convention. Gallery #12 (dining room) shows a circular panoramic glazed room high above the skyline with spires and a domed building visible below, consistent with a tall building whose top level is a round glazed chamber. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).
+**Placement rationale:** Exited into the collapse sequence that also shows the plaza; placed on the plaza edge. Tallest civic mass by convention. Gallery #12 (dining room) shows a circular panoramic glazed room high above the skyline with spires and a domed building visible below, consistent with a tall building whose top level is a round glazed chamber. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged). v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** footprint; height; which plaza edge; relationship to Council Hall (C-004)
 
@@ -553,7 +553,7 @@
 
 ### LM-PLAZA-DOME-BUILDING — Domed building at the plaza edge
 
-**Placement rationale:** A large pale domed building with an orange roof stands at the plaza edge in the S05E10 collapse frames and a similar dome is visible from the Presidential dining room (#12). Side of the plaza is camera-relative, so the azimuth is placeholder. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).
+**Placement rationale:** A large pale domed building with an orange roof stands at the plaza edge in the S05E10 collapse frames and a similar dome is visible from the Presidential dining room (#12). Side of the plaza is camera-relative, so the azimuth is placeholder. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged). v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** function; exact position; whether it is the Council/Shadow Council hall
 
@@ -563,7 +563,7 @@
 
 ### LM-COUNCIL-HALL — Council Hall (Council of Ricks)
 
-**Placement rationale:** Council chamber with stage/seating is direct (A). Its exterior and its position relative to the later Presidential Building are UNKNOWN. Placed in the civic core. States end at DS-02 because the Council is destroyed in Rickshank; whether the building persists is UNKNOWN. Gallery #24 (S01E10) shows the civic building the arriving Ricks face: a broad multi-storey glazed façade with three large emblem banners, a grand stair, a domed turret and tall spires behind. Identified as the Council building by the Council-era emblem; position still not shown. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).
+**Placement rationale:** Council chamber with stage/seating is direct (A). Its exterior and its position relative to the later Presidential Building are UNKNOWN. Placed in the civic core. States end at DS-02 because the Council is destroyed in Rickshank; whether the building persists is UNKNOWN. Gallery #24 (S01E10) shows the civic building the arriving Ricks face: a broad multi-storey glazed façade with three large emblem banners, a grand stair, a domed turret and tall spires behind. Identified as the Council building by the Council-era emblem; position still not shown. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged). v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** exterior massing; floor count; survival after DS-02; relation to Shadow Council Hall
 
@@ -593,7 +593,7 @@
 
 ### LM-SHADOW-COUNCIL-HALL — Shadow Council Hall
 
-**Placement rationale:** Dedicated interior with designated seats (A). Not proven to be the old Council Hall; kept as a separate node in the civic core. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).
+**Placement rationale:** Dedicated interior with designated seats (A). Not proven to be the old Council Hall; kept as a separate node in the civic core. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged). v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** exterior; identity with LM-COUNCIL-HALL
 
@@ -601,7 +601,7 @@
 
 ### LM-COURTHOUSE — Courthouse / judicial facility
 
-**Placement rationale:** Judicial function exists; no building shown. Civic-core slot. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).
+**Placement rationale:** Judicial function exists; no building shown. Civic-core slot. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged). v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** everything physical
 
@@ -609,7 +609,7 @@
 
 ### LM-MORTY-AGENCY — Morty Agency
 
-**Placement rationale:** Administrative facility with controlled access (A/B). Placed in the civic core as an administrative function; adjacency to anything is explicitly NOT established. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).
+**Placement rationale:** Administrative facility with controlled access (A/B). Placed in the civic core as an administrative function; adjacency to anything is explicitly NOT established. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged). v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** footprint; district; exterior
 
@@ -619,7 +619,7 @@
 
 ### LM-MILITIA-HQ — Citadel militia / SEAL Team Ricks base
 
-**Placement rationale:** Council-era security force exists; the facility is inferred. Near the civic core for government access. Gallery #20 shows armed Ricks in a glazed corridor with planting, so security circulation shares the civic core's glazed, vegetated language. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).
+**Placement rationale:** Council-era security force exists; the facility is inferred. Near the civic core for government access. Gallery #20 shows armed Ricks in a glazed corridor with planting, so security circulation shares the civic core's glazed, vegetated language. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged). v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** whether it is the same site as LM-POLICE-HQ in later states
 
@@ -627,7 +627,7 @@
 
 ### LM-POLICE-HQ — Citadel Police HQ and Academy
 
-**Placement rationale:** Police patrol Mortytown and dispatch to 'Fifth and Burp'; HQ placed between the civic core and Mortytown so patrol routes are short. Integrated into the street network per CITADEL_POLICE.md. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).
+**Placement rationale:** Police patrol Mortytown and dispatch to 'Fifth and Burp'; HQ placed between the civic core and Mortytown so patrol routes are short. Integrated into the street network per CITADEL_POLICE.md. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged). v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** footprint; whether HQ and Academy are one building
 
@@ -637,7 +637,7 @@
 
 ### LM-SHOOTING-RANGE — Police Academy shooting range
 
-**Placement rationale:** Directly shown interior. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).
+**Placement rationale:** Directly shown interior. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged). v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** lane count; range length
 
@@ -647,7 +647,7 @@
 
 ### LM-MORTY-ACADEMY — Morty Academy
 
-**Placement rationale:** Morty-serving institution; placed on the inner edge of Mortytown (C). Adjacency is not shown. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).
+**Placement rationale:** Morty-serving institution; placed on the inner edge of Mortytown (C). Adjacency is not shown. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged). v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** district; footprint; floor count
 
@@ -657,7 +657,7 @@
 
 ### LM-SIMPLE-RICKS — Simple Rick's Wafer Cookie Factory
 
-**Placement rationale:** Large industrial complex with multiple internal security zones (A). Placed in DIST-INDUSTRIAL. Footprint is the largest single building envelope by convention. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).
+**Placement rationale:** Large industrial complex with multiple internal security zones (A). Placed in DIST-INDUSTRIAL. Footprint is the largest single building envelope by convention. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged). v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** footprint; floor plan; position relative to Mortytown
 
@@ -667,7 +667,7 @@
 
 ### LM-FLAVOR-CORE — Flavor Core chamber
 
-**Placement rationale:** Secured chamber inside the factory, at the far end from the entrance by convention. Gallery #18 shows a circular chamber with a large central cylindrical tank fed by tubes, the Simple Rick chair beside it, and observation glazing around the perimeter. Geometry changed from a box to a cylinder. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).
+**Placement rationale:** Secured chamber inside the factory, at the far end from the entrance by convention. Gallery #18 shows a circular chamber with a large central cylindrical tank fed by tubes, the Simple Rick chair beside it, and observation glazing around the perimeter. Geometry changed from a box to a cylinder. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged). v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** dimensions; position within factory
 
@@ -677,7 +677,7 @@
 
 ### LM-WISHING-PORTAL — Wishing Portal compound
 
-**Placement rationale:** Rusty building inside a tall circular wall with a gated entrance (A). It is a waste-disposal facility; grouped with industry at the rim. The portal pit is assumed to drop into V-1/V-2. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).
+**Placement rationale:** Rusty building inside a tall circular wall with a gated entrance (A). It is a waste-disposal facility; grouped with industry at the rim. The portal pit is assumed to drop into V-1/V-2. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged). v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** disposal machinery; destination; whether the Waste Disposal Plant is this site (kept separate as LM-WASTE-PLANT)
 
@@ -687,7 +687,7 @@
 
 ### LM-WASTE-PLANT — Waste Disposal Plant
 
-**Placement rationale:** Named in secondary sources; placed next to the Wishing Portal because both are waste infrastructure. Not proven to be the same site. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).
+**Placement rationale:** Named in secondary sources; placed next to the Wishing Portal because both are waste infrastructure. Not proven to be the same site. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged). v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** identity with LM-WISHING-PORTAL; everything physical
 
@@ -695,7 +695,7 @@
 
 ### LM-AIRLOCK-PODS — Body-disposal airlock pods
 
-**Placement rationale:** Pods expel bodies into space, so they must penetrate the outer hull. Placed on the rim beside the waste facilities (C). Separate system from the Wishing Portal per the evidence register. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).
+**Placement rationale:** Pods expel bodies into space, so they must penetrate the outer hull. Placed on the rim beside the waste facilities (C). Separate system from the Wishing Portal per the evidence register. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged). v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** count; location; whether they are on the dome rim or the lower body
 
@@ -703,7 +703,7 @@
 
 ### LM-MEGAFRUIT-FARM — MegaFruit farm
 
-**Placement rationale:** Directly shown open farm with Farmer Rick and robot dog. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).
+**Placement rationale:** Directly shown open farm with Farmer Rick and robot dog. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged). v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** area; enclosure
 
@@ -741,7 +741,7 @@
 
 ### LM-MORTY-MART — Morty Mart
 
-**Placement rationale:** Street-facing retail in Mortytown (A). Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).
+**Placement rationale:** Street-facing retail in Mortytown (A). Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged). v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** block
 
@@ -751,7 +751,7 @@
 
 ### LM-CREEPY-MORTY — The Creepy Morty
 
-**Placement rationale:** Named venue with exterior entrance in Mortytown (A/B). Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).
+**Placement rationale:** Named venue with exterior entrance in Mortytown (A/B). Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged). v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** interior
 
@@ -761,7 +761,7 @@
 
 ### LM-MORTYTOWN-RESIDENCE — Mortytown residential interior (crib scene)
 
-**Placement rationale:** Proves occupied residential interiors exist in Mortytown. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).
+**Placement rationale:** Proves occupied residential interiors exist in Mortytown. Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged). v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** building
 
@@ -769,7 +769,7 @@
 
 ### LM-MORTY-DAY-CARE — Morty Day Care
 
-**Placement rationale:** Named business; Morty-serving so slotted in Mortytown (C). Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged).
+**Placement rationale:** Named business; Morty-serving so slotted in Mortytown (C). Relaid 2026-09-12 (v2.4 layout audit): moved to a slot clear of the plaza, ring roads, radial avenues and neighbouring landmarks; still a convenience placement (class unchanged). v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** all
 
@@ -777,7 +777,7 @@
 
 ### LM-MORTY-GAMES — Morty Games
 
-**Placement rationale:** As LM-MORTY-DAY-CARE.
+**Placement rationale:** As LM-MORTY-DAY-CARE. v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** all
 
@@ -785,7 +785,7 @@
 
 ### LM-MORTY-INSURANCE — Morty Insurance
 
-**Placement rationale:** Financial service; commercial-ring slot on the Mortytown side.
+**Placement rationale:** Financial service; commercial-ring slot on the Mortytown side. v2.5: re-slotted clear of the six primary avenues (three aligned with the bridges), the ring-road bands and the elevated rail band.
 
 **Unknowns:** all
 

@@ -843,9 +843,9 @@
           "lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R",
           "cyan light strips along the edges (#23)",
           "level with the equatorial plane",
-          "interior: two levels inside the 0.2 R section (through-concourse 0 to +0.045, utility deck below); exterior surface unchanged",
           "glazed skylight strip along the spine ridge (|side| < 0.07 R, above +0.095 R)",
-          "through-slot window band on both shoulders, r 1.40-1.75 (STL), glazed with vertical panes"
+          "through-slot window band on both shoulders, r 1.40-1.75 (STL), glazed with vertical panes",
+          "interior: through-concourse 0 to +0.045, window galleries +0.0335 to +0.05 on the flanks at r 1.42-1.74 (STL slot level), utility deck below; exterior surface unchanged"
         ],
         "interior_levels": [
           {
@@ -860,6 +860,23 @@
               90
             ],
             "use": "the bridge itself, filling the full width of the section: the avenue road down the centre, the rail spur beside it on a low viaduct, walkways either side, and a low arcade of buildings along both flanks (bridge-side commerce); structural ribs follow the hull section; portal in the disc rim (r 0.995) and in the pod rim; lit by the spine skylight above and the shoulder window bands (the STL slot) at the pod end"
+          },
+          {
+            "id": "ARM+1",
+            "name": "window galleries",
+            "z": [
+              0.0335,
+              0.05
+            ],
+            "m": [
+              67,
+              100
+            ],
+            "r": [
+              1.42,
+              1.74
+            ],
+            "use": "the STL slot floor at +0.0325 is a real surface over the concourse flanks at r 1.40-1.75; the space above it behind the window band is an observation gallery on each flank (the approach to the pod), reached by a stair/lift core at each end from the concourse"
           },
           {
             "id": "ARM-1",
@@ -955,9 +972,9 @@
           "lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R",
           "cyan light strips along the edges (#23)",
           "level with the equatorial plane",
-          "interior: two levels inside the 0.2 R section (through-concourse 0 to +0.045, utility deck below); exterior surface unchanged",
           "glazed skylight strip along the spine ridge (|side| < 0.07 R, above +0.095 R)",
-          "through-slot window band on both shoulders, r 1.40-1.75 (STL), glazed with vertical panes"
+          "through-slot window band on both shoulders, r 1.40-1.75 (STL), glazed with vertical panes",
+          "interior: through-concourse 0 to +0.045, window galleries +0.0335 to +0.05 on the flanks at r 1.42-1.74 (STL slot level), utility deck below; exterior surface unchanged"
         ],
         "interior_levels": [
           {
@@ -972,6 +989,23 @@
               90
             ],
             "use": "the bridge itself, filling the full width of the section: the avenue road down the centre, the rail spur beside it on a low viaduct, walkways either side, and a low arcade of buildings along both flanks (bridge-side commerce); structural ribs follow the hull section; portal in the disc rim (r 0.995) and in the pod rim; lit by the spine skylight above and the shoulder window bands (the STL slot) at the pod end"
+          },
+          {
+            "id": "ARM+1",
+            "name": "window galleries",
+            "z": [
+              0.0335,
+              0.05
+            ],
+            "m": [
+              67,
+              100
+            ],
+            "r": [
+              1.42,
+              1.74
+            ],
+            "use": "the STL slot floor at +0.0325 is a real surface over the concourse flanks at r 1.40-1.75; the space above it behind the window band is an observation gallery on each flank (the approach to the pod), reached by a stair/lift core at each end from the concourse"
           },
           {
             "id": "ARM-1",
@@ -1067,9 +1101,9 @@
           "lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R",
           "cyan light strips along the edges (#23)",
           "level with the equatorial plane",
-          "interior: two levels inside the 0.2 R section (through-concourse 0 to +0.045, utility deck below); exterior surface unchanged",
           "glazed skylight strip along the spine ridge (|side| < 0.07 R, above +0.095 R)",
-          "through-slot window band on both shoulders, r 1.40-1.75 (STL), glazed with vertical panes"
+          "through-slot window band on both shoulders, r 1.40-1.75 (STL), glazed with vertical panes",
+          "interior: through-concourse 0 to +0.045, window galleries +0.0335 to +0.05 on the flanks at r 1.42-1.74 (STL slot level), utility deck below; exterior surface unchanged"
         ],
         "interior_levels": [
           {
@@ -1084,6 +1118,23 @@
               90
             ],
             "use": "the bridge itself, filling the full width of the section: the avenue road down the centre, the rail spur beside it on a low viaduct, walkways either side, and a low arcade of buildings along both flanks (bridge-side commerce); structural ribs follow the hull section; portal in the disc rim (r 0.995) and in the pod rim; lit by the spine skylight above and the shoulder window bands (the STL slot) at the pod end"
+          },
+          {
+            "id": "ARM+1",
+            "name": "window galleries",
+            "z": [
+              0.0335,
+              0.05
+            ],
+            "m": [
+              67,
+              100
+            ],
+            "r": [
+              1.42,
+              1.74
+            ],
+            "use": "the STL slot floor at +0.0325 is a real surface over the concourse flanks at r 1.40-1.75; the space above it behind the window band is an observation gallery on each flank (the approach to the pod), reached by a stair/lift core at each end from the concourse"
           },
           {
             "id": "ARM-1",
@@ -5300,6 +5351,26 @@
           "districts to the rim",
           "farm at the rim (low glass)",
           "arm decks to the pods"
+        ]
+      },
+      {
+        "id": "ARM+1",
+        "name": "Bridge window galleries",
+        "z": [
+          0.0335,
+          0.05
+        ],
+        "m": [
+          67,
+          100
+        ],
+        "extent_r": [
+          1.42,
+          1.74
+        ],
+        "contents": [
+          "observation galleries behind the STL window band on both flanks",
+          "stair/lift cores to the concourse at each end"
         ]
       },
       {

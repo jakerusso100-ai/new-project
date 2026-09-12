@@ -229,6 +229,8 @@ DB.nodes.filter(n=>n.id.startsWith('ARM-')).forEach(n=>{ const pts=n.geometry.po
   const winMat=new THREE.MeshPhysicalMaterial({color:0x9fe8ff,emissive:0x3fd0ff,emissiveIntensity:0.7,transmission:0.5,roughness:0.1,transparent:true,opacity:0.8});
   const W=DB.arm_section.windows; const zc=r=>{ const T=W.z_ceiling_by_r; for(let i=0;i<T.length-1;i++){ if(r>=T[i][0]&&r<=T[i+1][0]) return T[i][1]+(T[i+1][1]-T[i][1])*(r-T[i][0])/(T[i+1][0]-T[i][0]); } return T[T.length-1][1]; };
   for(const sg of [1,-1]) for(let r=W.r_start;r<W.r_end-0.001;r+=0.02){ const rc=r+0.01; const h=zc(rc)-W.z_floor; if(h<0.004) continue; const side=halfRow(rc,zc(rc)+0.005,true)-0.003; put(new THREE.BoxGeometry(0.018,0.003,h),winMat,rc,sg*side,W.z_floor+h/2,'window band pane (STL slot, #23)',cat.glass); }
+  // window galleries: the STL slot floor (+0.0325) is a real surface over the concourse flanks at r 1.40-1.75, so the space above it, behind the window band, is a gallery: floor, rail, and a stair/lift core at each end down to the concourse
+  { const gA=W.r_start+0.005, gB=W.r_end-0.005, gL=gB-gA, gM=(gA+gB)/2; for(const sg of [1,-1]){ put(new THREE.BoxGeometry(gL,0.115,0.002),M({color:0xd8d3c0}),gM,sg*0.1125,W.z_floor+0.001,'window gallery floor (STL slot level)'); put(new THREE.BoxGeometry(gL,0.002,0.006),M({color:0x9aa0aa}),gM,sg*0.056,W.z_floor+0.005,'gallery rail'); for(let k=0;k<5;k++) put(new THREE.BoxGeometry(0.004,0.06,0.002),EM(COL.cyan,0.5),gA+gL*(k+0.5)/5,sg*0.11,W.z_floor+0.012,'gallery light'); for(const rr_ of [gA+0.012,gB-0.012]){ put(new THREE.BoxGeometry(0.02,0.02,W.z_floor),M({color:0xc9c3b0}),rr_,sg*0.1,W.z_floor/2,'gallery stair / lift core'); } } }
 });
 
 // ---------------- UI + visibility

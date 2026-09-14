@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.7.0",
+  "schema_version": "2.8.0",
   "title": "Citadel of Ricks — Master Schematic Database",
   "generated_from": "Evidence registers in this repository (see SCHEMATIC.md for derivation rules)",
   "units": {
@@ -279,7 +279,7 @@
         "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (full exterior, orbital 3/4 view)",
         "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)"
       ],
-      "rationale": "STL cross-sections: the underside of the main body is the lower half of the lens, 0.10 R deep at the centre. The v2 \"thin plate\" was the right thickness but the wrong shape. Geometry measured from the STL.",
+      "rationale": "STL cross-sections: the underside of the main body is the lower half of the lens, 0.10 R deep at the centre. The v2 \"thin plate\" was the right thickness but the wrong shape. Geometry measured from the STL. v2.8: a dark window band with lit slots is drawn on the rim underside (rim.drum_window_band, evidence #23).",
       "unknowns": [
         "rim wall height",
         "deck thickness",
@@ -4926,6 +4926,156 @@
       "reference_images": [
         "reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram)"
       ]
+    },
+    {
+      "id": "DOCK-S1",
+      "name": "Dock piers at the ARM-S1 junction",
+      "kind": "utility",
+      "layer": "L7",
+      "band": [
+        "V0"
+      ],
+      "existence": "B",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "pier_pair",
+        "az_offset_deg": 20,
+        "r_start": 0.966,
+        "r_end": 1.08,
+        "width": 0.045,
+        "height": 0.03,
+        "features": [
+          "dark docking pier projecting from the disc rim on each side of the arm root",
+          "cyan edge lights",
+          "mooring stubs",
+          "gantry crane on the rim"
+        ]
+      },
+      "position": [
+        1.02,
+        0.0,
+        0
+      ],
+      "azimuth": 0,
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (dark dock/gantry structures where the arms meet the disc)"
+      ],
+      "rationale": "Frame #23 shows dark, greebled hardware at each arm/disc junction (B). Modelled as a pair of docking piers projecting from the rim band on either side of the arm root (the only hull outside the dome footprint there), with a gantry on the rim. Size and count are conventions: PLACEHOLDER.",
+      "unknowns": [
+        "exact form",
+        "whether they are docks, hangars or structural collars"
+      ],
+      "required_shots": [
+        "S05E10 exterior, closer"
+      ],
+      "reference_images": []
+    },
+    {
+      "id": "DOCK-S2",
+      "name": "Dock piers at the ARM-S2 junction",
+      "kind": "utility",
+      "layer": "L7",
+      "band": [
+        "V0"
+      ],
+      "existence": "B",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "pier_pair",
+        "az_offset_deg": 20,
+        "r_start": 0.966,
+        "r_end": 1.08,
+        "width": 0.045,
+        "height": 0.03,
+        "features": [
+          "dark docking pier projecting from the disc rim on each side of the arm root",
+          "cyan edge lights",
+          "mooring stubs",
+          "gantry crane on the rim"
+        ]
+      },
+      "position": [
+        -0.51,
+        0.8833,
+        0
+      ],
+      "azimuth": 120,
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (dark dock/gantry structures where the arms meet the disc)"
+      ],
+      "rationale": "Frame #23 shows dark, greebled hardware at each arm/disc junction (B). Modelled as a pair of docking piers projecting from the rim band on either side of the arm root (the only hull outside the dome footprint there), with a gantry on the rim. Size and count are conventions: PLACEHOLDER.",
+      "unknowns": [
+        "exact form",
+        "whether they are docks, hangars or structural collars"
+      ],
+      "required_shots": [
+        "S05E10 exterior, closer"
+      ],
+      "reference_images": []
+    },
+    {
+      "id": "DOCK-MB",
+      "name": "Dock piers at the ARM-MB junction",
+      "kind": "utility",
+      "layer": "L7",
+      "band": [
+        "V0"
+      ],
+      "existence": "B",
+      "placement": "PLACEHOLDER",
+      "states": [
+        "DS-01",
+        "DS-02",
+        "DS-03",
+        "DS-04",
+        "DS-05"
+      ],
+      "geometry": {
+        "type": "pier_pair",
+        "az_offset_deg": 20,
+        "r_start": 0.966,
+        "r_end": 1.08,
+        "width": 0.045,
+        "height": 0.03,
+        "features": [
+          "dark docking pier projecting from the disc rim on each side of the arm root",
+          "cyan edge lights",
+          "mooring stubs",
+          "gantry crane on the rim"
+        ]
+      },
+      "position": [
+        -0.51,
+        -0.8833,
+        0
+      ],
+      "azimuth": 240,
+      "evidence": [
+        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (dark dock/gantry structures where the arms meet the disc)"
+      ],
+      "rationale": "Frame #23 shows dark, greebled hardware at each arm/disc junction (B). Modelled as a pair of docking piers projecting from the rim band on either side of the arm root (the only hull outside the dome footprint there), with a gantry on the rim. Size and count are conventions: PLACEHOLDER.",
+      "unknowns": [
+        "exact form",
+        "whether they are docks, hangars or structural collars"
+      ],
+      "required_shots": [
+        "S05E10 exterior, closer"
+      ],
+      "reference_images": []
     },
     {
       "id": "MB-THRUSTERS",
@@ -9779,6 +9929,21 @@
       "rule": "STL arm triangles inside a dome footprint (main dome r < 0.965, pod domes rp < 0.575 of pod radius 0.592) render as glazing; the arm is hull only outside the dome footprints",
       "why": "the STL extrudes each arm as a solid fillet into the domes, which put an opaque wedge over the glass at every junction (owner, 2026-09-14); the show meets arm and dome cleanly (#23, #04)",
       "probe": "ray casts down through the embedded STL at r 0.80-0.98 x side 0-0.3 and at the pod end along 1.74-1.95 x side 0.1-0.4 confirm the reclassified triangles lie on or above the dome surfaces"
+    }
+  },
+  "rim": {
+    "drum_window_band": {
+      "status": "existence B (#23 shows a dark band with lit strips around the disc rim below the dome), placement C",
+      "placement": "a dark band on the underside slope of the rim, r 0.970-0.992 (STL underside z -0.049 to -0.031 measured by ray probe), with 144 lit window slots",
+      "r": [
+        0.97,
+        0.992
+      ],
+      "z": [
+        -0.049,
+        -0.031
+      ],
+      "slots": 144
     }
   }
 }

@@ -114,9 +114,14 @@ function placeBlock(r,azDeg,sx,sy,fam,scale,cx,cy,envFn,cellKey){
   let h=fam.hf?e*rr(fam.hf[0],fam.hf[1]):rr(fam.habs[0],fam.habs[1]); h=Math.min(h,e*0.93)*scale; if(h<0.006*scale) h=0.006*scale;
   const x=cx+Math.cos(a)*r*scale, y=cy+Math.sin(a)*r*scale; const SX=sx*scale, SY=sy*scale; const col=pick(fam.col); const id=fam.id;
   const round=fam.shape==='round'||(fam.shape==='mixed'&&rnd()<0.35)||(fam.shape==='tower'&&rnd()<0.5); const k=round?'cyl':'box';
-  push(k,x,y,a,SX,SY,0,h,col,id); placed.push({x,y,az:a,sx:SX,sy:SY,h,id,cell:cellKey});
+  const tiered=(fam.shape==='tower'&&rnd()<0.55)||(fam.shape==='mixed'&&h>0.06*scale&&rnd()<0.3);
+  if(tiered){ // stepped taper: three shrinking tiers and a spire, all inside the same footprint (the tallest civic towers in #14 taper)
+    push(k,x,y,a,SX,SY,0,h*0.5,col,id); push(k,x,y,a,SX*0.72,SY*0.72,h*0.5,h*0.3,col,id); push(k,x,y,a,SX*0.48,SY*0.48,h*0.8,h*0.2,col,id); }
+  else push(k,x,y,a,SX,SY,0,h,col,id);
+  placed.push({x,y,az:a,sx:SX,sy:SY,h,id,cell:cellKey});
   const cap=e*0.93*scale-h;
-  if((fam.shape==='tower'||fam.shape==='mixed')&&cap>0.004*scale){ const t=rnd(); if(t<0.35) push(k,x,y,a,SX*0.7,SY*0.7,h,Math.min(cap,h*rr(0.25,0.5)),col,id); else if(t<0.55&&round) push('dome',x,y,a,SX,SY,h,Math.min(cap,SX*0.5),col,id); else if(t<0.7) push('cone',x,y,a,SX*0.4,SX*0.4,h,Math.min(cap,h*rr(0.15,0.35)),0xf0ead6,id); }
+  if(tiered&&cap>0.004*scale){ push('cone',x,y,a,SX*0.3,SX*0.3,h,Math.min(cap,h*rr(0.35,0.7)),0xf0ead6,id); }
+  else if((fam.shape==='tower'||fam.shape==='mixed')&&cap>0.004*scale){ const t=rnd(); if(t<0.35) push(k,x,y,a,SX*0.7,SY*0.7,h,Math.min(cap,h*rr(0.25,0.5)),col,id); else if(t<0.55&&round) push('dome',x,y,a,SX,SY,h,Math.min(cap,SX*0.5),col,id); else if(t<0.7) push('cone',x,y,a,SX*0.4,SX*0.4,h,Math.min(cap,h*rr(0.15,0.35)),0xf0ead6,id); }
   if(fam.shape==='shed'&&rnd()<0.6){ const [qx,qy]=[x+Math.cos(a)*SX*0.3-Math.sin(a)*SY*0.3, y+Math.sin(a)*SX*0.3+Math.cos(a)*SY*0.3]; push('cyl',qx,qy,a,SX*0.12,SX*0.12,0,Math.min(e*0.93*scale,h*rr(1.4,2.2)),0x9a948a,id); }
   if(rnd()<fam.strip){ const [qx,qy]=[x-Math.sin(a)*(SY*0.51), y+Math.cos(a)*(SY*0.51)]; push(fam.neon?'neon':'strip',qx,qy,a,SX*0.85,0.0015,h*rr(0.3,0.7),0.004*scale,fam.neon?pick([COL.magenta,COL.cyan,0xffe04a]):COL.cyan,id); }
   if(fam.shape==='tower'&&h>0.12*scale) towers.push({x,y,h,cell:cellKey,sy:SY});
@@ -243,11 +248,24 @@ DB.nodes.filter(n=>n.id.startsWith('ARM-')).forEach(n=>{ const pts=n.geometry.po
   { const gA=W.r_start+0.005, gB=W.r_end-0.005, gL=gB-gA, gM=(gA+gB)/2; for(const sg of [1,-1]){ put(new THREE.BoxGeometry(gL,0.115,0.002),M({color:0xd8d3c0}),gM,sg*0.1125,W.z_floor+0.001,'window gallery floor (STL slot level)'); put(new THREE.BoxGeometry(gL,0.002,0.006),M({color:0x9aa0aa}),gM,sg*0.056,W.z_floor+0.005,'gallery rail'); for(let k=0;k<5;k++) put(new THREE.BoxGeometry(0.004,0.06,0.002),EM(COL.cyan,0.5),gA+gL*(k+0.5)/5,sg*0.11,W.z_floor+0.012,'gallery light'); for(const rr_ of [gA+0.012,gB-0.012]){ put(new THREE.BoxGeometry(0.02,0.02,W.z_floor),M({color:0xc9c3b0}),rr_,sg*0.1,W.z_floor/2,'gallery stair / lift core'); } } }
 });
 
+// ---------------- junction hardware: dock piers + gantries beside each arm root (DOCK-*), and the rim drum window band (SHELL-DRUM)
+DB.nodes.filter(n=>n.geometry&&n.geometry.type==='pier_pair').forEach(n=>{ const g=n.geometry; const dark=M({color:0x2a3038,metalness:0.55,roughness:0.5}); const stub=M({color:0x4a525c,metalness:0.5,roughness:0.5});
+  for(const sg of [1,-1]){ const az=n.azimuth+sg*g.az_offset_deg; const a=az*Math.PI/180; const L=g.r_end-g.r_start, rc=(g.r_start+g.r_end)/2; const P=(r,side,z)=>[Math.cos(a)*r-Math.sin(a)*side, Math.sin(a)*r+Math.cos(a)*side, z];
+    const put=(geo,mat,r,side,z,label)=>{ const [x,y,zz]=P(r,side,z); cat.decks.add(tag(meshAt(geo,mat,x,y,zz,a),n.id,label)); };
+    put(new THREE.BoxGeometry(L,g.width,g.height),dark,rc,0,0,'dock pier');
+    for(const e of [1,-1]) put(new THREE.BoxGeometry(L*0.9,0.002,0.002),EM(COL.cyan,1.0),rc,e*g.width/2,g.height/2+0.001,'pier edge light');
+    for(let k=0;k<3;k++) put(new THREE.CylinderGeometry(0.005,0.005,0.02,10).rotateX(Math.PI/2),stub,1.03+k*0.02,sg*(g.width/2+0.01),0,'mooring stub');
+    put(new THREE.BoxGeometry(0.03,0.02,0.012),dark,g.r_end-0.02,0,g.height/2+0.006,'pier head');
+    // gantry on the rim band above the pier root
+    for(const e of [1,-1]) put(new THREE.BoxGeometry(0.006,0.006,0.085),stub,0.985,e*0.03,0.0425,'gantry post');
+    put(new THREE.BoxGeometry(0.008,0.07,0.006),stub,0.985,0,0.085,'gantry beam'); put(new THREE.BoxGeometry(0.06,0.006,0.006),stub,1.012,0,0.085,'gantry jib'); } });
+{ const D=DB.rim&&DB.rim.drum_window_band; if(D){ const [r0,r1]=D.r, [z0,z1]=D.z; const GAP=22*Math.PI/180; const bandMat=M({color:0x343a44,metalness:0.5,roughness:0.55,side:THREE.DoubleSide}); ARM_AZ.forEach(aa=>{ /* three arcs between the arm roots (the band would z-fight with the arm fillets inside +-22 deg of each arm) */ const start=aa+GAP, len=2*Math.PI/3-2*GAP; const lathe=new THREE.LatheGeometry([new THREE.Vector2(r0,z0),new THREE.Vector2(r1,z1)],64,0,len).rotateX(Math.PI/2).rotateZ(start); cat.decks.add(tag(new THREE.Mesh(lathe,bandMat),'SHELL-DRUM','drum window band')); }); const inGap=a=>ARM_AZ.some(aa=>Math.abs(Math.atan2(Math.sin(a-aa),Math.cos(a-aa)))<GAP+0.02); const rm=(r0+r1)/2-0.002, zm=(z0+z1)/2-0.002; for(let k=0;k<D.slots;k++){ const a=k/D.slots*Math.PI*2; if(inGap(a)) continue; cat.glass.add(tag(meshAt(new THREE.BoxGeometry(0.004,0.012,0.006).rotateY(-Math.PI/4),EM(0xfff1b0,1.1),Math.cos(a)*rm,Math.sin(a)*rm,zm,a),'SHELL-DRUM','drum window slot')); } } }
+
 // ---------------- UI + visibility
 const panel=document.createElement('div'); panel.innerHTML='<h2>Interior (generated)</h2>'+Object.keys(cat).map(k=>`<label class="row"><input type="checkbox" data-int="${k}" ${k==='labels'?'':'checked'}> ${k}</label>`).join('')+'<div class="sub">Generated fill inherits the placement class of its district; the inspector labels it GENERATED. See INTERIOR.md.</div>';
 document.getElementById('placements').parentNode.insertBefore(panel, document.getElementById('placements').nextSibling.nextSibling);
 cat.labels.visible=false; panel.querySelectorAll('[data-int]').forEach(e=>e.addEventListener('change',ev=>{ cat[ev.target.dataset.int].visible=ev.target.checked; }));
-const HIDE=['DOME-P','DOME-P-HUB','DOME-S1','DOME-S2','DOME-MB','DOME-S1-HUB','DOME-S2-HUB','DOME-MB-HUB','LM-CORE-WATER','LM-CENTRAL-PLAZA','CIRC-RING-1','CIRC-RING-2','CIRC-RING-3','CIRC-RADIALS','CIRC-HOVER-BAND','CIRC-TRAM-PLAZA','CIRC-CORE-WALKWAYS'].concat(LM.map(n=>n.id)).concat(MESH_B64?['ARM-S1','ARM-S2','ARM-MB','SHELL-DRUM','SHELL-PLATES','SHELL-UNDERHUB','SHELL-LOWER-BODY','SHELL-UNDERSIDE','KEEL-FIN-1','KEEL-FIN-2','KEEL-FIN-3','KEEL-FIN-4','KEEL-FIN-5']:[]);
+const HIDE=['DOCK-S1','DOCK-S2','DOCK-MB','DOME-P','DOME-P-HUB','DOME-S1','DOME-S2','DOME-MB','DOME-S1-HUB','DOME-S2-HUB','DOME-MB-HUB','LM-CORE-WATER','LM-CENTRAL-PLAZA','CIRC-RING-1','CIRC-RING-2','CIRC-RING-3','CIRC-RADIALS','CIRC-HOVER-BAND','CIRC-TRAM-PLAZA','CIRC-CORE-WALKWAYS'].concat(LM.map(n=>n.id)).concat(MESH_B64?['ARM-S1','ARM-S2','ARM-MB','SHELL-DRUM','SHELL-PLATES','SHELL-UNDERHUB','SHELL-LOWER-BODY','SHELL-UNDERSIDE','KEEL-FIN-1','KEEL-FIN-2','KEEL-FIN-3','KEEL-FIN-4','KEEL-FIN-5']:[]);
 const _rv=refreshVisibility; window.refreshVisibility=function(){ _rv(); const st=stateSel.value; const intact=['DS-01','DS-02','DS-03','DS-04','DS-05','all'].includes(st); IG.visible=intact; const cut=document.getElementById('cut').checked; cat.glass.visible=!cut&&document.querySelector('[data-int=glass]').checked; if(window.__tiers) window.__tiers.visible=['DS-01','DS-02','all'].includes(st); HIDE.forEach(id=>{ if(groups[id]) groups[id].visible=false; }); };
 [stateSel, document.getElementById('cut'), ...document.querySelectorAll('[data-layer],[data-placement]')].forEach(e=>e.addEventListener('change', ()=>window.refreshVisibility()));
 window.refreshVisibility();
@@ -271,5 +289,5 @@ window.__auditInterior=function(){
   LM.forEach(n=>{ const r=Math.hypot(n.position[0],n.position[1]); if(r>1.02) return; const g=n.geometry; const az=(n.azimuth||0)*Math.PI/180; const pts=g.size?obbCorners({x:n.position[0],y:n.position[1],az,sx:g.size[0],sy:g.size[1]}):[[n.position[0],n.position[1]]]; const R=g.size?0:lmRadius(n); const test=(x,y)=>{ const rr_=Math.hypot(x,y); if(RINGS.some(q=>Math.abs(rr_-q)<R+ROAD_HALF+WALK-0.003)) return 'ring'; const th=(Math.atan2(y,x)+2*Math.PI)%(2*Math.PI); for(let j=0;j<RAD.count;j++){ const ta=(RAD.az_start*Math.PI/180+j*2*Math.PI/RAD.count)%(2*Math.PI); let d=Math.abs(th-ta); d=Math.min(d,2*Math.PI-d); if(rr_>=RAD.r_inner-R&&d*rr_<R+ROAD_HALF+WALK-0.003) return 'radial '+j; } if(n.id!=='LM-CENTRAL-MONUMENT'&&rr_<PLAZA_R+R-0.003) return 'plaza'; if(Math.abs(rr_-RAIL.radius)<R+0.012) return 'rail'; return null; }; for(const [x,y] of pts){ const hit=test(x,y); if(hit){ rep.landmark_road.push([n.id,hit,+r.toFixed(3)]); break; } } });
   return rep;
 };
-console.log('interior v2.5 built:', placed.length, 'blocks; audit:', JSON.stringify(window.__auditInterior()));
+console.log('interior v2.8 built:', placed.length, 'blocks; audit:', JSON.stringify(window.__auditInterior()));
 })();

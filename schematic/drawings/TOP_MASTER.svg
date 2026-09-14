@@ -135,6 +135,9 @@
 <text x="811.2" y="666.0" font-size="10" text-anchor="middle" fill="#f5b942" font-family="ui-monospace, Consolas, monospace">CIRC-ELEVATED-TUBE</text>
 <circle cx="710.0" cy="690.0" r="67.5" stroke="#c98bff" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="none" />
 <circle cx="710.0" cy="690.0" r="135.0" stroke="#c98bff" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="none" />
+<text x="939.5" y="693.0" font-size="10" text-anchor="middle" fill="#c98bff" font-family="ui-monospace, Consolas, monospace">DOCK-S1</text>
+<text x="595.2" y="494.3" font-size="10" text-anchor="middle" fill="#c98bff" font-family="ui-monospace, Consolas, monospace">DOCK-S2</text>
+<text x="595.2" y="891.7" font-size="10" text-anchor="middle" fill="#c98bff" font-family="ui-monospace, Consolas, monospace">DOCK-MB</text>
 <circle cx="687.5" cy="683.2" r="9.0" stroke="#4caf50" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#4caf50" fill-opacity="0.12" />
 <text x="687.5" y="686.2" font-size="10" text-anchor="middle" fill="#4caf50" font-family="ui-monospace, Consolas, monospace">LM-CORE-WATER</text>
 <circle cx="756.6" cy="863.9" r="13.5" stroke="#4caf50" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#4caf50" fill-opacity="0.12" />

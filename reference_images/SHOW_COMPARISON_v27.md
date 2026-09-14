@@ -22,12 +22,12 @@ The STL extrudes each arm as a solid fillet into the domes. Classified as hull, 
 
 ## What still differs — work list
 
-1. **Hull finish.** Show: warm yellow-tan with dark panel seams and shading; model: flat beige. Cosmetic, but it is the biggest visual gap in the #23 composite. Option: a procedural panel-seam texture on the STL hull material (no geometry change).
-2. **Junction hardware.** #23 shows dark, greebled dock/gantry structures where the arms meet the disc and small gantries on the disc top near the arm roots. Not modelled (UNPLACED). Would sit on the hull outside the dome footprints.
-3. **Rim drum.** #23 shows a dark band with lit strips around the disc rim below the dome. The STL rim is plain. Candidate: a lit window band around the drum at deck level, same treatment as the arm slot windows. Evidence B; not built.
+1. **Hull finish.** DONE v2.8: hull colour warmed to yellow-tan and a procedural panel-seam shader (angular seams every 15 deg, ring/height bands, per-panel shade) on the STL hull material. No geometry change.
+2. **Junction hardware.** DONE v2.8 as PLACEHOLDER nodes `DOCK-S1/S2/MB`: a pair of dark docking piers projecting from the rim band 20 deg either side of each arm root (r 0.966-1.08), cyan edge lights, mooring stubs, and a gantry on the rim. Form is a convention; count and position are from #23.
+3. **Rim drum.** DONE v2.8: a dark band on the rim underside slope (r 0.970-0.992, STL underside z -0.049 to -0.031 by ray probe) with 144 lit window slots (`rim.drum_window_band`). Existence B, placement C.
 4. **Docked platform / dish.** A separate dish-and-gantry platform floats top-right in #23. UNPLACED; not built.
-5. **Interior style.** #14: organic, tapered, gothic spires; sweeping curved viaducts; yellow atmospheric haze; lush planters. Model: box/cylinder blocks, straight roads. The generator would need a tapered-spire family for the civic core and curved viaduct geometry for the rail. Layout (rings, radials, plaza, rail) is fine; silhouettes are not.
+5. **Interior style.** PARTIAL v2.8: civic-core towers (55 %) and tall commercial blocks (30 %) are now stepped tapers with a spire inside the same footprint. The organic curved forms of #14 are not reproducible from a wide shot; left as is by the owner's call.
 6. **Keel blade visibility.** With the STL opaque, the blade is the spike surface itself; the show's blade is a translucent energy column wider than the spike. Consider a translucent emissive column between the fins in addition to the spike material.
-7. **Dome tint.** Show domes read teal-green with visible reflection bands; ours are near-clear. A slight tint on the main/pod dome material would bring the composite closer without hiding the city.
+7. **Dome tint.** DONE v2.8: dome glass tinted teal (0x9fd9d2, opacity 0.36, faint emissive, clearcoat) on all four domes.
 
 Nothing in the list changes measured geometry; all are surface, hardware or generator-style items and each stays labelled with its evidence class in the register.

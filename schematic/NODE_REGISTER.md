@@ -1,6 +1,6 @@
 # Node Register (generated — do not edit; edit `citadel_schematic.json` and run `python schematic/build.py`)
 
-96 nodes. Positions are in U (1 U = DOME-P radius). Placement class governs how much trust the position deserves.
+99 nodes. Positions are in U (1 U = DOME-P radius). Placement class governs how much trust the position deserves.
 
 | ID | Name | Kind | Layer | Bands | Exist. | Placement | States | Position (X,Y,Z) | Parent | Key evidence |
 |---|---|---|---|---|---|---|---|---|---|---|
@@ -95,6 +95,9 @@
 | `UG-LAUNCH-CHAMBER` | Launch chamber (Evil Morty's spacecraft) | machinery | L7 | V-3 V-4 | A | ANCHORED | DS-04 DS-05 | +0.00,-0.03,-0.55 | — | EPISODE_EVIDENCE_SOLARICKS.md (surviving launch/technical chamber); EPISODE_EVIDENCE_RICKMURAI_JACK.md (spacecraft loaded into an exit chute) |
 | `UG-EXIT-CHUTE` | Spacecraft exit chute | machinery | L7 | V-3 V-4 | A | ANCHORED | DS-04 DS-05 DS-06 | +0.00,+0.00,-0.97 | — | EPISODE_EVIDENCE_RICKMURAI_JACK.md (launched from the bottom of the Citadel); EPISODE_EVIDENCE_SOLARICKS.md (launch track) |
 | `IF-MORTYBURG` | Mortyburg attachment interface | interface | L7 | V0 V-1 | A | PROVISIONAL | DS-01 DS-02 DS-03 DS-04 DS-05 | -0.50,-0.87,-0.05 | — | EPISODE_EVIDENCE_RICKMURAI_JACK.md (Mortyburg detachment); DIALOGUE_ARCHITECTURE_CROSSREF.md D-008, D-009 |
+| `DOCK-S1` | Dock piers at the ARM-S1 junction | utility | L7 | V0 | B | PLACEHOLDER | DS-01 DS-02 DS-03 DS-04 DS-05 | +1.02,+0.00,+0.00 | — | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (dark dock/gantry structures where the arms meet the disc) |
+| `DOCK-S2` | Dock piers at the ARM-S2 junction | utility | L7 | V0 | B | PLACEHOLDER | DS-01 DS-02 DS-03 DS-04 DS-05 | -0.51,+0.88,+0.00 | — | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (dark dock/gantry structures where the arms meet the disc) |
+| `DOCK-MB` | Dock piers at the ARM-MB junction | utility | L7 | V0 | B | PLACEHOLDER | DS-01 DS-02 DS-03 DS-04 DS-05 | -0.51,-0.88,+0.00 | — | reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (dark dock/gantry structures where the arms meet the disc) |
 | `MB-THRUSTERS` | Mortyburg boosters / thrusters | machinery | L7 | V-1 | A | PROVISIONAL | DS-05 DS-06 | -1.16,-2.01,-0.10 | DOME-MB | DIALOGUE_ARCHITECTURE_CROSSREF.md D-010 |
 | `RUIN-DEBRIS-FIELD` | Post-destruction debris field | ruin | L7 | — | A | PROVISIONAL | DS-06 DS-07 DS-08 | +0.00,+0.00,+0.00 | — | EPISODE_EVIDENCE_SOLARICKS.md; CONTRADICTION_LOG.md C-009 |
 | `RUIN-LAUNCH-CHAMBER` | Ruined launch chamber | ruin | L7 | V-3 | A | ANCHORED | DS-06 | +0.00,-0.03,-0.55 | UG-LAUNCH-CHAMBER | EPISODE_EVIDENCE_SOLARICKS.md (surviving launch/technical chamber) |
@@ -105,7 +108,7 @@
 
 ### SHELL-DRUM — Central lens — lower hull
 
-**Placement rationale:** STL cross-sections: the underside of the main body is the lower half of the lens, 0.10 R deep at the centre. The v2 "thin plate" was the right thickness but the wrong shape. Geometry measured from the STL.
+**Placement rationale:** STL cross-sections: the underside of the main body is the lower half of the lens, 0.10 R deep at the centre. The v2 "thin plate" was the right thickness but the wrong shape. Geometry measured from the STL. v2.8: a dark window band with lit slots is drawn on the rim underside (rim.drum_window_band, evidence #23).
 
 **Unknowns:** rim wall height; deck thickness; rim detailing
 
@@ -914,6 +917,36 @@
 **Evidence:** EPISODE_EVIDENCE_RICKMURAI_JACK.md (Mortyburg detachment); DIALOGUE_ARCHITECTURE_CROSSREF.md D-008, D-009
 
 **Sub-features to model:** closing entrance / blast door; rail passes through; DISENGAGE control; structural release
+
+### DOCK-S1 — Dock piers at the ARM-S1 junction
+
+**Placement rationale:** Frame #23 shows dark, greebled hardware at each arm/disc junction (B). Modelled as a pair of docking piers projecting from the rim band on either side of the arm root (the only hull outside the dome footprint there), with a gantry on the rim. Size and count are conventions: PLACEHOLDER.
+
+**Unknowns:** exact form; whether they are docks, hangars or structural collars
+
+**Evidence:** reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (dark dock/gantry structures where the arms meet the disc)
+
+**Sub-features to model:** dark docking pier projecting from the disc rim on each side of the arm root; cyan edge lights; mooring stubs; gantry crane on the rim
+
+### DOCK-S2 — Dock piers at the ARM-S2 junction
+
+**Placement rationale:** Frame #23 shows dark, greebled hardware at each arm/disc junction (B). Modelled as a pair of docking piers projecting from the rim band on either side of the arm root (the only hull outside the dome footprint there), with a gantry on the rim. Size and count are conventions: PLACEHOLDER.
+
+**Unknowns:** exact form; whether they are docks, hangars or structural collars
+
+**Evidence:** reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (dark dock/gantry structures where the arms meet the disc)
+
+**Sub-features to model:** dark docking pier projecting from the disc rim on each side of the arm root; cyan edge lights; mooring stubs; gantry crane on the rim
+
+### DOCK-MB — Dock piers at the ARM-MB junction
+
+**Placement rationale:** Frame #23 shows dark, greebled hardware at each arm/disc junction (B). Modelled as a pair of docking piers projecting from the rim band on either side of the arm root (the only hull outside the dome footprint there), with a gantry on the rim. Size and count are conventions: PLACEHOLDER.
+
+**Unknowns:** exact form; whether they are docks, hangars or structural collars
+
+**Evidence:** reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (dark dock/gantry structures where the arms meet the disc)
+
+**Sub-features to model:** dark docking pier projecting from the disc rim on each side of the arm root; cyan edge lights; mooring stubs; gantry crane on the rim
 
 ### MB-THRUSTERS — Mortyburg boosters / thrusters
 

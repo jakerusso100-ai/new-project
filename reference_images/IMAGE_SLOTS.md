@@ -97,10 +97,13 @@ Each image should also get a row in `reference_images/CAMERA_MATCH.md` (see temp
 | `UG-LAUNCH-CHAMBER` Launch chamber (Evil Morty's spacecraft) | ANCHORED | - [ ] S05E10 spacecraft loading<br>- [ ] S06E01 ruined platforms and track<br>- [ ] S06E01 broken glass/piping | _none yet_ |
 | `UG-EXIT-CHUTE` Spacecraft exit chute | ANCHORED | - [ ] S05E10 launch<br>- [ ] S06E01 track ruin | _none yet_ |
 | `IF-MORTYBURG` Mortyburg attachment interface | PROVISIONAL | - [ ] S05E10 DISENGAGE control<br>- [ ] S05E10 entrance closing<br>- [ ] S05E10 separation exterior | reference_images/CITADEL_IMAGE_GALLERY.md#04 (S05E10 founding hologram) |
+| `DOCK-S1` Dock piers at the ARM-S1 junction | PLACEHOLDER | - [ ] S05E10 exterior, closer | _none yet_ |
+| `DOCK-S2` Dock piers at the ARM-S2 junction | PLACEHOLDER | - [ ] S05E10 exterior, closer | _none yet_ |
+| `DOCK-MB` Dock piers at the ARM-MB junction | PLACEHOLDER | - [ ] S05E10 exterior, closer | _none yet_ |
 | `MB-THRUSTERS` Mortyburg boosters / thrusters | PROVISIONAL | - [ ] S05E10 boosters firing | _none yet_ |
 | `RUIN-DEBRIS-FIELD` Post-destruction debris field | PROVISIONAL | - [ ] S06E01 approach<br>- [ ] S06E01 fragment hops<br>- [ ] S08E03 wreckage | _none yet_ |
 | `RUIN-LAUNCH-CHAMBER` Ruined launch chamber | ANCHORED | - [ ] S06E01 chamber ruin | _none yet_ |
 | `RUIN-BEACON` Summer's beacon on the ruins | PLACEHOLDER | - [ ] S06E01 beacon placement | _none yet_ |
 | `NEW-CITADEL` New Citadel construction (Boss Hog Rick) | PROVISIONAL | - [ ] S08E03 New Citadel exterior<br>- [ ] S08E03 construction/lab interiors<br>- [ ] S08E03 destruction | reference_images/CITADEL_IMAGE_GALLERY.md#21 (S08E03 Boss Hog throne room) |
 
-**94 images logged against 162 required shots.**
+**94 images logged against 165 required shots.**

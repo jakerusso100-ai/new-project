@@ -100,3 +100,8 @@ Each pod repeats the shell (glass, ribs, hub, rim lights), a deck, a ring road, 
 ## What this is not
 
 Not a floor plan. No individual generated block corresponds to anything seen on screen; only the landmarks and the district assignments do. When a frame shows a specific block, add it as a node and the generator will skip its footprint.
+
+
+## Exterior finish and junction hardware (v2.8, 2026-09-14)
+
+Working the show comparison list (`reference_images/SHOW_COMPARISON_v27.md`): the STL hull material is warm tan with a procedural panel-seam shader; the four domes are tinted teal; dock piers with gantries (`DOCK-S1/S2/MB`, PLACEHOLDER) project from the rim band either side of each arm root; a dark window band with lit slots runs around the rim underside (`rim.drum_window_band`); civic-core and tall commercial towers are stepped tapers with spires. None of it moves measured geometry.

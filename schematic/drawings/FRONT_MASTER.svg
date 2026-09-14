@@ -85,6 +85,9 @@
 <text x="308.6" y="327.0" font-size="9" text-anchor="middle" fill="#5bc0eb" font-family="ui-monospace, Consolas, monospace">DOME-MB-HUB</text>
 <line x1="562.0" y1="384.8" x2="1018.0" y2="384.8" stroke="#c98bff" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="none"/>
 <text x="982.0" y="392.0" font-size="9" text-anchor="middle" fill="#c98bff" font-family="ui-monospace, Consolas, monospace">UG-SEWERS</text>
+<text x="790.0" y="375.2" font-size="9" text-anchor="middle" fill="#c98bff" font-family="ui-monospace, Consolas, monospace">DOCK-S1</text>
+<text x="1002.0" y="375.2" font-size="9" text-anchor="middle" fill="#c98bff" font-family="ui-monospace, Consolas, monospace">DOCK-S2</text>
+<text x="578.0" y="375.2" font-size="9" text-anchor="middle" fill="#c98bff" font-family="ui-monospace, Consolas, monospace">DOCK-MB</text>
 <polygon points="785.2,317.6 794.8,317.6 798.4,380.0 781.6,380.0" stroke="#ff8a65" stroke-width="1.8" stroke-opacity="0.9" fill="#ff8a65" fill-opacity="0.12"/>
 <text x="790.0" y="389.6" font-size="9" text-anchor="middle" fill="#ff8a65" font-family="ui-monospace, Consolas, monospace">LM-CENTRAL-MONUMENT</text>
 <polygon points="842.6,319.3 846.4,319.3 853.1,380.0 835.8,380.0" stroke="#ff8a65" stroke-width="1.6" stroke-opacity="0.8" stroke-dasharray="8,5" fill="#ff8a65" fill-opacity="0.12"/>

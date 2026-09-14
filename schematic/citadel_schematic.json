@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.5.0",
+  "schema_version": "2.7.0",
   "title": "Citadel of Ricks — Master Schematic Database",
   "generated_from": "Evidence registers in this repository (see SCHEMATIC.md for derivation rules)",
   "units": {
@@ -674,7 +674,7 @@
         "SOURCE_INDEX.md (lower metallic structural plates)",
         "GEOMETRY_DATABASE.md G-002"
       ],
-      "rationale": "Third pass on #23, measured: keel top width ≈ 70 px = 0.87 R across; blade tip 125 px = 1.56 R below the disc underside; fins end ≈ 1.2 R down. The keel is a bright cyan crystalline blade on the axis flanked by flat plated fins with angled tips, all hanging from the under-hub. Existence A, ratios B. Numeric fit to #23: blade tip at z −2.10 (measured from the disc centre, not the front rim — the earlier 1.56 was measured from the wrong edge). Silhouette fit: blade root r 0.117, tip z -2.13. STL: central spike tip at 2.13 R below the equator — identical to the silhouette-fitted blade tip (−2.13). Root r 0.19, thinning to 0.026 R.",
+      "rationale": "Third pass on #23, measured: keel top width ≈ 70 px = 0.87 R across; blade tip 125 px = 1.56 R below the disc underside; fins end ≈ 1.2 R down. The keel is a bright cyan crystalline blade on the axis flanked by flat plated fins with angled tips, all hanging from the under-hub. Existence A, ratios B. Numeric fit to #23: blade tip at z −2.10 (measured from the disc centre, not the front rim — the earlier 1.56 was measured from the wrong edge). Silhouette fit: blade root r 0.117, tip z -2.13. STL: central spike tip at 2.13 R below the equator — identical to the silhouette-fitted blade tip (−2.13). Root r 0.19, thinning to 0.026 R. v2.7: the STL keel spike (r < 0.12 R, below -0.4 R) renders with an emissive cyan blade material so the embedded mesh shows the blade #23 shows.",
       "unknowns": [
         "blade section (round vs flat)",
         "whether the glow is the Drive output"
@@ -5680,9 +5680,9 @@
       "spine_half_width": 0.047
     },
     "skylight": {
-      "status": "design decision on the owner's request (2026-09-12); placement class C",
+      "status": "design decision on the owner's request (2026-09-12); placement class B since 2026-09-14",
       "rule": "STL arm triangles within |side| < 0.07 R of the spine and above z +0.095 R render as glazing; every other arm triangle stays hull",
-      "evidence": "the STL carries a raised spine ridge along each arm top and the Printables render shows a lighter centre strip there; frame #23 shows the arms lit from within; no frame shows the arm roof directly, so the strip is not promoted above C"
+      "evidence": "the STL carries a raised spine ridge along each arm top and the Printables render shows a lighter centre strip there; frame #23 shows the arms lit from within; no frame shows the arm roof directly, so the strip is not promoted above C; the S05E10 founding hologram (gallery #04) draws the arms with the same rib lattice as the domes, i.e. as latticed/glazed structures rather than solid tubes"
     },
     "half_width_by_r": {
       "note": "STL cross-sections perpendicular to the arm axis, all three arms identical to 0.001 R; half-width of the solid at each z (R units), by r along the arm. Rows inside the shoulder slot (r >= 1.40, z ~0.033-0.058) show the spine only (0.047).",
@@ -9774,6 +9774,11 @@
           0.1023
         ]
       ]
+    },
+    "dome_junctions": {
+      "rule": "STL arm triangles inside a dome footprint (main dome r < 0.965, pod domes rp < 0.575 of pod radius 0.592) render as glazing; the arm is hull only outside the dome footprints",
+      "why": "the STL extrudes each arm as a solid fillet into the domes, which put an opaque wedge over the glass at every junction (owner, 2026-09-14); the show meets arm and dome cleanly (#23, #04)",
+      "probe": "ray casts down through the embedded STL at r 0.80-0.98 x side 0-0.3 and at the pod end along 1.74-1.95 x side 0.1-0.4 confirm the reclassified triangles lie on or above the dome surfaces"
     }
   }
 }

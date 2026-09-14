@@ -175,7 +175,7 @@
 
 ### SHELL-LOWER-BODY — Central spike (energy blade)
 
-**Placement rationale:** Third pass on #23, measured: keel top width ≈ 70 px = 0.87 R across; blade tip 125 px = 1.56 R below the disc underside; fins end ≈ 1.2 R down. The keel is a bright cyan crystalline blade on the axis flanked by flat plated fins with angled tips, all hanging from the under-hub. Existence A, ratios B. Numeric fit to #23: blade tip at z −2.10 (measured from the disc centre, not the front rim — the earlier 1.56 was measured from the wrong edge). Silhouette fit: blade root r 0.117, tip z -2.13. STL: central spike tip at 2.13 R below the equator — identical to the silhouette-fitted blade tip (−2.13). Root r 0.19, thinning to 0.026 R.
+**Placement rationale:** Third pass on #23, measured: keel top width ≈ 70 px = 0.87 R across; blade tip 125 px = 1.56 R below the disc underside; fins end ≈ 1.2 R down. The keel is a bright cyan crystalline blade on the axis flanked by flat plated fins with angled tips, all hanging from the under-hub. Existence A, ratios B. Numeric fit to #23: blade tip at z −2.10 (measured from the disc centre, not the front rim — the earlier 1.56 was measured from the wrong edge). Silhouette fit: blade root r 0.117, tip z -2.13. STL: central spike tip at 2.13 R below the equator — identical to the silhouette-fitted blade tip (−2.13). Root r 0.19, thinning to 0.026 R. v2.7: the STL keel spike (r < 0.12 R, below -0.4 R) renders with an emissive cyan blade material so the embedded mesh shows the blade #23 shows.
 
 **Unknowns:** blade section (round vs flat); whether the glow is the Drive output
 

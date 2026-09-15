@@ -27,21 +27,25 @@ const RINGS=DB.nodes.filter(n=>n.id.startsWith('CIRC-RING')).map(n=>n.geometry.r
 const RAIL=NB['CIRC-RAIL-LOOP'].geometry, TRAM=NB['CIRC-TRAM-PLAZA'].geometry;
 
 // ---------------- glazing (main body + pods)
-function lensShell(R,H,segs,scale,cx,cy,id){
+function lensShell(R,H,segs,scale,cx,cy,id,prof){
   const g=new THREE.Group();
   const geo=new THREE.SphereGeometry(1,96,32,0,Math.PI*2,0,Math.PI/2); geo.rotateX(Math.PI/2); geo.scale(R,R,H);
   const glass=new THREE.MeshPhysicalMaterial({color:COL.glass,transmission:0.92,roughness:0.08,metalness:0,transparent:true,opacity:0.28,side:THREE.DoubleSide,depthWrite:false});
   if(!MESH_B64) g.add(tag(meshAt(geo,glass,cx,cy,0),id,'glazing'));
-  const ribMat=M({color:COL.rib,roughness:0.5,metalness:0.3}); const inset=0.009*scale;
-  for(let i=0;i<segs;i++){ const a=i/segs*Math.PI*2; const pts=[]; for(let k=0;k<=24;k++){ const t=k/24*Math.PI/2; pts.push(new THREE.Vector3(cx+Math.cos(a)*(R-inset)*Math.cos(t), cy+Math.sin(a)*(R-inset)*Math.cos(t), (H-inset)*Math.sin(t))); }
-    g.add(tag(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts),24,0.007*scale,8,false),ribMat),id,'structural rib')); }
-  for(const f of [0.45,0.75]){ const pts=[]; const zz=(H-inset)*Math.sqrt(1-f*f); for(let k=0;k<=96;k++){ const a=k/96*Math.PI*2; pts.push(new THREE.Vector3(cx+Math.cos(a)*(R-inset)*f,cy+Math.sin(a)*(R-inset)*f,zz)); } g.add(tag(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts,true),96,0.004*scale,6,true),ribMat),id,'ring purlin')); }
+  const ribMat=M({color:COL.rib,roughness:0.5,metalness:0.3});
+  // profiles: measured STL top surface (dome_profile / pod_profile) when available, else the ellipsoid
+  const interp=(arr,r)=>{ if(!prof) return H*Math.sqrt(Math.max(0,1-(r/R)*(r/R))); const rs=prof.r; let last=null; for(let i=0;i<rs.length-1;i++){ const z0=arr[i], z1=arr[i+1]; if(z0==null) continue; if(z1==null) return z0; if(r>=rs[i]&&r<=rs[i+1]) return z0+(z1-z0)*(r-rs[i])/(rs[i+1]-rs[i]); last=z1; } return last==null?0:last; };
+  const zRidge=r=>interp(prof?prof.z_ridge:null,r), zPanel=r=>interp(prof?prof.z_panel:null,r);
+  const azs=prof&&prof.ridge_azimuths_deg&&prof.ridge_azimuths_deg.length?prof.ridge_azimuths_deg.map(d=>d*Math.PI/180):Array.from({length:segs},(_,i)=>i/segs*Math.PI*2);
+  const rEnd=prof?R*0.985:R-0.009*scale; const lift=0.004*scale;
+  azs.forEach(a=>{ const pts=[]; for(let k=0;k<=32;k++){ const r=rEnd*k/32; pts.push(new THREE.Vector3(cx+Math.cos(a)*r, cy+Math.sin(a)*r, zRidge(r)+lift)); } g.add(tag(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts),32,0.007*scale,8,false),ribMat),id,'structural rib (on the STL ridge)')); });
+  for(const f of [0.45,0.75]){ const pts=[]; const r=R*f; const zz=zPanel(r)+lift; for(let k=0;k<=96;k++){ const a=k/96*Math.PI*2; pts.push(new THREE.Vector3(cx+Math.cos(a)*r,cy+Math.sin(a)*r,zz)); } g.add(tag(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(pts,true),96,0.004*scale,6,true),ribMat),id,'ring purlin')); }
   if(!MESH_B64){ g.add(tag(meshAt(new THREE.CylinderGeometry(0.2*R,0.2*R,0.012*scale,48).rotateX(Math.PI/2),M({color:COL.hull}),cx,cy,H-0.004*scale),id,'apex hub'));
     g.add(tag(meshAt(new THREE.TorusGeometry(R,0.012*scale,8,128),M({color:COL.hull}),cx,cy,0),id,'rim'));
     for(let i=0;i<24;i++){ const a=i/24*Math.PI*2+0.05; g.add(tag(meshAt(new THREE.BoxGeometry(0.03*scale,0.08*scale,0.008*scale),EM(COL.cyan,1.2),cx+Math.cos(a)*R*1.005,cy+Math.sin(a)*R*1.005,0.01*scale,a),id,'rim light')); } }
   return g;
 }
-cat.glass.add(lensShell(1.0,0.292,8,1,0,0,'DOME-P'));
+cat.glass.add(lensShell(1.0,0.292,8,1,0,0,'DOME-P',DB.dome_profile));
 
 // ---------------- decks
 const deckDisc=(r,z,color,op,id,label)=>tag(meshAt(new THREE.CircleGeometry(r,96),M({color,transparent:op<1,opacity:op,side:THREE.DoubleSide}),0,0,z),id,label);
@@ -163,7 +167,7 @@ for(let i=0;i<towers.length;i++) for(let j=i+1;j<towers.length;j++){ const A=tow
 DB.nodes.filter(n=>(n.id.startsWith('DOME-S')||n.id==='DOME-MB')&&n.geometry.type==='lens').forEach(pod=>{
   const [px,py]=pod.position; const s=pod.geometry.radius; const penv=r=>lensTop(r)*(pod.geometry.top_height/0.292);
   const fam=pod.id==='DOME-MB'?Object.assign({id:pod.id},FAM['DIST-MORTYTOWN']):Object.assign({id:pod.id},FAM.GENERIC);
-  cat.pods.add(lensShell(s,pod.geometry.top_height,8,s,px,py,pod.id));
+  cat.pods.add(lensShell(s,pod.geometry.top_height,8,s,px,py,pod.id,DB.pod_profile));
   cat.pods.add(tag(meshAt(new THREE.CircleGeometry(s*0.999,96),M({color:COL.plaza}),px,py,-0.002),pod.id,'pod deck'));
   cat.pods.add(tag(meshAt(new THREE.RingGeometry((0.5-ROAD_HALF)*s,(0.5+ROAD_HALF)*s,96),roadMat,px,py,0.002),pod.id,'pod ring road'));
   for(let k=0;k<6;k++){ const a=k/6*Math.PI*2; const L=(0.97-0.14)*s; cat.pods.add(tag(meshAt(new THREE.BoxGeometry(L,RAD.width*s,0.002),roadMat,px+Math.cos(a)*(0.14+0.415)*s,py+Math.sin(a)*(0.14+0.415)*s,0.002,a),pod.id,'pod avenue')); }
@@ -197,6 +201,10 @@ const tiers=new THREE.Group(); [[PLAZA_R+0.02,0.04],[PLAZA_R+0.026,0.08],[PLAZA_
 // rail spur to Mortyburg: track guide and columns along the schematic path (descends beside the avenue into the bridge concourse)
 { const sp=NB['CIRC-RAIL-MB-SPUR'].geometry.points.map(p=>new THREE.Vector3(...p)); const cur=new THREE.CatmullRomCurve3(sp); cat.transit.add(tag(new THREE.Mesh(new THREE.TubeGeometry(cur,64,0.005,6,false),EM(COL.cyan,0.5)),'CIRC-RAIL-MB-SPUR','spur track guide')); for(let k=0;k<=30;k++){ const q=cur.getPoint(k/30); if(q.z<0.012) continue; cat.transit.add(tag(meshAt(new THREE.CylinderGeometry(0.004,0.004,q.z,8).rotateX(Math.PI/2),colMat,q.x,q.y,q.z/2),'CIRC-RAIL-MB-SPUR','spur column')); } }
 
+// ---------------- keel energy column (#23: a glowing cyan blade between the fins), additive and translucent, in addition to the emissive STL spike
+{ const col=new THREE.MeshBasicMaterial({color:0x5fe8ff,transparent:true,opacity:0.32,blending:THREE.AdditiveBlending,depthWrite:false}); const core=new THREE.MeshBasicMaterial({color:0xd8fbff,transparent:true,opacity:0.55,blending:THREE.AdditiveBlending,depthWrite:false});
+  cat.decks.add(tag(meshAt(new THREE.CylinderGeometry(0.03,0.10,1.6,24,1,true).rotateX(Math.PI/2),col,0,0,-1.25),'SHELL-LOWER-BODY','energy column')); cat.decks.add(tag(meshAt(new THREE.CylinderGeometry(0.012,0.05,1.7,16,1,true).rotateX(Math.PI/2),core,0,0,-1.25),'SHELL-LOWER-BODY','energy core')); }
+
 // ---------------- underground
 const ug=NB['UG-PORTAL-FLUID'].geometry, ugp=NB['UG-PORTAL-FLUID'].position;
 cat.underground.add(tag(meshAt(new THREE.CylinderGeometry(ug.radius,ug.radius*0.9,ug.z_top-ug.z_bottom,24,1,true).rotateX(Math.PI/2),M({color:0x6b5a48,side:THREE.BackSide,roughness:1}),ugp[0],ugp[1],(ug.z_top+ug.z_bottom)/2),'UG-PORTAL-FLUID','cave wall'));
@@ -227,45 +235,23 @@ DB.nodes.filter(n=>n.id.startsWith('ARM-')).forEach(n=>{ const pts=n.geometry.po
   { const RP=DB.arm_section.rib_profiles.profiles; RP.forEach(pf=>{ const path=new THREE.CurvePath(); const P=pf.pts.map(([s,z])=>new THREE.Vector3(...at(pf.r,s,z))); for(let i=0;i<P.length;i++) path.add(new THREE.LineCurve3(P[i],P[(i+1)%P.length])); cat.decks.add(tag(new THREE.Mesh(new THREE.TubeGeometry(path,P.length*2,0.004,6,true),M({color:0xb8bcc4,metalness:0.3})),n.id,'hull rib')); }); }
   // cyan light strips along the arm edges (#23), following the hull edge at the equator just outside it
   for(const sg of [1,-1]){ const P=[]; for(let r=1.0;r<=podR+0.001;r+=0.05) P.push(new THREE.Vector3(...at(r,sg*(halfRow(r,0,true)+0.004),0))); cat.glass.add(tag(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(P,false,'centripetal'),48,0.003,6,false),EM(COL.cyan,1.2)),n.id,'edge light strip (#23)')); }
-  // spine skylight framing: the glazed strip (|side| < 0.07, above +0.095) gets edge frames and a transverse mullion every 0.03 R (the STL spine fin serves as the ridge), laid on the STL top surface (arm_section.top_surface, ray-cast grid)
-  { const TS=DB.arm_section.top_surface; const topZ=(r,sd)=>{ const fr=Math.min(Math.max((r-TS.r[0])/(TS.r[1]-TS.r[0]),0),TS.r.length-1.001), fs=Math.min(Math.max((sd-TS.side[0])/(TS.side[1]-TS.side[0]),0),TS.side.length-1.001); const i=Math.floor(fr), j=Math.floor(fs), u=fr-i, v=fs-j; const Z=TS.z; const zAt=(ii,jj)=>Math.abs(TS.side[jj])<0.005?(Z[ii][jj-1]+Z[ii][jj+1])/2:Z[ii][jj]; /* the spine fin (one grid column, +0.011) is the STL's own ridge; frames run at its base */ return (zAt(i,j)*(1-v)+zAt(i,j+1)*v)*(1-u)+(zAt(i+1,j)*(1-v)+zAt(i+1,j+1)*v)*u; };
-    const frameMat=M({color:0x56606c,metalness:0.6,roughness:0.35}); const poly=(P,rad,label)=>{ const path=new THREE.CurvePath(); for(let i=0;i<P.length-1;i++) path.add(new THREE.LineCurve3(P[i],P[i+1])); cat.glass.add(tag(new THREE.Mesh(new THREE.TubeGeometry(path,(P.length-1)*2,rad,5,false),frameMat),n.id,label)); };
-    const rS=1.0, rE=Math.min(podR-0.02,1.76), off=0.0025;
-    for(const sd of [-0.07,0.07]){ const P=[]; for(let r=rS;r<=rE+1e-6;r+=0.02) P.push(new THREE.Vector3(...at(r,sd,topZ(r,sd)+off))); poly(P,0.0022,'skylight edge frame'); }
-    for(let r=rS;r<=rE+1e-6;r+=0.03){ const P=[]; for(let sd=-0.07;sd<=0.0701;sd+=0.01) P.push(new THREE.Vector3(...at(r,sd,topZ(r,sd)+off))); poly(P,0.0014,'skylight mullion'); }
-  }
-  // window-band mullions and sill: a dark frame between each pane and along the slot floor edge so the band reads as glazing from outside
-  { const W2=DB.arm_section.windows; const frameMat=M({color:0x3a434e,metalness:0.5,roughness:0.4}); const zc2=r=>{ const T=W2.z_ceiling_by_r; for(let i=0;i<T.length-1;i++){ if(r>=T[i][0]&&r<=T[i+1][0]) return T[i][1]+(T[i+1][1]-T[i][1])*(r-T[i][0])/(T[i+1][0]-T[i][0]); } return T[T.length-1][1]; };
-    for(const sg of [1,-1]) for(let r=W2.r_start;r<=W2.r_end-0.0199;r+=0.02){ const h=zc2(r)-W2.z_floor; if(h<0.004) continue; const side=halfRow(r+0.01,zc2(r+0.01)+0.005,true)-0.0025; put(new THREE.BoxGeometry(0.0018,0.004,h),frameMat,r,sg*side,W2.z_floor+h/2,'window mullion',cat.glass); } }
   // utility deck below the concourse, continuous with the city sub-decks (services, freight, disengage machinery at the root)
   put(new THREE.BoxGeometry(podR+0.03-0.95,0.3,0.003),M({color:COL.deck,transparent:true,opacity:0.6}),(0.95+podR+0.03)/2,0,-0.05,'utility deck');
   for(let k=0;k<8;k++) put(new THREE.CylinderGeometry(0.012,0.012,0.035,12).rotateX(Math.PI/2),M({color:0x7a8a7a}),rimR+len*(k+0.5)/8,0.09,-0.031,'utility tank');
-  // window bands: the STL cuts a horizontal slot under the overhanging upper slab of each shoulder from r 1.40 to 1.75 (floor +0.0335, ceiling rising to +0.0575, slab face at ~0.18-0.19); vertical glazing panes stand in the slab face, the shelf outside is the ledge
-  const winMat=new THREE.MeshStandardMaterial({color:0xc8f6ff,emissive:0x3fd0ff,emissiveIntensity:1.15,roughness:0.08,metalness:0.1,transparent:true,opacity:0.9});
+  // light band: the STL cuts a slot under an overhanging slab on both shoulders (r 1.40-1.75); #23 shows lit strips there. Opaque emissive bars stand in the slab face; no glazing on the arms (owner, 2026-09-15)
+  const barMat=new THREE.MeshStandardMaterial({color:0xbff4ff,emissive:0x3fd0ff,emissiveIntensity:1.3,roughness:0.3});
   const W=DB.arm_section.windows; const zc=r=>{ const T=W.z_ceiling_by_r; for(let i=0;i<T.length-1;i++){ if(r>=T[i][0]&&r<=T[i+1][0]) return T[i][1]+(T[i+1][1]-T[i][1])*(r-T[i][0])/(T[i+1][0]-T[i][0]); } return T[T.length-1][1]; };
-  for(const sg of [1,-1]) for(let r=W.r_start;r<W.r_end-0.001;r+=0.02){ const rc=r+0.01; const h=zc(rc)-W.z_floor; if(h<0.004) continue; const side=halfRow(rc,zc(rc)+0.005,true)-0.003; put(new THREE.BoxGeometry(0.018,0.003,h),winMat,rc,sg*side,W.z_floor+h/2,'window band pane (STL slot, #23)',cat.glass); }
-  // window galleries: the STL slot floor (+0.0325) is a real surface over the concourse flanks at r 1.40-1.75, so the space above it, behind the window band, is a gallery: floor, rail, and a stair/lift core at each end down to the concourse
-  { const gA=W.r_start+0.005, gB=W.r_end-0.005, gL=gB-gA, gM=(gA+gB)/2; for(const sg of [1,-1]){ put(new THREE.BoxGeometry(gL,0.115,0.002),M({color:0xd8d3c0}),gM,sg*0.1125,W.z_floor+0.001,'window gallery floor (STL slot level)'); put(new THREE.BoxGeometry(gL,0.002,0.006),M({color:0x9aa0aa}),gM,sg*0.056,W.z_floor+0.005,'gallery rail'); for(let k=0;k<5;k++) put(new THREE.BoxGeometry(0.004,0.06,0.002),EM(COL.cyan,0.5),gA+gL*(k+0.5)/5,sg*0.11,W.z_floor+0.012,'gallery light'); for(const rr_ of [gA+0.012,gB-0.012]){ put(new THREE.BoxGeometry(0.02,0.02,W.z_floor),M({color:0xc9c3b0}),rr_,sg*0.1,W.z_floor/2,'gallery stair / lift core'); } } }
+  for(const sg of [1,-1]) for(let r=W.r_start;r<W.r_end-0.001;r+=0.02){ const rc=r+0.01; const h=zc(rc)-W.z_floor; if(h<0.004) continue; const side=halfRow(rc,zc(rc)+0.005,true)-0.003; put(new THREE.BoxGeometry(0.016,0.003,h*0.8),barMat,rc,sg*side,W.z_floor+h/2,'slot light bar (#23 lit strips)'); }
 });
 
-// ---------------- junction hardware: dock piers + gantries beside each arm root (DOCK-*), and the rim drum window band (SHELL-DRUM)
-DB.nodes.filter(n=>n.geometry&&n.geometry.type==='pier_pair').forEach(n=>{ const g=n.geometry; const dark=M({color:0x2a3038,metalness:0.55,roughness:0.5}); const stub=M({color:0x4a525c,metalness:0.5,roughness:0.5});
-  for(const sg of [1,-1]){ const az=n.azimuth+sg*g.az_offset_deg; const a=az*Math.PI/180; const L=g.r_end-g.r_start, rc=(g.r_start+g.r_end)/2; const P=(r,side,z)=>[Math.cos(a)*r-Math.sin(a)*side, Math.sin(a)*r+Math.cos(a)*side, z];
-    const put=(geo,mat,r,side,z,label)=>{ const [x,y,zz]=P(r,side,z); cat.decks.add(tag(meshAt(geo,mat,x,y,zz,a),n.id,label)); };
-    put(new THREE.BoxGeometry(L,g.width,g.height),dark,rc,0,0,'dock pier');
-    for(const e of [1,-1]) put(new THREE.BoxGeometry(L*0.9,0.002,0.002),EM(COL.cyan,1.0),rc,e*g.width/2,g.height/2+0.001,'pier edge light');
-    for(let k=0;k<3;k++) put(new THREE.CylinderGeometry(0.005,0.005,0.02,10).rotateX(Math.PI/2),stub,1.03+k*0.02,sg*(g.width/2+0.01),0,'mooring stub');
-    put(new THREE.BoxGeometry(0.03,0.02,0.012),dark,g.r_end-0.02,0,g.height/2+0.006,'pier head');
-    // gantry on the rim band above the pier root
-    for(const e of [1,-1]) put(new THREE.BoxGeometry(0.006,0.006,0.085),stub,0.985,e*0.03,0.0425,'gantry post');
-    put(new THREE.BoxGeometry(0.008,0.07,0.006),stub,0.985,0,0.085,'gantry beam'); put(new THREE.BoxGeometry(0.06,0.006,0.006),stub,1.012,0,0.085,'gantry jib'); } });
+// ---------------- rim drum window band (SHELL-DRUM)
 { const D=DB.rim&&DB.rim.drum_window_band; if(D){ const [r0,r1]=D.r, [z0,z1]=D.z; const GAP=22*Math.PI/180; const bandMat=M({color:0x343a44,metalness:0.5,roughness:0.55,side:THREE.DoubleSide}); ARM_AZ.forEach(aa=>{ /* three arcs between the arm roots (the band would z-fight with the arm fillets inside +-22 deg of each arm) */ const start=aa+GAP, len=2*Math.PI/3-2*GAP; const lathe=new THREE.LatheGeometry([new THREE.Vector2(r0,z0),new THREE.Vector2(r1,z1)],64,0,len).rotateX(Math.PI/2).rotateZ(start); cat.decks.add(tag(new THREE.Mesh(lathe,bandMat),'SHELL-DRUM','drum window band')); }); const inGap=a=>ARM_AZ.some(aa=>Math.abs(Math.atan2(Math.sin(a-aa),Math.cos(a-aa)))<GAP+0.02); const rm=(r0+r1)/2-0.002, zm=(z0+z1)/2-0.002; for(let k=0;k<D.slots;k++){ const a=k/D.slots*Math.PI*2; if(inGap(a)) continue; cat.glass.add(tag(meshAt(new THREE.BoxGeometry(0.004,0.012,0.006).rotateY(-Math.PI/4),EM(0xfff1b0,1.1),Math.cos(a)*rm,Math.sin(a)*rm,zm,a),'SHELL-DRUM','drum window slot')); } } }
 
 // ---------------- UI + visibility
 const panel=document.createElement('div'); panel.innerHTML='<h2>Interior (generated)</h2>'+Object.keys(cat).map(k=>`<label class="row"><input type="checkbox" data-int="${k}" ${k==='labels'?'':'checked'}> ${k}</label>`).join('')+'<div class="sub">Generated fill inherits the placement class of its district; the inspector labels it GENERATED. See INTERIOR.md.</div>';
 document.getElementById('placements').parentNode.insertBefore(panel, document.getElementById('placements').nextSibling.nextSibling);
 cat.labels.visible=false; panel.querySelectorAll('[data-int]').forEach(e=>e.addEventListener('change',ev=>{ cat[ev.target.dataset.int].visible=ev.target.checked; }));
-const HIDE=['DOCK-S1','DOCK-S2','DOCK-MB','DOME-P','DOME-P-HUB','DOME-S1','DOME-S2','DOME-MB','DOME-S1-HUB','DOME-S2-HUB','DOME-MB-HUB','LM-CORE-WATER','LM-CENTRAL-PLAZA','CIRC-RING-1','CIRC-RING-2','CIRC-RING-3','CIRC-RADIALS','CIRC-HOVER-BAND','CIRC-TRAM-PLAZA','CIRC-CORE-WALKWAYS'].concat(LM.map(n=>n.id)).concat(MESH_B64?['ARM-S1','ARM-S2','ARM-MB','SHELL-DRUM','SHELL-PLATES','SHELL-UNDERHUB','SHELL-LOWER-BODY','SHELL-UNDERSIDE','KEEL-FIN-1','KEEL-FIN-2','KEEL-FIN-3','KEEL-FIN-4','KEEL-FIN-5']:[]);
+const HIDE=['DOME-P','DOME-P-HUB','DOME-S1','DOME-S2','DOME-MB','DOME-S1-HUB','DOME-S2-HUB','DOME-MB-HUB','LM-CORE-WATER','LM-CENTRAL-PLAZA','CIRC-RING-1','CIRC-RING-2','CIRC-RING-3','CIRC-RADIALS','CIRC-HOVER-BAND','CIRC-TRAM-PLAZA','CIRC-CORE-WALKWAYS'].concat(LM.map(n=>n.id)).concat(MESH_B64?['ARM-S1','ARM-S2','ARM-MB','SHELL-DRUM','SHELL-PLATES','SHELL-UNDERHUB','SHELL-LOWER-BODY','SHELL-UNDERSIDE','KEEL-FIN-1','KEEL-FIN-2','KEEL-FIN-3','KEEL-FIN-4','KEEL-FIN-5']:[]);
 const _rv=refreshVisibility; window.refreshVisibility=function(){ _rv(); const st=stateSel.value; const intact=['DS-01','DS-02','DS-03','DS-04','DS-05','all'].includes(st); IG.visible=intact; const cut=document.getElementById('cut').checked; cat.glass.visible=!cut&&document.querySelector('[data-int=glass]').checked; if(window.__tiers) window.__tiers.visible=['DS-01','DS-02','all'].includes(st); HIDE.forEach(id=>{ if(groups[id]) groups[id].visible=false; }); };
 [stateSel, document.getElementById('cut'), ...document.querySelectorAll('[data-layer],[data-placement]')].forEach(e=>e.addEventListener('change', ()=>window.refreshVisibility()));
 window.refreshVisibility();
@@ -289,5 +275,5 @@ window.__auditInterior=function(){
   LM.forEach(n=>{ const r=Math.hypot(n.position[0],n.position[1]); if(r>1.02) return; const g=n.geometry; const az=(n.azimuth||0)*Math.PI/180; const pts=g.size?obbCorners({x:n.position[0],y:n.position[1],az,sx:g.size[0],sy:g.size[1]}):[[n.position[0],n.position[1]]]; const R=g.size?0:lmRadius(n); const test=(x,y)=>{ const rr_=Math.hypot(x,y); if(RINGS.some(q=>Math.abs(rr_-q)<R+ROAD_HALF+WALK-0.003)) return 'ring'; const th=(Math.atan2(y,x)+2*Math.PI)%(2*Math.PI); for(let j=0;j<RAD.count;j++){ const ta=(RAD.az_start*Math.PI/180+j*2*Math.PI/RAD.count)%(2*Math.PI); let d=Math.abs(th-ta); d=Math.min(d,2*Math.PI-d); if(rr_>=RAD.r_inner-R&&d*rr_<R+ROAD_HALF+WALK-0.003) return 'radial '+j; } if(n.id!=='LM-CENTRAL-MONUMENT'&&rr_<PLAZA_R+R-0.003) return 'plaza'; if(Math.abs(rr_-RAIL.radius)<R+0.012) return 'rail'; return null; }; for(const [x,y] of pts){ const hit=test(x,y); if(hit){ rep.landmark_road.push([n.id,hit,+r.toFixed(3)]); break; } } });
   return rep;
 };
-console.log('interior v2.8 built:', placed.length, 'blocks; audit:', JSON.stringify(window.__auditInterior()));
+console.log('interior v2.9 built:', placed.length, 'blocks; audit:', JSON.stringify(window.__auditInterior()));
 })();

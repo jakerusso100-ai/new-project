@@ -1,5 +1,5 @@
 {
-  "schema_version": "2.8.0",
+  "schema_version": "2.9.0",
   "title": "Citadel of Ricks — Master Schematic Database",
   "generated_from": "Evidence registers in this repository (see SCHEMATIC.md for derivation rules)",
   "units": {
@@ -674,7 +674,7 @@
         "SOURCE_INDEX.md (lower metallic structural plates)",
         "GEOMETRY_DATABASE.md G-002"
       ],
-      "rationale": "Third pass on #23, measured: keel top width ≈ 70 px = 0.87 R across; blade tip 125 px = 1.56 R below the disc underside; fins end ≈ 1.2 R down. The keel is a bright cyan crystalline blade on the axis flanked by flat plated fins with angled tips, all hanging from the under-hub. Existence A, ratios B. Numeric fit to #23: blade tip at z −2.10 (measured from the disc centre, not the front rim — the earlier 1.56 was measured from the wrong edge). Silhouette fit: blade root r 0.117, tip z -2.13. STL: central spike tip at 2.13 R below the equator — identical to the silhouette-fitted blade tip (−2.13). Root r 0.19, thinning to 0.026 R. v2.7: the STL keel spike (r < 0.12 R, below -0.4 R) renders with an emissive cyan blade material so the embedded mesh shows the blade #23 shows.",
+      "rationale": "Third pass on #23, measured: keel top width ≈ 70 px = 0.87 R across; blade tip 125 px = 1.56 R below the disc underside; fins end ≈ 1.2 R down. The keel is a bright cyan crystalline blade on the axis flanked by flat plated fins with angled tips, all hanging from the under-hub. Existence A, ratios B. Numeric fit to #23: blade tip at z −2.10 (measured from the disc centre, not the front rim — the earlier 1.56 was measured from the wrong edge). Silhouette fit: blade root r 0.117, tip z -2.13. STL: central spike tip at 2.13 R below the equator — identical to the silhouette-fitted blade tip (−2.13). Root r 0.19, thinning to 0.026 R. v2.7: the STL keel spike (r < 0.12 R, below -0.4 R) renders with an emissive cyan blade material so the embedded mesh shows the blade #23 shows. v2.9: a translucent additive energy column is drawn between the fins (z -0.45 to -2.05, radius 0.10 tapering to 0.03) in addition to the emissive spike, matching the glowing blade of #23.",
       "unknowns": [
         "blade section (round vs flat)",
         "whether the glow is the Drive output"
@@ -843,9 +843,9 @@
           "lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R",
           "cyan light strips along the edges (#23)",
           "level with the equatorial plane",
-          "glazed skylight strip along the spine ridge (|side| < 0.07 R, above +0.095 R)",
-          "through-slot window band on both shoulders, r 1.40-1.75 (STL), glazed with vertical panes",
-          "interior: through-concourse 0 to +0.045, window galleries +0.0335 to +0.05 on the flanks at r 1.42-1.74 (STL slot level), utility deck below; exterior surface unchanged"
+          "no glazing anywhere on the arm (owner, 2026-09-15; the show shows solid arms)",
+          "lit light band in the STL shoulder slot, r 1.40-1.75 (#23)",
+          "interior: through-concourse 0 to +0.045 and utility deck below; exterior surface unchanged"
         ],
         "interior_levels": [
           {
@@ -859,24 +859,7 @@
               0,
               90
             ],
-            "use": "the bridge itself, filling the full width of the section: the avenue road down the centre, the rail spur beside it on a low viaduct, walkways either side, and a low arcade of buildings along both flanks (bridge-side commerce); structural ribs follow the hull section; portal in the disc rim (r 0.995) and in the pod rim; lit by the spine skylight above and the shoulder window bands (the STL slot) at the pod end"
-          },
-          {
-            "id": "ARM+1",
-            "name": "window galleries",
-            "z": [
-              0.0335,
-              0.05
-            ],
-            "m": [
-              67,
-              100
-            ],
-            "r": [
-              1.42,
-              1.74
-            ],
-            "use": "the STL slot floor at +0.0325 is a real surface over the concourse flanks at r 1.40-1.75; the space above it behind the window band is an observation gallery on each flank (the approach to the pod), reached by a stair/lift core at each end from the concourse"
+            "use": "the bridge itself, filling the full width of the section: the avenue road down the centre, the rail spur beside it on a low viaduct, walkways either side, and a low arcade of buildings along both flanks (bridge-side commerce); structural ribs follow the hull section; portal in the disc rim (r 0.995) and in the pod rim; artificially lit (no glazing on the arms) at the pod end"
           },
           {
             "id": "ARM-1",
@@ -972,9 +955,9 @@
           "lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R",
           "cyan light strips along the edges (#23)",
           "level with the equatorial plane",
-          "glazed skylight strip along the spine ridge (|side| < 0.07 R, above +0.095 R)",
-          "through-slot window band on both shoulders, r 1.40-1.75 (STL), glazed with vertical panes",
-          "interior: through-concourse 0 to +0.045, window galleries +0.0335 to +0.05 on the flanks at r 1.42-1.74 (STL slot level), utility deck below; exterior surface unchanged"
+          "no glazing anywhere on the arm (owner, 2026-09-15; the show shows solid arms)",
+          "lit light band in the STL shoulder slot, r 1.40-1.75 (#23)",
+          "interior: through-concourse 0 to +0.045 and utility deck below; exterior surface unchanged"
         ],
         "interior_levels": [
           {
@@ -988,24 +971,7 @@
               0,
               90
             ],
-            "use": "the bridge itself, filling the full width of the section: the avenue road down the centre, the rail spur beside it on a low viaduct, walkways either side, and a low arcade of buildings along both flanks (bridge-side commerce); structural ribs follow the hull section; portal in the disc rim (r 0.995) and in the pod rim; lit by the spine skylight above and the shoulder window bands (the STL slot) at the pod end"
-          },
-          {
-            "id": "ARM+1",
-            "name": "window galleries",
-            "z": [
-              0.0335,
-              0.05
-            ],
-            "m": [
-              67,
-              100
-            ],
-            "r": [
-              1.42,
-              1.74
-            ],
-            "use": "the STL slot floor at +0.0325 is a real surface over the concourse flanks at r 1.40-1.75; the space above it behind the window band is an observation gallery on each flank (the approach to the pod), reached by a stair/lift core at each end from the concourse"
+            "use": "the bridge itself, filling the full width of the section: the avenue road down the centre, the rail spur beside it on a low viaduct, walkways either side, and a low arcade of buildings along both flanks (bridge-side commerce); structural ribs follow the hull section; portal in the disc rim (r 0.995) and in the pod rim; artificially lit (no glazing on the arms) at the pod end"
           },
           {
             "id": "ARM-1",
@@ -1101,9 +1067,9 @@
           "lenticular section: 0.55 R wide and 0.20 R thick at the equator, tapering to ≈0.2 R wide at ±0.10 R",
           "cyan light strips along the edges (#23)",
           "level with the equatorial plane",
-          "glazed skylight strip along the spine ridge (|side| < 0.07 R, above +0.095 R)",
-          "through-slot window band on both shoulders, r 1.40-1.75 (STL), glazed with vertical panes",
-          "interior: through-concourse 0 to +0.045, window galleries +0.0335 to +0.05 on the flanks at r 1.42-1.74 (STL slot level), utility deck below; exterior surface unchanged"
+          "no glazing anywhere on the arm (owner, 2026-09-15; the show shows solid arms)",
+          "lit light band in the STL shoulder slot, r 1.40-1.75 (#23)",
+          "interior: through-concourse 0 to +0.045 and utility deck below; exterior surface unchanged"
         ],
         "interior_levels": [
           {
@@ -1117,24 +1083,7 @@
               0,
               90
             ],
-            "use": "the bridge itself, filling the full width of the section: the avenue road down the centre, the rail spur beside it on a low viaduct, walkways either side, and a low arcade of buildings along both flanks (bridge-side commerce); structural ribs follow the hull section; portal in the disc rim (r 0.995) and in the pod rim; lit by the spine skylight above and the shoulder window bands (the STL slot) at the pod end"
-          },
-          {
-            "id": "ARM+1",
-            "name": "window galleries",
-            "z": [
-              0.0335,
-              0.05
-            ],
-            "m": [
-              67,
-              100
-            ],
-            "r": [
-              1.42,
-              1.74
-            ],
-            "use": "the STL slot floor at +0.0325 is a real surface over the concourse flanks at r 1.40-1.75; the space above it behind the window band is an observation gallery on each flank (the approach to the pod), reached by a stair/lift core at each end from the concourse"
+            "use": "the bridge itself, filling the full width of the section: the avenue road down the centre, the rail spur beside it on a low viaduct, walkways either side, and a low arcade of buildings along both flanks (bridge-side commerce); structural ribs follow the hull section; portal in the disc rim (r 0.995) and in the pod rim; artificially lit (no glazing on the arms) at the pod end"
           },
           {
             "id": "ARM-1",
@@ -4928,156 +4877,6 @@
       ]
     },
     {
-      "id": "DOCK-S1",
-      "name": "Dock piers at the ARM-S1 junction",
-      "kind": "utility",
-      "layer": "L7",
-      "band": [
-        "V0"
-      ],
-      "existence": "B",
-      "placement": "PLACEHOLDER",
-      "states": [
-        "DS-01",
-        "DS-02",
-        "DS-03",
-        "DS-04",
-        "DS-05"
-      ],
-      "geometry": {
-        "type": "pier_pair",
-        "az_offset_deg": 20,
-        "r_start": 0.966,
-        "r_end": 1.08,
-        "width": 0.045,
-        "height": 0.03,
-        "features": [
-          "dark docking pier projecting from the disc rim on each side of the arm root",
-          "cyan edge lights",
-          "mooring stubs",
-          "gantry crane on the rim"
-        ]
-      },
-      "position": [
-        1.02,
-        0.0,
-        0
-      ],
-      "azimuth": 0,
-      "evidence": [
-        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (dark dock/gantry structures where the arms meet the disc)"
-      ],
-      "rationale": "Frame #23 shows dark, greebled hardware at each arm/disc junction (B). Modelled as a pair of docking piers projecting from the rim band on either side of the arm root (the only hull outside the dome footprint there), with a gantry on the rim. Size and count are conventions: PLACEHOLDER.",
-      "unknowns": [
-        "exact form",
-        "whether they are docks, hangars or structural collars"
-      ],
-      "required_shots": [
-        "S05E10 exterior, closer"
-      ],
-      "reference_images": []
-    },
-    {
-      "id": "DOCK-S2",
-      "name": "Dock piers at the ARM-S2 junction",
-      "kind": "utility",
-      "layer": "L7",
-      "band": [
-        "V0"
-      ],
-      "existence": "B",
-      "placement": "PLACEHOLDER",
-      "states": [
-        "DS-01",
-        "DS-02",
-        "DS-03",
-        "DS-04",
-        "DS-05"
-      ],
-      "geometry": {
-        "type": "pier_pair",
-        "az_offset_deg": 20,
-        "r_start": 0.966,
-        "r_end": 1.08,
-        "width": 0.045,
-        "height": 0.03,
-        "features": [
-          "dark docking pier projecting from the disc rim on each side of the arm root",
-          "cyan edge lights",
-          "mooring stubs",
-          "gantry crane on the rim"
-        ]
-      },
-      "position": [
-        -0.51,
-        0.8833,
-        0
-      ],
-      "azimuth": 120,
-      "evidence": [
-        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (dark dock/gantry structures where the arms meet the disc)"
-      ],
-      "rationale": "Frame #23 shows dark, greebled hardware at each arm/disc junction (B). Modelled as a pair of docking piers projecting from the rim band on either side of the arm root (the only hull outside the dome footprint there), with a gantry on the rim. Size and count are conventions: PLACEHOLDER.",
-      "unknowns": [
-        "exact form",
-        "whether they are docks, hangars or structural collars"
-      ],
-      "required_shots": [
-        "S05E10 exterior, closer"
-      ],
-      "reference_images": []
-    },
-    {
-      "id": "DOCK-MB",
-      "name": "Dock piers at the ARM-MB junction",
-      "kind": "utility",
-      "layer": "L7",
-      "band": [
-        "V0"
-      ],
-      "existence": "B",
-      "placement": "PLACEHOLDER",
-      "states": [
-        "DS-01",
-        "DS-02",
-        "DS-03",
-        "DS-04",
-        "DS-05"
-      ],
-      "geometry": {
-        "type": "pier_pair",
-        "az_offset_deg": 20,
-        "r_start": 0.966,
-        "r_end": 1.08,
-        "width": 0.045,
-        "height": 0.03,
-        "features": [
-          "dark docking pier projecting from the disc rim on each side of the arm root",
-          "cyan edge lights",
-          "mooring stubs",
-          "gantry crane on the rim"
-        ]
-      },
-      "position": [
-        -0.51,
-        -0.8833,
-        0
-      ],
-      "azimuth": 240,
-      "evidence": [
-        "reference_images/CITADEL_IMAGE_GAP_CLOSURE_BATCH_02.md#23 (dark dock/gantry structures where the arms meet the disc)"
-      ],
-      "rationale": "Frame #23 shows dark, greebled hardware at each arm/disc junction (B). Modelled as a pair of docking piers projecting from the rim band on either side of the arm root (the only hull outside the dome footprint there), with a gantry on the rim. Size and count are conventions: PLACEHOLDER.",
-      "unknowns": [
-        "exact form",
-        "whether they are docks, hangars or structural collars"
-      ],
-      "required_shots": [
-        "S05E10 exterior, closer"
-      ],
-      "reference_images": []
-    },
-    {
       "id": "MB-THRUSTERS",
       "name": "Mortyburg boosters / thrusters",
       "kind": "machinery",
@@ -5504,26 +5303,6 @@
         ]
       },
       {
-        "id": "ARM+1",
-        "name": "Bridge window galleries",
-        "z": [
-          0.0335,
-          0.05
-        ],
-        "m": [
-          67,
-          100
-        ],
-        "extent_r": [
-          1.42,
-          1.74
-        ],
-        "contents": [
-          "observation galleries behind the STL window band on both flanks",
-          "stair/lift cores to the concourse at each end"
-        ]
-      },
-      {
         "id": "ARM0",
         "name": "Bridge concourses",
         "z": [
@@ -5544,8 +5323,7 @@
           "walkways",
           "flank arcades",
           "hull ribs",
-          "portals at disc rim and pod rim",
-          "spine skylight above"
+          "portals at disc rim and pod rim"
         ]
       },
       {
@@ -5782,10 +5560,10 @@
     ],
     "surface_notes": "STL top surface z(side) at r 1.1-1.7 on all three arms: smooth lens with a central spine ridge. The section is narrowest at r 1.30 (half-width 0.249 R at the equator) and flares to 0.31 R at the disc fillet and 0.34 R at the pod fillet. From r 1.40 to 1.75 a horizontal slot is cut through both shoulders (floor +0.0335 R, ceiling rising to +0.0575 R): the flat \"shelf\" reported in v2.4 is the floor of this slot, i.e. the window band. Fin faces are smooth tapers with no recess.",
     "windows": {
-      "evidence": "the STL cuts a horizontal slot into both shoulders of each arm from r 1.40 to 1.75 under an overhanging upper slab: floor at z +0.0335 R, ceiling rising from +0.035 at r 1.40 to +0.0575 at r 1.725, the slot running inward to a 0.094 R spine; the Printables render paints the openings teal; frame #23 shows a row of lit strips on the arm flanks beside the pods",
-      "placement": "vertical glazing panes in the face of the overhanging upper slab (|side| ~0.18-0.19 R, measured from the section just above the slot ceiling), both shoulders, r 1.42-1.74, height = slot height at that r (2 m at the root of the slot to 48 m by the pod); the flat shelf outside the slab face (|side| 0.19-0.26+) is a ledge in front of the windows",
+      "type": "lit light band (no glazing)",
+      "evidence": "frame #23 shows a row of lit strips on the arm flanks beside the pods; the STL cuts a slot under an overhanging slab there (r 1.40-1.75, floor +0.0335, ceiling rising to +0.0575)",
+      "placement": "opaque emissive light bars standing in the slab face inside the STL slot, both shoulders, r 1.42-1.74; no glass, no interior level behind them (owner, 2026-09-15)",
       "confidence": "existence A (frame + STL slot), placement A (slot measured)",
-      "type": "through-slot window band",
       "r_start": 1.42,
       "r_end": 1.74,
       "z_floor": 0.0335,
@@ -5830,9 +5608,8 @@
       "spine_half_width": 0.047
     },
     "skylight": {
-      "status": "design decision on the owner's request (2026-09-12); placement class B since 2026-09-14",
-      "rule": "STL arm triangles within |side| < 0.07 R of the spine and above z +0.095 R render as glazing; every other arm triangle stays hull",
-      "evidence": "the STL carries a raised spine ridge along each arm top and the Printables render shows a lighter centre strip there; frame #23 shows the arms lit from within; no frame shows the arm roof directly, so the strip is not promoted above C; the S05E10 founding hologram (gallery #04) draws the arms with the same rib lattice as the domes, i.e. as latticed/glazed structures rather than solid tubes"
+      "status": "REMOVED 2026-09-15 (owner): the show's arms carry no glazing. The STL spine ridge is hull.",
+      "history": "added 2026-09-12 as a design decision (C), briefly B on the #04 lattice reading; withdrawn"
     },
     "half_width_by_r": {
       "note": "STL cross-sections perpendicular to the arm axis, all three arms identical to 0.001 R; half-width of the solid at each z (R units), by r along the arm. Rows inside the shoulder slot (r >= 1.40, z ~0.033-0.058) show the spine only (0.047).",
@@ -9945,5 +9722,282 @@
       ],
       "slots": 144
     }
+  },
+  "dome_profile": {
+    "note": "STL main-dome top surface by ray cast (R units, schematic frame). The dome carries raised radial ridges; z_ridge is the profile along a ridge, z_panel between ridges.",
+    "ridge_azimuths_deg": [
+      0,
+      60,
+      120,
+      180,
+      240,
+      300
+    ],
+    "r": [
+      0.0,
+      0.02,
+      0.04,
+      0.06,
+      0.08,
+      0.1,
+      0.12,
+      0.14,
+      0.16,
+      0.18,
+      0.2,
+      0.22,
+      0.24,
+      0.26,
+      0.28,
+      0.3,
+      0.32,
+      0.34,
+      0.36,
+      0.38,
+      0.4,
+      0.42,
+      0.44,
+      0.46,
+      0.48,
+      0.5,
+      0.52,
+      0.54,
+      0.56,
+      0.58,
+      0.6,
+      0.62,
+      0.64,
+      0.66,
+      0.68,
+      0.7,
+      0.72,
+      0.74,
+      0.76,
+      0.78,
+      0.8,
+      0.82,
+      0.84,
+      0.86,
+      0.88,
+      0.9,
+      0.92,
+      0.94,
+      0.96,
+      0.98,
+      1.0
+    ],
+    "z_ridge": [
+      0.2924,
+      0.2923,
+      0.292,
+      0.2916,
+      0.2912,
+      0.2906,
+      0.2899,
+      0.2891,
+      0.288,
+      0.2869,
+      0.2856,
+      0.2841,
+      0.2826,
+      0.2808,
+      0.279,
+      0.2769,
+      0.2748,
+      0.2725,
+      0.27,
+      0.2728,
+      0.27,
+      0.267,
+      0.2639,
+      0.2606,
+      0.2571,
+      0.2534,
+      0.2495,
+      0.2453,
+      0.241,
+      0.2365,
+      0.2316,
+      0.2266,
+      0.2214,
+      0.2157,
+      0.2099,
+      0.2036,
+      0.1971,
+      0.1901,
+      0.1828,
+      0.175,
+      0.1668,
+      0.1579,
+      0.1484,
+      0.1382,
+      0.1272,
+      0.1151,
+      0.1017,
+      0.0866,
+      0.0694,
+      0.0505,
+      null
+    ],
+    "z_panel": [
+      0.2924,
+      0.2923,
+      0.292,
+      0.2916,
+      0.2913,
+      0.2906,
+      0.2899,
+      0.2891,
+      0.288,
+      0.2869,
+      0.2856,
+      0.2842,
+      0.2826,
+      0.2808,
+      0.2791,
+      0.277,
+      0.2749,
+      0.2726,
+      0.2701,
+      0.2727,
+      0.2689,
+      0.2617,
+      0.2585,
+      0.2552,
+      0.2516,
+      0.2479,
+      0.244,
+      0.2399,
+      0.2356,
+      0.231,
+      0.2263,
+      0.221,
+      0.2158,
+      0.2101,
+      0.2043,
+      0.198,
+      0.1914,
+      0.1844,
+      0.177,
+      0.1693,
+      0.1608,
+      0.1519,
+      0.1424,
+      0.132,
+      0.1208,
+      0.1086,
+      0.0949,
+      0.0795,
+      0.0616,
+      0.0503,
+      null
+    ]
+  },
+  "pod_profile": {
+    "note": "STL pod-dome top surface by ray cast (R units, radius from the pod centre, azimuths relative to the pod in the schematic frame).",
+    "ridge_azimuths_deg": [
+      0,
+      60,
+      120,
+      180,
+      240,
+      300
+    ],
+    "r": [
+      0.0,
+      0.02,
+      0.04,
+      0.06,
+      0.08,
+      0.1,
+      0.12,
+      0.14,
+      0.16,
+      0.18,
+      0.2,
+      0.22,
+      0.24,
+      0.26,
+      0.28,
+      0.3,
+      0.32,
+      0.34,
+      0.36,
+      0.38,
+      0.4,
+      0.42,
+      0.44,
+      0.46,
+      0.48,
+      0.5,
+      0.52,
+      0.54,
+      0.56,
+      0.58
+    ],
+    "z_ridge": [
+      0.1871,
+      0.1869,
+      0.1867,
+      0.1861,
+      0.1854,
+      0.1844,
+      0.1833,
+      0.1872,
+      0.1856,
+      0.1837,
+      0.1817,
+      0.1794,
+      0.1767,
+      0.1739,
+      0.1708,
+      0.1673,
+      0.1635,
+      0.1594,
+      0.1549,
+      0.1499,
+      0.1445,
+      0.1386,
+      0.1318,
+      0.1245,
+      0.1161,
+      0.1066,
+      0.0955,
+      0.0818,
+      0.0636,
+      0.0416
+    ],
+    "z_panel": [
+      0.1871,
+      0.1869,
+      0.1867,
+      0.1861,
+      0.1854,
+      0.1844,
+      0.1833,
+      0.1868,
+      0.1803,
+      0.1784,
+      0.1764,
+      0.174,
+      0.1714,
+      0.1686,
+      0.1654,
+      0.162,
+      0.1582,
+      0.154,
+      0.1495,
+      0.1444,
+      0.1389,
+      0.1329,
+      0.1263,
+      0.1188,
+      0.1103,
+      0.1006,
+      0.0892,
+      0.075,
+      0.0555,
+      0.0416
+    ]
   }
 }
